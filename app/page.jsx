@@ -126,7 +126,7 @@ function CardHeader({ domain, name, height=130 }) {
       <div style={{ position:"absolute", top:0, right:0, width:36, height:36, borderBottom:`1.5px solid ${accent}`, borderLeft:`1.5px solid ${accent}`, opacity:0.35 }}/>
       {name && (
         <div style={{ position:"absolute", bottom:14, left:18 }}>
-          <span style={{ fontSize:12, fontFamily:"monospace", letterSpacing:"0.1em", color:accent, fontWeight:600, textTransform:"uppercase" }}>{name}</span>
+          <span style={{ fontSize:16, fontFamily:"'Georgia',serif", letterSpacing:"0.02em", color:"rgba(255,255,255,0.9)", fontWeight:400 }}>{name}</span>
         </div>
       )}
     </div>
@@ -333,7 +333,7 @@ export default function LeveryHomepage() {
         </svg>
         <div style={{ position:"absolute", top:0, left:"38%", width:"14%", height:"100%", zIndex:2,
           background:`linear-gradient(to right, ${C.sand}, transparent)`, pointerEvents:"none" }}/>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"clamp(48px, 7vh, 88px) 32px clamp(40px, 6vh, 72px)", width:"100%", position:"relative", zIndex:3 }}>
+        <div style={{ maxWidth:1200, margin:"0 auto", padding:"clamp(72px, 10vh, 120px) 32px clamp(48px, 6vh, 72px)", width:"100%", position:"relative", zIndex:3 }}>
           <div style={{ maxWidth:780 }}>
             <span style={{ fontFamily:"monospace", fontSize:10, letterSpacing:"0.18em", color:C.inkLight, textTransform:"uppercase", marginBottom:22, display:"block" }}>{t.heroLabel}</span>
             <h1 className="l-hero-h1" style={{ fontSize:"clamp(38px, 3.8vw, 64px)", fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
@@ -381,13 +381,13 @@ export default function LeveryHomepage() {
                   <div style={{ position:"absolute", right:16, bottom:16, fontSize:88, fontFamily:"monospace", fontWeight:700, color:"rgba(255,255,255,0.04)", letterSpacing:"-0.04em", lineHeight:1, userSelect:"none", pointerEvents:"none" }}>{label}</div>
 
                   {/* Content */}
-                  <div style={{ padding:"36px 32px 32px", display:"flex", flexDirection:"column", flexGrow:1, justifyContent:"space-between", position:"relative", zIndex:1 }}>
+                  <div style={{ padding:"24px 28px 24px", display:"flex", flexDirection:"column", flexGrow:1, justifyContent:"space-between", position:"relative", zIndex:1 }}>
                     {/* TOP: label + title + desc + ifText — grows to fill space */}
                     <div>
                       <span style={{ display:"inline-block", fontSize:10, fontFamily:"monospace", letterSpacing:"0.12em", color:accent, background:"rgba(255,255,255,0.07)", padding:"3px 9px", borderRadius:2, marginBottom:20, alignSelf:"flex-start", textTransform:"uppercase" }}>{label}</span>
                       <h3 style={{ fontSize:21, fontWeight:400, color:C.white, margin:"0 0 14px", fontFamily:"'Georgia',serif", lineHeight:1.3 }}>{svc.title}</h3>
-                      <p style={{ fontSize:15, lineHeight:1.8, color:"rgba(255,255,255,0.62)", margin:"0 0 14px", fontFamily:"'Helvetica Neue',Arial,sans-serif" }}>{svc.desc}</p>
-                      <p style={{ fontSize:12, fontStyle:"italic", color:"rgba(255,255,255,0.32)", margin:0, fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.6 }}>{svc.ifText}</p>
+                      <p style={{ fontSize:14, lineHeight:1.7, color:"rgba(255,255,255,0.62)", margin:"0 0 10px", fontFamily:"'Helvetica Neue',Arial,sans-serif" }}>{svc.desc}</p>
+                      <p style={{ fontSize:11, fontStyle:"italic", color:"rgba(255,255,255,0.32)", margin:0, fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.6 }}>{svc.ifText}</p>
                     </div>
                     {/* BOTTOM: capabilities list + link — always anchored to bottom */}
                     <div>
@@ -440,7 +440,7 @@ export default function LeveryHomepage() {
               return (
                 <div key={i} style={{ background:C.white, display:"flex", flexDirection:"column", overflow:"hidden", borderRadius:2 }} className="l-proj-card">
                   <div className="l-proj-header" style={{ transition:"filter 0.2s" }}>
-                    <CardHeader domain={dom} name={p.name} height={130}/>
+                    <CardHeader domain={dom} name={p.name} height={100}/>
                   </div>
                   <div style={{ padding:"20px 22px 22px", display:"flex", flexDirection:"column", gap:10, flexGrow:1 }}>
                     <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:8 }}>
