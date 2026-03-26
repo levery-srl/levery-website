@@ -11,7 +11,7 @@
     "next": "15.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "outstatic": "^1.10.0",
+    "outstatic": "2.0.18",
     "gray-matter": "^4.0.3",
     "next-mdx-remote": "^4.4.1"
   },
