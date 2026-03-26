@@ -141,7 +141,7 @@ const copy = {
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Your external R&D team",
     heroH1b:"for the construction industry.",
-    heroSub:"We work alongside manufacturers, material producers, and contractors — bringing specialist R&D capabilities in new product development, sustainability compliance, and EU funding access.",
+    heroSub:"From regulatory compliance and certification support to EU funding and digital tools — we work alongside construction manufacturers as a specialist R&D partner.",
     heroBtn:"Book a 30-minute call →",
     heroLink:"See our active projects ↓",
     stats:[
@@ -195,7 +195,7 @@ const copy = {
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Il tuo team R&D esterno",
     heroH1b:"per l'industria delle costruzioni.",
-    heroSub:"Affianchiamo produttori, fornitori di materiali e imprese con competenze R&D verticali — sviluppo di nuovi prodotti, sostenibilità normativa e accesso ai finanziamenti europei.",
+    heroSub:"Dal supporto alla conformità normativa e alla certificazione, ai finanziamenti europei e agli strumenti digitali — affianchiamo i produttori del settore costruzioni come partner R&D specializzato.",
     heroBtn:"Prenota una call di 30 minuti →",
     heroLink:"Vedi i progetti attivi ↓",
     stats:[
@@ -333,7 +333,11 @@ export default function LeveryHomepage() {
         <div style={{ position:"absolute", top:0, left:"38%", width:"14%", height:"100%", zIndex:2,
           background:`linear-gradient(to right, ${C.sand}, transparent)`, pointerEvents:"none" }}/>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"80px 32px 72px", width:"100%", position:"relative", zIndex:3 }}>
+<<<<<<< HEAD
           <div style={{ maxWidth:780 }}>
+=======
+          <div style={{ maxWidth:600 }}>
+>>>>>>> 289de0050098d00db8f795856d69078c331e6a1c
             <span style={{ fontFamily:"monospace", fontSize:10, letterSpacing:"0.18em", color:C.inkLight, textTransform:"uppercase", marginBottom:22, display:"block" }}>{t.heroLabel}</span>
             <h1 className="l-hero-h1" style={{ fontSize:64, fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
               {t.heroH1a}<br/><span style={{ fontStyle:"italic", color:C.brand }}>{t.heroH1b}</span>
