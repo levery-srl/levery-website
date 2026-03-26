@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from "react";
 
 const C = {
@@ -355,7 +356,7 @@ export default function LeveryTeam() {
                 letterSpacing:"0.1em", padding:"4px 10px", borderRadius:2, cursor:"pointer" }}>
               {t.langSwitch}
             </button>
-            <a href="/contact" style={{ background:C.green, color:C.white,
+            <a href="https://outlook.office.com/bookwithme/user/2565314db4ec43499c12dc4e59d747f2@levery.it?anonymous&ep=signature" target="_blank" rel="noopener noreferrer" style={ background:C.green, color:C.white,
               padding:"9px 20px", borderRadius:2, fontSize:13,
               fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:500,
               textDecoration:"none", transition:"background 0.2s" }}
@@ -411,7 +412,7 @@ export default function LeveryTeam() {
             fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.7 }}>
             {t.ctaSub}
           </p>
-          <a href="/contact" style={{ background:C.white, color:C.green,
+          <a href="https://outlook.office.com/bookwithme/user/2565314db4ec43499c12dc4e59d747f2@levery.it?anonymous&ep=signature" target="_blank" rel="noopener noreferrer" style={ background:C.white, color:C.green,
             padding:"12px 32px", borderRadius:2, fontSize:14,
             fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600,
             textDecoration:"none", display:"inline-block" }}

@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from "react";
 
 // ─── DESIGN TOKENS ───────────────────────────────────────────────────────────
@@ -135,7 +136,7 @@ function CardHeader({ domain, name, height=130 }) {
 // ─── COPY ────────────────────────────────────────────────────────────────────
 const copy = {
   en: {
-    nav:["Our Work","Insights","Research","Team","Impact"],
+    nav:["Our Work","Products","Insights","Impact","Team","Contact"],
     bookCTA:"Book a call",
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Your external R&D team",
@@ -144,8 +145,8 @@ const copy = {
     heroBtn:"Book a 30-minute call →",
     heroLink:"See our active projects ↓",
     stats:[
-      {value:"€15M+",label:"In funded programmes"},
-      {value:"10+",  label:"Active R&D projects"},
+      {value:"€15M+",label:"EU projects contributed to"},
+      {value:"€700K+",label:"Direct R&D budget managed"},
       {value:"50+",  label:"Peer-reviewed publications"},
       {value:"100+", label:"Partners we work with"},
     ],
@@ -154,17 +155,17 @@ const copy = {
       { domain:DOMAIN.digital, icon:"◈", title:"New Product Development",
         desc:"From concept development and material testing to prototype validation and pre-commercial launch — we run the full R&D cycle so your team can focus on production.",
         ifText:"Relevant if you are developing a new building material, component, or system.",
-        caps:["Concept development & prototyping","Material selection & testing","Technical documentation","Market analysis","Business model definition"],
+        caps:["Concept development & prototyping","Material selection & testing","Market validation & competitive benchmarking","Certification pathway support","Business model definition"],
         link:"See related projects →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sustainability & Circular Economy",
         desc:"LCA, Digital Product Passports, decarbonisation roadmaps, ESG reporting. We translate regulatory requirements into actionable technical work.",
         ifText:"Relevant if you face ESPR compliance, decarbonisation targets, or ESG reporting obligations.",
-        caps:["Digital Product Passport (DPP)","LCA / Lifecycle Assessment","Decarbonisation roadmap","ESG Scope 1–3 reporting","Circular economy supply chain"],
+        caps:["Digital Product Passport (DPP)","LCA / Lifecycle Assessment","ESPR & CE marking compliance","Decarbonisation roadmap","ESG Scope 1–3 reporting"],
         link:"See related projects →", href:"/work?filter=sustainability" },
       { domain:DOMAIN.funding, icon:"◎", title:"EU Funding & Networks",
         desc:"Horizon Europe proposal writing, open call applications, consortium building, financial reporting. We have been on the inside of 10+ funded projects.",
         ifText:"Relevant if you want to access EU R&D funding or join an active research consortium.",
-        caps:["Horizon Europe proposal writing","Open call scouting","Consortium building","EU project management","Financial reporting"],
+        caps:["Horizon Europe proposal writing","Open call scouting","Consortium building","EU project management & reporting","Technical documentation for regulators"],
         link:"See related projects →", href:"/work?filter=funding" },
     ],
     projectsTitle:"Active projects",
@@ -189,7 +190,7 @@ const copy = {
     langSwitch:"IT",
   },
   it: {
-    nav:["Progetti","Insights","Ricerca","Team","Impatto"],
+    nav:["Progetti","Prodotti","Insights","Impatto","Team","Contatti"],
     bookCTA:"Prenota una call",
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Il tuo team R&D esterno",
@@ -198,8 +199,8 @@ const copy = {
     heroBtn:"Prenota una call di 30 minuti →",
     heroLink:"Vedi i progetti attivi ↓",
     stats:[
-      {value:"€15M+",label:"In programmi finanziati"},
-      {value:"10+",  label:"Progetti R&D attivi"},
+      {value:"€15M+",label:"Progetti EU a cui abbiamo contribuito"},
+      {value:"€700K+",label:"Budget R&D gestito direttamente"},
       {value:"50+",  label:"Pubblicazioni peer-reviewed"},
       {value:"100+", label:"Partner con cui collaboriamo"},
     ],
@@ -208,17 +209,17 @@ const copy = {
       { domain:DOMAIN.digital, icon:"◈", title:"Sviluppo Nuovi Prodotti",
         desc:"Dallo sviluppo del concept e dalla selezione dei materiali fino alla validazione del prototipo e al lancio pre-commerciale — gestiamo l'intero ciclo R&D perché il tuo team possa concentrarsi sulla produzione.",
         ifText:"Pertinente se stai sviluppando un nuovo materiale, componente o sistema per l'edilizia.",
-        caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Documentazione tecnica","Analisi di mercato","Definizione business model"],
+        caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Validazione di mercato e benchmarking","Supporto percorso certificazione","Definizione business model"],
         link:"Vedi progetti correlati →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sostenibilità ed Economia Circolare",
         desc:"LCA, Passaporti Digitali di Prodotto, roadmap di decarbonizzazione, reportistica ESG. Traduciamo i requisiti normativi in lavoro tecnico concreto.",
         ifText:"Pertinente se affronti la conformità ESPR, obiettivi di decarbonizzazione o obblighi di rendicontazione ESG.",
-        caps:["Passaporto Digitale di Prodotto (DPP)","LCA / Analisi del Ciclo di Vita","Roadmap di decarbonizzazione","Reportistica ESG Scope 1–3","Supply chain economia circolare"],
+        caps:["Passaporto Digitale di Prodotto (DPP)","LCA / Analisi del Ciclo di Vita","Conformità ESPR e marcatura CE","Roadmap di decarbonizzazione","Reportistica ESG Scope 1–3"],
         link:"Vedi progetti correlati →", href:"/work?filter=sustainability" },
       { domain:DOMAIN.funding, icon:"◎", title:"Finanziamenti EU e Reti",
         desc:"Scrittura di proposte Horizon Europe, domande per open call, costruzione di consorzi, rendicontazione finanziaria. Siamo stati all'interno di 10+ progetti finanziati.",
         ifText:"Pertinente se vuoi accedere ai finanziamenti R&D europei o unirti a un consorzio di ricerca attivo.",
-        caps:["Scrittura proposte Horizon Europe","Scouting open call","Costruzione consorzi","Gestione progetti UE","Rendicontazione finanziaria"],
+        caps:["Scrittura proposte Horizon Europe","Scouting open call","Costruzione consorzi","Gestione e rendicontazione progetti UE","Documentazione tecnica per enti e regolatori"],
         link:"Vedi progetti correlati →", href:"/work?filter=funding" },
     ],
     projectsTitle:"Progetti attivi",
@@ -282,7 +283,7 @@ export default function LeveryHomepage() {
           .l-stats-grid{grid-template-columns:1fr 1fr!important}
           .l-footer-grid{grid-template-columns:1fr 1fr!important}
           .l-hero-right{opacity:0.18!important}
-          .l-hero-h1{font-size:34px!important}
+          .l-hero-h1{font-size:38px!important}
         }
         .l-insight-row:hover{background:rgba(45,64,89,0.04)!important}
         .l-proj-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.10)!important}
@@ -295,15 +296,18 @@ export default function LeveryHomepage() {
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px", height:64, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
           <LeveryLogo color="#fff" height={30}/>
           <ul style={{ display:"flex", gap:28, listStyle:"none", margin:0, padding:0 }} className="l-nav-links">
-            {t.nav.map(item=>(
-              <li key={item}><a href="#" style={{ color:"rgba(255,255,255,0.78)", textDecoration:"none", fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.04em" }}
-                onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.78)"}
-              >{item}</a></li>
-            ))}
+            {t.nav.map((item,i)=>{
+              const hrefs = ["/work","/products","/insights","/impact","/team","/contact"];
+              return(
+                <li key={item}><a href={hrefs[i]} style={{ color:"rgba(255,255,255,0.78)", textDecoration:"none", fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.04em" }}
+                  onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.78)"}
+                >{item}</a></li>
+              );
+            })}
           </ul>
           <div style={{ display:"flex", alignItems:"center", gap:14 }}>
             <button onClick={()=>setLang(lang==="en"?"it":"en")} style={{ background:"none", border:"1px solid rgba(255,255,255,0.2)", color:"rgba(255,255,255,0.5)", fontSize:11, fontFamily:"monospace", letterSpacing:"0.1em", padding:"4px 10px", borderRadius:2, cursor:"pointer" }}>{t.langSwitch}</button>
-            <a href="#cta" style={{ background:C.green, color:C.white, border:"none", padding:"9px 20px", borderRadius:2, fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:500, cursor:"pointer", textDecoration:"none", display:"inline-block", transition:"background 0.2s" }}
+            <a href="https://outlook.office.com/bookwithme/user/2565314db4ec43499c12dc4e59d747f2@levery.it?anonymous&ep=signature" target="_blank" rel="noopener noreferrer" style={{ background:C.green, color:C.white, border:"none", padding:"9px 20px", borderRadius:2, fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:500, cursor:"pointer", textDecoration:"none", display:"inline-block", transition:"background 0.2s" }}
               onMouseEnter={e=>e.target.style.background=C.greenMid} onMouseLeave={e=>e.target.style.background=C.green}
               onClick={()=>track("cta_click",{source:"nav"})}
             >{t.bookCTA}</a>
@@ -312,19 +316,31 @@ export default function LeveryHomepage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{ minHeight:"100vh", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
+      <section style={{ minHeight:"80vh", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0, zIndex:1 }} className="l-hero-right">
           <GradientMesh parallax={parallax}/>
         </div>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"100px 32px 80px", width:"100%", position:"relative", zIndex:2 }}>
-          <div style={{ maxWidth:560 }}>
+        {/* Stripe pattern — right 55%, fades left */}
+        <svg style={{ position:"absolute", top:0, right:0, width:"55%", height:"100%", opacity:0.045, pointerEvents:"none", zIndex:1 }}
+          viewBox="0 0 660 480" preserveAspectRatio="xMidYMid slice">
+          {Array.from({length:14},(_,i)=>(
+            <line key={i} x1={i*52-20} y1="0" x2={i*52+120} y2="480" stroke={C.brand} strokeWidth="1.5"/>
+          ))}
+          {[[80,80],[200,140],[380,60],[520,200],[140,320],[340,380],[480,300]].map(([x,y],i)=>(
+            <circle key={i} cx={x} cy={y} r="2.5" fill={C.brand}/>
+          ))}
+        </svg>
+        <div style={{ position:"absolute", top:0, left:"38%", width:"14%", height:"100%", zIndex:2,
+          background:`linear-gradient(to right, ${C.sand}, transparent)`, pointerEvents:"none" }}/>
+        <div style={{ maxWidth:1200, margin:"0 auto", padding:"80px 32px 72px", width:"100%", position:"relative", zIndex:3 }}>
+          <div style={{ maxWidth:780 }}>
             <span style={{ fontFamily:"monospace", fontSize:10, letterSpacing:"0.18em", color:C.inkLight, textTransform:"uppercase", marginBottom:22, display:"block" }}>{t.heroLabel}</span>
-            <h1 className="l-hero-h1" style={{ fontSize:52, fontWeight:400, color:C.ink, lineHeight:1.1, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
+            <h1 className="l-hero-h1" style={{ fontSize:64, fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
               {t.heroH1a}<br/><span style={{ fontStyle:"italic", color:C.brand }}>{t.heroH1b}</span>
             </h1>
             <p style={{ fontSize:16, color:C.inkMid, lineHeight:1.8, margin:"0 0 44px", fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:300 }}>{t.heroSub}</p>
             <div style={{ display:"flex", alignItems:"center", gap:24, flexWrap:"wrap" }}>
-              <a href="#cta" style={{ background:C.brand, color:C.white, padding:"13px 28px", borderRadius:2, fontSize:15, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600, textDecoration:"none", display:"inline-block", transition:"all 0.2s" }}
+              <a href="https://outlook.office.com/bookwithme/user/2565314db4ec43499c12dc4e59d747f2@levery.it?anonymous&ep=signature" target="_blank" rel="noopener noreferrer" style={{ background:C.brand, color:C.white, padding:"13px 28px", borderRadius:2, fontSize:15, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600, textDecoration:"none", display:"inline-block", transition:"all 0.2s" }}
                 onMouseEnter={e=>{e.target.style.background=C.brandMid;e.target.style.transform="translateY(-2px)"}}
                 onMouseLeave={e=>{e.target.style.background=C.brand;e.target.style.transform="none"}}
                 onClick={()=>track("cta_click",{source:"hero"})}
@@ -508,7 +524,7 @@ export default function LeveryHomepage() {
       <footer style={{ background:"#111820", padding:"60px 0 0" }}>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px 48px", display:"grid", gridTemplateColumns:"2fr 1fr 1.4fr", gap:56, borderBottom:"1px solid rgba(255,255,255,0.06)" }} className="l-footer-grid">
           <div>
-            <LeveryLogo color="#fff" height={28}/>
+            <LeveryLogo color="#fff" height={36}/>
             <p style={{ fontSize:14, color:"rgba(255,255,255,0.3)", fontFamily:"'Georgia',serif", fontStyle:"italic", lineHeight:1.7, marginTop:14 }}>{t.footerTagline}</p>
             <a href="/impact" style={{ display:"inline-flex", alignItems:"center", gap:6, marginTop:20, textDecoration:"none",
               border:"1px solid rgba(255,255,255,0.12)", borderRadius:2, padding:"5px 10px" }}>
@@ -521,7 +537,7 @@ export default function LeveryHomepage() {
           <div>
             <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em", color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>{lang==="en"?"Legal":"Note legali"}</p>
             <span style={{ display:"block", fontSize:11, color:"rgba(255,255,255,0.2)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>Via Pisino 66, 47814 Bellaria Igea Marina (RN)</span>
-            <span style={{ display:"block", fontSize:11, color:"rgba(255,255,255,0.2)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>P.IVA 04730050400</span>
+            <span style={{ display:"block", fontSize:11, color:"rgba(255,255,255,0.2)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>{lang==="en"?"VAT":"P.IVA"} 04730050400</span>
             <a href="/privacy" style={{ display:"block", fontSize:12, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }}>Privacy Policy</a>
             <a href="/cookies" style={{ display:"block", fontSize:12, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none" }}>Cookie Policy</a>
           </div>
@@ -529,7 +545,7 @@ export default function LeveryHomepage() {
             <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em", color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>{lang==="en"?"Contact":"Contatti"}</p>
             <a href="mailto:info@levery.it" style={{ display:"block", fontSize:13, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }} onClick={()=>track("footer_email_click")}>info@levery.it</a>
             <a href="tel:+393396469607"    style={{ display:"block", fontSize:13, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }} onClick={()=>track("footer_phone_click")}>(+39) 339 646 9607</a>
-            <a href="#cta" style={{ display:"block", fontSize:13, color:C.greenMid, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }} onClick={()=>track("cta_click",{source:"footer"})}>{lang==="en"?"Book a call →":"Prenota una call →"}</a>
+            <a href="https://outlook.office.com/bookwithme/user/2565314db4ec43499c12dc4e59d747f2@levery.it?anonymous&ep=signature" target="_blank" rel="noopener noreferrer" style={{ display:"block", fontSize:13, color:C.greenMid, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }} onClick={()=>track("cta_click",{source:"footer"})}>{lang==="en"?"Book a call →":"Prenota una call →"}</a>
           </div>
         </div>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"18px 32px", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
@@ -546,7 +562,7 @@ export default function LeveryHomepage() {
 
       {/* MOBILE STICKY */}
       <div className="l-mobile-cta" style={{ display:"none", position:"fixed", bottom:0, left:0, right:0, zIndex:200, padding:"12px 16px", background:C.white, borderTop:`1px solid ${C.rule}`, boxShadow:"0 -4px 16px rgba(0,0,0,0.08)" }}>
-        <a href="#cta" style={{ display:"block", width:"100%", textAlign:"center", background:C.green, color:C.white, padding:"14px", borderRadius:2, fontSize:15, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600, textDecoration:"none" }}
+        <a href="https://outlook.office.com/bookwithme/user/2565314db4ec43499c12dc4e59d747f2@levery.it?anonymous&ep=signature" target="_blank" rel="noopener noreferrer" style={{ display:"block", width:"100%", textAlign:"center", background:C.green, color:C.white, padding:"14px", borderRadius:2, fontSize:15, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600, textDecoration:"none" }}
           onClick={()=>track("cta_click",{source:"mobile_sticky"})}
         >
           {t.bookCTA} →
