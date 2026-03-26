@@ -136,12 +136,12 @@ function CardHeader({ domain, name, height=130 }) {
 // ─── COPY ────────────────────────────────────────────────────────────────────
 const copy = {
   en: {
-    nav:["Our Work","Insights","Research","Team","Impact"],
+    nav:["Our Work","Products","Insights","Impact","Team","Contact"],
     bookCTA:"Book a call",
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Your external R&D team",
     heroH1b:"for the construction industry.",
-    heroSub:"We work alongside manufacturers, material producers, and contractors — bringing specialist R&D capabilities in new product development, sustainability compliance, and EU funding access.",
+    heroSub:"From regulatory compliance and certification support to EU funding and digital tools — we work alongside construction manufacturers as a specialist R&D partner.",
     heroBtn:"Book a 30-minute call →",
     heroLink:"See our active projects ↓",
     stats:[
@@ -155,17 +155,17 @@ const copy = {
       { domain:DOMAIN.digital, icon:"◈", title:"New Product Development",
         desc:"From concept development and material testing to prototype validation and pre-commercial launch — we run the full R&D cycle so your team can focus on production.",
         ifText:"Relevant if you are developing a new building material, component, or system.",
-        caps:["Concept development & prototyping","Material selection & testing","Technical documentation","Market analysis","Business model definition"],
+        caps:["Concept development & prototyping","Material selection & testing","Market validation & competitive benchmarking","Certification pathway support","Business model definition"],
         link:"See related projects →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sustainability & Circular Economy",
         desc:"LCA, Digital Product Passports, decarbonisation roadmaps, ESG reporting. We translate regulatory requirements into actionable technical work.",
         ifText:"Relevant if you face ESPR compliance, decarbonisation targets, or ESG reporting obligations.",
-        caps:["Digital Product Passport (DPP)","LCA / Lifecycle Assessment","Decarbonisation roadmap","ESG Scope 1–3 reporting","Circular economy supply chain"],
+        caps:["Digital Product Passport (DPP)","LCA / Lifecycle Assessment","ESPR & CE marking compliance","Decarbonisation roadmap","ESG Scope 1–3 reporting"],
         link:"See related projects →", href:"/work?filter=sustainability" },
       { domain:DOMAIN.funding, icon:"◎", title:"EU Funding & Networks",
         desc:"Horizon Europe proposal writing, open call applications, consortium building, financial reporting. We have been on the inside of 10+ funded projects.",
         ifText:"Relevant if you want to access EU R&D funding or join an active research consortium.",
-        caps:["Horizon Europe proposal writing","Open call scouting","Consortium building","EU project management","Financial reporting"],
+        caps:["Horizon Europe proposal writing","Open call scouting","Consortium building","EU project management & reporting","Technical documentation for regulators"],
         link:"See related projects →", href:"/work?filter=funding" },
     ],
     projectsTitle:"Active projects",
@@ -190,12 +190,12 @@ const copy = {
     langSwitch:"IT",
   },
   it: {
-    nav:["Progetti","Insights","Ricerca","Team","Impatto"],
+    nav:["Progetti","Prodotti","Insights","Impatto","Team","Contatti"],
     bookCTA:"Prenota una call",
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Il tuo team R&D esterno",
     heroH1b:"per l'industria delle costruzioni.",
-    heroSub:"Affianchiamo produttori, fornitori di materiali e imprese con competenze R&D verticali — sviluppo di nuovi prodotti, sostenibilità normativa e accesso ai finanziamenti europei.",
+    heroSub:"Dal supporto alla conformità normativa e alla certificazione, ai finanziamenti europei e agli strumenti digitali — affianchiamo i produttori del settore costruzioni come partner R&D specializzato.",
     heroBtn:"Prenota una call di 30 minuti →",
     heroLink:"Vedi i progetti attivi ↓",
     stats:[
@@ -209,17 +209,17 @@ const copy = {
       { domain:DOMAIN.digital, icon:"◈", title:"Sviluppo Nuovi Prodotti",
         desc:"Dallo sviluppo del concept e dalla selezione dei materiali fino alla validazione del prototipo e al lancio pre-commerciale — gestiamo l'intero ciclo R&D perché il tuo team possa concentrarsi sulla produzione.",
         ifText:"Pertinente se stai sviluppando un nuovo materiale, componente o sistema per l'edilizia.",
-        caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Documentazione tecnica","Analisi di mercato","Definizione business model"],
+        caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Validazione di mercato e benchmarking","Supporto percorso certificazione","Definizione business model"],
         link:"Vedi progetti correlati →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sostenibilità ed Economia Circolare",
         desc:"LCA, Passaporti Digitali di Prodotto, roadmap di decarbonizzazione, reportistica ESG. Traduciamo i requisiti normativi in lavoro tecnico concreto.",
         ifText:"Pertinente se affronti la conformità ESPR, obiettivi di decarbonizzazione o obblighi di rendicontazione ESG.",
-        caps:["Passaporto Digitale di Prodotto (DPP)","LCA / Analisi del Ciclo di Vita","Roadmap di decarbonizzazione","Reportistica ESG Scope 1–3","Supply chain economia circolare"],
+        caps:["Passaporto Digitale di Prodotto (DPP)","LCA / Analisi del Ciclo di Vita","Conformità ESPR e marcatura CE","Roadmap di decarbonizzazione","Reportistica ESG Scope 1–3"],
         link:"Vedi progetti correlati →", href:"/work?filter=sustainability" },
       { domain:DOMAIN.funding, icon:"◎", title:"Finanziamenti EU e Reti",
         desc:"Scrittura di proposte Horizon Europe, domande per open call, costruzione di consorzi, rendicontazione finanziaria. Siamo stati all'interno di 10+ progetti finanziati.",
         ifText:"Pertinente se vuoi accedere ai finanziamenti R&D europei o unirti a un consorzio di ricerca attivo.",
-        caps:["Scrittura proposte Horizon Europe","Scouting open call","Costruzione consorzi","Gestione progetti UE","Rendicontazione finanziaria"],
+        caps:["Scrittura proposte Horizon Europe","Scouting open call","Costruzione consorzi","Gestione e rendicontazione progetti UE","Documentazione tecnica per enti e regolatori"],
         link:"Vedi progetti correlati →", href:"/work?filter=funding" },
     ],
     projectsTitle:"Progetti attivi",
@@ -283,7 +283,7 @@ export default function LeveryHomepage() {
           .l-stats-grid{grid-template-columns:1fr 1fr!important}
           .l-footer-grid{grid-template-columns:1fr 1fr!important}
           .l-hero-right{opacity:0.18!important}
-          .l-hero-h1{font-size:34px!important}
+          .l-hero-h1{font-size:38px!important}
         }
         .l-insight-row:hover{background:rgba(45,64,89,0.04)!important}
         .l-proj-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.10)!important}
@@ -296,11 +296,14 @@ export default function LeveryHomepage() {
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px", height:64, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
           <LeveryLogo color="#fff" height={30}/>
           <ul style={{ display:"flex", gap:28, listStyle:"none", margin:0, padding:0 }} className="l-nav-links">
-            {t.nav.map(item=>(
-              <li key={item}><a href="#" style={{ color:"rgba(255,255,255,0.78)", textDecoration:"none", fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.04em" }}
-                onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.78)"}
-              >{item}</a></li>
-            ))}
+            {t.nav.map((item,i)=>{
+              const hrefs = ["/work","/products","/insights","/impact","/team","/contact"];
+              return(
+                <li key={item}><a href={hrefs[i]} style={{ color:"rgba(255,255,255,0.78)", textDecoration:"none", fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.04em" }}
+                  onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.78)"}
+                >{item}</a></li>
+              );
+            })}
           </ul>
           <div style={{ display:"flex", alignItems:"center", gap:14 }}>
             <button onClick={()=>setLang(lang==="en"?"it":"en")} style={{ background:"none", border:"1px solid rgba(255,255,255,0.2)", color:"rgba(255,255,255,0.5)", fontSize:11, fontFamily:"monospace", letterSpacing:"0.1em", padding:"4px 10px", borderRadius:2, cursor:"pointer" }}>{t.langSwitch}</button>
@@ -313,14 +316,26 @@ export default function LeveryHomepage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{ minHeight:"100vh", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
+      <section style={{ minHeight:"80vh", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0, zIndex:1 }} className="l-hero-right">
           <GradientMesh parallax={parallax}/>
         </div>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"100px 32px 80px", width:"100%", position:"relative", zIndex:2 }}>
-          <div style={{ maxWidth:560 }}>
+        {/* Stripe pattern — right 55%, fades left */}
+        <svg style={{ position:"absolute", top:0, right:0, width:"55%", height:"100%", opacity:0.045, pointerEvents:"none", zIndex:1 }}
+          viewBox="0 0 660 480" preserveAspectRatio="xMidYMid slice">
+          {Array.from({length:14},(_,i)=>(
+            <line key={i} x1={i*52-20} y1="0" x2={i*52+120} y2="480" stroke={C.brand} strokeWidth="1.5"/>
+          ))}
+          {[[80,80],[200,140],[380,60],[520,200],[140,320],[340,380],[480,300]].map(([x,y],i)=>(
+            <circle key={i} cx={x} cy={y} r="2.5" fill={C.brand}/>
+          ))}
+        </svg>
+        <div style={{ position:"absolute", top:0, left:"38%", width:"14%", height:"100%", zIndex:2,
+          background:`linear-gradient(to right, ${C.sand}, transparent)`, pointerEvents:"none" }}/>
+        <div style={{ maxWidth:1200, margin:"0 auto", padding:"80px 32px 72px", width:"100%", position:"relative", zIndex:3 }}>
+          <div style={{ maxWidth:600 }}>
             <span style={{ fontFamily:"monospace", fontSize:10, letterSpacing:"0.18em", color:C.inkLight, textTransform:"uppercase", marginBottom:22, display:"block" }}>{t.heroLabel}</span>
-            <h1 className="l-hero-h1" style={{ fontSize:52, fontWeight:400, color:C.ink, lineHeight:1.1, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
+            <h1 className="l-hero-h1" style={{ fontSize:64, fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
               {t.heroH1a}<br/><span style={{ fontStyle:"italic", color:C.brand }}>{t.heroH1b}</span>
             </h1>
             <p style={{ fontSize:16, color:C.inkMid, lineHeight:1.8, margin:"0 0 44px", fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:300 }}>{t.heroSub}</p>
