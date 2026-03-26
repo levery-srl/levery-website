@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from "react";
 
 // ─── This is the template for /work/[slug]
