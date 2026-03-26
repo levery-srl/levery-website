@@ -283,7 +283,8 @@ export default function LeveryHomepage() {
           .l-stats-grid{grid-template-columns:1fr 1fr!important}
           .l-footer-grid{grid-template-columns:1fr 1fr!important}
           .l-hero-right{opacity:0.18!important}
-          .l-hero-h1{font-size:38px!important}
+        @media(max-width:1400px){.l-hero-h1{font-size:52px!important}}
+          @media(max-width:900px){.l-hero-h1{font-size:38px!important}}
         }
         .l-insight-row:hover{background:rgba(45,64,89,0.04)!important}
         .l-proj-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.10)!important}
@@ -316,7 +317,7 @@ export default function LeveryHomepage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{ minHeight:"80vh", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
+      <section style={{ minHeight:"clamp(60vh, 75vh, 82vh)", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0, zIndex:1 }} className="l-hero-right">
           <GradientMesh parallax={parallax}/>
         </div>
@@ -332,10 +333,10 @@ export default function LeveryHomepage() {
         </svg>
         <div style={{ position:"absolute", top:0, left:"38%", width:"14%", height:"100%", zIndex:2,
           background:`linear-gradient(to right, ${C.sand}, transparent)`, pointerEvents:"none" }}/>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"80px 32px 72px", width:"100%", position:"relative", zIndex:3 }}>
+        <div style={{ maxWidth:1200, margin:"0 auto", padding:"clamp(48px, 7vh, 88px) 32px clamp(40px, 6vh, 72px)", width:"100%", position:"relative", zIndex:3 }}>
           <div style={{ maxWidth:780 }}>
             <span style={{ fontFamily:"monospace", fontSize:10, letterSpacing:"0.18em", color:C.inkLight, textTransform:"uppercase", marginBottom:22, display:"block" }}>{t.heroLabel}</span>
-            <h1 className="l-hero-h1" style={{ fontSize:64, fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
+            <h1 className="l-hero-h1" style={{ fontSize:"clamp(38px, 3.8vw, 64px)", fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
               {t.heroH1a}<br/><span style={{ fontStyle:"italic", color:C.brand }}>{t.heroH1b}</span>
             </h1>
             <p style={{ fontSize:16, color:C.inkMid, lineHeight:1.8, margin:"0 0 44px", fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:300 }}>{t.heroSub}</p>
