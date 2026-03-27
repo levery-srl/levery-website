@@ -142,8 +142,11 @@ function ArticleCard({a}){
 }
 
 function PubCard({p}){
+  const [hov,setHov]=useState(false);
   return(
-    <div style={{background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,padding:"22px 24px",borderLeft:`3px solid ${p.open?"#1E6B45":"#2D4059"}`}}>
+    <a href={p.url} target="_blank" rel="noopener noreferrer"
+      onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}
+      style={{textDecoration:"none",display:"block",background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,padding:"22px 24px",borderLeft:`3px solid ${p.open?"#1E6B45":"#2D4059"}`,transform:hov?"translateY(-2px)":"none",boxShadow:hov?"0 6px 20px rgba(0,0,0,0.08)":"none",transition:"all 0.2s"}}>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,marginBottom:10}}>
         <p style={{fontSize:11,fontFamily:"monospace",color:C.inkLight,margin:0,letterSpacing:"0.06em"}}>
           {p.year} · {p.journal}{p.volume?` · ${p.volume}`:""}
@@ -156,23 +159,29 @@ function PubCard({p}){
       </div>
       <h3 style={{fontSize:15,fontWeight:400,color:C.ink,margin:"0 0 8px",fontFamily:"'Georgia',serif",lineHeight:1.4}}>{p.title}</h3>
       <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px",lineHeight:1.5}}>{p.authors}</p>
-      <a href={p.url} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:C.green,fontFamily:"monospace",textDecoration:"none",letterSpacing:"0.04em"}}>
-        DOI: {p.doi} ↗
-      </a>
-    </div>
+      <span style={{fontSize:12,color:C.green,fontFamily:"monospace",letterSpacing:"0.04em"}}>DOI: {p.doi} ↗</span>
+    </a>
   );
 }
 
 function PressCard({p}){
+  const [hov,setHov]=useState(false);
   return(
-    <a href={p.url} target="_blank" rel="noopener noreferrer" style={{textDecoration:"none",display:"block",background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,padding:"22px 24px"}}>
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,marginBottom:10}}>
-        <span style={{fontSize:11,fontFamily:"monospace",color:C.inkLight,letterSpacing:"0.06em"}}>{p.source} · {p.date}</span>
-        <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"#F5F2EC",color:C.inkLight,padding:"3px 8px",borderRadius:2,flexShrink:0}}>PRESS</span>
+    <a href={p.url} target="_blank" rel="noopener noreferrer"
+      onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}
+      style={{textDecoration:"none",display:"block",background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,overflow:"hidden",transform:hov?"translateY(-3px)":"none",boxShadow:hov?"0 8px 24px rgba(0,0,0,0.10)":"none",transition:"all 0.2s"}}>
+      <div style={{height:120,background:`linear-gradient(135deg,#1C2D40,#2D4059)`,display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0 24px",position:"relative"}}>
+        <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.07}} viewBox="0 0 600 120" preserveAspectRatio="xMidYMid slice">
+          {Array.from({length:8},(_,i)=>(<line key={i} x1={i*85-20} y1="0" x2={i*85+80} y2="120" stroke="#7EC8E3" strokeWidth="1"/>))}
+        </svg>
+        <span style={{fontSize:13,fontFamily:"monospace",letterSpacing:"0.12em",color:"rgba(255,255,255,0.7)",textTransform:"uppercase",fontWeight:600,position:"relative",zIndex:1}}>{p.source}</span>
+        <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"rgba(255,255,255,0.1)",color:"rgba(255,255,255,0.5)",padding:"4px 10px",borderRadius:2,position:"relative",zIndex:1}}>PRESS · {p.date}</span>
       </div>
-      <h3 style={{fontSize:15,fontWeight:400,color:C.ink,margin:"0 0 8px",fontFamily:"'Georgia',serif",lineHeight:1.4}}>{p.title}</h3>
-      <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 12px",lineHeight:1.65}}>{p.excerpt}</p>
-      <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>Read article ↗</span>
+      <div style={{padding:"18px 24px 22px"}}>
+        <h3 style={{fontSize:16,fontWeight:400,color:C.ink,margin:"0 0 10px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{p.title}</h3>
+        <p style={{fontSize:13,color:C.inkMid,lineHeight:1.65,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px"}}>{p.excerpt}</p>
+        <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>Read article ↗</span>
+      </div>
     </a>
   );
 }
@@ -195,11 +204,11 @@ export default function InsightsPage(){
       <NavBar/>
 
       {/* HEADER */}
-      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,minHeight:"clamp(88px,11vh,130px)",display:"flex",alignItems:"flex-end",paddingBottom:0,position:"relative",overflow:"hidden"}}>
+      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"120px 0 0",position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.06,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"clamp(88px,11vh,130px) 32px 0",width:"100%",position:"relative",zIndex:1}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 40px",width:"100%",position:"relative",zIndex:1}}>
           <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>03</span>
             <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:0,fontFamily:"'Georgia',serif",lineHeight:1.05}}>Insights</h1>

@@ -85,7 +85,7 @@ const copy = {
       {
         initials:"AP",
         bg:"#1C2D40", accent:"#7EC8E3",
-        photo:"https://raw.githubusercontent.com/levery-srl/levery-website/main/public/team/alessandro.jpg",
+        photo:"/team/alessandro.jpg",
         role:"Co-founder & Director",
         name:"Alessandro Pracucci",
         credentials:"PhD · Architect · Adjunct Professor, University of Bologna",
@@ -97,7 +97,7 @@ const copy = {
       {
         initials:"MG",
         bg:"#1A3D2B", accent:"#A8E6CF",
-        photo:"https://raw.githubusercontent.com/levery-srl/levery-website/main/public/team/matteo.jpg",
+        photo:"/team/matteo.jpg",
         role:"Co-founder",
         name:"Matteo Giovanardi",
         credentials:"PhD · Architect · Politecnico di Torino",
@@ -109,7 +109,7 @@ const copy = {
       {
         initials:"FP",
         bg:"#2A1E3D", accent:"#C3A8E6",
-        photo:"https://raw.githubusercontent.com/levery-srl/levery-website/main/public/team/francesca.jpg",
+        photo:"/team/francesca.jpg",
         role:"Researcher",
         name:"Francesca Pollet",
         credentials:"PhD Student · University of Ferrara",
@@ -134,7 +134,7 @@ const copy = {
       {
         initials:"AP",
         bg:"#1C2D40", accent:"#7EC8E3",
-        photo:"https://raw.githubusercontent.com/levery-srl/levery-website/main/public/team/alessandro.jpg",
+        photo:"/team/alessandro.jpg",
         role:"Co-fondatore & Direttore",
         name:"Alessandro Pracucci",
         credentials:"PhD · Architetto · Professore a contratto, Università di Bologna",
@@ -146,7 +146,7 @@ const copy = {
       {
         initials:"MG",
         bg:"#1A3D2B", accent:"#A8E6CF",
-        photo:"https://raw.githubusercontent.com/levery-srl/levery-website/main/public/team/matteo.jpg",
+        photo:"/team/matteo.jpg",
         role:"Co-fondatore",
         name:"Matteo Giovanardi",
         credentials:"PhD · Architetto · Politecnico di Torino",
@@ -158,7 +158,7 @@ const copy = {
       {
         initials:"FP",
         bg:"#2A1E3D", accent:"#C3A8E6",
-        photo:"https://raw.githubusercontent.com/levery-srl/levery-website/main/public/team/francesca.jpg",
+        photo:"/team/francesca.jpg",
         role:"Ricercatrice",
         name:"Francesca Pollet",
         credentials:"PhD Student · Università di Ferrara",
@@ -339,7 +339,7 @@ export default function LeveryTeam() {
 
       {/* PAGE HEADER */}
       <div style={{ background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,
-        padding:"clamp(88px,11vh,130px) 0 56px", position:"relative", overflow:"hidden" }}>
+        padding:"120px 0 64px", position:"relative", overflow:"hidden" }}>
         <svg style={{ position:"absolute", inset:0, width:"100%", height:"100%",
           opacity:0.04, pointerEvents:"none" }}
           viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">

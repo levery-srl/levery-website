@@ -293,28 +293,17 @@ export default function LeveryHomepage() {
       `}</style>
 
       {/* ── NAV ── */}
-      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:100, background:"rgba(45,64,89,0.97)", backdropFilter:"blur(10px)", borderBottom:"1px solid rgba(255,255,255,0.07)" }}>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px", height:64, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-          <a href="/" style={{display:"flex",alignItems:"center",textDecoration:"none"}}>
-            <img src="/logo-white.svg" alt="Levery" height="32" style={{display:"block"}}/>
-          </a>
-          <ul style={{ display:"flex", gap:28, listStyle:"none", margin:0, padding:0 }} className="l-nav-links">
-            {t.nav.map((item,i)=>{
-              const hrefs = ["/work","/products","/insights","/impact","/team","/contact"];
-              return(
-                <li key={item}><a href={hrefs[i]} style={{ color:"rgba(255,255,255,0.78)", textDecoration:"none", fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.04em" }}
-                  onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.78)"}
-                >{item}</a></li>
-              );
-            })}
+      <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+          <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
+          <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
+            {[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]].map(([label,href])=>(
+              <li key={label}><a href={href} style={{color:"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>{label}</a></li>
+            ))}
           </ul>
-          <div style={{ display:"flex", alignItems:"center", gap:14 }}>
-            <button onClick={()=>setLang(lang==="en"?"it":"en")} style={{ background:"none", border:"1px solid rgba(255,255,255,0.2)", color:"rgba(255,255,255,0.5)", fontSize:11, fontFamily:"monospace", letterSpacing:"0.1em", padding:"4px 10px", borderRadius:2, cursor:"pointer" }}>{t.langSwitch}</button>
-            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{ background:C.green, color:C.white, border:"none", padding:"9px 20px", borderRadius:2, fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:500, cursor:"pointer", textDecoration:"none", display:"inline-block", transition:"background 0.2s" }}
-              onMouseEnter={e=>e.target.style.background=C.greenMid} onMouseLeave={e=>e.target.style.background=C.green}
-              onClick={()=>track("cta_click",{source:"nav"})}
-            >{t.bookCTA}</a>
-          </div>
+          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer"
+            onClick={()=>track("cta_click",{source:"nav"})}
+            style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>{t.bookCTA}</a>
         </div>
       </nav>
 

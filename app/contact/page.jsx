@@ -68,7 +68,7 @@ export default function ContactPage(){
       </nav>
 
       {/* HEADER */}
-      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"clamp(88px,11vh,130px) 0 56px",position:"relative",overflow:"hidden"}}>
+      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"120px 0 64px",position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.06,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
@@ -118,8 +118,8 @@ export default function ContactPage(){
               ):(
                 <form onSubmit={handleSubmit}>
                   <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
-                    <Input label="Name" name="name" required value={form.name} onChange={set("name")} placeholder="Alessandro Pracucci"/>
-                    <Input label="Company" name="company" value={form.company} onChange={set("company")} placeholder="Levery S.r.l."/>
+                    <Input label="Name" name="name" required value={form.name} onChange={set("name")} placeholder="Name Surname"/>
+                    <Input label="Company" name="company" value={form.company} onChange={set("company")} placeholder="Company name"/>
                   </div>
                   <Input label="Email" name="email" type="email" required value={form.email} onChange={set("email")} placeholder="info@yourcompany.com"/>
                   <Select label="Topic" name="topic" required value={form.topic} onChange={set("topic")}
