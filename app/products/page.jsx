@@ -398,7 +398,7 @@ export default function LeveryProducts(){
             <a href="tel:+393396469607" style={{display:"block",fontSize:13,
               color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",
               textDecoration:"none",marginBottom:9}}>(+39) 339 646 9607</a>
-            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={display:"block",fontSize:13,color:"#A8E6CF",
+            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{display:"block",fontSize:13,color:"#A8E6CF",
               fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>
               {lang==="en"?"Book a call →":"Prenota una call →"}
             </a>
