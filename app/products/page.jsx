@@ -239,7 +239,7 @@ export default function LeveryProducts(){
         transition:"all 0.35s ease"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,
           display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <a href="/"><LeveryLogo color="#fff" height={30}/></a>
+          <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {navLinks.map(([label,href])=>(
               <li key={label}><a href={href} style={{
@@ -282,11 +282,11 @@ export default function LeveryProducts(){
           ))}
         </svg>
         <div style={{...inner,position:"relative",zIndex:1}}>
-          <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",
-            color:"rgba(255,255,255,0.3)",textTransform:"uppercase",
-            marginBottom:18,display:"block"}}>{t.pageLabel}</span>
-          <h1 style={{fontSize:44,fontWeight:400,color:C.white,margin:"0 0 14px",
-            fontFamily:"'Georgia',serif",lineHeight:1.1}}>{t.pageTitle}</h1>
+          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
+            <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>02</span>
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>{t.pageLabel}</span>
+          </div>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.1}}>{t.pageTitle}</h1>
           <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 40px",
             fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:500,
             lineHeight:1.7}}>{t.pageSub}</p>

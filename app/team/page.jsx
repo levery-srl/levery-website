@@ -327,49 +327,19 @@ export default function LeveryTeam() {
       `}</style>
 
       {/* NAV */}
-      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:100,
-        background:"rgba(45,64,89,0.97)",
-        backdropFilter:"blur(10px)",
-        borderBottom:"1px solid rgba(255,255,255,0.07)",
-        transition:"all 0.35s ease" }}>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px", height:64,
-          display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-          <a href="/"><LeveryLogo color="#fff" height={30}/></a>
-          <ul style={{ display:"flex", gap:28, listStyle:"none", margin:0, padding:0 }}
-            className="l-nav-links">
-            {navLinks.map(([label,href])=>(
-              <li key={label}><a href={href} style={{
-                color:href==="/team"?"#fff":"rgba(255,255,255,0.72)",
-                textDecoration:"none", fontSize:13, letterSpacing:"0.04em",
-                fontFamily:"'Helvetica Neue',Arial,sans-serif",
-                borderBottom:href==="/team"?"1px solid rgba(255,255,255,0.35)":"none",
-                paddingBottom:2 }}
-                onMouseEnter={e=>e.target.style.color="#fff"}
-                onMouseLeave={e=>e.target.style.color=href==="/team"?"#fff":"rgba(255,255,255,0.72)"}
-              >{label}</a></li>
-            ))}
+      <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+          <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
+          <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
+            {navLinks.map(([label,href])=>(<li key={label}><a href={href} style={{color:href==="/team"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/team"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>))}
           </ul>
-          <div style={{ display:"flex", gap:14, alignItems:"center" }}>
-            <button onClick={()=>setLang(lang==="en"?"it":"en")}
-              style={{ background:"none", border:"1px solid rgba(255,255,255,0.2)",
-                color:"rgba(255,255,255,0.5)", fontSize:11, fontFamily:"monospace",
-                letterSpacing:"0.1em", padding:"4px 10px", borderRadius:2, cursor:"pointer" }}>
-              {t.langSwitch}
-            </button>
-            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{ background:C.green, color:C.white,
-              padding:"9px 20px", borderRadius:2, fontSize:13,
-              fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:500,
-              textDecoration:"none", transition:"background 0.2s" }}
-              onMouseEnter={e=>e.target.style.background=C.greenMid}
-              onMouseLeave={e=>e.target.style.background=C.green}
-            >{t.bookCTA}</a>
-          </div>
+          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
         </div>
       </nav>
 
       {/* PAGE HEADER */}
       <div style={{ background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,
-        padding:"136px 0 80px", position:"relative", overflow:"hidden" }}>
+        padding:"clamp(88px,11vh,130px) 0 56px", position:"relative", overflow:"hidden" }}>
         <svg style={{ position:"absolute", inset:0, width:"100%", height:"100%",
           opacity:0.04, pointerEvents:"none" }}
           viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
@@ -378,15 +348,13 @@ export default function LeveryTeam() {
               stroke="#7EC8E3" strokeWidth="1"/>
           ))}
         </svg>
-        <div style={{ ...inner, position:"relative", zIndex:1 }}>
-          <span style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.18em",
-            color:"rgba(255,255,255,0.3)", textTransform:"uppercase",
-            marginBottom:18, display:"block" }}>{t.pageLabel}</span>
-          <h1 style={{ fontSize:44, fontWeight:400, color:C.white, margin:"0 0 14px",
-            fontFamily:"'Georgia',serif", lineHeight:1.1 }}>{t.pageTitle}</h1>
-          <p style={{ fontSize:16, color:"rgba(255,255,255,0.48)", margin:0,
-            fontFamily:"'Helvetica Neue',Arial,sans-serif", maxWidth:480,
-            lineHeight:1.7 }}>{t.pageSub}</p>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",position:"relative",zIndex:1}}>
+          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
+            <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>05</span>
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>{t.pageLabel}</span>
+          </div>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.1}}>{t.pageTitle}</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:480,lineHeight:1.7}}>{t.pageSub}</p>
         </div>
       </div>
 

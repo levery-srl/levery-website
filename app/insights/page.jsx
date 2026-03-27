@@ -1,56 +1,105 @@
 'use client'
 import { useState } from "react";
 
-const C={brand:"#2D4059",brandMid:"#3A5274",green:"#1E6B45",greenMid:"#2A8A58",
-  white:"#FFFFFF",sand:"#F5F2EC",sandDark:"#EDE9E1",ink:"#1A1A1A",
-  inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
+const C={brand:"#2D4059",green:"#1E6B45",white:"#FFFFFF",sand:"#F5F2EC",
+  ink:"#1A1A1A",inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
 const DOMAIN={
   digital:{bg:"#1C2D40",accent:"#7EC8E3",label:"R&D"},
   green:{bg:"#1A3D2B",accent:"#A8E6CF",label:"ECO"},
-  funding:{bg:"#2A2010",accent:"#FFD97D",label:"EU"},
+  human:{bg:"#2A1E3D",accent:"#C3A8E6",label:"HUMAN"},
 };
 const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
+const NAV_LINKS=[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
 
+// ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
-  {slug:"ai-solutions-construction-products",
-   series:"Make It Digital",domain:"digital",num:"03/26",author:"MG",date:"February 25, 2026",
+  {slug:"ai-02-26",series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"human",author:"MG",date:"Feb 25, 2026",
    title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
-   excerpt:"The landscape of AI-based solutions is expanding rapidly, from automated MEP design to high-precision reality capture. Examining frontier products addressing the industry's most persistent labor shortages.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-34804017-1920w.jpeg",
-  },
-  {slug:"robotics-automation-construction-products",
-   series:"Make It Digital",domain:"digital",num:"02/26",author:"AP",date:"February 3, 2026",
+   excerpt:"The landscape of AI-based solutions is expanding rapidly — from automated MEP design to high-precision reality capture. Examining frontier products addressing the industry's most persistent labor shortages.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-34804017-1920w.jpeg"},
+  {slug:"rob-02-26",series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"AP",date:"Feb 3, 2026",
    title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
-   excerpt:"Robotic units capable of bridging the gap between digital BIM representation and jobsite execution — HP SitePrint, FBR Hadrian X, and autonomous site management platforms.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-17180807-1920w.jpeg",
-  },
-  {slug:"bio-based-building-materials-products",
-   series:"Make It Green",domain:"green",num:"01/26",author:"AP",date:"January 7, 2026",
+   excerpt:"Robotic units bridging the gap between digital BIM representation and jobsite execution — HP SitePrint, FBR Hadrian X, and autonomous site management platforms.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-17180807-1920w.jpeg"},
+  {slug:"bio-02-26",series:"Make It Green",sub:"Bio-02",num:"01/26",domain:"green",author:"AP",date:"Jan 7, 2026",
    title:"Bio-based building materials & products for construction: innovative technologies",
-   excerpt:"From mycelium insulation to hemp bricks, high-performance bio-based composites are redefining the building envelope — moving beyond timber toward alternatives that act as active carbon sinks.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/crop2.jpg%28mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69%29-1920w.jpg",
-  },
-  {slug:"ai-copilot-construction-stakeholders",
-   series:"Make It Digital",domain:"digital",num:"12/25",author:"MG",date:"November 26, 2025",
+   excerpt:"From mycelium insulation to hemp bricks — high-performance bio-based composites redefining the building envelope as active carbon sinks.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/crop2.jpg%28mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69%29-1920w.jpg"},
+  {slug:"ai-01-25",series:"Make It Human",sub:"AI-01",num:"12/25",domain:"human",author:"MG",date:"Nov 26, 2025",
    title:"AI as a Copilot for Construction: Actors & Stakeholders",
-   excerpt:"AI is rapidly shifting construction from manual and reactive processes to predictive and optimized workflows — mapping the ecosystem of technology developers, data providers and end-users.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-30530416-1920w.jpeg",
-  },
-  {slug:"robotics-automation-construction-stakeholders",
-   series:"Make It Digital",domain:"digital",num:"11/25",author:"AP",date:"October 29, 2025",
+   excerpt:"AI is shifting construction from reactive to predictive workflows — mapping the ecosystem of technology developers, data providers and end-users driving this transformation.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-30530416-1920w.jpeg"},
+  {slug:"rob-01-25",series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"AP",date:"Oct 29, 2025",
    title:"Robotic & Automation for Construction: Actors & Stakeholders",
-   excerpt:"The global construction industry is embracing robotics and automation. Understanding the key actors — from equipment manufacturers to research entities — driving the shift toward digital construction.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-10119310-1920w.jpeg",
-  },
-  {slug:"bio-based-building-materials-stakeholders",
-   series:"Make It Green",domain:"green",num:"08/25",author:"AP",date:"October 1, 2025",
+   excerpt:"Understanding the key actors — from equipment manufacturers to research entities — driving the shift toward automated, digitally integrated construction.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-10119310-1920w.jpeg"},
+  {slug:"bio-01-25",series:"Make It Green",sub:"Bio-01",num:"08/25",domain:"green",author:"AP",date:"Oct 1, 2025",
    title:"Bio-based Building Materials & Products for Construction: Actors & Stakeholders",
-   excerpt:"The transition to bio-based construction requires a fundamental shift in the entire value chain — from farmers growing raw materials to policymakers setting new standards.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/ladrillos_de_canamo_0-1920w.jpg",
+   excerpt:"The transition to bio-based construction requires a fundamental shift in the value chain — from farmers growing raw materials to policymakers setting new standards.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/ladrillos_de_canamo_0-1920w.jpg"},
+  {slug:"xr-03-25",series:"Make It Human",sub:"XR-03",num:"07/25",domain:"human",author:"AP",date:"Jul 2025",
+   title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
+   excerpt:"XR solutions as a technological enabler for building O&M — immersive document visualization, remote assistance, advanced diagnostics and automated reporting with ARyze.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine-2025-06-26-104300-1920w.jpg"},
+  {slug:"dpp-03-25",series:"Make It Digital",sub:"DPP-03",num:"06/25",domain:"digital",author:"AP",date:"Jun 2025",
+   title:"DeePPy: Revolutionizing Transparency in Construction with the Digital Product Passport",
+   excerpt:"How DeePPy's guided DPP creation, supplier data management and impact configurator are making ESPR compliance accessible to construction product manufacturers.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/immagine-1-1920w.jpg"},
+  {slug:"bipv-03-25",series:"Make It Green",sub:"BIPV-03",num:"05/25",domain:"green",author:"AP",date:"May 2025",
+   title:"BIPV in Action: Real-World Applications Driving the Sustainable Transformation of Buildings",
+   excerpt:"From Novartis Pavilion Basel to Copenhagen International School — global case studies demonstrating how BIPV thrives and the barriers it must overcome.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/NovartisPavillon-01-ThePlan-1920w.jpg"},
+  {slug:"xr-02-25",series:"Make It Human",sub:"XR-02",num:"04/25",domain:"human",author:"AP",date:"Apr 2025",
+   title:"Extended Reality (XR) in Construction: Transforming Design, Building, and Operation",
+   excerpt:"XR technologies reshaping every stage of the construction lifecycle — case studies from Unity, HoloBuilder, Gamma AR, XYZ Reality and the PROMETHEUS project.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/foto-1920w.jpg"},
+];
+
+// ─── PUBLICATIONS ─────────────────────────────────────────────────────────────
+const PUBLICATIONS=[
+  {
+    authors:"Pracucci A., Giovanardi M.",year:2026,
+    title:"Ecodesign Prioritization for BIPV Manufacturers Under ESPR Compliance: An LLM-Assisted Multi-Criteria Framework with Use Cases Application",
+    journal:"Preprints.org",note:"Preprint — under peer review",
+    doi:"10.20944/preprints202602.1710.v1",
+    url:"https://www.preprints.org/manuscript/202602.1710",
+    project:"MC2.0",open:true,
+  },
+  {
+    authors:"Pracucci A., Giovanardi M.",year:2025,
+    title:"Design of a Sensor-Based Digital Product Passport for Low-Tech Manufacturing: Traceability and Environmental Monitoring in Bio-Block Production",
+    journal:"Sensors",volume:"25(18), 5653",
+    doi:"10.3390/s25185653",
+    url:"https://www.mdpi.com/1424-8220/25/18/5653",
+    project:"Digi4BioMat",open:true,
+  },
+  {
+    authors:"Morganti L., Rudenå A., Brunklaus B., Bomark P., Armijo Prieto A., Skog J., Zaffagnini T., Pracucci A., Astudillo Larraz J.",year:2025,
+    title:"Wood-for-construction supply chain digital twin to drive circular economy and actor-based LCA information",
+    journal:"Journal of Cleaner Production",volume:"520, 146074",
+    doi:"10.1016/j.jclepro.2025.146074",
+    url:"https://www.sciencedirect.com/science/article/pii/S0959652625014246",
+    project:"W2W",open:false,
+  },
+  {
+    authors:"Giovanardi M., Castellan C., La Rosa M., Pavlovic A., Pracucci A.",year:2024,
+    title:"Designing BIPV – Strategies for managing complexity in the integration of photovoltaics in facades",
+    journal:"AGATHÓN — International Journal of Architecture, Art and Design",volume:"16",
+    doi:"10.19229/2464-9309/16152024",
+    url:"https://agathon.it/agathon/article/view/443",
+    project:"MC2.0",open:true,
   },
 ];
 
-const NAV_LINKS=[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
+// ─── PRESS ────────────────────────────────────────────────────────────────────
+const PRESS=[
+  {
+    source:"INFOBUILD",date:"2025",
+    title:"Materiali edili circolari: la nuova filiera bio-based — DeePPy e Levery",
+    excerpt:"Come DeePPy e la ricerca di Levery stanno contribuendo alla costruzione di filiere bio-based circolari nel settore edile italiano.",
+    url:"https://www.infobuild.it/approfondimenti/materiali-edili-circolari-digitale-filiera-bio-based/",
+  },
+];
 
 function NavBar(){
   return(
@@ -58,9 +107,7 @@ function NavBar(){
       <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
         <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
-          {NAV_LINKS.map(([label,href])=>(
-            <li key={label}><a href={href} style={{color:href==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>
-          ))}
+          {NAV_LINKS.map(([label,href])=>(<li key={label}><a href={href} style={{color:href==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>))}
         </ul>
         <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
       </div>
@@ -74,74 +121,152 @@ function ArticleCard({a}){
   return(
     <a href={`/insights/${a.slug}`} style={{textDecoration:"none",display:"block",background:C.white,borderRadius:2,overflow:"hidden",border:`1px solid ${C.rule}`,transform:hov?"translateY(-3px)":"none",boxShadow:hov?"0 8px 24px rgba(0,0,0,0.10)":"none",transition:"all 0.2s"}}
       onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}>
-      {a.hero&&<div style={{height:180,overflow:"hidden"}}><img src={a.hero} alt={a.title} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"center",display:"block"}}/></div>}
-      <div style={{padding:"20px 22px 24px"}}>
-        <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:12}}>
-          <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.16em",color:dom.accent,background:dom.bg,padding:"3px 9px",borderRadius:2,textTransform:"uppercase"}}>{dom.label}</span>
-          <span style={{fontSize:11,fontFamily:"monospace",color:C.inkLight}}>{a.series}</span>
-          <span style={{fontSize:11,fontFamily:"monospace",color:C.rule}}>·</span>
-          <span style={{fontSize:11,fontFamily:"monospace",color:C.inkLight}}>{a.num}</span>
+      <div style={{height:160,overflow:"hidden",background:dom.bg,position:"relative"}}>
+        {a.hero&&<img src={a.hero} alt={a.title} style={{width:"100%",height:"100%",objectFit:"cover",opacity:0.6,display:"block"}}/>}
+        <div style={{position:"absolute",top:12,left:12,display:"flex",gap:6}}>
+          <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:dom.accent,background:"rgba(0,0,0,0.4)",padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>{dom.label}</span>
+          <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",color:"rgba(255,255,255,0.5)",background:"rgba(0,0,0,0.3)",padding:"3px 8px",borderRadius:2}}>{a.sub}</span>
         </div>
-        <h3 style={{fontSize:17,fontWeight:400,color:C.ink,margin:"0 0 10px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{a.title}</h3>
-        <p style={{fontSize:13,color:C.inkMid,lineHeight:1.7,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 16px"}}>{a.excerpt}</p>
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-          <span style={{fontSize:11,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>{a.date} · By {a.author}</span>
-          <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>Read →</span>
+        <div style={{position:"absolute",bottom:12,right:12}}>
+          <span style={{fontSize:10,fontFamily:"monospace",color:"rgba(255,255,255,0.4)"}}>{a.num}</span>
         </div>
+      </div>
+      <div style={{padding:"18px 20px 22px"}}>
+        <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,margin:"0 0 8px"}}>{a.series} · {a.date} · By {a.author}</p>
+        <h3 style={{fontSize:16,fontWeight:400,color:C.ink,margin:"0 0 10px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{a.title}</h3>
+        <p style={{fontSize:13,color:C.inkMid,lineHeight:1.65,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px"}}>{a.excerpt}</p>
+        <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>Read →</span>
       </div>
     </a>
   );
 }
 
+function PubCard({p}){
+  return(
+    <div style={{background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,padding:"22px 24px",borderLeft:`3px solid ${p.open?"#1E6B45":"#2D4059"}`}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,marginBottom:10}}>
+        <p style={{fontSize:11,fontFamily:"monospace",color:C.inkLight,margin:0,letterSpacing:"0.06em"}}>
+          {p.year} · {p.journal}{p.volume?` · ${p.volume}`:""}
+          {p.note&&<span style={{color:"#C17B00",marginLeft:8}}>{p.note}</span>}
+        </p>
+        <div style={{display:"flex",gap:6,flexShrink:0}}>
+          {p.project&&<span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"#F5F2EC",color:C.inkLight,padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>{p.project}</span>}
+          {p.open&&<span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"#E8F5EE",color:"#1E6B45",padding:"3px 8px",borderRadius:2}}>OPEN ACCESS</span>}
+        </div>
+      </div>
+      <h3 style={{fontSize:15,fontWeight:400,color:C.ink,margin:"0 0 8px",fontFamily:"'Georgia',serif",lineHeight:1.4}}>{p.title}</h3>
+      <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px",lineHeight:1.5}}>{p.authors}</p>
+      <a href={p.url} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:C.green,fontFamily:"monospace",textDecoration:"none",letterSpacing:"0.04em"}}>
+        DOI: {p.doi} ↗
+      </a>
+    </div>
+  );
+}
+
+function PressCard({p}){
+  return(
+    <a href={p.url} target="_blank" rel="noopener noreferrer" style={{textDecoration:"none",display:"block",background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,padding:"22px 24px"}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,marginBottom:10}}>
+        <span style={{fontSize:11,fontFamily:"monospace",color:C.inkLight,letterSpacing:"0.06em"}}>{p.source} · {p.date}</span>
+        <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"#F5F2EC",color:C.inkLight,padding:"3px 8px",borderRadius:2,flexShrink:0}}>PRESS</span>
+      </div>
+      <h3 style={{fontSize:15,fontWeight:400,color:C.ink,margin:"0 0 8px",fontFamily:"'Georgia',serif",lineHeight:1.4}}>{p.title}</h3>
+      <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 12px",lineHeight:1.65}}>{p.excerpt}</p>
+      <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>Read article ↗</span>
+    </a>
+  );
+}
+
 export default function InsightsPage(){
+  const [tab,setTab]=useState("articles");
   const [filter,setFilter]=useState("all");
-  const filtered=filter==="all"?ARTICLES:ARTICLES.filter(a=>a.domain===filter);
+  const filtered=filter==="all"?ARTICLES:ARTICLES.filter(a=>a.domain===filter||a.series.toLowerCase().includes(filter));
+
+  const TabBtn=({id,label})=>(
+    <button onClick={()=>setTab(id)} style={{fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,padding:"10px 24px",borderRadius:2,cursor:"pointer",border:"none",transition:"all 0.2s",
+      background:tab===id?C.white:"transparent",color:tab===id?C.ink:"rgba(255,255,255,0.55)"}}>
+      {label}
+    </button>
+  );
 
   return(
     <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-grid{grid-template-columns:1fr!important}}`}</style>
       <NavBar/>
 
-      {/* PAGE HEADER */}
-      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"clamp(88px,11vh,130px) 0 56px",position:"relative",overflow:"hidden"}}>
+      {/* HEADER */}
+      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,minHeight:"clamp(88px,11vh,130px)",display:"flex",alignItems:"flex-end",paddingBottom:0,position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.06,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",position:"relative",zIndex:1}}>
-          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:20}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"clamp(88px,11vh,130px) 32px 0",width:"100%",position:"relative",zIndex:1}}>
+          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>03</span>
             <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:0,fontFamily:"'Georgia',serif",lineHeight:1.05}}>Insights</h1>
           </div>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:"0 0 32px",fontFamily:"'Georgia',serif",fontStyle:"italic",maxWidth:560,lineHeight:1.65}}>Sector analysis, product reviews and R&D perspectives on digital construction, sustainability and EU funding.</p>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.5)",margin:"0 0 32px",fontFamily:"'Georgia',serif",fontStyle:"italic",maxWidth:560,lineHeight:1.65}}>Sector analysis, product reviews and R&D perspectives on digital construction, sustainability and EU funding.</p>
 
-          {/* SERIES FILTERS */}
-          <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-            {[["all","All articles"],["digital","Make It Digital"],["green","Make It Green"]].map(([key,label])=>(
-              <button key={key} onClick={()=>setFilter(key)}
-                style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",textTransform:"uppercase",padding:"7px 16px",borderRadius:2,cursor:"pointer",border:"1px solid",transition:"all 0.2s",
-                  background:filter===key?"rgba(255,255,255,0.15)":"transparent",
-                  color:filter===key?"#fff":"rgba(255,255,255,0.5)",
-                  borderColor:filter===key?"rgba(255,255,255,0.35)":"rgba(255,255,255,0.15)"}}>
-                {label}
-              </button>
-            ))}
+          {/* TABS */}
+          <div style={{display:"flex",gap:4,background:"rgba(0,0,0,0.2)",borderRadius:2,padding:4,width:"fit-content"}}>
+            <TabBtn id="articles" label="Articles"/>
+            <TabBtn id="publications" label="Publications"/>
+            <TabBtn id="press" label="Press"/>
           </div>
         </div>
       </div>
 
-      {/* ARTICLES GRID */}
-      <div style={{background:C.white,padding:"64px 0 96px"}}>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
-            {filtered.map(a=>(<ArticleCard key={a.slug} a={a}/>))}
+      {/* ARTICLES TAB */}
+      {tab==="articles"&&(
+        <div style={{background:C.white,padding:"40px 0 96px"}}>
+          <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
+            {/* Series filters */}
+            <div style={{display:"flex",gap:8,flexWrap:"wrap",marginBottom:40}}>
+              {[["all","All articles"],["digital","Make It Digital"],["green","Make It Green"],["human","Make It Human"]].map(([key,label])=>(
+                <button key={key} onClick={()=>setFilter(key)} style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",textTransform:"uppercase",padding:"7px 16px",borderRadius:2,cursor:"pointer",border:"1px solid",transition:"all 0.2s",
+                  background:filter===key?C.brand:"transparent",color:filter===key?C.white:C.inkLight,borderColor:filter===key?C.brand:C.rule}}>
+                  {label}
+                </button>
+              ))}
+            </div>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
+              {filtered.map(a=>(<ArticleCard key={a.slug} a={a}/>))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {/* PUBLICATIONS TAB */}
+      {tab==="publications"&&(
+        <div style={{background:C.white,padding:"40px 0 96px"}}>
+          <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
+            <p style={{fontSize:14,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7,margin:"0 0 32px",maxWidth:640}}>
+              Peer-reviewed scientific publications by the Levery team. Open access articles are freely available at the linked DOI.
+            </p>
+            <div style={{display:"flex",flexDirection:"column",gap:16}}>
+              {PUBLICATIONS.map((p,i)=>(<PubCard key={i} p={p}/>))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* PRESS TAB */}
+      {tab==="press"&&(
+        <div style={{background:C.white,padding:"40px 0 96px"}}>
+          <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
+            <p style={{fontSize:14,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7,margin:"0 0 32px",maxWidth:640}}>
+              External media coverage and press mentions of Levery, its research and products.
+            </p>
+            <div style={{display:"flex",flexDirection:"column",gap:16}}>
+              {PRESS.map((p,i)=>(<PressCard key={i} p={p}/>))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <div style={{background:C.green,padding:"64px 0"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
-          <h2 style={{fontSize:28,fontWeight:400,color:C.white,fontFamily:"'Georgia',serif",margin:"0 0 12px"}}>Want R&D insights for your sector?</h2>
+          <h2 style={{fontSize:28,fontWeight:400,color:C.white,fontFamily:"'Georgia',serif",margin:"0 0 12px"}}>Want R&D insights tailored to your sector?</h2>
           <p style={{fontSize:15,color:"rgba(255,255,255,0.7)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>Book a call and we will walk you through what is relevant for your business.</p>
           <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{display:"inline-block",background:C.white,color:C.green,padding:"13px 32px",borderRadius:2,fontSize:15,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:600,textDecoration:"none"}}>Book a call →</a>
         </div>
@@ -149,7 +274,12 @@ export default function InsightsPage(){
 
       <footer style={{background:C.ink,padding:"48px 0 0"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 40px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
-          <div><img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/><p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>Specialist R&D, built around your team.</p></div>
+          <div><img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/><p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>Specialist R&D, built around your team.</p>
+            <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
+              <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
+              <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>Società Benefit · Our impact →</span>
+            </a>
+          </div>
           <div><p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Legal</p>
             <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>Via Pisino 66, 47814 Bellaria Igea Marina (RN)</span>
             <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>VAT 04730050400</span>
