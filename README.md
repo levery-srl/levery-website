@@ -1,6 +1,5 @@
 # LEVERY_SPEC — Complete Project Reference
 # Version: 2.0 — March 2026
-# Paste this file at the start of a new Claude session for full context.
 
 ---
 
