@@ -359,12 +359,12 @@ export default function LeveryHomepage() {
 
       {/* ── SERVICES ── */}
       <div style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 56px" }}>
-        <div style={{inner}>
-          <div style={{secLab()}>
-            <span style={{secNum()}>01</span>
-            <span style={{secTitle()}>{t.servicesTitle}</span>
+        <div style={inner}>
+          <div style={secLab()}>
+            <span style={secNum()}>01</span>
+            <span style={secTitle()}>{t.servicesTitle}</span>
           </div>
-          <hr style={{hr()}/>
+          <hr style={hr()}/>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:2, background:C.rule }} className="l-grid3">
             {t.services.map((svc,i)=>{
               const { bg, accent, label } = svc.domain;
@@ -426,15 +426,15 @@ export default function LeveryHomepage() {
 
       {/* ── PROJECTS ── */}
       <div style={{ background:C.white, padding:"72px 0 88px" }} id="projects">
-        <div style={{inner}>
-          <div style={{secHdr}>
-            <div style={{secLab()}>
-              <span style={{secNum()}>02</span>
-              <span style={{secTitle()}>{t.projectsTitle}</span>
+        <div style={inner}>
+          <div style={secHdr}>
+            <div style={secLab()}>
+              <span style={secNum()}>02</span>
+              <span style={secTitle()}>{t.projectsTitle}</span>
             </div>
-            <a href="/work" style={{allLink()}>  {t.projectsSub}</a>
+            <a href="/work" style={allLink()}>  {t.projectsSub}</a>
           </div>
-          <hr style={{hr()}/>
+          <hr style={hr()}/>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:2, background:C.rule }} className="l-grid3">
             {t.projects.map((p,i)=>{
               const active = p.status==="Active"||p.status==="Attivo";
@@ -471,15 +471,15 @@ export default function LeveryHomepage() {
 
       {/* ── INSIGHTS ── */}
       <div style={{ background:C.sand, padding:"88px 0" }}>
-        <div style={{inner}>
-          <div style={{secHdr}>
-            <div style={{secLab()}>
-              <span style={{secNum()}>03</span>
-              <span style={{secTitle()}>{t.insightsTitle}</span>
+        <div style={inner}>
+          <div style={secHdr}>
+            <div style={secLab()}>
+              <span style={secNum()}>03</span>
+              <span style={secTitle()}>{t.insightsTitle}</span>
             </div>
-            <a href="/insights" style={{allLink()}>{t.insightsSub}</a>
+            <a href="/insights" style={allLink()}>{t.insightsSub}</a>
           </div>
-          <hr style={{hr()}/>
+          <hr style={hr()}/>
           <div style={{ display:"flex", flexDirection:"column", gap:2 }}>
             {t.insights.map((ins,i)=>(
               <a key={i} href={`/insights/${ins.slug}`} style={{ textDecoration:"none" }}
