@@ -52,7 +52,7 @@ export default function ImpactPage(){
       </nav>
 
       {/* HEADER */}
-      <div style={{background:`linear-gradient(145deg,${C.green} 0%,#143D2A 100%)`,padding:"120px 0 56px",position:"relative",overflow:"hidden"}}>
+      <div style={{background:`linear-gradient(145deg,${C.green} 0%,#143D2A 100%)`,padding:"clamp(88px,11vh,130px) 0 56px",position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.07,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#A8E6CF" strokeWidth="1"/>))}
         </svg>

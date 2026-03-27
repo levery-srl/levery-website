@@ -319,7 +319,7 @@ export default function LeveryHomepage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{ minHeight:"clamp(60vh, 75vh, 82vh)", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
+      <section style={{ minHeight:"clamp(60vh,72vh,80vh)", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0, zIndex:1 }} className="l-hero-right">
           <GradientMesh parallax={parallax}/>
         </div>
@@ -542,8 +542,7 @@ export default function LeveryHomepage() {
             <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em", color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>{lang==="en"?"Legal":"Note legali"}</p>
             <span style={{ display:"block", fontSize:11, color:"rgba(255,255,255,0.2)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>Via Pisino 66, 47814 Bellaria Igea Marina (RN)</span>
             <span style={{ display:"block", fontSize:11, color:"rgba(255,255,255,0.2)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>{lang==="en"?"VAT":"P.IVA"} 04730050400</span>
-            <a href="/privacy" style={{ display:"block", fontSize:12, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }}>Privacy Policy</a>
-            <a href="/privacy" style={{ display:"block", fontSize:12, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none" }}>Cookie Policy</a>
+            <a href="/privacy" style={{ display:"block", fontSize:12, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none" }}>Privacy & Cookie Policy</a>
           </div>
           <div>
             <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em", color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>{lang==="en"?"Contact":"Contatti"}</p>
