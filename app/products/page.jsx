@@ -260,7 +260,7 @@ export default function LeveryProducts(){
                 letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer"}}>
               {t.langSwitch}
             </button>
-            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={background:C.green,color:C.white,padding:"9px 20px",
+            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",
               borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",
               fontWeight:500,textDecoration:"none"}}
               onMouseEnter={e=>e.target.style.background=C.greenMid}
@@ -343,7 +343,7 @@ export default function LeveryProducts(){
           <p style={{fontSize:15,color:"rgba(255,255,255,0.6)",
             margin:"0 auto 32px",maxWidth:460,
             fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7}}>{t.ctaSub}</p>
-          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={background:C.white,color:C.green,
+          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:C.white,color:C.green,
             padding:"12px 32px",borderRadius:2,fontSize:14,
             fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:600,
             textDecoration:"none",display:"inline-block"}}
