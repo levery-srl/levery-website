@@ -428,45 +428,16 @@ export default function LeveryWork() {
       `}</style>
 
       {/* NAV */}
-      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:100,
-        background:"rgba(45,64,89,0.97)",
-        backdropFilter:"blur(10px)",
-        borderBottom:"1px solid rgba(255,255,255,0.07)",
-        transition:"all 0.35s ease" }}>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px", height:64,
-          display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+            <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
-          <ul style={{ display:"flex", gap:28, listStyle:"none", margin:0, padding:0 }}
-            className="l-nav-links">
-            {navLinks.map(([label,href])=>(
-              <li key={label}><a href={href} style={{
-                color:href==="/work"?"#fff":"rgba(255,255,255,0.72)",
-                textDecoration:"none", fontSize:13, letterSpacing:"0.04em",
-                fontFamily:"'Helvetica Neue',Arial,sans-serif",
-                borderBottom:href==="/work"?"1px solid rgba(255,255,255,0.35)":"none",
-                paddingBottom:2 }}
-                onMouseEnter={e=>e.target.style.color="#fff"}
-                onMouseLeave={e=>e.target.style.color=href==="/work"?"#fff":"rgba(255,255,255,0.72)"}
-              >{label}</a></li>
-            ))}
+          <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
+            <li key="Work"><a href="/work" style={{color:"/work"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/work"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Work</a></li><li key="Products"><a href="/products" style={{color:"/products"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/products"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Products</a></li><li key="Insights"><a href="/insights" style={{color:"/insights"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/insights"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Insights</a></li><li key="Impact"><a href="/impact" style={{color:"/impact"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/impact"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Impact</a></li><li key="Team"><a href="/team" style={{color:"/team"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/team"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Team</a></li><li key="Contact"><a href="/contact" style={{color:"/contact"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/contact"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Contact</a></li>
           </ul>
-          <div style={{ display:"flex", gap:14, alignItems:"center" }}>
-            <button onClick={()=>setLang(lang==="en"?"it":"en")}
-              style={{ background:"none", border:"1px solid rgba(255,255,255,0.2)",
-                color:"rgba(255,255,255,0.5)", fontSize:11, fontFamily:"monospace",
-                letterSpacing:"0.1em", padding:"4px 10px", borderRadius:2, cursor:"pointer" }}>
-              {t.langSwitch}
-            </button>
-            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{ background:C.green, color:C.white,
-              padding:"9px 20px", borderRadius:2, fontSize:13,
-              fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:500,
-              textDecoration:"none" }}
-              onMouseEnter={e=>e.target.style.background=C.greenMid}
-              onMouseLeave={e=>e.target.style.background=C.green}
-            >{t.bookCTA}</a>
-          </div>
+          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
         </div>
       </nav>
+
 
       {/* PAGE HEADER */}
       <div style={{ background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,
@@ -484,7 +455,7 @@ export default function LeveryWork() {
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>01</span>
             <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>{t.pageLabel}</span>
           </div>
-          <h1 style={{ fontSize:44, fontWeight:400, color:C.white, margin:"0 0 14px",
+          <h1 style={{ fontSize:"clamp(34px,3.5vw,48px)", fontWeight:400, color:C.white, margin:"0 0 14px",
             fontFamily:"'Georgia',serif", lineHeight:1.1 }}>{t.pageTitle}</h1>
           <p style={{ fontSize:16, color:"rgba(255,255,255,0.48)", margin:"0 0 40px",
             fontFamily:"'Helvetica Neue',Arial,sans-serif", maxWidth:520,
@@ -536,74 +507,34 @@ export default function LeveryWork() {
       </div>
 
       {/* FOOTER */}
-      <footer style={{ background:C.ink, padding:"56px 0 0" }}>
-        <div style={{ ...inner, paddingBottom:48,
-          display:"grid", gridTemplateColumns:"2fr 1fr 1.4fr", gap:56,
-          borderBottom:"1px solid rgba(255,255,255,0.06)" }}>
+            <footer style={{background:"#1A1A1A",padding:"48px 0 0"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 40px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
-            <LeveryLogo color="#fff" height={28}/>
-            <p style={{ fontSize:14, color:"rgba(255,255,255,0.3)",
-              fontFamily:"'Georgia',serif", fontStyle:"italic",
-              lineHeight:1.7, marginTop:14 }}>{t.footerTagline}</p>
-            <a href="/impact" style={{ display:"inline-flex", alignItems:"center",
-              gap:6, marginTop:20, textDecoration:"none",
-              border:"1px solid rgba(255,255,255,0.12)", borderRadius:2,
-              padding:"5px 10px" }}>
-              <span style={{ fontSize:9, color:"#A8E6CF", fontFamily:"monospace" }}>⬡</span>
-              <span style={{ fontSize:10, color:"rgba(255,255,255,0.35)",
-                fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.06em" }}>
-                {t.benefitBadge}
-              </span>
+            <img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/>
+            <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>Specialist R&D, built around your team.</p>
+            <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
+              <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
+              <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>Società Benefit · Our impact →</span>
             </a>
           </div>
           <div>
-            <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em",
-              color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>
-              {lang==="en"?"Legal":"Note legali"}
-            </p>
-            {["Via Pisino 66, 47814 Bellaria Igea Marina (RN)","P.IVA 04730050400"].map((s,i)=>(
-              <span key={i} style={{ display:"block", fontSize:11,
-                color:"rgba(255,255,255,0.2)",
-                fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>{s}</span>
-            ))}
-            {["Privacy Policy","Cookie Policy"].map((s,i)=>(
-              <a key={i} href={`/${s.toLowerCase().replace(" ","-")}`}
-                style={{ display:"block", fontSize:12, color:"rgba(255,255,255,0.45)",
-                  fontFamily:"'Helvetica Neue',Arial,sans-serif",
-                  textDecoration:"none", marginBottom:9 }}>{s}</a>
-            ))}
+            <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Legal</p>
+            <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>Via Pisino 66, 47814 Bellaria Igea Marina (RN)</span>
+            <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>VAT 04730050400</span>
+            <a href="/privacy" style={{display:"block",fontSize:12,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Privacy & Cookie Policy</a>
           </div>
           <div>
-            <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em",
-              color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>
-              {lang==="en"?"Contact":"Contatti"}
-            </p>
-            <a href="mailto:info@levery.it" style={{ display:"block", fontSize:13,
-              color:"rgba(255,255,255,0.45)",
-              fontFamily:"'Helvetica Neue',Arial,sans-serif",
-              textDecoration:"none", marginBottom:9 }}>info@levery.it</a>
-            <a href="tel:+393396469607" style={{ display:"block", fontSize:13,
-              color:"rgba(255,255,255,0.45)",
-              fontFamily:"'Helvetica Neue',Arial,sans-serif",
-              textDecoration:"none", marginBottom:9 }}>(+39) 339 646 9607</a>
-            <a href="/contact" style={{ display:"block", fontSize:13, color:"#A8E6CF",
-              fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none" }}>
-              {lang==="en"?"Book a call →":"Prenota una call →"}
-            </a>
+            <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Contact</p>
+            <a href="mailto:info@levery.it" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>info@levery.it</a>
+            <a href="tel:+393396469607" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>(+39) 339 646 9607</a>
+            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{display:"block",fontSize:13,color:"#A8E6CF",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Book a call →</a>
           </div>
         </div>
-        <div style={{ ...inner, padding:"18px 32px",
-          display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-          <span style={{ fontSize:11, color:"rgba(255,255,255,0.18)",
-            fontFamily:"monospace", letterSpacing:"0.04em" }}>{t.footerRights}</span>
-          <button onClick={()=>setLang(lang==="en"?"it":"en")}
-            style={{ background:"none", border:"none", fontSize:11,
-              color:"rgba(255,255,255,0.18)", fontFamily:"monospace",
-              letterSpacing:"0.04em", cursor:"pointer", padding:0 }}>
-            {lang==="en"?"EN / IT":"IT / EN"}
-          </button>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"16px 32px"}}>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.18)",fontFamily:"monospace"}}>© 2026 Levery S.r.l. Società Benefit · All rights reserved</span>
         </div>
       </footer>
+
     </div>
   );
 }
