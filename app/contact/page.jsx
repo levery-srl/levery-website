@@ -77,7 +77,7 @@ export default function ContactPage(){
             <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Contact</span>
           </div>
           <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Contact</h1>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif\",fontStyle:"italic",maxWidth:520,lineHeight:1.65}}>Tell us about your project. We respond within one working day.</p>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.65}}>Tell us about your project. We respond within one working day.</p>
         </div>
       </div>
 
