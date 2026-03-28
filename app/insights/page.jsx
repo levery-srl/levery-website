@@ -144,23 +144,30 @@ function ArticleCard({a}){
 
 function PubCard({p}){
   const [hov,setHov]=useState(false);
+  const isOA=p.open;
+  const heroBg=isOA?"linear-gradient(135deg,#1A3D2B,#0F2D1E)":"linear-gradient(135deg,#1C2D40,#2D4059)";
+  const accent=isOA?"#A8E6CF":"#7EC8E3";
+  const accLabel=isOA?"OPEN ACCESS":"PEER REVIEWED";
   return(
     <a href={p.url} target="_blank" rel="noopener noreferrer"
       onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}
-      style={{textDecoration:"none",display:"block",background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,padding:"22px 24px",borderLeft:`3px solid ${p.open?"#1E6B45":"#2D4059"}`,transform:hov?"translateY(-2px)":"none",boxShadow:hov?"0 6px 20px rgba(0,0,0,0.08)":"none",transition:"all 0.2s"}}>
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:16,marginBottom:10}}>
-        <p style={{fontSize:11,fontFamily:"monospace",color:C.inkLight,margin:0,letterSpacing:"0.06em"}}>
-          {p.year} · {p.journal}{p.volume?` · ${p.volume}`:""}
-          {p.note&&<span style={{color:"#C17B00",marginLeft:8}}>{p.note}</span>}
-        </p>
-        <div style={{display:"flex",gap:6,flexShrink:0}}>
-          {p.project&&<span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"#F5F2EC",color:C.inkLight,padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>{p.project}</span>}
-          {p.open&&<span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"#E8F5EE",color:"#1E6B45",padding:"3px 8px",borderRadius:2}}>OPEN ACCESS</span>}
+      style={{textDecoration:"none",display:"block",background:C.white,borderRadius:2,overflow:"hidden",border:`1px solid ${C.rule}`,transform:hov?"translateY(-3px)":"none",boxShadow:hov?"0 8px 24px rgba(0,0,0,0.10)":"none",transition:"all 0.2s"}}>
+      <div style={{height:140,background:heroBg,position:"relative",overflow:"hidden"}}>
+        <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.08,pointerEvents:"none"}} viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+          {Array.from({length:5},(_,i)=>(<line key={i} x1={i*90-20} y1="0" x2={i*90+100} y2="140" stroke={accent} strokeWidth="1"/>))}
+        </svg>
+        <div style={{position:"absolute",top:10,left:10,display:"flex",gap:6}}>
+          <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:accent,background:"rgba(0,0,0,0.4)",padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>{accLabel}</span>
+          {p.project&&<span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",color:"rgba(255,255,255,0.5)",background:"rgba(0,0,0,0.3)",padding:"3px 8px",borderRadius:2}}>{p.project}</span>}
         </div>
+        <div style={{position:"absolute",bottom:10,right:10,fontSize:10,fontFamily:"monospace",color:"rgba(255,255,255,0.4)"}}>{p.year}</div>
       </div>
-      <h3 style={{fontSize:15,fontWeight:400,color:C.ink,margin:"0 0 8px",fontFamily:"'Georgia',serif",lineHeight:1.4}}>{p.title}</h3>
-      <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px",lineHeight:1.5}}>{p.authors}</p>
-      <span style={{fontSize:12,color:C.green,fontFamily:"monospace",letterSpacing:"0.04em"}}>DOI: {p.doi} ↗</span>
+      <div style={{padding:"16px 18px 20px"}}>
+        <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,margin:"0 0 8px"}}>{p.journal}{p.volume?` · ${p.volume}`:""}{p.note?` · ${p.note}`:""}</p>
+        <h3 style={{fontSize:15,fontWeight:400,color:C.ink,margin:"0 0 8px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{p.title}</h3>
+        <p style={{fontSize:11,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 12px",lineHeight:1.5}}>{p.authors}</p>
+        <span style={{fontSize:11,color:C.green,fontFamily:"monospace",letterSpacing:"0.04em"}}>DOI: {p.doi} ↗</span>
+      </div>
     </a>
   );
 }
@@ -170,22 +177,27 @@ function PressCard({p}){
   return(
     <a href={p.url} target="_blank" rel="noopener noreferrer"
       onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}
-      style={{textDecoration:"none",display:"block",background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,overflow:"hidden",transform:hov?"translateY(-3px)":"none",boxShadow:hov?"0 8px 24px rgba(0,0,0,0.10)":"none",transition:"all 0.2s"}}>
-      <div style={{height:120,background:`linear-gradient(135deg,#1C2D40,#2D4059)`,display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0 24px",position:"relative"}}>
-        <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.07}} viewBox="0 0 600 120" preserveAspectRatio="xMidYMid slice">
-          {Array.from({length:8},(_,i)=>(<line key={i} x1={i*85-20} y1="0" x2={i*85+80} y2="120" stroke="#7EC8E3" strokeWidth="1"/>))}
+      style={{textDecoration:"none",display:"block",background:C.white,borderRadius:2,overflow:"hidden",border:`1px solid ${C.rule}`,transform:hov?"translateY(-3px)":"none",boxShadow:hov?"0 8px 24px rgba(0,0,0,0.10)":"none",transition:"all 0.2s"}}>
+      <div style={{height:140,background:"linear-gradient(135deg,#2D4059,#1C2D40)",position:"relative",overflow:"hidden"}}>
+        <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.08,pointerEvents:"none"}} viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice">
+          {Array.from({length:5},(_,i)=>(<line key={i} x1={i*90-20} y1="0" x2={i*90+100} y2="140" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
-        <span style={{fontSize:13,fontFamily:"monospace",letterSpacing:"0.12em",color:"rgba(255,255,255,0.7)",textTransform:"uppercase",fontWeight:600,position:"relative",zIndex:1}}>{p.source}</span>
-        <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",background:"rgba(255,255,255,0.1)",color:"rgba(255,255,255,0.5)",padding:"4px 10px",borderRadius:2,position:"relative",zIndex:1}}>PRESS · {p.date}</span>
+        <div style={{position:"absolute",top:10,left:10,display:"flex",gap:6}}>
+          <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:"#7EC8E3",background:"rgba(0,0,0,0.4)",padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>PRESS</span>
+          <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.1em",color:"rgba(255,255,255,0.5)",background:"rgba(0,0,0,0.3)",padding:"3px 8px",borderRadius:2}}>{p.source}</span>
+        </div>
+        <div style={{position:"absolute",bottom:10,right:10,fontSize:10,fontFamily:"monospace",color:"rgba(255,255,255,0.4)"}}>{p.date}</div>
       </div>
-      <div style={{padding:"18px 24px 22px"}}>
-        <h3 style={{fontSize:16,fontWeight:400,color:C.ink,margin:"0 0 10px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{p.title}</h3>
-        <p style={{fontSize:13,color:C.inkMid,lineHeight:1.65,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px"}}>{p.excerpt}</p>
+      <div style={{padding:"16px 18px 20px"}}>
+        <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,margin:"0 0 8px"}}>{p.source} · {p.date}</p>
+        <h3 style={{fontSize:15,fontWeight:400,color:C.ink,margin:"0 0 10px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{p.title}</h3>
+        <p style={{fontSize:12,color:C.inkMid,lineHeight:1.65,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 12px"}}>{p.excerpt}</p>
         <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>Read article ↗</span>
       </div>
     </a>
   );
 }
+
 
 export default function InsightsPage(){
   const [tab,setTab]=useState("articles");
@@ -193,8 +205,11 @@ export default function InsightsPage(){
   const filtered=filter==="all"?ARTICLES:ARTICLES.filter(a=>a.domain===filter||a.series.toLowerCase().includes(filter));
 
   const TabBtn=({id,label})=>(
-    <button onClick={()=>setTab(id)} style={{fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,padding:"10px 24px",borderRadius:2,cursor:"pointer",border:"none",transition:"all 0.2s",
-      background:tab===id?C.white:"transparent",color:tab===id?C.ink:"rgba(255,255,255,0.55)"}}>
+    <button onClick={()=>setTab(id)} style={{fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,padding:"9px 22px",borderRadius:2,cursor:"pointer",transition:"all 0.2s",
+      border:"1px solid",
+      borderColor:tab===id?"#fff":"rgba(255,255,255,0.35)",
+      background:tab===id?"#fff":"transparent",
+      color:tab===id?"#1C2D40":"rgba(255,255,255,0.72)"}}>
       {label}
     </button>
   );
@@ -205,19 +220,20 @@ export default function InsightsPage(){
       <NavBar/>
 
       {/* HEADER */}
-      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"120px 0 0",position:"relative",overflow:"hidden"}}>
+      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"120px 0 64px",position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.06,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 40px",width:"100%",position:"relative",zIndex:1}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",width:"100%",position:"relative",zIndex:1}}>
           <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>03</span>
-            <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:0,fontFamily:"'Georgia',serif",lineHeight:1.05}}>Insights</h1>
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Insights</span>
           </div>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.5)",margin:"0 0 32px",fontFamily:"'Georgia',serif",fontStyle:"italic",maxWidth:560,lineHeight:1.65}}>Sector analysis, product reviews and R&D perspectives on digital construction, sustainability and EU funding.</p>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Insights</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>Sector analysis, product reviews and
 
           {/* TABS */}
-          <div style={{display:"flex",gap:4,background:"rgba(0,0,0,0.2)",borderRadius:2,padding:4,width:"fit-content"}}>
+          <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
             <TabBtn id="articles" label="Articles"/>
             <TabBtn id="publications" label="Publications"/>
             <TabBtn id="press" label="Press"/>
@@ -252,7 +268,7 @@ export default function InsightsPage(){
             <p style={{fontSize:14,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7,margin:"0 0 32px",maxWidth:640}}>
               Peer-reviewed scientific publications by the Levery team. Open access articles are freely available at the linked DOI.
             </p>
-            <div style={{display:"flex",flexDirection:"column",gap:16}}>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
               {PUBLICATIONS.map((p,i)=>(<PubCard key={i} p={p}/>))}
             </div>
           </div>
@@ -266,7 +282,7 @@ export default function InsightsPage(){
             <p style={{fontSize:14,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7,margin:"0 0 32px",maxWidth:640}}>
               External media coverage and press mentions of Levery, its research and products.
             </p>
-            <div style={{display:"flex",flexDirection:"column",gap:16}}>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
               {PRESS.map((p,i)=>(<PressCard key={i} p={p}/>))}
             </div>
           </div>
@@ -283,7 +299,7 @@ export default function InsightsPage(){
       </div>
 
             <footer style={{background:"#1A1A1A",padding:"48px 0 0"}}>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 40px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
             <img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/>
             <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>Specialist R&D, built around your team.</p>

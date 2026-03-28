@@ -56,15 +56,15 @@ export default function ImpactPage(){
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#A8E6CF" strokeWidth="1"/>))}
         </svg>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",position:"relative",zIndex:1}}>
-          <div style={{display:"inline-flex",alignItems:"center",gap:8,marginBottom:20,border:"1px solid rgba(168,230,207,0.3)",borderRadius:2,padding:"5px 12px"}}>
-            <span style={{fontSize:11,color:"#A8E6CF",fontFamily:"monospace",letterSpacing:"0.08em"}}>⬡</span>
-            <span style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(255,210,80,0.12)",border:"1px solid #FFD97D",borderRadius:2,padding:"8px 16px",fontSize:12,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:"#FFD97D",letterSpacing:"0.06em",fontWeight:500}}><svg width="11" height="11" viewBox="0 0 12 12"><polygon points="6,0 12,3 12,9 6,12 0,9 0,3" fill="none" stroke="#FFD97D" strokeWidth="1.5"/></svg>Società Benefit</span>
-          </div>
-          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:20}}>
+          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>04</span>
-            <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:0,fontFamily:"'Georgia',serif",lineHeight:1.05}}>Our Impact</h1>
+            <span style={{fontFamily:"monospace",fontSize:9,letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Impact</span>
           </div>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:0,fontFamily:"'Georgia',serif",fontStyle:"italic",maxWidth:600,lineHeight:1.65}}>As a Società Benefit, our mission goes beyond profit. We are dedicated to creating lasting positive impact through sustainability-driven innovation in the construction sector.</p>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Our Impact</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>As a Società Benefit, our mission goes beyond profit. We are dedicated to creating lasting positive impact through sustainability-driven innovation in the construction sector.</p>
+          <div style={{display:"flex",gap:10,flexWrap:"wrap",alignItems:"center"}}>
+            <span style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(255,210,80,0.12)",border:"1px solid #FFD97D",borderRadius:2,padding:"9px 20px",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:"#FFD97D",letterSpacing:"0.04em",fontWeight:500}}><svg width="11" height="11" viewBox="0 0 12 12"><polygon points="6,0 12,3 12,9 6,12 0,9 0,3" fill="none" stroke="#FFD97D" strokeWidth="1.5"/></svg>Società Benefit</span>
+          </div>
         </div>
       </div>
 

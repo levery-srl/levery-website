@@ -63,7 +63,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Active",
       fund:"CIRCULOOS · Horizon Europe",
-      tags:["Bio-based","Circular Economy","Emilia-Romagna"],
+      tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
       desc:"Building a coordinated and regenerative supply chain for eco-sustainable building materials from bio-waste in the Emilia-Romagna region.",
       levery:"Supply chain design, Digital Product Passport development, NGSI-LD data platform.",
     },
@@ -73,7 +73,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Active",
       fund:"Regional · Emilia-Romagna",
-      tags:["Agro-waste","Circular Economy","Bio-based"],
+      tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
       desc:"Developing a circular agro-waste value chain for the sustainable building sector, creating rural-urban synergies across Emilia-Romagna.",
       levery:"Circular business model, material valorisation strategy, stakeholder engagement.",
     },
@@ -83,7 +83,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Active",
       fund:"Horizon Europe",
-      tags:["Windows","Circular Economy","End-of-Life"],
+      tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
       desc:"Developing technologies, digitisation tools and business models for closing the life cycle of windows — from design to end-of-life recovery.",
       levery:"Digital Product Passport, lifecycle assessment, circular business model definition.",
     },
@@ -93,7 +93,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Active",
       fund:"Horizon Europe",
-      tags:["Bio-based","Construction Products","Sustainability"],
+      tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
       desc:"Re-designing the construction sector through sustainable and functional bio-based construction products with competitive market performance.",
       levery:"Product development support, LCA, market analysis and pre-commercial validation.",
     },
@@ -103,7 +103,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Active",
       fund:"Horizon Europe · GA 101138789",
-      tags:["Wood Waste","Circular Economy","Bio-based"],
+      tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
       desc:"Transforming wood waste into a valuable resource for a greener future — developing upcycling technologies and circular business models for the construction sector.",
       levery:"Prefabricated façade system development, DPP design, scientific dissemination.",
     },
@@ -113,7 +113,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Active",
       fund:"Horizon Europe",
-      tags:["Digital Product Passport","Bio-based","Circular Economy"],
+      tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
       desc:"Developing Digital Product Passport infrastructure to upscale circular business models for bio-based construction materials across EU supply chains.",
       levery:"DPP platform design, data model development, regulatory alignment with ESPR.",
     },
@@ -123,7 +123,7 @@ const projects = {
       domain: DOMAIN.xr,
       status:"Completed",
       fund:"Horizon Europe",
-      tags:["XR","Augmented Reality","Construction"],
+      tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
       desc:"Advancing augmented and virtual reality applications for the construction sector — from design review to on-site maintenance and worker training.",
       levery:"XR use case definition, building O&M workflows, technology transfer to ARyze.",
     },
@@ -133,7 +133,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Active",
       fund:"Horizon Europe · GA 101096139",
-      tags:["BIPV","Mass Customisation","Building Envelope"],
+      tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
       desc:"Mass Customisation 2.0 for integrated photovoltaic building envelopes — enabling flexible, high-performance BIPV systems for mainstream construction.",
       levery:"Ecodesign MCDA methodology, LCA/LCC analysis, DPP design for BIPV products.",
     },
@@ -143,7 +143,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Completed",
       fund:"Direct service · Glass to Power",
-      tags:["BIPV","Building Envelope","Technology Transfer"],
+      tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
       desc:"Supporting Glass to Power in the technological integration of BIPV systems into building envelopes — from product validation to market positioning.",
       levery:"Technical documentation, building envelope integration analysis, market strategy.",
     },
@@ -153,7 +153,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Active",
       fund:"Horizon Europe",
-      tags:["Digital Twin","Lifecycle Management","Sustainability"],
+      tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
       desc:"Built Environment Lifecycle Management Assistance — developing digital tools for whole-life assessment and management of building systems and components.",
       levery:"Platform architecture, sustainability assessment modules, data interoperability.",
     },
@@ -165,7 +165,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Attivo",
       fund:"CIRCULOOS · Horizon Europe",
-      tags:["Bio-based","Economia Circolare","Emilia-Romagna"],
+      tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
       desc:"Costruzione di una filiera coordinata e rigenerativa per materiali da costruzione eco-sostenibili da bio-rifiuti in Emilia-Romagna.",
       levery:"Design della supply chain, sviluppo Digital Product Passport, piattaforma dati NGSI-LD.",
     },
@@ -175,7 +175,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Attivo",
       fund:"Regionale · Emilia-Romagna",
-      tags:["Agro-rifiuti","Economia Circolare","Bio-based"],
+      tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
       desc:"Sviluppo di una filiera circolare per rifiuti agro-industriali nel settore edilizio sostenibile, creando sinergie rurale-urbane in Emilia-Romagna.",
       levery:"Business model circolare, strategia di valorizzazione dei materiali, engagement degli stakeholder.",
     },
@@ -185,7 +185,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Attivo",
       fund:"Horizon Europe",
-      tags:["Finestre","Economia Circolare","Fine Vita"],
+      tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
       desc:"Sviluppo di tecnologie, strumenti di digitalizzazione e modelli di business per chiudere il ciclo di vita dei serramenti.",
       levery:"Digital Product Passport, analisi del ciclo di vita, definizione business model circolare.",
     },
@@ -195,7 +195,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Attivo",
       fund:"Horizon Europe",
-      tags:["Bio-based","Prodotti da Costruzione","Sostenibilità"],
+      tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
       desc:"Re-design del settore costruzioni attraverso prodotti bio-based sostenibili e funzionali con prestazioni competitive sul mercato.",
       levery:"Supporto sviluppo prodotto, LCA, analisi di mercato e validazione pre-commerciale.",
     },
@@ -205,7 +205,7 @@ const projects = {
       domain: DOMAIN.green,
       status:"Attivo",
       fund:"Horizon Europe · GA 101138789",
-      tags:["Rifiuti Legno","Economia Circolare","Bio-based"],
+      tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
       desc:"Trasformazione dei rifiuti di legno in una risorsa di valore — tecnologie di upcycling e modelli di business circolari per il settore costruzioni.",
       levery:"Sistema facciata prefabbricata, design DPP, disseminazione scientifica.",
     },
@@ -215,7 +215,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Attivo",
       fund:"Horizon Europe",
-      tags:["Passaporto Digitale","Bio-based","Economia Circolare"],
+      tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
       desc:"Infrastruttura Digital Product Passport per scalare modelli di business circolari per materiali da costruzione bio-based nelle filiere europee.",
       levery:"Design piattaforma DPP, sviluppo modello dati, allineamento normativo ESPR.",
     },
@@ -225,7 +225,7 @@ const projects = {
       domain: DOMAIN.xr,
       status:"Completato",
       fund:"Horizon Europe",
-      tags:["XR","Realtà Aumentata","Costruzioni"],
+      tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
       desc:"Avanzamento delle applicazioni di realtà aumentata e virtuale per il settore costruzioni — dal design review alla manutenzione in loco e alla formazione.",
       levery:"Definizione use case XR, workflow O&M edilizio, trasferimento tecnologico ad ARyze.",
     },
@@ -235,7 +235,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Attivo",
       fund:"Horizon Europe · GA 101096139",
-      tags:["BIPV","Mass Customisation","Involucro Edilizio"],
+      tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
       desc:"Mass Customisation 2.0 per involucri edilizi fotovoltaici integrati — sistemi BIPV flessibili e ad alte prestazioni per il mercato mainstream.",
       levery:"Metodologia MCDA ecodesign, analisi LCA/LCC, design DPP per prodotti BIPV.",
     },
@@ -245,7 +245,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Completato",
       fund:"Servizio diretto · Glass to Power",
-      tags:["BIPV","Involucro Edilizio","Trasferimento Tecnologico"],
+      tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
       desc:"Supporto a Glass to Power nell'integrazione tecnologica di sistemi BIPV nell'involucro edilizio — dalla validazione di prodotto al posizionamento di mercato.",
       levery:"Documentazione tecnica, analisi integrazione involucro, strategia di mercato.",
     },
@@ -255,7 +255,7 @@ const projects = {
       domain: DOMAIN.digital,
       status:"Attivo",
       fund:"Horizon Europe",
-      tags:["Digital Twin","Gestione Ciclo di Vita","Sostenibilità"],
+      tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
       desc:"Built Environment Lifecycle Management Assistance — strumenti digitali per la valutazione e gestione dell'intero ciclo di vita di sistemi e componenti edilizi.",
       levery:"Architettura piattaforma, moduli di valutazione sostenibilità, interoperabilità dati.",
     },
@@ -330,49 +330,42 @@ function ProjectCard({ p, t }) {
       <div style={{ padding:"20px 22px 24px", display:"flex",
         flexDirection:"column", flexGrow:1, gap:10 }}>
 
-        {/* Status + fund */}
-        <div style={{ display:"flex", justifyContent:"space-between",
-          alignItems:"flex-start", gap:8 }}>
-          <span style={{ display:"inline-block", fontSize:10, fontFamily:"monospace",
-            letterSpacing:"0.1em", padding:"3px 8px", borderRadius:2,
-            textTransform:"uppercase",
-            background: active ? C.greenLight : "#EBEBEB",
-            color: active ? C.green : C.inkLight }}>
+        {/* Status badge */}
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:8}}>
+          <span style={{display:"inline-block",fontSize:10,fontFamily:"monospace",
+            letterSpacing:"0.1em",padding:"3px 8px",borderRadius:2,textTransform:"uppercase",
+            background:active?C.greenLight:"#EBEBEB",color:active?C.green:C.inkLight}}>
             {p.status}
           </span>
-          <span style={{ fontSize:10, fontFamily:"monospace", color:C.inkLight,
-            letterSpacing:"0.04em", textAlign:"right", lineHeight:1.5 }}>
-            {p.fund}
-          </span>
+          <span style={{fontSize:10,fontFamily:"monospace",color:"rgba(255,255,255,0.4)",
+            background:active?"rgba(30,107,69,0.15)":"rgba(0,0,0,0.06)",
+            padding:"3px 8px",borderRadius:2,letterSpacing:"0.06em"}}>{p.period}</span>
         </div>
 
         {/* Name */}
-        <h3 style={{ fontSize:18, fontWeight:400, color:C.ink, margin:0,
-          fontFamily:"'Georgia',serif", lineHeight:1.3 }}>{p.name}</h3>
+        <h3 style={{fontSize:18,fontWeight:400,color:C.ink,margin:0,
+          fontFamily:"'Georgia',serif",lineHeight:1.3}}>{p.name}</h3>
 
         {/* Description */}
-        <p style={{ fontSize:13, color:C.inkMid, lineHeight:1.7,
-          fontFamily:"'Helvetica Neue',Arial,sans-serif", margin:0, flexGrow:1 }}>
+        <p style={{fontSize:13,color:C.inkMid,lineHeight:1.7,
+          fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0,flexGrow:1}}>
           {p.desc}
         </p>
 
-        {/* Levery role */}
-        <div style={{ borderTop:`1px solid ${C.rule}`, paddingTop:12 }}>
-          <p style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.12em",
-            color:C.inkLight, textTransform:"uppercase", margin:"0 0 6px" }}>
-            {t.leveryRole}
-          </p>
-          <p style={{ fontSize:12, color:C.inkMid, lineHeight:1.6,
-            fontFamily:"'Helvetica Neue',Arial,sans-serif", margin:0,
-            fontStyle:"italic" }}>{p.levery}</p>
+        {/* SEO tags */}
+        <div style={{display:"flex",flexWrap:"wrap",gap:5}}>
+          {p.tags.map((tag,i)=>(
+            <span key={i} style={{fontSize:10,fontFamily:"'Helvetica Neue',Arial,sans-serif",
+              padding:"3px 8px",border:`1px solid ${C.rule}`,borderRadius:2,
+              color:C.inkLight,background:C.sand}}>{tag}</span>
+          ))}
         </div>
 
         {/* View project link */}
         <a href={`/work/${p.slug}`}
-          style={{ fontSize:12, color:C.green,
-            fontFamily:"'Helvetica Neue',Arial,sans-serif",
-            textDecoration:"none", letterSpacing:"0.03em",
-            borderBottom:`1px solid ${C.greenLight}`, paddingBottom:1 }}
+          style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",
+            textDecoration:"none",letterSpacing:"0.03em",
+            borderBottom:`1px solid ${C.greenLight}`,paddingBottom:1}}
           onClick={()=>track("project_view",{project:p.name})}
         >{t.viewProject}</a>
       </div>
@@ -455,11 +448,9 @@ export default function LeveryWork() {
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>01</span>
             <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>{t.pageLabel}</span>
           </div>
-          <h1 style={{ fontSize:"clamp(34px,3.5vw,48px)", fontWeight:400, color:C.white, margin:"0 0 14px",
-            fontFamily:"'Georgia',serif", lineHeight:1.1 }}>{t.pageTitle}</h1>
-          <p style={{ fontSize:16, color:"rgba(255,255,255,0.48)", margin:"0 0 40px",
-            fontFamily:"'Helvetica Neue',Arial,sans-serif", maxWidth:520,
-            lineHeight:1.7 }}>{t.pageSub}</p>
+          <h1 style={{ fontSize:"clamp(36px,3.5vw,52px)", fontWeight:400, color:C.white, margin:"0 0 14px",
+            fontFamily:"'Georgia',serif", lineHeight:1.05 }}>{t.pageTitle}</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:520,lineHeight:1.7,fontStyle:"italic"}}>{t.pageSub}</p>
 
           {/* Filters */}
           <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>

@@ -72,11 +72,12 @@ export default function ContactPage(){
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",position:"relative",zIndex:1}}>
-          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:20}}>
-            <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)"}}>06</span>
-            <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:0,fontFamily:"'Georgia',serif",lineHeight:1.05}}>Contact</h1>
+          <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
+            <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>06</span>
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Contact</span>
           </div>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:0,fontFamily:"'Georgia',serif",fontStyle:"italic",maxWidth:520,lineHeight:1.65}}>Tell us about your project. We respond within one working day.</p>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Contact</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif\",fontStyle:"italic",maxWidth:520,lineHeight:1.65}}>Tell us about your project. We respond within one working day.</p>
         </div>
       </div>
 

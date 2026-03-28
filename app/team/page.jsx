@@ -354,8 +354,8 @@ export default function LeveryTeam() {
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>05</span>
             <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>{t.pageLabel}</span>
           </div>
-          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.1}}>{t.pageTitle}</h1>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:480,lineHeight:1.7}}>{t.pageSub}</p>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>{t.pageTitle}</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:480,lineHeight:1.7,fontStyle:"italic"}}>{t.pageSub}</p>
         </div>
       </div>
 
