@@ -60,7 +60,7 @@ const projects = {
     {
       slug:"bio-corner",
       name:"BIO.CO.R.N.ER",
-      domain:"rd",
+      domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Active",
       fund:"CIRCULOOS · Horizon Europe",
       tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
@@ -70,7 +70,7 @@ const projects = {
     {
       slug:"agro-builder",
       name:"Agro.build.ER",
-      domain:"dual",
+      domain:"dual",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:true,
       status:"Active",
       fund:"Regional · Emilia-Romagna",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
@@ -80,7 +80,7 @@ const projects = {
     {
       slug:"winloop",
       name:"WINLOOP",
-      domain:"rd",
+      domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
@@ -90,7 +90,7 @@ const projects = {
     {
       slug:"bios-mater",
       name:"BIOS MATER",
-      domain:"eco",
+      domain:"eco",bg:"#1A3D2B",accent:"#A8E6CF",label:"ECO",isDual:false,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
@@ -100,7 +100,7 @@ const projects = {
     {
       slug:"w2w",
       name:"W2W",
-      domain:"dual",
+      domain:"dual",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:true,
       status:"Active",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
@@ -110,7 +110,7 @@ const projects = {
     {
       slug:"digi4bio",
       name:"Digi4BioMat",
-      domain:"dual",
+      domain:"dual",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:true,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
@@ -120,7 +120,7 @@ const projects = {
     {
       slug:"prometheus",
       name:"PROMETHEUS",
-      domain:"rd",
+      domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Completed",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
@@ -130,7 +130,7 @@ const projects = {
     {
       slug:"mc20",
       name:"MC2.0",
-      domain:"eco",
+      domain:"eco",bg:"#1A3D2B",accent:"#A8E6CF",label:"ECO",isDual:false,
       status:"Active",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
@@ -140,7 +140,7 @@ const projects = {
     {
       slug:"pv-igu",
       name:"PV-IGU",
-      domain:"rd",
+      domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Completed",
       fund:"Direct service · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
@@ -150,7 +150,7 @@ const projects = {
     {
       slug:"belm",
       name:"BELM",
-      domain:"rd",
+      domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
@@ -296,9 +296,10 @@ const copy = {
 // ─── PROJECT CARD ─────────────────────────────────────────────────────────────
 function ProjectCard({ p, t }) {
   const active = p.status==="Active" || p.status==="Attivo";
-  const isDual = p.domain === "dual";
-  const domObj = DOMAIN[p.domain] || DOMAIN.rd;
-  const { bg, accent, label } = domObj;
+  const isDual = p.isDual || false;
+  const bg = p.bg || "#1C2D40";
+  const accent = p.accent || "#7EC8E3";
+  const label = p.label || "R&D";
   const stripes = Array.from({length:10},(_,i)=>i*38-30);
 
   return (
