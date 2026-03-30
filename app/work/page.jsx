@@ -297,7 +297,8 @@ const copy = {
 function ProjectCard({ p, t }) {
   const active = p.status==="Active" || p.status==="Attivo";
   const isDual = p.domain === DOMAIN.dual;
-  const { bg, accent, label } = p.domain;
+  const domObj = p.domain || DOMAIN.rd;
+  const { bg, accent, label } = domObj;
   const stripes = Array.from({length:10},(_,i)=>i*38-30);
 
   return (
