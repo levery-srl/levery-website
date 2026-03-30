@@ -60,7 +60,7 @@ const projects = {
     {
       slug:"bio-corner",
       name:"BIO.CO.R.N.ER",
-      domain: DOMAIN.green,
+      domain: DOMAIN.rd,
       status:"Active",
       fund:"CIRCULOOS · Horizon Europe",
       tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
@@ -70,7 +70,7 @@ const projects = {
     {
       slug:"agro-builder",
       name:"Agro.build.ER",
-      domain: DOMAIN.green,
+      domain: DOMAIN.dual,
       status:"Active",
       fund:"Regional · Emilia-Romagna",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
@@ -80,7 +80,7 @@ const projects = {
     {
       slug:"winloop",
       name:"WINLOOP",
-      domain: DOMAIN.green,
+      domain: DOMAIN.rd,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
@@ -90,7 +90,7 @@ const projects = {
     {
       slug:"bios-mater",
       name:"BIOS MATER",
-      domain: DOMAIN.green,
+      domain: DOMAIN.eco,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
@@ -100,7 +100,7 @@ const projects = {
     {
       slug:"w2w",
       name:"W2W",
-      domain: DOMAIN.green,
+      domain: DOMAIN.dual,
       status:"Active",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
@@ -110,7 +110,7 @@ const projects = {
     {
       slug:"digi4bio",
       name:"Digi4BioMat",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.dual,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
@@ -120,7 +120,7 @@ const projects = {
     {
       slug:"prometheus",
       name:"PROMETHEUS",
-      domain: DOMAIN.xr,
+      domain: DOMAIN.rd,
       status:"Completed",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
@@ -130,7 +130,7 @@ const projects = {
     {
       slug:"mc20",
       name:"MC2.0",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.eco,
       status:"Active",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
@@ -140,7 +140,7 @@ const projects = {
     {
       slug:"pv-igu",
       name:"PV-IGU",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.rd,
       status:"Completed",
       fund:"Direct service · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
@@ -150,7 +150,7 @@ const projects = {
     {
       slug:"belm",
       name:"BELM",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.rd,
       status:"Active",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
@@ -162,7 +162,7 @@ const projects = {
     {
       slug:"bio-corner",
       name:"BIO.CO.R.N.ER",
-      domain: DOMAIN.green,
+      domain: DOMAIN.rd,
       status:"Attivo",
       fund:"CIRCULOOS · Horizon Europe",
       tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
@@ -172,7 +172,7 @@ const projects = {
     {
       slug:"agro-builder",
       name:"Agro.build.ER",
-      domain: DOMAIN.green,
+      domain: DOMAIN.dual,
       status:"Attivo",
       fund:"Regionale · Emilia-Romagna",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
@@ -182,7 +182,7 @@ const projects = {
     {
       slug:"winloop",
       name:"WINLOOP",
-      domain: DOMAIN.green,
+      domain: DOMAIN.rd,
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
@@ -192,7 +192,7 @@ const projects = {
     {
       slug:"bios-mater",
       name:"BIOS MATER",
-      domain: DOMAIN.green,
+      domain: DOMAIN.eco,
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
@@ -202,7 +202,7 @@ const projects = {
     {
       slug:"w2w",
       name:"W2W",
-      domain: DOMAIN.green,
+      domain: DOMAIN.dual,
       status:"Attivo",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
@@ -212,7 +212,7 @@ const projects = {
     {
       slug:"digi4bio",
       name:"Digi4BioMat",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.dual,
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
@@ -222,7 +222,7 @@ const projects = {
     {
       slug:"prometheus",
       name:"PROMETHEUS",
-      domain: DOMAIN.xr,
+      domain: DOMAIN.rd,
       status:"Completato",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
@@ -232,7 +232,7 @@ const projects = {
     {
       slug:"mc20",
       name:"MC2.0",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.eco,
       status:"Attivo",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
@@ -242,7 +242,7 @@ const projects = {
     {
       slug:"pv-igu",
       name:"PV-IGU",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.rd,
       status:"Completato",
       fund:"Servizio diretto · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
@@ -252,7 +252,7 @@ const projects = {
     {
       slug:"belm",
       name:"BELM",
-      domain: DOMAIN.digital,
+      domain: DOMAIN.rd,
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
@@ -296,6 +296,7 @@ const copy = {
 // ─── PROJECT CARD ─────────────────────────────────────────────────────────────
 function ProjectCard({ p, t }) {
   const active = p.status==="Active" || p.status==="Attivo";
+  const isDual = p.domain === DOMAIN.dual;
   const { bg, accent, label } = p.domain;
   const stripes = Array.from({length:10},(_,i)=>i*38-30);
 
@@ -305,7 +306,7 @@ function ProjectCard({ p, t }) {
       className="l-proj-card">
 
       {/* Coloured header */}
-      <div style={{ height:110, background:bg, position:"relative", overflow:"hidden" }}>
+      <div style={{ height:110, background:isDual?"linear-gradient(135deg,#1C2D40,#1A3D2B)":bg, position:"relative", overflow:"hidden" }}>
         <svg style={{ position:"absolute", inset:0, width:"100%", height:"100%",
           opacity:0.06, pointerEvents:"none" }} viewBox="0 0 320 110" preserveAspectRatio="none">
           {stripes.map((x,i)=>(
@@ -318,11 +319,14 @@ function ProjectCard({ p, t }) {
         <div style={{ position:"absolute", right:14, bottom:-8, fontSize:60,
           fontFamily:"monospace", fontWeight:700, color:"rgba(255,255,255,0.04)",
           letterSpacing:"-0.04em", lineHeight:1, userSelect:"none" }}>{label}</div>
-        {/* Domain pill */}
-        <div style={{ position:"absolute", top:16, left:16 }}>
-          <span style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em",
-            color:accent, background:"rgba(0,0,0,0.3)",
-            padding:"3px 9px", borderRadius:2, textTransform:"uppercase" }}>{label}</span>
+        {/* Domain pills */}
+        <div style={{position:"absolute",top:10,left:14,display:"flex",gap:5}}>
+          {isDual ? (<>
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:"#7EC8E3",background:"rgba(0,0,0,0.4)",padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>R&D</span>
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:"#A8E6CF",background:"rgba(0,0,0,0.4)",padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>ECO</span>
+          </>) : (
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:accent,background:"rgba(0,0,0,0.3)",padding:"3px 9px",borderRadius:2,textTransform:"uppercase"}}>{label}</span>
+          )}
         </div>
       </div>
 
