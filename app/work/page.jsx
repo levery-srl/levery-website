@@ -60,7 +60,7 @@ const projects = {
     {
       slug:"bio-corner",
       name:"BIO.CO.R.N.ER",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Active",
       fund:"CIRCULOOS · Horizon Europe",
       tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
@@ -70,7 +70,7 @@ const projects = {
     {
       slug:"agro-builder",
       name:"Agro.build.ER",
-      domain: DOMAIN.dual,
+      domain:"dual",
       status:"Active",
       fund:"Regional · Emilia-Romagna",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
@@ -80,7 +80,7 @@ const projects = {
     {
       slug:"winloop",
       name:"WINLOOP",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Active",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
@@ -90,7 +90,7 @@ const projects = {
     {
       slug:"bios-mater",
       name:"BIOS MATER",
-      domain: DOMAIN.eco,
+      domain:"eco",
       status:"Active",
       fund:"Horizon Europe",
       tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
@@ -100,7 +100,7 @@ const projects = {
     {
       slug:"w2w",
       name:"W2W",
-      domain: DOMAIN.dual,
+      domain:"dual",
       status:"Active",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
@@ -110,7 +110,7 @@ const projects = {
     {
       slug:"digi4bio",
       name:"Digi4BioMat",
-      domain: DOMAIN.dual,
+      domain:"dual",
       status:"Active",
       fund:"Horizon Europe",
       tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
@@ -120,7 +120,7 @@ const projects = {
     {
       slug:"prometheus",
       name:"PROMETHEUS",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Completed",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
@@ -130,7 +130,7 @@ const projects = {
     {
       slug:"mc20",
       name:"MC2.0",
-      domain: DOMAIN.eco,
+      domain:"eco",
       status:"Active",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
@@ -140,7 +140,7 @@ const projects = {
     {
       slug:"pv-igu",
       name:"PV-IGU",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Completed",
       fund:"Direct service · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
@@ -150,7 +150,7 @@ const projects = {
     {
       slug:"belm",
       name:"BELM",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Active",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
@@ -162,7 +162,7 @@ const projects = {
     {
       slug:"bio-corner",
       name:"BIO.CO.R.N.ER",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Attivo",
       fund:"CIRCULOOS · Horizon Europe",
       tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
@@ -172,7 +172,7 @@ const projects = {
     {
       slug:"agro-builder",
       name:"Agro.build.ER",
-      domain: DOMAIN.dual,
+      domain:"dual",
       status:"Attivo",
       fund:"Regionale · Emilia-Romagna",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
@@ -182,7 +182,7 @@ const projects = {
     {
       slug:"winloop",
       name:"WINLOOP",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
@@ -192,7 +192,7 @@ const projects = {
     {
       slug:"bios-mater",
       name:"BIOS MATER",
-      domain: DOMAIN.eco,
+      domain:"eco",
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
@@ -202,7 +202,7 @@ const projects = {
     {
       slug:"w2w",
       name:"W2W",
-      domain: DOMAIN.dual,
+      domain:"dual",
       status:"Attivo",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
@@ -212,7 +212,7 @@ const projects = {
     {
       slug:"digi4bio",
       name:"Digi4BioMat",
-      domain: DOMAIN.dual,
+      domain:"dual",
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
@@ -222,7 +222,7 @@ const projects = {
     {
       slug:"prometheus",
       name:"PROMETHEUS",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Completato",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
@@ -232,7 +232,7 @@ const projects = {
     {
       slug:"mc20",
       name:"MC2.0",
-      domain: DOMAIN.eco,
+      domain:"eco",
       status:"Attivo",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
@@ -242,7 +242,7 @@ const projects = {
     {
       slug:"pv-igu",
       name:"PV-IGU",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Completato",
       fund:"Servizio diretto · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
@@ -252,7 +252,7 @@ const projects = {
     {
       slug:"belm",
       name:"BELM",
-      domain: DOMAIN.rd,
+      domain:"rd",
       status:"Attivo",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
@@ -296,8 +296,8 @@ const copy = {
 // ─── PROJECT CARD ─────────────────────────────────────────────────────────────
 function ProjectCard({ p, t }) {
   const active = p.status==="Active" || p.status==="Attivo";
-  const isDual = p.domain === DOMAIN.dual;
-  const domObj = p.domain || DOMAIN.rd;
+  const isDual = p.domain === "dual";
+  const domObj = DOMAIN[p.domain] || DOMAIN.rd;
   const { bg, accent, label } = domObj;
   const stripes = Array.from({length:10},(_,i)=>i*38-30);
 
