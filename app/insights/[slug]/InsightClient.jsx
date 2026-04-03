@@ -11,6 +11,37 @@ const NAV_LINKS=[["Work","/work"],["Products","/products"],["Insights","/insight
 const inner={maxWidth:1200,margin:"0 auto",padding:"0 32px"};
 
 const ARTICLES={
+  "bio-03-26":{
+    series:"Make It Green",sub:"Bio-03",num:"04/26",domain:"green",author:"Alessandro Pracucci",date:"April 2, 2026",
+    title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
+    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/jametguedjatelierfusomyrhaps-35-1920w.jpg",
+    images:[
+      "https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Pedone-02_Pedone-1920w.jpg",
+      "https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Ricehouse-02_Ricehouse-1920w.jpg",
+      "https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine+2026-04-02+121740-1920w.png",
+    ],
+    captions:[
+      "Fig. 1 | The Goutte d'Or project by Atelier Fuso (credit: The Plan)",
+      "Fig. 2 | Casa di Luce by Pedone Working (credit: Pedone Working)",
+      "Fig. 3 | Torri Risorsa by RiceHouse (credit: RiceHouse)",
+      "Fig. 4 | Internal bio-based insulation at Castello Utveggio (credit: Heres Srl)",
+    ],
+    sections:[
+      {h:"Introduction",body:"The biological transition in the construction sector finds its ultimate validation in the implementation of architectural projects that integrate low-environmental-impact materials. Following our analysis of bio-based stakeholders and products, this article examines six projects completed between 2023 and 2026. These interventions demonstrate how the use of biocomposites, natural fibers, and \"grown\" construction systems achieves equivalent or superior technical performance compared to traditional building methods, while ensuring the decarbonization of the built heritage at both national and European levels. The adoption of bio-based solutions is no longer niche experimentation but a consolidated reality ranging from monumental restoration to large-scale urban developments. The goal of this analysis is to highlight the competitive advantage of such materials in terms of thermal phase shift, moisture management, and biogenic CO₂ sequestration."},
+      {h:"Iconic projects and urban innovation in Europe",body:"The integration of bio-based materials at an urban scale found a fundamental example in Germany, where the Roots Hamburg project, built with Rubner timber technology, has redefined the limits of timber construction, reaching heights previously reserved for concrete and steel. The use of mass timber (CLT and glulam) for this skyscraper allowed for a 30% reduction in CO₂ emissions compared to an equivalent building. The structural lightness of timber proved to be a decisive technical advantage for construction in coastal areas. In Paris, public housing is successfully experimenting with hempcrete. The Goutte d'Or project by Atelier Fuso demonstrates how to integrate a timber frame with hempcrete infill in a dense and historical urban context. This combination ensures excellent thermal and acoustic insulation along with natural moisture regulation. Similarly, the work of Dalin Bourgoin Architecte on bio-based residential projects confirms the effectiveness of using cast-in-place natural materials, drastically reducing the structural carbon footprint compared to traditional masonry systems.",imgIndex:0},
+      {h:"Residential excellence and circularity in Italy",body:"The Italian context stands out for its excellence in the use of hemp and agricultural by-products. The Case di Luce - Scala C project, managed by Pedone Working, represents the technological evolution of hemp-lime systems (BIOmat system). In this project, the building envelope acts as a thermal lung: the material sequesters biogenic CO₂ during its lifecycle and ensures high thermal inertia, ideal for the Mediterranean climate. The Torri Risorsa in Milan, a project involving RiceHouse, demonstrates the potential of the circular economy applied to urban densification. The project utilises straw and rice husk-based technologies for insulation and interior finishes. The advantage of this approach lies in the natural resistance of rice husk to moisture and fire, transforming an agricultural residue into a high-performance construction resource.",imgIndex:1},
+      {h:"Historical restoration and public value",body:"The recovery of existing heritage particularly benefits from the hygroscopic properties of natural materials. The energy efficiency intervention at Castello Utveggio, involving Heres srl, utilised natural lime-based thermal insulating plasters. This solution allows for improving the thermal performance of listed buildings without compromising the breathability of historical masonry, preventing condensation and mould.",imgIndex:2},
+      {h:"Conclusion",body:"The analysis of these international case studies demonstrates that bio-based construction has reached the technical maturity required for large-scale deployment. The relevance of bio-based products is defined by their capacity to address the core challenges of the modern built environment: decarbonization, resource efficiency, and indoor environmental quality (IEQ). Unlike traditional mineral-based materials, products such as hemp-lime, mass timber, and rice-husk insulation act as active carbon sinks, sequestering biogenic CO₂ throughout the building's lifecycle. Beyond environmental metrics, these materials provide specific technical advantages: superior hygrometric regulation, high thermal inertia, and the elimination of volatile organic compounds (VOCs). By transforming agricultural residues into high-performance resources, the industry moves toward a circular model that is both economically viable and structurally sound. Levery continues to facilitate the adoption of these innovative systems, recognising that the future of construction depends on the strategic integration of natural intelligence and advanced engineering."},
+    ],
+    refs:[
+      "Pedone Working — Case di Luce - Scala C: https://pedoneworking.it/portfolio/case-di-luce-scala-c/",
+      "Heres srl — Castello Utveggio: https://www.edilsocialnetwork.it/heres-tradizione-innovazione-e-sostenibilita-al-servizio-del-patrimonio-architettonico/",
+      "RiceHouse — Torri Risorsa: https://www.ricehouse.it/storie/torri-risorsa/",
+      "Rubner Timber — Roots Hamburg: https://www.rubner.com/en/references/timber-construction/roots/",
+      "Atelier Fuso — Goutte d\'Or: https://www.theplan.it/architettura/public-housing-goutte-dor-atelier-fuso",
+    ],
+  },
+
   "ai-02-26":{
     series:"Make It Human",sub:"AI-02",num:"03/26",domain:"human",author:"Matteo Giovanardi",date:"February 25, 2026",
     title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
@@ -183,8 +214,15 @@ export default function InsightClient({slug}){
                 <div key={i} style={{marginBottom:40}}>
                   <h2 style={{fontSize:20,fontWeight:400,color:C.ink,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.2}}>{sec.h}</h2>
                   <p style={{fontSize:15,color:C.inkMid,lineHeight:1.85,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{sec.body}</p>
-                  {/* Show image after section 1 if available */}
-                  {i===0&&a.images&&a.images[0]&&(
+                  {sec.imgIndex!==undefined&&a.images&&a.images[sec.imgIndex]&&(
+                    <div style={{marginTop:24,marginBottom:4,borderRadius:2,overflow:"hidden"}}>
+                      <img src={a.images[sec.imgIndex]} alt={sec.h} style={{width:"100%",maxHeight:400,objectFit:"cover",display:"block"}}/>
+                      {a.captions&&a.captions[sec.imgIndex]&&(
+                        <p style={{fontSize:11,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"8px 0 0",fontStyle:"italic"}}>{a.captions[sec.imgIndex]}</p>
+                      )}
+                    </div>
+                  )}
+                  {i===0&&!sec.imgIndex&&a.images&&a.images[0]&&!a.captions&&(
                     <div style={{marginTop:24,borderRadius:2,overflow:"hidden"}}>
                       <img src={a.images[0]} alt={sec.h} style={{width:"100%",maxHeight:360,objectFit:"cover",display:"block"}}/>
                     </div>

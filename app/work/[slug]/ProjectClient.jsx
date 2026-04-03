@@ -30,7 +30,7 @@ const PROJECTS={
   "w2w":{
     name:"W2W",domainType:"dual",status:"Active",
     fund:"Horizon Europe (GA 101138789)",fundUrl:"",
-    period:"2023–2027",
+    period:"2024–ongoing",
     partners:["Horizon Europe (Grant Agreement 101138789)"],
     subtitle:"Transforming Wood Waste into Valuable Resource for a Greener Future.",
     about:"W2W develops a comprehensive framework for multi-dimensional cascade valorisation of wood from Construction & Demolition and furniture waste. The project focuses on significantly reducing the demand for virgin materials, cutting waste sent to landfill or incineration, and supporting the transition to a circular economy with closed-loop systems.",
@@ -40,9 +40,9 @@ const PROJECTS={
     leveryRole:["Validation of W2W upcycled wood products for integration into prefabricated façade panel systems.","Benchmarking and comparative analysis against conventional virgin materials.","Façade system engineering — design and technical documentation.","Scientific dissemination and communication of project insights across the value chain."],
   },
   "mc20":{
-    name:"MC2.0",domainType:"eco",status:"Active",
+    name:"MC2.0",domainType:"eco",status:"Completed",
     fund:"Horizon Europe (GA 101096139)",fundUrl:"",
-    period:"2022–2026",
+    period:"2024–2026",
     partners:["Horizon Europe (Grant Agreement 101096139)","Glass to Power S.p.A.","GUALINI S.p.A."],
     subtitle:"Mass Customization 2.0 for Integrated Photovoltaic building envelopes.",
     about:"MC2.0 demonstrates how automated manufacturing of Integrated Photovoltaic (IPV) elements using the mass customisation approach can deliver a cost breakthrough in IPV façades, IPV windows and IPV roofs. The overarching ambition is to demonstrate a cost breakthrough for IPV through advanced manufacturing approaches.",
@@ -53,7 +53,7 @@ const PROJECTS={
   "prometheus":{
     name:"PROMETHEUS",domainType:"rd",status:"Completed",
     fund:"Horizon Europe",fundUrl:"",
-    period:"2022–2024",
+    period:"2024–2025",
     partners:["Horizon Europe","Exvirience S.r.l."],
     subtitle:"Extended Reality platform for Construction — from design review to on-site maintenance of adaptive building envelopes.",
     about:"PROMETHEUS delivered a groundbreaking XR-based WebXR application for remote maintenance of adaptive building envelopes, enabling real-time interactive maintenance via standard PCs and tablets without dedicated hardware. The project directly led to the commercialisation of the ARyze platform.",
@@ -76,7 +76,7 @@ const PROJECTS={
   "bios-mater":{
     name:"BIOS MATER",domainType:"eco",status:"Active",
     fund:"Horizon Europe",fundUrl:"",
-    period:"2023–2027",
+    period:"2025–ongoing",
     partners:["Horizon Europe"],
     subtitle:"Re-designing the construction sector through sustainable and functional bio-based construction products.",
     about:"BIOS MATER develops sustainable and functional bio-based construction products with competitive market performance. The project addresses the full innovation chain from raw material sourcing to market deployment, targeting manufacturers looking to transition ahead of ESPR requirements.",
@@ -96,9 +96,9 @@ const PROJECTS={
     leveryRole:["Circular business model design — identifying viable pathways for agro-waste valorisation into construction materials.","Material valorisation strategy — technical assessment of agro-waste streams and performance testing.","Stakeholder engagement and regional supply chain mapping between agri-food and construction sectors."],
   },
   "digi4bio":{
-    name:"Digi4BioMat",domainType:"dual",status:"Active",
+    name:"Digi4BioMat",domainType:"dual",status:"Completed",
     fund:"INTRANSIT · 2nd Open Call",fundUrl:"https://intransitproject.eu/",
-    period:"2023–2025",
+    period:"2025",
     partners:["Pedone Working S.r.l.","CETMA — Centro di Ricerca e Trasferimento Tecnologico","INTRANSIT (2nd Open Call)"],
     subtitle:"Digital Product Passport for upscaling a circular business model for bio-based construction materials.",
     about:"Digi4BioMat proposes a groundbreaking circular approach for the construction industry: developing innovative bio-based building blocks from agro-wastes (olive stone and almond shells), designing a new Circular Business Model, and implementing a Digital Product Passport for tracking lifecycle data. Key challenges include bio-based material development, mechanical performance testing, lifecycle data digitisation, and innovative CBM validation.",

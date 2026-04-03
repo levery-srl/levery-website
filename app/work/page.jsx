@@ -62,6 +62,7 @@ const projects = {
       name:"BIO.CO.R.N.ER",
       domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Active",
+      period:"2023–2026",
       fund:"CIRCULOOS · Horizon Europe",
       tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
       desc:"Building a coordinated and regenerative supply chain for eco-sustainable building materials from bio-waste in the Emilia-Romagna region.",
@@ -72,6 +73,7 @@ const projects = {
       name:"Agro.build.ER",
       domain:"dual",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:true,
       status:"Active",
+      period:"2023–2025",
       fund:"Regional · Emilia-Romagna",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
       desc:"Developing a circular agro-waste value chain for the sustainable building sector, creating rural-urban synergies across Emilia-Romagna.",
@@ -82,6 +84,7 @@ const projects = {
       name:"WINLOOP",
       domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Active",
+      period:"2023–2027",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
       desc:"Developing technologies, digitisation tools and business models for closing the life cycle of windows — from design to end-of-life recovery.",
@@ -92,6 +95,7 @@ const projects = {
       name:"BIOS MATER",
       domain:"eco",bg:"#1A3D2B",accent:"#A8E6CF",label:"ECO",isDual:false,
       status:"Active",
+      period:"2025–ongoing",
       fund:"Horizon Europe",
       tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
       desc:"Re-designing the construction sector through sustainable and functional bio-based construction products with competitive market performance.",
@@ -102,6 +106,7 @@ const projects = {
       name:"W2W",
       domain:"dual",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:true,
       status:"Active",
+      period:"2024–ongoing",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
       desc:"Transforming wood waste into a valuable resource for a greener future — developing upcycling technologies and circular business models for the construction sector.",
@@ -111,7 +116,8 @@ const projects = {
       slug:"digi4bio",
       name:"Digi4BioMat",
       domain:"dual",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:true,
-      status:"Active",
+      status:"Completed",
+      period:"2025",
       fund:"Horizon Europe",
       tags:["Digital Product Passport", "DPP", "Bio-based", "ESPR", "Circular Business Model"],
       desc:"Developing Digital Product Passport infrastructure to upscale circular business models for bio-based construction materials across EU supply chains.",
@@ -122,6 +128,7 @@ const projects = {
       name:"PROMETHEUS",
       domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Completed",
+      period:"2024–2025",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
       desc:"Advancing augmented and virtual reality applications for the construction sector — from design review to on-site maintenance and worker training.",
@@ -131,7 +138,8 @@ const projects = {
       slug:"mc20",
       name:"MC2.0",
       domain:"eco",bg:"#1A3D2B",accent:"#A8E6CF",label:"ECO",isDual:false,
-      status:"Active",
+      status:"Completed",
+      period:"2024–2026",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
       desc:"Mass Customisation 2.0 for integrated photovoltaic building envelopes — enabling flexible, high-performance BIPV systems for mainstream construction.",
@@ -142,6 +150,7 @@ const projects = {
       name:"PV-IGU",
       domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Completed",
+      period:"2022–2023",
       fund:"Direct service · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
       desc:"Supporting Glass to Power in the technological integration of BIPV systems into building envelopes — from product validation to market positioning.",
@@ -152,6 +161,7 @@ const projects = {
       name:"BELM",
       domain:"rd",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:false,
       status:"Active",
+      period:"2023–2027",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
       desc:"Built Environment Lifecycle Management Assistance — developing digital tools for whole-life assessment and management of building systems and components.",
@@ -164,6 +174,7 @@ const projects = {
       name:"BIO.CO.R.N.ER",
       domain:"rd",
       status:"Attivo",
+      period:"2023–2026",
       fund:"CIRCULOOS · Horizon Europe",
       tags:["Bio-based Materials", "Circular Economy", "Emilia-Romagna", "Agro-waste", "LCA"],
       desc:"Costruzione di una filiera coordinata e rigenerativa per materiali da costruzione eco-sostenibili da bio-rifiuti in Emilia-Romagna.",
@@ -174,6 +185,7 @@ const projects = {
       name:"Agro.build.ER",
       domain:"dual",
       status:"Attivo",
+      period:"2023–2025",
       fund:"Regionale · Emilia-Romagna",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
       desc:"Sviluppo di una filiera circolare per rifiuti agro-industriali nel settore edilizio sostenibile, creando sinergie rurale-urbane in Emilia-Romagna.",
@@ -184,6 +196,7 @@ const projects = {
       name:"WINLOOP",
       domain:"rd",
       status:"Attivo",
+      period:"2023–2027",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
       desc:"Sviluppo di tecnologie, strumenti di digitalizzazione e modelli di business per chiudere il ciclo di vita dei serramenti.",
@@ -194,6 +207,7 @@ const projects = {
       name:"BIOS MATER",
       domain:"eco",
       status:"Attivo",
+      period:"2025–ongoing",
       fund:"Horizon Europe",
       tags:["Bio-based Materials", "ESPR Compliance", "Sustainable Products", "LCA", "Market Validation"],
       desc:"Re-design del settore costruzioni attraverso prodotti bio-based sostenibili e funzionali con prestazioni competitive sul mercato.",
@@ -204,6 +218,7 @@ const projects = {
       name:"W2W",
       domain:"dual",
       status:"Attivo",
+      period:"2024–ongoing",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
       desc:"Trasformazione dei rifiuti di legno in una risorsa di valore — tecnologie di upcycling e modelli di business circolari per il settore costruzioni.",
@@ -224,6 +239,7 @@ const projects = {
       name:"PROMETHEUS",
       domain:"rd",
       status:"Completato",
+      period:"2024–2025",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
       desc:"Avanzamento delle applicazioni di realtà aumentata e virtuale per il settore costruzioni — dal design review alla manutenzione in loco e alla formazione.",
@@ -244,6 +260,7 @@ const projects = {
       name:"PV-IGU",
       domain:"rd",
       status:"Completato",
+      period:"2022–2023",
       fund:"Servizio diretto · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
       desc:"Supporto a Glass to Power nell'integrazione tecnologica di sistemi BIPV nell'involucro edilizio — dalla validazione di prodotto al posizionamento di mercato.",
@@ -254,6 +271,7 @@ const projects = {
       name:"BELM",
       domain:"rd",
       status:"Attivo",
+      period:"2023–2027",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
       desc:"Built Environment Lifecycle Management Assistance — strumenti digitali per la valutazione e gestione dell'intero ciclo di vita di sistemi e componenti edilizi.",
@@ -398,6 +416,14 @@ export default function LeveryWork() {
     return()=>window.removeEventListener("scroll",h);
   },[]);
 
+  useEffect(()=>{
+    // Auto-detect language from browser, with localStorage preference
+    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
+    if(saved){setLang(saved);return;}
+    const browser=typeof navigator!=="undefined"?navigator.language:"en";
+    if(browser.startsWith("it")){setLang("it");localStorage.setItem("levery_lang","it");}
+  },[]);
+
   const inner = { maxWidth:1200, margin:"0 auto", padding:"0 32px" };
   const navLinks=[["Work","/work"],["Products","/products"],["Insights","/insights"],
     ["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
@@ -433,7 +459,7 @@ export default function LeveryWork() {
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             <li key="Work"><a href="/work" style={{color:"/work"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/work"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Work</a></li><li key="Products"><a href="/products" style={{color:"/products"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/products"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Products</a></li><li key="Insights"><a href="/insights" style={{color:"/insights"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/insights"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Insights</a></li><li key="Impact"><a href="/impact" style={{color:"/impact"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/impact"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Impact</a></li><li key="Team"><a href="/team" style={{color:"/team"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/team"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Team</a></li><li key="Contact"><a href="/contact" style={{color:"/contact"==="/work"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/contact"==="/work"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Contact</a></li>
           </ul>
-          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
+          <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
         </div>
       </nav>
 

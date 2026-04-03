@@ -2,7 +2,7 @@
 import InsightClient from "./InsightClient";
 
 const SLUGS = [
-  "ai-02-26","rob-02-26","bio-02-26","ai-01-25","rob-01-25",
+  "bio-03-26","ai-02-26","rob-02-26","bio-02-26","ai-01-25","rob-01-25",
   "bio-01-25","xr-03-25","dpp-03-25","bipv-03-25","xr-02-25"
 ];
 

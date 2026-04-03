@@ -259,6 +259,13 @@ export default function LeveryHomepage() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
+  useEffect(()=>{
+    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
+    if(saved&&(saved==="it"||saved==="en")){setLang(saved);return;}
+    const browser=typeof navigator!=="undefined"?navigator.language:"en";
+    if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
+  },[]);
+
   const parallax = -scrollY * 0.15;
 
   // shared style helpers
@@ -301,7 +308,7 @@ export default function LeveryHomepage() {
               <li key={label}><a href={href} style={{color:"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>{label}</a></li>
             ))}
           </ul>
-          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer"
+          <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer"
             onClick={()=>track("cta_click",{source:"nav"})}
             style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>{t.bookCTA}</a>
         </div>

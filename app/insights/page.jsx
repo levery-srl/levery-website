@@ -13,6 +13,10 @@ const NAV_LINKS=[["Work","/work"],["Products","/products"],["Insights","/insight
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
+  {slug:"bio-03-26",series:"Make It Green",sub:"Bio-03",num:"04/26",domain:"green",author:"AP",date:"Apr 2, 2026",
+   title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
+   excerpt:"Six projects completed between 2023 and 2026 — from Roots Hamburg to Casa di Luce — demonstrating how biocomposites and natural fibers achieve equivalent or superior technical performance.",
+   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/jametguedjatelierfusomyrhaps-35-1920w.jpg"},
   {slug:"ai-02-26",series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"human",author:"MG",date:"Feb 25, 2026",
    title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
    excerpt:"The landscape of AI-based solutions is expanding rapidly — from automated MEP design to high-precision reality capture. Examining frontier products addressing the industry's most persistent labor shortages.",
@@ -93,6 +97,12 @@ const PUBLICATIONS=[
 
 // ─── PRESS ────────────────────────────────────────────────────────────────────
 const PRESS=[
+  {
+    source:"YouBuild",date:"Oct 2024",
+    title:"Digital Product Passport: il valore dei dati nei processi manifatturieri",
+    excerpt:"YouBuild analizza come il Digital Product Passport trasforma i processi manifatturieri nel settore delle costruzioni, con focus sulla piattaforma DeePPy di Levery.",
+    url:"https://www.youbuildweb.it/digital-product-passport-il-valore-dei-dati-nei-processi-manifatturieri/",
+  },
   {
     source:"INFOBUILD",date:"2025",
     title:"Materiali edili circolari: la nuova filiera bio-based — DeePPy e Levery",

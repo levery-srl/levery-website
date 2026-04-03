@@ -79,10 +79,15 @@ export default function ImpactPage(){
               <p style={{fontSize:15,color:C.inkMid,lineHeight:1.8,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>As an innovative startup classified under Italian law (D.L. 179/2012) and registered as a Società Benefit, we are legally committed to reporting our social and environmental impact annually.</p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}} className="l-sdg-grid">
-              {SDGS.map((s,i)=>(
-                <div key={i} style={{background:C.white,borderRadius:2,border:`1px solid ${C.rule}`,padding:"16px 18px"}}>
-                  <span style={{fontSize:10,fontFamily:"monospace",color:C.green,letterSpacing:"0.1em",display:"block",marginBottom:6}}>{s.n}</span>
-                  <span style={{fontSize:13,color:C.ink,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.4}}>{s.label}</span>
+              {SDGS.map((sdg,i)=>(
+                <div key={i} style={{display:"flex",alignItems:"center",gap:14,padding:"14px 16px",background:C.white,borderRadius:2,border:`1px solid ${C.rule}`,borderLeft:`4px solid ${sdg.color}`}}>
+                  <div style={{width:44,height:44,borderRadius:2,background:sdg.color,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
+                    <span style={{fontSize:10,fontFamily:"monospace",fontWeight:700,color:"#fff",letterSpacing:"0.06em"}}>{sdg.n}</span>
+                  </div>
+                  <div>
+                    <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.1em",color:sdg.color,textTransform:"uppercase",margin:"0 0 2px",fontWeight:600}}>{sdg.n}</p>
+                    <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0,lineHeight:1.4}}>{sdg.label}</p>
+                  </div>
                 </div>
               ))}
             </div>
