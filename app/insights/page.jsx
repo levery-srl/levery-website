@@ -210,14 +210,6 @@ function PressCard({p}){
 
 
 export default function InsightsPage(){
-  useEffect(()=>{
-    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
-    if(saved){setLang(saved);}
-    else{const b=typeof navigator!=="undefined"?navigator.language:"en";if(b.startsWith("it")){setLang("it");}}
-  },[]); 
-}
-
-export default function InsightsPage(){
 
   const [tab,setTab]=useState("articles");
   const [filter,setFilter]=useState("all");

@@ -139,14 +139,6 @@ function HeroPattern({accent1,accent2,dual}){
 }
 
 export default function ProjectClient({slug}){
-  useEffect(()=>{
-    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
-    if(saved){setLang(saved);}
-    else{const b=typeof navigator!=="undefined"?navigator.language:"en";if(b.startsWith("it")){setLang("it");}}
-  },[]); 
-}
-
-export default function ProjectClient({slug}){
 
   const p=PROJECTS[slug]||PROJECTS["bio-corner"];
   const isDual=p.domainType==="dual";
@@ -276,4 +268,4 @@ export default function ProjectClient({slug}){
       </footer>
     </div>
   );
-}<button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button>
+}
