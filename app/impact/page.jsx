@@ -80,7 +80,7 @@ export default function ImpactPage(){
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
   },[]);
-  const t=copy[lang];
+  const t=copy[lang]||copy["en"];
   return(
     <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-metrics-grid{grid-template-columns:1fr!important}.l-sdg-grid{grid-template-columns:1fr 1fr!important}}`}</style>

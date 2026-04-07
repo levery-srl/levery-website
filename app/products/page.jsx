@@ -207,7 +207,7 @@ export default function LeveryProducts(){
   const [lang,setLang]=useState("en");
   const [scrolled,setScrolled]=useState(false);
   const [active,setActive]=useState(null); // null | "aryze" | "deeppy"
-  const t=copy[lang];
+  const t=copy[lang]||copy["en"];
 
   useEffect(()=>{
     const h=()=>setScrolled(window.scrollY>40);

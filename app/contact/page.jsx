@@ -64,7 +64,7 @@ export default function ContactPage(){
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
   },[]);
-  const t=copy[lang];
+  const t=copy[lang]||copy["en"];
   const [form,setForm]=useState({name:"",company:"",email:"",topic:"",message:""});
   const [status,setStatus]=useState("idle"); // idle | sending | success | error
 
