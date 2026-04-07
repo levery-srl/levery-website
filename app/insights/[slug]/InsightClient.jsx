@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from "react";
 const C={brand:"#2D4059",green:"#1E6B45",white:"#FFFFFF",sand:"#F5F2EC",sandDark:"#EDE9E1",
   ink:"#1A1A1A",inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
 const DOMAIN={
@@ -14,11 +15,11 @@ const ARTICLES={
   "bio-03-26":{
     series:"Make It Green",sub:"Bio-03",num:"04/26",domain:"green",author:"Alessandro Pracucci",date:"April 2, 2026",
     title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/jametguedjatelierfusomyrhaps-35-1920w.jpg",
+    hero:"/images/blog/jametguedjatelierfusomyrhaps-35-1920w.jpg",
     images:[
-      "https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Pedone-02_Pedone-1920w.jpg",
-      "https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Ricehouse-02_Ricehouse-1920w.jpg",
-      "https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine+2026-04-02+121740-1920w.png",
+      "/images/blog/Pedone-02_Pedone-1920w.jpg",
+      "/images/blog/Ricehouse-02_Ricehouse-1920w.jpg",
+      "/images/blog/Immagine+2026-04-02+121740-1920w.png",
     ],
     captions:[
       "Fig. 1 | The Goutte d'Or project by Atelier Fuso (credit: The Plan)",
@@ -42,133 +43,270 @@ const ARTICLES={
     ],
   },
 
-  "ai-02-26":{
-    series:"Make It Human",sub:"AI-02",num:"03/26",domain:"human",author:"Matteo Giovanardi",date:"February 25, 2026",
+      "ai-02-26":{
+    series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"digital",author:"Matteo Giovanardi",date:"February 25, 2026",
     title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-34804017-1920w.jpeg",
-    sections:[
-      {h:"The evolution of generative design and BIM optimization",body:"The design phase represents the critical leverage point for both carbon and cost reduction, where AI-driven generative design is redefining architectural and engineering boundaries. Clev.ai automates repetitive BIM modeling tasks, enabling designers to reduce technical overhead and focus on architectural quality. Autodesk Forma deploys a cloud-based AI platform enabling real-time environmental analysis of wind patterns, solar radiation and acoustic levels — evaluating thousands of iterations in seconds. Hyperganic's AI-driven algorithmic engineering creates complex, 3D-printable structural components that mimic trabecular biological structures, using up to 40% less material than traditional casting."},
-      {h:"AI-driven MEP design",body:"The design and coordination of MEP systems has traditionally consumed up to 80% of total engineering hours in complex projects. Endra.ai demonstrated the potential for 70x efficiency gains by synthesizing Large Language Models with high-fidelity 3D simulation, integrating directly with Autodesk Revit to compress design timelines from months to hours."},
-      {h:"AI-driven site management and robotic assembly",body:"OpenSpace leverages AI-powered 360-degree photo documentation to automatically map site imagery to BIM models, creating a temporal 'Street View' of construction progress. Built Robotics' 'Exosystem' converts standard excavators into fully autonomous units using LiDAR, GPS sensors and deep learning, executing complex trenching and foundation tasks with millimeter precision."},
-      {h:"Conclusion",body:"The AI-based products currently available demonstrate that digital intelligence has evolved from a peripheral tool into a core component of the modern construction value chain. At Levery, we view the adoption of these intelligent, data-driven systems as a fundamental requirement for a precise, resilient, and decarbonized built environment."},
+    hero:"/images/blog/pexels-photo-34804017-1920w.jpeg",
+    images:[
+      "/images/blog/clev-1920w.png",
+      "/images/blog/9f8b381c-444c-4770-bd92-0705078deee4-1920w.jpg",
+      "/images/blog/original_163384f3-13d7-4bde-a80e-092c1f1589b7_-1920w.png",
+      "/images/blog/Immagine+2026-02-25+153201-1920w.png",
     ],
-    refs:["https://clev-eng.framer.website/","https://www.autodesk.com/it/products/forma/overview","https://www.endra.ai/","https://www.builtrobotics.com/technology"],
-    funded:"EU-funded research",
+    captions:[
+      "Fig. 1 | Clev AI copilot for BIM (credit: Clev)",
+      "Fig. 2 | Autodesk Forma environmental analysis platform (credit: Autodesk)",
+      "Fig. 3 | Endra.AI platform for MEP design (credit: Endra)",
+      "Fig. 4 | Exosystem by Built Robotics — autonomous excavator (credit: Built Robotics)",
+    ],
+    sections:[
+      {h:"Introduction",body:"The landscape of AI-based solutions is expanding rapidly, ranging from automated Mechanical, Electrical, and Plumbing (MEP) design to high-precision reality capture. The digital transformation of the construction industry is currently transitioning from static Building Information Modeling (BIM) toward an integrated \"Cognitive Construction\" ecosystem. While 2025 recorded a benchmark $6.57 billion in construction technology investments, the strategic focus has shifted: 64% of this capital is now allocated to productivity-enhancing tools, specifically AI and automation. Building upon our previous analysis of digital twin foundations, we now examine frontier products — from generative MEP engineering to multi-agent design support — that are addressing the industry's most persistent labor shortages and efficiency bottlenecks."},
+      {h:"The evolution of generative design and BIM optimization",body:"The design phase represents the critical leverage point for both carbon and cost reduction, where AI-driven generative design is redefining architectural and engineering boundaries. A significant advancement in this field is represented by Clev.ai, an AI-based solution specifically designed to streamline the BIM authoring process. By automating repetitive modeling tasks and facilitating data-driven decision-making within the BIM environment, Clev.ai enables designers to reduce technical overhead and focus on architectural quality, ensuring that complex information models remain consistent and optimized throughout the project lifecycle. In the field of structural optimization, Autodesk Forma has deployed a cloud-based AI platform that enables real-time environmental analysis. By processing complex datasets — including wind patterns, solar radiation, and acoustic levels — the system allows designers to evaluate thousands of iterations in seconds. This ensures that a building's massing and orientation are optimized for passive energy performance long before groundbreaking. Structural efficiency is further enhanced by computational pioneers such as Hyperganic. Their AI-driven algorithmic engineering enables the creation of complex, 3D-printable structural components that mimic trabecular biological structures. These elements are engineered through \"functional gradients,\" where material density is strategically allocated only where mechanical stress requires it. This produces high-performance components that utilise up to 40% less material than traditional concrete or steel casting.",imgIndex:0},
+      {h:"MEP design automation and hybrid AI platforms",body:"The design and coordination of MEP systems has traditionally consumed up to 80% of total engineering hours in complex projects. This systemic bottleneck is now being addressed by \"hybrid AI\" platforms. Endra.ai has recently demonstrated the potential for 70x efficiency gains by synthesising Large Language Models (LLMs) with high-fidelity 3D simulation. By integrating directly with Autodesk Revit, these systems compress design timelines that previously spanned months into hours. For the AEC sector, this represents a paradigm shift: the capacity to deliver validated, high-fidelity preliminary designs during initial stakeholder consultations, fundamentally transforming competitive pricing models.",imgIndex:2},
+      {h:"AI-driven site management and robotic assembly",body:"Innovation is no longer confined to the digital drawing board; it is actively reshaping the physical construction site through computer vision and autonomous systems. Site monitoring is being redefined by platforms like OpenSpace, which leverages AI-powered photo documentation. Using 360-degree cameras integrated into field safety gear, computer vision algorithms automatically map site imagery to BIM models. This creates a temporal \"Street View\" of construction progress, enabling automated quantity tracking and the early detection of structural deviations, thereby mitigating costly rework. In the domain of robotic assembly and autonomous heavy machinery, Built Robotics is pioneering the \"Exosystem,\" an AI-based integration kit that converts standard excavators into fully autonomous units. Utilising LiDAR, GPS sensors, and deep learning models, these machines execute complex trenching and foundation tasks with millimetre precision. This autonomy not only enhances site safety by removing personnel from high-risk zones but also optimises fuel consumption through algorithmic path planning, reducing the environmental impact of earthmoving operations.",imgIndex:3},
+      {h:"Conclusion",body:"The AI-based products currently available demonstrate that digital intelligence has evolved from a peripheral tool into a core component of the modern construction value chain. From the generative algorithms of Hyperganic to the autonomous systems of Built Robotics, these solutions provide a proactive response to the industry's dual challenges of productivity and sustainability. By integrating machine learning and predictive analytics across the project lifecycle, the sector can achieve a synergistic benefit: maximising material efficiency while minimising human and environmental risk. At Levery, we view the adoption of these intelligent, data-driven systems as a fundamental requirement for a precise, resilient, and decarbonised built environment."},
+    ],
+    refs:[
+      "Clev — BIM AI copilot: https://clev-eng.framer.website/",
+      "Autodesk Forma — cloud AI platform: https://www.autodesk.com/it/products/forma/overview",
+      "Endra.AI — MEP design platform: https://www.endra.ai/",
+      "Built Robotics — Exosystem: https://www.builtrobotics.com/technology",
+      "Levery — Robotic & Automation Actors & Stakeholders: https://www.levery.it/robotic-automation-for-construction-actors-stakeholders",
+    ],
   },
   "rob-02-26":{
     series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"Alessandro Pracucci",date:"February 3, 2026",
     title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-17180807-1920w.jpeg",
+    hero:"/images/blog/pexels-photo-17180807-1920w.jpeg",
+    images:[
+      "/images/blog/HP-01-1920w.jpg",
+      "/images/blog/Tybot-01-1920w.jpg",
+      "/images/blog/Canvas-01-1920w.jpg",
+    ],
+    captions:[
+      "Fig. 1 | HP SitePrint layout robot on construction site",
+      "Fig. 2 | TyBot autonomous rebar tying robot (credit: Advanced Construction Robotics)",
+      "Fig. 3 | Canvas drywall finishing robot (credit: JLG/Canvas)",
+    ],
     sections:[
-      {h:"Building on-site operations: layout and structural masonry",body:"The HP SitePrint layout robot autonomously prints complex floor plans directly onto the jobsite slab, integrating with cloud-based BIM data to eliminate traditional manual marking. The FBR Hadrian X truck-mounted system lays structural blocks according to a 3D CAD model using a specialized adhesive instead of traditional mortar, achieving high lay rates and structural precision with minimal material waste."},
-      {h:"Specialized infrastructure works",body:"Robotic solutions are extending from general building operations to specialized infrastructure tasks. Autonomous systems for tunneling, bridge construction and utility installation are demonstrating precision and efficiency gains that manual methods cannot match. The key driver is the integration between digital design models and physical execution — eliminating the translation errors that cause rework."},
-      {h:"Human augmentation and cobotic systems",body:"Rather than replacing workers entirely, many robotic platforms are designed for human augmentation — cobotic systems that enhance precision and reduce physical strain. Exoskeleton technologies and guided robotic arms are enabling workers to perform tasks previously requiring heavy machinery, improving both safety and output quality in constrained environments."},
-      {h:"Conclusion",body:"The robotic products currently entering the construction market demonstrate that digital intelligence has evolved from a peripheral enhancement to a core operational requirement. The perspective is a transition from traditional manual labor to a proactive, data-driven construction environment where humans and robots collaborate on precision tasks."},
+      {h:"Introduction",body:"The systemic change toward a digitally integrated construction site is being enhanced by the physical deployment of robotic units capable of bridging the gap between digital representation of the built environment via CAD and BIM, and jobsite execution. Following our analysis of the stakeholders driving this evolution, we now focus on some of the robotic products which are currently optimising task automation and addressing human augmentation. These technologies address core industry challenges: labour shortages, safety risks in repetitive tasks, and the persistent productivity gap. By classifying these solutions based on their field of application — ranging from general building operations to specialised infrastructure works — we can observe how automation is replacing manual, error-prone processes with high-precision digital execution."},
+      {h:"Building on-site operations: layout and structural masonry",body:"The initial phase of any on-site operation requires the precise translation of digital designs into physical coordinates. The HP SitePrint layout robot serves this specific function, autonomously printing complex floor plans directly onto the jobsite slab. By integrating directly with cloud-based BIM data, the system eliminates the traditional, manual marking process. Its impact is measured by the reduction in layout time and the high-fidelity alignment between the \"as-designed\" and \"as-built\" setting out, preventing downstream errors. Moving from layout to structural assembly, the FBR Hadrian X represents a significant shift in autonomous masonry. This truck-mounted system utilises a telescopic boom to lay structural blocks according to a 3D CAD model. By using a specialised adhesive instead of traditional mortar, the Hadrian X achieves high lay rates and structural precision with minimal material waste.",imgIndex:0},
+      {h:"Infrastructure operations: specialised heavy automation",body:"Large-scale infrastructure projects, such as bridges and highways, require automation capable of handling high-volume, repetitive structural tasks. The Advanced Construction Robotics TyBot is a specialised autonomous solution for rebar tying on bridge decks. The TyBot navigates the rebar mat autonomously, identifying and tying thousands of intersections without manual intervention. This allows human crews to focus on complex placement while the robot manages the critical path of reinforcement. For large-scale earthworks, the Built Robotics Exosystem provides a scalable solution for infrastructure and energy projects. This AI-driven aftermarket kit transforms standard heavy machinery into fully autonomous robots capable of performing complex trenching and digging tasks with consistent excavation depth and precision, facilitating 24/7 operations and increasing site productivity by up to 30%.",imgIndex:1},
+      {h:"Finishing, interior installation and site intelligence",body:"Once the structure is established, interior finishing and MEP installations require precise, semi-autonomous movements. The Hilti Jaibot is a mobile drilling robot designed for overhead MEP installations, the result of a strategic collaboration between Hilti and Norwegian startup nLink. By following BIM-defined coordinates, the Jaibot executes precise anchor holes, ensuring ceiling-mounted systems are installed exactly where the digital plan dictates. Complementing this is the Canvas (a JLG company) drywall finishing robot, which automates the spraying and sanding of joint compound. For site-wide monitoring, the Boston Dynamics Spot robot — utilised by contractors like Skanska — serves as a mobile sensing platform. Integrated with FARO/HoloBuilder technology, Spot performs autonomous site walks to capture 360-degree imagery and laser scans, providing real-time digital twin updates.",imgIndex:2},
+      {h:"Conclusion",body:"The robotic products currently available for the construction sector demonstrate a clear move toward specialised, task-oriented automation. From the HP SitePrint's layout accuracy to the heavy-duty infrastructure capabilities of TyBot and the interior precision of the Hilti Jaibot and Canvas, these machines are redefining the jobsite. By delegating repetitive, dangerous, and high-precision tasks to robotic units, the construction industry achieves higher productivity and safer working conditions. At Levery, we recognise that the future of construction is centred on the seamless integration of digital intelligence and robotic execution."},
+    ],
+    refs:[
+      "HP SitePrint — Layout Robot: https://www.hp.com/us-en/printers/site-print/layout-robot.html",
+      "JLG Canvas — Drywall Finishing Robot: https://www.jlg.com/en/canvas",
+      "Advanced Construction Robotics — TyBot: https://www.constructionrobots.com/tybot",
+      "Built Robotics — Exosystem: https://www.builtrobotics.com/exosystem",
+      "FBR Limited — Hadrian X: https://www.fbr.com.au/system/hadrian-x",
+      "Hilti Group — Jaibot: https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html",
+      "nLink Robotics: https://www.nlinkrobotics.com/our-story",
+      "Boston Dynamics — Spot: https://www.bostondynamics.com/products/spot",
+      "Levery — Robotic & Automation Actors & Stakeholders: https://www.levery.it/robotic-automation-for-construction-actors-stakeholders",
     ],
   },
-  "bio-02-26":{
-    series:"Make It Green",sub:"Bio-02",num:"01/26",domain:"green",author:"Alessandro Pracucci",date:"January 7, 2026",
+"bio-02-26":{
+    series:"Make It Green",sub:"BIO-02",num:"01/26",domain:"green",author:"Alessandro Pracucci",date:"Jan 7, 2026",
     title:"Bio-based building materials & products for construction: innovative technologies",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/crop2.jpg%28mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69%29-1920w.jpg",
-    sections:[
-      {h:"The evolution of the bio-based building envelope",body:"The building envelope serves as the primary interface for energy efficiency. Indresmat has developed a thermal-break window frame using proprietary bio-based polyurethane — up to 65-75% biosourced materials — achieving thermal transmittance values of 0.88 W/m²K while reducing carbon footprint. Mykor produces highly insulating panels by growing fungal root structures on industrial wood residues, creating a carbon-negative product that sequesters more carbon during growth than is emitted during processing."},
-      {h:"Advanced bio-foams, bioceramics and hemp",body:"4D-Mater's 'Grow-Foams' leverage porous biological structures to provide a high strength-to-weight ratio for lightweight infill panels. The Mattone di Canapa by Biomat (Pedone Working) — a hemp brick composed of hemp shives and natural lime binders — provides high thermal inertia and regulates indoor humidity, ensuring superior hygrometric comfort with a circular business model using hemp cultivation waste."},
-      {h:"Structural bio-based composites",body:"Beyond single components, bio-based composites are being engineered for structural applications. Mycelium-bound composites, agricultural fiber reinforced concretes and bio-polymer matrices are demonstrating mechanical performance comparable to conventional materials while delivering significant reductions in embodied carbon and end-of-life impact."},
-      {h:"Conclusion",body:"These materials are moving beyond traditional timber to include high-performance composites derived from agricultural waste, fungi and bio-polymers — aiming to replace carbon-intensive plastics, mineral wool and concrete with alternatives that act as active carbon sinks. The transition from pilot to market requires regulatory clarity, supply chain development and the digital traceability tools that Levery is helping to build through projects like Digi4BioMat and BIO.CO.R.N.ER."},
+    hero:"/images/blog/crop2.jpg(mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69)-1920w.jpg",
+    images:[
+      "/images/blog/mykor-01-1920w.jpg",
+      "/images/blog/INDRESMAT-01-1920w.jpg",
+      "/images/blog/mogu-02-1920w.jpg",
+      "/images/blog/strongbyform-01-1920w.jpg",
     ],
+    captions:[
+      "Fig. 1 — Mykor mycelium insulation panel (credit: Mykor)",
+      "Fig. 2 — Indresmat bio-based PUR window frame (credit: Indresmat)",
+      "Fig. 3 — Mogu interior acoustic panel from mycelium (credit: Mogu)",
+      "Fig. 4 — StrongByForm Woodflow structural bio-composite (credit: StrongByForm)",
+    ],
+    sections:[
+      {h:"Building components and elements",body:"The transition toward a sustainable built environment relies on the physical integration of low-impact materials into building structures. Following our analysis of the stakeholders driving this sector, we now focus on the products redefining the performance of both the building envelope and internal systems. These materials are moving beyond traditional timber to include high-performance composites derived from agricultural waste, fungi, and bio-polymers — aiming to replace carbon-intensive plastics, mineral wool, and concrete with alternatives that act as active carbon sinks."},
+      {h:"The evolution of the bio-based building envelope",body:"Indresmat has developed a thermal-break window frame solution using a proprietary bio-based polyurethane, with up to 65–75% biosourced materials. These frames achieve thermal transmittance values of 0.88 W/m²K — exceeding current regulatory requirements — while replacing 100% fossil-based polyurethane. Mykor produces highly insulating panels by growing fungal root structures on industrial wood residues, creating a carbon-negative product that sequesters more carbon during growth than is emitted during processing. Thermal conductivity is comparable to mineral wool but with superior acoustic performance and fire resistance without toxic chemicals. 4D-Mater's Grow-Foams leverage porous biological structures for a high strength-to-weight ratio. The Mattone di Canapa by Biomat (Pedone Working) — hemp shives and natural lime binders — provides high thermal inertia, regulates indoor humidity, and enables a circular business model using hemp cultivation waste.",imgIndex:0},
+      {h:"Bio-based solutions for interiors, structure and furniture",body:"Mogu utilizes mycelium technology grown from fungal strains on upcycled textile and agricultural residues to create acoustic panels that are entirely biodegradable and VOC-free. StrongByForm pioneers structural Woodflow technology, creating high-performance components by optimizing wood fiber direction to mimic natural growth patterns — lightweight structural elements that can replace steel or concrete in specific applications. Woodio has developed a water-resistant wood composite for sanitaryware including sinks and toilets, with wood chips and bio-based resin binder creating carbon-storing products with significantly lower carbon footprint than ceramic alternatives.",imgIndex:2},
+      {h:"Conclusion",body:"The physical products available today prove that bio-based materials are no longer limited to niche applications. From the bio-polyurethane frames of Indresmat and the carbon-negative masonry of Biomat to the structural bio-composites of StrongByForm, these components provide a proactive solution to the construction industry's environmental challenges. At Levery, we view the adoption of these standardized, high-performance bio-components as a fundamental step toward a truly sustainable and human-centric built environment."},
+    ],
+    refs:[
+      "Indresmat — Bio-based Windows: https://www.indresmat.com/",
+      "Mykor — Mycelium Insulation Technology: https://www.mykor.co.uk/",
+      "4D-Mater — Grow-Foams and Bioceramics: https://4d-mater.com/index.php/products/grow-foams",
+      "Biomat Canapa — Mattone di Canapa: https://biomatcanapa.it/home-big-construction-company/linea-canapafor-mattonedicanapa/",
+      "Mogu — Mycelium for Interior Design: https://mogu.bio/",
+      "StrongByForm — Structural Woodflow Technology: https://www.strongbyform.com/",
+      "Woodio — Bio-based Wood Composite Sanitaryware: https://www.woodio.fi/",
+    ],
+    funding:"This research is funded by the European Union (Project: BIOS MATER, GA 101214808). Views and opinions are those of the Authors only.",
   },
-  "ai-01-25":{
-    series:"Make It Human",sub:"AI-01",num:"12/25",domain:"human",author:"Matteo Giovanardi",date:"November 26, 2025",
+
+    "ai-01-25":{
+    series:"Make It Digital",sub:"AI-01",num:"12/25",domain:"digital",author:"Matteo Giovanardi",date:"Nov 26, 2025",
     title:"AI as a Copilot for Construction: Actors & Stakeholders",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-30530416-1920w.jpeg",
-    sections:[
-      {h:"The disruptive role of AI",body:"The global construction industry is on the verge of an epochal transformation, driven by the imperative to increase safety, productivity and sustainability. AI is rapidly shifting the sector from manual and reactive processes to predictive and optimized workflows. AI can process vast amounts of data — BIM, GIS, images — in seconds that would take weeks manually, significantly improving design accuracy and drastically reducing on-site errors."},
-      {h:"Design and pre-construction pioneers",body:"Design software developers and digital compliance providers are embedding AI directly into core design tools, transforming static models into intelligent data platforms. Clev stands as a BIM/CAD AI copilot dedicated to accelerating project iterations — reducing review times by up to 80%, automating 100% compliance verification, and leveraging intelligent archives of past projects."},
-      {h:"Construction execution stakeholders",body:"Robotic system integrators and autonomous machinery providers are enabling AI-driven execution on site. Equipment manufacturers like Hilti Group are strategically partnering with startups to industrialize robotic solutions, while platform developers are building the digital infrastructure to connect design data with physical execution in real time."},
-      {h:"Operations and performance monitoring",body:"Post-construction, AI is enabling predictive maintenance and performance optimization. IoT-integrated building management systems, digital twin platforms and energy monitoring tools are forming the foundation for AI-driven building lifecycle management — a space where Levery's ARyze platform is actively contributing."},
+    hero:"/images/blog/pexels-photo-30530416-1920w.jpeg",
+    images:[
+      "/images/blog/IMG1-1920w.png",
+      "/images/blog/IMG2-1920w.png",
+      "/images/blog/IMG3-1920w.jpg",
+      "/images/blog/IMG4-1920w.png",
     ],
-  },
-  "rob-01-25":{
-    series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"Alessandro Pracucci",date:"October 29, 2025",
-    title:"Robotic & Automation for Construction: Actors & Stakeholders",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-10119310-1920w.jpeg",
+    captions:[
+      "Fig. 1 — Clev platform: AI BIM copilot (credit: Clev)",
+      "Fig. 2 — ArchiLab AI copilot for Revit (credit: ArchiLab)",
+      "Fig. 3 — OneClick LCA carbon optimizer (credit: OneClick LCA)",
+      "Fig. 4 — Becquerel Institute AI agent for BIPV/PV optimization (credit: Becquerel Institute)",
+    ],
     sections:[
-      {h:"Equipment machinery manufacturers: the product innovator",body:"Companies like Hilti Group extend beyond mere sales, strategically partnering with specialists to industrialize robotic solutions. The Hilti Jaibot — a semi-autonomous drilling robot developed in collaboration with nLink — automates overhead drilling for MEP installations directly from a digital plan, demonstrating how incumbents integrate with agile startups to rapidly scale innovation and improve on-site safety."},
-      {h:"Research entities and technology developers",body:"Academic institutions and specialized R&D firms provide the foundational innovation that manufacturers then industrialize. Their role is to validate new approaches in controlled environments, de-risk adoption for industry partners and publish findings that advance the collective knowledge base. The EU-funded ecosystem — including projects like PROMETHEUS — plays a critical role in enabling this research-to-market pathway."},
-      {h:"General contractors and construction companies",body:"End-users drive the demand for robotic solutions through their operational requirements. The most innovative construction companies are not passive technology adopters but active co-developers, providing field validation data and practical requirements that shape product development. Their feedback loop is essential for solutions to move from prototype to reliable production tool."},
-      {h:"Conclusion",body:"The success of robotics in construction relies on a sophisticated networking ecosystem where technology creators, research entities, large industry players and end-users collaborate to prove the value and scalability of automated solutions. The stakeholders driving this evolution are defined by their unique contribution to bridging the gap between digital planning and physical building."},
+      {h:"Introduction: the disruptive role of AI",body:"The global construction industry is on the verge of an epochal transformation. AI is rapidly shifting the sector from manual and reactive processes to predictive and optimized workflows. AI integrates along the entire project lifecycle: from generative design to site management, through to maintenance and energy performance monitoring. Its impact is disruptive: AI can process vast amounts of data — BIM, GIS, images — in seconds that would take weeks manually, significantly improving design accuracy, drastically reducing on-site errors, and the enormous associated material waste."},
+      {h:"Design and pre-construction pioneers",body:"Clev stands as a BIM/CAD AI copilot dedicated to accelerating project iterations and centralizing complex data management. Its AI capabilities drastically reduce review times (up to 80%) by eliminating the need for hundreds of disjointed plugins. Clev automatically performs 100% compliance verification against norms, ISO standards, and client-specific rules, and automates workflows such as Quantity Takeoff (QTO). ArchiLab acts as an AI copilot specifically for Revit, transforming traditional BIM workflows through intelligent automation — allowing architects and engineers to focus on creativity rather than manual data manipulation.",imgIndex:0},
+      {h:"Sustainability and material choice enablers",body:"OneClick LCA provides AI-powered Life Cycle Assessment software that transforms how sustainability is managed in construction. The embedded AI streamlines the complex process of data mapping for materials, achieving 10× faster and more reliable data flows by resolving inconsistencies across multiple languages. This allows designers to automatically verify results against industry benchmarks, compare design alternatives, and quickly explore optimized construction scenarios to meet demanding decarbonization targets.",imgIndex:2},
+      {h:"Operation, energy and asset managers",body:"Becquerel Institute Italia focuses its AI expertise on the photovoltaic sector. Their AI solutions offer specialized services including AI Assessment & Roadmap to strategically plan the integration of AI and robotics into the PV value chain, customized Use Case Development, and Custom Implementation designed to optimize solar asset performance, predict maintenance needs, and maximize long-term ROI and energy sustainability of the built environment.",imgIndex:3},
+      {h:"Conclusion",body:"The transition to a digital construction site and design process is inherently an ecosystem challenge. The innovation brought by design specialists like Clev and ArchiLab, combined with the focus on sustainability ensured by OneClick LCA and Becquerel, is essential. The collaboration among these actors is accelerating change, replacing manual, risky, and polluting processes with sophisticated, data-driven automation. AI is not just an improvement — it is the foundation for a future where construction is safer, more efficient, and radically more sustainable."},
+    ],
+    refs:[
+      "Clev AI — BIM Copilot: https://clev.framer.website/",
+      "ArchiLab — AI for Revit: https://archilabs.ai/posts/revit-ai",
+      "OneClick LCA — AI-powered LCA: https://oneclicklca.com/en-gb/why-us/capabilities/powered-by-ai",
+      "Becquerel Institute — AI for Solar Industry: https://www.becquerelinstitute.eu/it/ai-solutions-for-the-solar-industry",
     ],
   },
   "bio-01-25":{
-    series:"Make It Green",sub:"Bio-01",num:"08/25",domain:"green",author:"Alessandro Pracucci",date:"October 1, 2025",
+    series:"Make It Green",sub:"BIO-01",num:"08/25",domain:"green",author:"Alessandro Pracucci",date:"Oct 1, 2025",
     title:"Bio-based Building Materials & Products for Construction: Actors & Stakeholders",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/ladrillos_de_canamo_0-1920w.jpg",
-    sections:[
-      {h:"Raw material suppliers and feedstock processors",body:"A new and critical player in the bio-based ecosystem is the agrowaste processor. Companies and organizations that collect and transform agricultural by-products — rice husks, corn cobs, grape pomace — into usable construction materials. Regional clusters like the Agrifood Clust-ER in Emilia-Romagna create vital 'short supply chains', connecting agri-food waste streams to construction material innovation."},
-      {h:"Material manufacturers and product developers",body:"Bio-based material manufacturers bridge the gap between raw biological feedstocks and market-ready construction products. Companies like Pedone Working (hemp-based building blocks), Mykor (mycelium insulation) and Indresmat (bio-polyurethane window frames) are demonstrating that bio-based alternatives can meet the performance standards required for commercial construction applications."},
-      {h:"Certification bodies and regulators",body:"The transition to bio-based construction is dependent on clear regulatory frameworks and accessible certification pathways. CE marking, EPD (Environmental Product Declaration) certification and ESPR compliance are key milestones. Levery actively supports manufacturers through certification pathway analysis and technical documentation, a service identified as a priority need by industrial partners in MEZeroE survey data."},
-      {h:"Digital tool developers",body:"The scale-up of bio-based materials requires robust digital traceability infrastructure. Digital Product Passports, IoT-enabled supply chain monitoring and lifecycle data management platforms are essential for demonstrating compliance and building market confidence. Levery's DeePPy platform and its role in projects like Digi4BioMat and BIO.CO.R.N.ER represent a direct response to this need."},
+    hero:"/images/blog/ladrillos_de_canamo_0-1920w.jpg",
+    images:[
+      "/images/blog/04-TATU.1698252652.2865-1920w.jpg",
+      "/images/blog/W2W_partnes-1920w.jpg",
+      "/images/blog/0002-1920w.jpg",
     ],
+    captions:[
+      "Fig. 1 — Agrofood and agrowaste value chain in Emilia-Romagna",
+      "Fig. 2 — W2W project consortium — 25 partners across Europe",
+      "Fig. 3 — Biomat (Pedone Working) hemp-based building materials",
+    ],
+    sections:[
+      {h:"Introduction",body:"The global construction industry is a major contributor to CO₂ emissions and resource consumption. Bio-based materials — derived from renewable biological resources like plants, animals, and microorganisms — can sequester carbon, reduce reliance on fossil fuels, and offer thermal, acoustic, and health benefits at least comparable to traditional products. The transition from conventional to bio-based materials is not just about the products themselves but a fundamental shift in the entire value chain, driven by a diverse group of stakeholders from farmers growing raw materials to policymakers setting new standards."},
+      {h:"Raw material suppliers: the feedstock processor",body:"A new and critical player in the bio-based ecosystem is the agrowaste processor. Companies and organizations specialize in collecting and transforming agricultural by-products — rice husks, corn cobs, grape pomace — into usable construction materials. The Agrifood Clust-ER in Emilia-Romagna exemplifies this: this private association connects companies, research centers, and training bodies to focus on the circular economy and valorization of biomass residues. Levery, together with Agrifood Clust-ER and under the coordination of CETMA, is developing a new project for agro-waste chain monitoring.",imgIndex:0},
+      {h:"Consortium projects: collaboration in action",body:"The EU-funded WoodToWood (W2W) project unites 25 partners including research institutes, universities, and industry players (Levery is part of this consortium). Their goal is to upcycle wood waste from construction and demolition into new high-value materials, creating a comprehensive framework for multi-dimensional cascade valorization of wood. The BIOS MATER project brings together 22 partners from 10 EU countries (Levery is also part of this consortium) to develop and validate four new production routes for bio-based construction products including flooring systems and tiles, measuring success through techno-economic and environmental KPIs.",imgIndex:1},
+      {h:"Networking ecosystem: InnovaWood and Built by Nature",body:"InnovaWood is the largest European network dedicated to research, innovation, and education in the forest, wood-based, and furniture sector — an umbrella for over 70 members facilitating knowledge transfer and project consortia. Built by Nature (BbN) is dedicated to increasing market demand for mass timber and other bio-based materials, connecting developers, architects, investors, and policymakers. Both networks are essential in creating the critical mass needed to scale bio-based construction across Europe."},
+      {h:"Public policy: France RE2020",body:"The French RE2020 environmental regulation mandates the use of bio-based materials in new buildings. This policy drives a market shift by incentivizing low-carbon materials and factoring in the carbon-storing benefits of bio-based products. Specific CO₂/m²/year caps decrease over time (2025, 2028, 2031), targeting a 30% reduction in emissions by 2030 compared to 2013 levels for construction."},
+      {h:"Manufacturers: Pedone Working / Biomat",body:"Italian company Pedone Working operates under the Biomat brand to develop hemp-based building products with a potentially 0 km supply chain. Their Mattone di Canapa hemp brick is carbon-negative — absorbing more CO₂ during its lifecycle than is emitted in production. Their products improve indoor air quality, regulate humidity, and provide high fire resistance, targeting a complete carbon-negative building solution.",imgIndex:2},
+      {h:"Conclusion",body:"The shift to bio-based materials in construction is a systemic change requiring the coordinated effort of a wide array of stakeholders. From pioneering companies and EU-funded consortia building new circular value chains, to agrowaste processors turning agricultural by-products into building blocks, we are seeing a collaborative push toward a greener future. At Levery, we are proud to be part of this movement, helping to connect these different worlds and accelerate the transition to a truly sustainable built environment."},
+    ],
+    refs:[
+      "Agrifood Clust-ER (Emilia-Romagna): https://agrifood.clust-er.it/",
+      "WoodToWood Project: https://www.wood2wood-project.eu/",
+      "BIOS MATER Project: https://biosmater.eu/",
+      "Built by Nature Network: https://builtbn.org/",
+      "InnovaWood: https://innovawood.com/",
+      "Pedone Working / Biomat: https://pedoneworking.it/",
+      "Biomat Canapa: https://biomatcanapa.it/",
+      "French RE2020 — Building with Wood: https://agriculture.gouv.fr/building-wood-environmental-and-economic-potential-analysis-ndeg211",
+    ],
+    funding:"This research is funded by the European Union (Project: W2W, GA 101138789). Views and opinions are those of the Authors only.",
+  },
+
+
+  "rob-01-25":{
+    series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"Alessandro Pracucci",date:"Oct 29, 2025",
+    title:"Robotic & Automation for Construction: Actors & Stakeholders",
+    hero:"/images/blog/pexels-photo-10119310-1920w.jpeg",
+    images:[
+      "/images/blog/Amlatea-01_Credit-Iturralde-1920w.jpeg",
+      "/images/blog/Hadriamn-X-03_Credit-FBR-1920w.jpg",
+      "/images/blog/Hilti_01_Credit-Hilti-1920w.jpg",
+    ],
+    captions:[
+      "Fig. 1 — AMALTEA project: robotics technologies (credit: Iturralde)",
+      "Fig. 2 — Hadrian X autonomous masonry robot (credit: FBR)",
+      "Fig. 3 — Hilti robotic construction tools (credit: Hilti)",
+    ],
+    sections:[
+      {h:"The rise of Robotics and Automation",body:"The global construction industry is embracing robotics and automation (R&A) driven by the critical need for increased safety, productivity and predictability. R&A is integrating into the entire construction lifecycle — from design to execution and monitoring. Success relies on a Networking Ecosystem where technology creators, research entities, large industry players and end-users collaborate to prove the value and scalability of automated solutions."},
+      {h:"Equipment manufacturers: Hilti and nLink",body:"Hilti Group is a prime example of productizing high-value robotic applications. Their Hilti Jaibot, a semi-autonomous drilling robot, is the result of a strategic collaboration with Norwegian startup nLink since 2021. This partnership leverages Hilti's market access and safety standards with nLink's robotics expertise, automating the strenuous task of overhead drilling for MEP installations directly from a digital plan.",imgIndex:0},
+      {h:"Construction robotics: FBR Hadrian X",body:"FBR Limited's Hadrian X is designed to be the world's first fully autonomous bricklaying system. The truck-mounted robot uses a telescopic boom to lay proprietary blocks with high precision based on 3D CAD data, using fast-curing adhesive instead of mortar to achieve unprecedented lay rates with minimal material waste.",imgIndex:1},
+      {h:"Monitoring: Boston Dynamics Spot + HoloBuilder",body:"Boston Dynamics Spot performs autonomous, repeatable site walks capturing vast data, processed by the FARO/HoloBuilder platform into 360-degree virtual records linked directly to the BIM model. GCs like Skanska are active pioneers testing Spot for novel applications — setting new benchmarks for efficiency and safety."},
+      {h:"Consortium projects: AMALTEA",body:"The AMALTEA Horizon Europe consortium brings together RTOs, universities, architects and robot manufacturers to combine AI, robotics and Digital Twins. Their goal is to validate a single streamlined digital-to-physical process for building envelope systems from design through manufacturing to construction.",imgIndex:2},
+      {h:"Conclusion",body:"The transition to a digital construction site is an ecosystem challenge. Innovation from product developers like Hilti, disruption from builders like FBR, essential monitoring from Spot and HoloBuilder, and research catalysed by AMALTEA — all essential. The collaborative efforts across this value chain are accelerating the pace of change, replacing dangerous repetitive manual labour with sophisticated data-driven automation."},
+    ],
+    refs:["Hilti Jaibot: https://www.hilti.com/content/hilti/W1/US/en/business/business/trends/jaibot.html","nLink Robotics: https://www.nlinkrobotics.com/our-story","AMALTEA Project: https://amaltea-project.eu/","FBR Hadrian X: https://www.fbr.com.au/view/hadrian","HoloBuilder (FARO): https://www.faro.com/fr-FR/Products/Software/HoloBuilder-Software","Skanska USA: https://www.usa.skanska.com/who-we-are/media/constructive-thinking/meet-spot-a-robot-that-s-being-tested-to-clean-construction-jobsites/"],
   },
   "xr-03-25":{
-    series:"Make It Human",sub:"XR-03",num:"07/25",domain:"human",author:"Alessandro Pracucci",date:"July 2025",
+    series:"Make It Digital",sub:"XR-03",num:"07/25",domain:"digital",author:"Matteo Giovanardi",date:"Jun 26, 2025",
     title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine-2025-06-26-104300-1920w.jpg",
-    images:["https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine+2025-06-26+105320-1920w.jpg","https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine+2025-06-26+104402-1920w.jpg","https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine+2025-06-26+104341-1920w.jpg"],
+    hero:"/images/blog/Immagine-2025-06-26-104300-1920w.jpg",
+    images:["/images/blog/Immagine-2025-06-26-104300-1920w.jpg","/images/blog/Immagine+2025-06-26+105320-1920w.jpg","/images/blog/Immagine+2025-06-26+104402-1920w.jpg","/images/blog/Immagine+2025-06-26+104341-1920w.jpg"],
+    captions:["Fig. 1 — ARyze platform (credits: Levery)","Fig. 2 — ARyze: remote collaboration module (credits: Levery)","Fig. 3 — ARyze: IoT data visualization (credits: Levery)","Fig. 4 — ARyze: automated reporting interface (credits: Levery)"],
     sections:[
-      {h:"The growing complexity of building O&M",body:"Modern buildings are becoming increasingly complex, integrating advanced technologies that pose new challenges for long-term operational efficiency. Building envelopes now incorporate intelligent solar shading, automated openings, environmental sensors, photovoltaic modules and advanced plant systems. Aligned with directives like the EPBD (EU/2024/1275) and the Smart Readiness Indicator framework, there is a growing urgency to develop innovative O&M solutions."},
-      {h:"XR as a game changer: immediate functionalities",body:"XR platforms allow for the real-time overlay of digital data — maintenance manuals, performance metrics, maintenance histories, 2D/3D models — directly onto the physical building environment. Remote technicians can access the XR platform, visualize the system in question, and provide qualified assistance through immersive collaborative sessions with digital annotations and visual instructions. IoT sensor data, smart metering and thermal cameras can be queried and visualized through the XR interface for advanced diagnostics and anomaly detection."},
-      {h:"ARyze platform capabilities",body:"ARyze — developed by Levery and Exvirience — delivers these capabilities as a commercial platform accessible on standard PC and tablet hardware without dedicated XR headsets. The platform enables contextualized visualization of technical documents overlaid on the physical environment, remote assistance sessions, immersive training simulations, and automated certified reporting with voice and gesture interfaces."},
-      {h:"The path forward",body:"Current market focus prioritizes practical, highly useful functionalities to address concrete sectoral problems. The future will be characterized by increasingly immersive, connective and intelligent interactions, supported by predictive maintenance schemes and AI for automatic fault recognition, guided maintenance support and proactive prediction of potential malfunctions."},
+      {h:"Introduction",body:"Extended Reality (XR) — encompassing VR, AR, and MR — is transforming how we interact with buildings. Modern building envelopes incorporate sophisticated active components: intelligent solar shading, automated openings, environmental sensors, photovoltaic modules. Traditional reactive maintenance is no longer sufficient. Aligned with EPBD (EU/2024/1275) and the Smart Readiness Indicator (SRI) framework, innovative solutions must preserve system functionality while extending useful life."},
+      {h:"XR key functionalities for O&M",body:"ARyze delivers five immediately applicable functionalities: (1) immersive overlay of maintenance manuals, performance metrics and 2D/3D models directly onto the physical environment; (2) remote technical assistance through collaborative sessions with digital annotations; (3) immersive simulations and training for complex maintenance scenarios; (4) advanced diagnostics by querying IoT sensors, smart metering, thermal cameras and Digital Twin models; (5) automated certified reporting via voice and gesture interfaces.",imgIndex:0},
+      {h:"Remote assistance",body:"Remote technicians and designers access the ARyze platform to provide qualified assistance through immersive collaborative sessions, utilizing digital annotations and visual instructions. This significantly reduces travel and accelerates problem resolution.",imgIndex:1},
+      {h:"IoT integration and anomaly detection",body:"By querying IoT sensors, smart metering, thermal cameras and Digital Twin models, technicians access historical data series and real-time alerts through the XR platform — identifying performance variations and anticipating system malfunctions proactively.",imgIndex:2},
+      {h:"Automated reporting",body:"ARyze streamlines generation of automated maintenance reports in real-time. Critical images and actions are saved and transcribed via voice or gesture interfaces, optimizing manual report compilation time and providing certified records.",imgIndex:3},
+      {h:"Conclusion",body:"The current market focus prioritizes practical functionalities to optimize maintenance costs for complex building systems. Overlaying digital maintenance and performance data onto the physical environment is paramount. The future of building management will be characterized by increasingly immersive, connective and intelligent interactions."},
     ],
-    funded:"This research is funded by the European Union within the SUSTAIN Open Call.",
+    refs:["This research is funded by the European Union within the SUSTAIN Open Call. Views and opinions expressed are those of the Authors only."],
+    funding:"SUSTAIN Open Call — European Union",
   },
   "dpp-03-25":{
-    series:"Make It Digital",sub:"DPP-03",num:"06/25",domain:"digital",author:"Alessandro Pracucci",date:"June 2025",
-    title:"DeePPy: Revolutionizing Transparency in Construction with the Digital Product Passport",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/immagine-1-1920w.jpg",
+    series:"Make It Digital",sub:"DPP-03",num:"06/25",domain:"digital",author:"Alessandro Pracucci",date:"Jun 2025",
+    title:"DeePPy: Revolutionizing Transparency in the Construction Sector with the Digital Product Passport",
+    hero:"/images/blog/immagine-1-1920w.jpg",
+    images:["/images/blog/immagine-1-1920w.jpg"],
+    captions:["Fig. 1 — DeePPy platform interface (credits: Levery)"],
     sections:[
-      {h:"The ESPR and the Digital Product Passport",body:"The Ecodesign for Sustainable Products Regulation (ESPR) introduces the Digital Product Passport (DPP) as the key mechanism for ensuring transparency and accessibility of product lifecycle information. Every construction product will eventually require a QR code or link revealing data from material origin to carbon emissions, from estimated durability to end-of-life recycling options — enabling informed decisions across the value chain."},
-      {h:"DeePPy's key features",body:"DeePPy simplifies DPP creation through an intuitive guided data entry process, collecting all product-related data in a single cloud-based repository. Supplier data management allows users to associate materials with suppliers and collect sustainability information including EPDs and environmental certifications. The product impact configurator estimates overall environmental impact based on supplier choices, enabling manufacturers to optimize sourcing for sustainability."},
-      {h:"Marketplace and ecosystem",body:"Beyond DPP management, DeePPy proposes itself as a marketplace for sustainable materials with certified DPPs, creating a virtuous ecosystem where manufacturers can offer ESPR-compliant products to a broader and more conscious audience. This marketplace creates demand incentives for transparency and sustainability across the construction value chain."},
-      {h:"Conclusion",body:"Platforms like DeePPy are fundamental in driving the transition toward a circular construction sector, providing the tools to create, manage and enhance the value of DPPs. Adopting these solutions ensures regulatory compliance while unlocking new opportunities for innovation, sustainability and the creation of a more circular future for the built environment."},
+      {h:"Introduction",body:"The Ecodesign for Sustainable Products Regulation (ESPR) stands out for its ambition to incentivize the production and consumption of more sustainable products throughout their entire lifecycle. A fundamental pillar of the ESPR is the Digital Product Passport (DPP) — a digital document including crucial information about a product's sustainability, traceability, and circularity. Platforms like DeePPy are emerging as essential tools to facilitate widespread DPP adoption in the construction sector."},
+      {h:"The DPP under ESPR",body:"The DPP is the key mechanism for ensuring transparency and accessibility of product lifecycle information. Imagine a QR code associated with every construction product that reveals: origin of materials, carbon emissions from production, estimated durability, and end-of-life recycling options. This enables consumers to make more informed decisions and provides manufacturers with a holistic view of environmental and social impact.",imgIndex:0},
+      {h:"DeePPy key features",body:"DeePPy is designed by Levery to simplify DPP creation and management. Its key functionalities: (1) Rapid guided data entry with intuitive interface and predefined ESPR-required fields; (2) Centralized cloud-based data repository — all product data in a single web-accessible point; (3) Supplier data management with environmental certifications, EPDs and sustainability practices; (4) Product impact configurator estimating environmental impact based on sourcing choices; (5) Marketplace for sustainable materials with verified DPPs."},
+      {h:"Conclusion",body:"The DPP is not just a regulatory requirement but a powerful lever for sustainable transformation of the construction sector. With its data entry, centralization, supplier management, impact configurator, and marketplace, DeePPy is revolutionizing how construction products are designed, produced, and commercialized. Adopting solutions like DeePPy will ensure regulatory compliance and unlock new opportunities for innovation, sustainability, and a more circular future for the built environment."},
     ],
-    funded:"DeePPy is the result of a research project funded by the European Union (INTRANSIT Open Call — Digi4BioMat project).",
+    refs:["ESPR Regulation (EU) 2024/1781: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1781","DeePPy platform: https://deeppy.eu"],
+    funding:"DeePPy is the result of a research project funded by the European Union (INTRANSIT Open Call — Digi4BioMat project)",
   },
   "bipv-03-25":{
     series:"Make It Green",sub:"BIPV-03",num:"05/25",domain:"green",author:"Alessandro Pracucci",date:"May 2025",
     title:"BIPV in Action: Real-World Applications Driving the Sustainable Transformation of Buildings",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/NovartisPavillon-01-ThePlan-1920w.jpg",
-    images:["https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/CIS-01-SolarLab-1920w.jpg","https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Unipol-02-MCA-1920w.jpg"],
+    hero:"/images/blog/NovartisPavillon-01-ThePlan-1920w.jpg",
+    images:["/images/blog/NovartisPavillon-01-ThePlan-1920w.jpg","/images/blog/CIS-01-SolarLab-1920w.jpg","/images/blog/Red-College-01-MetSolar-1920w.jpg","/images/blog/Unipol-02-MCA-1920w.jpg","/images/blog/SunRock-01-MVRDV-1920w.png"],
+    captions:["Fig. 1 — Pavillon Novartis, Basel (credit: The Plan / AMDL Circle)","Fig. 2 — Copenhagen International School (credit: SolarLab / C.F. Møller Architects)","Fig. 3 — Red Deer College Residence, Canada (credit: MetSolar)","Fig. 4 — Unipol Tower, Milan (credit: MCA Architects / MetSolar)","Fig. 5 — Sun Rock by MVRDV for Taipower, Taiwan (credit: MVRDV)"],
     sections:[
-      {h:"Art meets energy: Pavillon Novartis, Basel",body:"Designed by AMDL CIRCLE and architect Michele De Lucchi, the Novartis Pavilion features a translucent media façade with 10,000 diamond-shaped organic photovoltaic panels and 30,000 embedded LEDs, generating approximately 15,000 kWh annually. Transparent silicon solar panels in the curtain wall convert sunlight into electricity without blocking natural daylight — demonstrating that energy-producing buildings can also be works of art."},
-      {h:"Copenhagen International School: large-scale commitment",body:"Designed by C.F. Møller Architects, the CIS was clad with approximately 12,000 custom-colored, lightweight solar panels supplying almost half of the school's annual electricity consumption. Custom-colored panels demonstrate that BIPV can move beyond traditional dark hues, allowing architects to maintain the visual identity of a building while incorporating renewable energy generation."},
-      {h:"Unipol Tower, Milan: high-rise leadership",body:"Designed by MCA, Unipol Tower features a double-skin façade fully integrated with photovoltaic modules following the tower's curvature. Developed in partnership with MetSolar, the project achieved LEED Gold certification and demonstrates that sustainability and architectural intent must work in tandem from the outset — the BIPV was not an afterthought but a fundamental design component."},
-      {h:"Lessons from global BIPV projects",body:"The IEA PVPS Task 15 portfolio demonstrates the versatility of BIPV in different climates and building types. Common success factors include multidisciplinary coordination from early design stages, reliable verification, and regulatory alignment. The primary barrier to adoption remains the higher upfront cost compared to conventional cladding — addressed by the ecodesign tools and market analysis Levery is developing within the MC2.0 project."},
+      {h:"Introduction",body:"BIPV represents a paradigm shift in construction — one of the most promising ways to decarbonize the built environment. Solar panels are no longer add-ons but integral components that blend functionality with sustainability. The European project MC2.0 investigates how stakeholders approach BIPV in different building typologies, mapping practices and testing design tools to accelerate scalable, user-centric BIPV solutions."},
+      {h:"Pavillon Novartis, Basel",body:"The Novartis Pavilion in Basel features a translucent media façade with 10,000 diamond-shaped OPV panels with 30,000 embedded LEDs, designed by AMDL Circle with Michele de Lucchi. The installation generates approximately 15,000 kWh annually — equivalent to four average homes — while creating a striking architectural statement. It demonstrates that energy-producing buildings can also be works of art that enhance the urban landscape.",imgIndex:0},
+      {h:"Copenhagen International School",body:"CIS in Denmark, designed by C.F. Møller Architects, clad the entire facade with approximately 12,000 custom-colored lightweight solar panels — supplying almost half of annual electricity consumption. Custom-colored panels demonstrate that BIPV can move beyond traditional dark hues while maintaining a building's visual identity.",imgIndex:1},
+      {h:"Red Deer College and Unipol Tower",body:"Red Deer College (Canada) incorporated over 300 m² of custom photovoltaic glass in the south-facing façade, in collaboration with MetSolar, meeting rigorous energy efficiency demands while adhering to local climate conditions. Unipol Tower in Milan by MCA Architects features a double-skin BIPV façade following the tower's curvature — achieved LEED Gold certification. BIPV was a fundamental design component from project inception, not an afterthought.",imgIndex:2},
+      {h:"Sun Rock by MVRDV, Taiwan",body:"The Sun Rock building for Taipower in Taiwan features a pleated facade covering approximately 4,000 m² of PV panels, projected to generate 1.2 million kWh annually — making the building completely self-sufficient. The building's form resulted from data-driven analysis to optimize solar irradiation throughout the day, with each pleat angle precisely adjusted based on solar path analysis.",imgIndex:4},
+      {h:"Lessons and barriers",body:"Common success factors include multidisciplinary coordination, reliable verification, and regulatory alignment. Key barriers remain: higher upfront costs, longer payback periods, and technical complexity requiring expertise in both construction and electrical engineering. Overcoming these requires continued technological advancement, clearer industry standards, and supportive government policies."},
     ],
+    refs:["MC2.0 — Mass Customization for BIPV: https://mc2dot0.eu/","IEA PVPS Task 15: https://iea-pvps.org/wp-content/uploads/2021/03/IEA-PVPS-Task-15-An-international-collection-of-BIPV-projects-compr.pdf","MetSolar — Red Deer College: https://metsolar.eu/solar-architecture/red-deer-college-residence-successful-bipv-customization-challenge-in-canada/","MetSolar — Unipol Tower: https://metsolar.eu/solar-architecture/unipol-tower-in-milan-brilliant-example-of-leadership-in-energy-and-environmental-design/","AMDL Circle — Novartis Pavillon: https://www.theplan.it/eng/award-2023-Culture/novartis-pavillon-the-potential-of-architecture-to-communicate-the-values-of-science-amdl-circle","SolarLab — CIS: https://solarlab.global/project/copenhagen-international-school","MVRDV — Sun Rock: https://mvrdv.com/projects/754/sun-rock"],
   },
   "xr-02-25":{
-    series:"Make It Human",sub:"XR-02",num:"04/25",domain:"human",author:"Alessandro Pracucci",date:"April 2025",
+    series:"Make It Human",sub:"XR-02",num:"04/25",domain:"digital",author:"Matteo Giovanardi",date:"Apr 2025",
     title:"Extended Reality (XR) in Construction: Transforming Design, Building, and Operation",
-    hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/foto-1920w.jpg",
-    images:["https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/01_Holo-02-1920w.jpg","https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/02_Gamma-01-1920w.jpg","https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/03-XYZ-01-1920w.jpg"],
+    hero:"/images/blog/01_Holo-02-1920w.jpg",
+    images:["/images/blog/01_Holo-02-1920w.jpg","/images/blog/02_Gamma-01-1920w.jpg","/images/blog/03-XYZ-01-1920w.jpg","/images/blog/foto-1920w.jpg"],
+    captions:["Fig. 1 — HoloBuilder XR platform (credit: HoloBuilder)","Fig. 2 — GAMMA AR solution for construction site (credit: GAMMA)","Fig. 3 — XYZ Reality Engineering-Grade AR platform (credit: XYZ Reality)","Fig. 4 — EXVIRIENCE + LEVERY platform for building envelope maintenance (credit: EXVIRIENCE / Levery)"],
     sections:[
-      {h:"Virtual prototyping and immersive collaboration",body:"XR enables stakeholders to step into a full-scale immersive 3D environment of a proposed building, overcoming the limitations of 2D blueprints. Unity's real-time 3D development platform enables VR walkthroughs, AR overlays and MR simulations with lighting analysis and BIM integration. HoloBuilder revolutionizes site monitoring with 360-degree photo documentation powered by AI and AR, integrating with Autodesk and Procore for automatic updates and historical tracking."},
-      {h:"Engineering-grade precision on site",body:"Gamma AR allows construction teams to overlay digital models onto physical environments, minimizing construction errors and enhancing communication between on-site teams and project managers. XYZ Reality introduces 'Engineering-Grade AR' projecting highly precise digital blueprints onto construction sites in real-time with sub-millimeter accuracy, enabling contractors to construct directly from holographic plans."},
-      {h:"Operations and maintenance",body:"XR improves efficiency and accuracy in maintenance tasks by providing real-time data and step-by-step instructions. IMVIZAR utilizes AR to create historical reconstructions of demolished buildings, while Inception provides VR training platforms for building managers. PROMETHEUS — Levery's collaboration with Exvirience — focuses on integrating XR into dynamic building envelopes, enabling facility managers to interact with real-time data on energy performance through AR and MR applications."},
-      {h:"Conclusion",body:"The shift from traditional methods to intuitive, data-driven approaches facilitated by XR is not just a technological trend — it represents a fundamental evolution in how the built environment is conceived, created, and maintained. These technologies not only drive efficiency but also contribute to sustainability by reducing errors, optimizing resource usage, and enhancing the longevity of built environments."},
+      {h:"Introduction",body:"XR — encompassing VR, AR, and MR — is redefining every stage of the construction lifecycle. From initial design conceptualization to on-site construction and ongoing O&M, XR is enhancing accuracy, fostering collaboration, bolstering safety and improving efficiency across the entire building lifecycle."},
+      {h:"Unity and HoloBuilder",body:"Unity enables immersive XR applications for AEC — VR walkthroughs, AR overlays, and MR simulations at full scale before construction begins, with BIM model integration for improved decision-making. HoloBuilder revolutionizes site monitoring with 360-degree AI-powered photo documentation, integrating with Autodesk and Procore for automatic updates and historical tracking.",imgIndex:0},
+      {h:"GAMMA AR and XYZ Reality",body:"Gamma AR allows construction teams to overlay digital models onto physical environments, minimizing construction errors by ensuring installations align with design specifications. XYZ Reality introduces Engineering-Grade AR projecting highly precise digital blueprints onto construction sites with sub-millimeter accuracy — contractors can construct directly from holographic plans.",imgIndex:1},
+      {h:"PROMETHEUS: XR for dynamic building envelopes",body:"PROMETHEUS, a collaborative initiative between LEVERY and EXVIRIENCE, focuses on integrating XR into dynamic building envelopes. This project enables facility managers to interact with real-time data on energy performance, shading adjustments, and smart façade operations through AR and MR. XR allows maintenance personnel to overlay digital information onto physical façade systems, providing real-time guidance for maintenance tasks and access to technical documentation.",imgIndex:3},
+      {h:"Conclusion",body:"The case studies provide compelling evidence of XR's transformative power across the entire construction lifecycle. The integration of XR is no longer a futuristic vision — it is a present-day reality reshaping how we design, build, and manage our spaces, contributing to sustainability by reducing errors, optimizing resource usage and enhancing the longevity of built environments."},
     ],
-    refs:["https://unity.com/products","https://www.holobuilder.com/","https://gamma-ar.com/","https://www.xyzreality.com/"],
+    refs:["Unity: https://unity.com/products","HoloBuilder: https://www.holobuilder.com/","Gamma AR: https://gamma-ar.com/","XYZ Reality: https://www.xyzreality.com/","IMVIZAR: https://www.imvizar.com/","Inception VR: https://www.inceptionspinoff.com/","PROMETHEUS Project — LEVERY & EXVIRIENCE, 2025"],
+    funding:"This communication activity is carried out within the PROMETHEUS project, funded by the European Union. Views and opinions are those of the authors only.",
   },
+
 };
 
-function HeroPattern({accent}){
-  return(<svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.07,pointerEvents:"none"}} viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice">
-    {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="320" stroke={accent} strokeWidth="1"/>))}
-  </svg>);
-}
-
 export default function InsightClient({slug}){
+  const [lang,setLang]=useState("en");
+  useEffect(()=>{
+    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
+    if(saved){setLang(saved);return;}
+    const browser=typeof navigator!=="undefined"?navigator.language:"en";
+    if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
+  },[]);
   const a=ARTICLES[slug]||ARTICLES["ai-02-26"];
   const dom=DOMAIN[a.domain]||DOMAIN.digital;
 
@@ -182,7 +320,7 @@ export default function InsightClient({slug}){
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {NAV_LINKS.map(([label,href])=>(<li key={label}><a href={href} style={{color:href==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>))}
           </ul>
-          <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
+          <a href={BOOKING} target="_blank" rel="noopener noreferrer" <button style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}} onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
         </div>
       </nav>
 
@@ -249,15 +387,15 @@ export default function InsightClient({slug}){
             <aside style={{position:"sticky",top:88}} className="l-sidebar">
               <div style={{background:C.sand,borderRadius:2,padding:24,marginBottom:16,border:`1px solid ${C.rule}`}}>
                 <p style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 14px"}}>About this article</p>
-                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>Series:</strong> {a.series}</p>
-                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>Issue:</strong> {a.sub} · {a.num}</p>
-                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>Author:</strong> {a.author}</p>
-                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0,lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>Published:</strong> {a.date}</p>
+                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Series:":"Serie:"}</strong> {a.series}</p>
+                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Issue:":"Numero:"}</strong> {a.sub} · {a.num}</p>
+                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Author:":"Autore:"}</strong> {a.author}</p>
+                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0,lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Published:":"Pubblicato:"}</strong> {a.date}</p>
               </div>
               <div style={{background:dom.bg,borderRadius:2,padding:24}}>
                 <p style={{fontSize:13,color:"rgba(255,255,255,0.6)",fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.6,margin:"0 0 16px"}}>Want to discuss this topic for your business?</p>
-                <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",padding:"10px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,background:dom.accent,color:dom.bg,textDecoration:"none"}}>Book a call →</a>
-                <a href="/insights" style={{display:"block",textAlign:"center",marginTop:10,fontSize:12,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>← All articles</a>
+                <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",padding:"10px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,background:dom.accent,color:dom.bg,textDecoration:"none"}}>{lang==="en"?"Book a call →":"Prenota una call →"}</a>
+                <a href="/insights" style={{display:"block",textAlign:"center",marginTop:10,fontSize:12,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>{lang==="en"?"← All articles":"← Tutti gli articoli"}</a>
               </div>
             </aside>
           </div>
@@ -265,7 +403,7 @@ export default function InsightClient({slug}){
       </div>
 
       <div style={{background:C.sand,padding:"28px 0",borderTop:`1px solid ${C.rule}`}}>
-        <div style={inner}><a href="/insights" style={{fontSize:13,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>← Back to Insights</a></div>
+        <div style={inner}><a href="/insights" style={{fontSize:13,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>{lang==="en"?"← Back to Insights":"← Torna agli Insight"}</a></div>
       </div>
 
       <footer style={{background:C.ink,padding:"48px 0 0"}}>
@@ -284,7 +422,7 @@ export default function InsightClient({slug}){
           <div><p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Contact</p>
             <a href="mailto:info@levery.it" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>info@levery.it</a>
             <a href="tel:+393396469607" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>(+39) 339 646 9607</a>
-            <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{display:"block",fontSize:13,color:"#A8E6CF",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Book a call →</a>
+            <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{display:"block",fontSize:13,color:"#A8E6CF",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>{lang==="en"?"Book a call →":"Prenota una call →"}</a>
           </div>
         </div>
         <div style={{...inner,padding:"16px 32px"}}><span style={{fontSize:11,color:"rgba(255,255,255,0.18)",fontFamily:"monospace"}}>© 2026 Levery S.r.l. Società Benefit · All rights reserved</span></div>

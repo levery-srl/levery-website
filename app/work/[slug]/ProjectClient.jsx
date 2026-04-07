@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const C={brand:"#2D4059",green:"#1E6B45",greenMid:"#2A8A58",greenLight:"#E8F5EE",
   white:"#FFFFFF",sand:"#F5F2EC",ink:"#1A1A1A",inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
@@ -36,7 +36,7 @@ const PROJECTS={
     about:"W2W develops a comprehensive framework for multi-dimensional cascade valorisation of wood from Construction & Demolition and furniture waste. The project focuses on significantly reducing the demand for virgin materials, cutting waste sent to landfill or incineration, and supporting the transition to a circular economy with closed-loop systems.",
     context:"Funded by the European Union under Horizon Europe (Grant Agreement 101138789).",
     tags:["Wood Waste","Circular Economy","C&D Waste","Façade Systems","Digital Twin","LCA","Supply Chain"],
-    images:["https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/1753693908168-1920w.jpeg","https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/1753693894511-1920w.jpeg"],
+    images:["/images/blog/1753693908168-1920w.jpeg","/images/blog/1753693894511-1920w.jpeg"],
     leveryRole:["Validation of W2W upcycled wood products for integration into prefabricated façade panel systems.","Benchmarking and comparative analysis against conventional virgin materials.","Façade system engineering — design and technical documentation.","Scientific dissemination and communication of project insights across the value chain."],
   },
   "mc20":{
@@ -59,13 +59,13 @@ const PROJECTS={
     about:"PROMETHEUS delivered a groundbreaking XR-based WebXR application for remote maintenance of adaptive building envelopes, enabling real-time interactive maintenance via standard PCs and tablets without dedicated hardware. The project directly led to the commercialisation of the ARyze platform.",
     context:"Funded by the European Union under Horizon Europe. Developed in collaboration with Exvirience S.r.l. — a specialist XR technology company. The research outputs formed the foundation of the ARyze commercial product.",
     tags:["Extended Reality","XR","Building Maintenance","WebXR","Digital Twin","O&M","BIM Integration","ARyze"],
-    images:["https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine-2024-10-04-104240-1920w.jpg"],
+    images:["/images/blog/Immagine-2024-10-04-104240-1920w.jpg"],
     leveryRole:["Definition of XR use cases for building operations and maintenance across the full building lifecycle.","Integration of BIM, Digital Product Passport and building management data into the XR interface.","Technology transfer — from research outputs to the ARyze commercial product."],
   },
   "winloop":{
     name:"WINLOOP",domainType:"rd",status:"Active",
     fund:"Horizon Europe",fundUrl:"",
-    period:"2023–2027",
+    period:"2026–ongoing",
     partners:["Horizon Europe"],
     subtitle:"Development of technologies, digitisation and business models for closing the life cycle of windows.",
     about:"WINLOOP addresses one of the least circular product categories in construction. The project develops technologies, digitalisation tools and business models to close the lifecycle of windows — from design and manufacturing through to end-of-life material recovery and re-entry into the value chain.",
@@ -107,9 +107,9 @@ const PROJECTS={
     leveryRole:["Design of the Digi4BioMat Circular Business Model — mapping material flows, supply chains and circularity opportunities.","Development of the Digital Product Passport platform — data schemas, APIs and stakeholder interface.","Dissemination of results through scientific papers, technical reports and industry communications."],
   },
   "pv-igu":{
-    name:"PV-IGU",domainType:"rd",status:"Completed",
+    name:"PV-IGU",domainType:"rd",status:"Active",
     fund:"Direct R&D service · Glass to Power S.p.A.",fundUrl:"",
-    period:"2022–2023",
+    period:"2024–ongoing",
     partners:["Glass to Power S.p.A."],
     subtitle:"Supporting Glass to Power in the technological integration of BIPV systems into building envelopes.",
     about:"PV-IGU was a direct R&D service engagement with Glass to Power, an Italian manufacturer of transparent organic photovoltaic modules for building integration. The project focused on supporting the company's technical documentation, building envelope integration strategy and go-to-market approach for BIPV products.",
@@ -138,7 +138,13 @@ function HeroPattern({accent1,accent2,dual}){
   );
 }
 
-export default function ProjectClient({slug}){
+export default function ProjectClie
+  const [lang,setLang]=useState("en");
+  useEffect(()=>{
+    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
+    if(saved){setLang(saved);}
+    else{const b=typeof navigator!=="undefined"?navigator.language:"en";if(b.startsWith("it")){setLang("it");}}
+  },[]);nt({slug}){
   const p=PROJECTS[slug]||PROJECTS["bio-corner"];
   const isDual=p.domainType==="dual";
   const dom1=isDual?DOM.rd:p.domainType==="rd"?DOM.rd:DOM.eco;
@@ -267,4 +273,4 @@ export default function ProjectClient({slug}){
       </footer>
     </div>
   );
-}
+}<button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button>

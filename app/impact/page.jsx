@@ -34,7 +34,52 @@ const SDGS=[
   {n:"SDG 17",label:"Partnerships for the Goals"},
 ];
 
+const copy={
+  en:{
+    pageLabel:"Impact", pageTitle:"Our Impact",
+    pageSub:"{t.pageSub}",
+    langSwitch:"IT", bookCTA:"Book a call",
+    commitTitle:"Sustainability aligned with the UN Sustainable Development Goals",
+    commitBody1:"Every project we undertake and every product we develop aims to contribute to global sustainability frameworks. We align our work with the SDGs most relevant to the construction sector.",
+    commitBody2:"As an innovative startup classified under Italian law (D.L. 179/2012) and registered as a Società Benefit, we are legally committed to reporting our social and environmental impact annually.",
+    metricsTitle:"Our commitment in numbers",
+    reportTitle:"Annual Benefit Report",
+    reportSub:"As a Società Benefit, we publish an annual report documenting our social and environmental impact in line with Italian law.",
+    report2025:"2025 Annual Report",
+    report2025status:"Publishing Q2 2026",
+    report2024:"2024 Annual Report",
+    ctaTitle:"Work with us on your sustainability goals",
+    ctaSub:"Whether you need an LCA, a Digital Product Passport, or a full decarbonisation roadmap — we can help.",
+    ctaBtn:"Book a call →",
+  },
+  it:{
+    pageLabel:"Impatto", pageTitle:"Il nostro impatto",
+    pageSub:"Come Società Benefit, la nostra missione va oltre il profitto. Siamo impegnati a creare un impatto positivo duraturo attraverso l'innovazione orientata alla sostenibilità nel settore delle costruzioni.",
+    langSwitch:"EN", bookCTA:"Prenota una call",
+    commitTitle:"Sostenibilità allineata agli Obiettivi di Sviluppo Sostenibile delle Nazioni Unite",
+    commitBody1:"Ogni progetto che intraprendiamo e ogni prodotto che sviluppiamo mira a contribuire ai framework globali di sostenibilità. Allineiamo il nostro lavoro agli SDG più rilevanti per il settore delle costruzioni.",
+    commitBody2:"Come startup innovativa classificata ai sensi della legge italiana (D.L. 179/2012) e registrata come Società Benefit, siamo legalmente impegnati a rendicontare annualmente il nostro impatto sociale e ambientale.",
+    metricsTitle:"Il nostro impegno in numeri",
+    reportTitle:"Relazione Annuale d'Impatto",
+    reportSub:"Come Società Benefit, pubblichiamo una relazione annuale che documenta il nostro impatto sociale e ambientale in conformità con la legge italiana.",
+    report2025:"Relazione 2025",
+    report2025status:"Pubblicazione prevista Q2 2026",
+    report2024:"Relazione 2024",
+    ctaTitle:"Lavora con noi sui tuoi obiettivi di sostenibilità",
+    ctaSub:"Che tu abbia bisogno di un'LCA, di un Passaporto Digitale di Prodotto o di una roadmap di decarbonizzazione completa — possiamo aiutarti.",
+    ctaBtn:"Prenota una call →",
+  },
+};
+
 export default function ImpactPage(){
+  const [lang,setLang]=useState("en");
+  useEffect(()=>{
+    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
+    if(saved){setLang(saved);return;}
+    const browser=typeof navigator!=="undefined"?navigator.language:"en";
+    if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
+  },[]);
+  const t=copy[lang];
   return(
     <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-metrics-grid{grid-template-columns:1fr!important}.l-sdg-grid{grid-template-columns:1fr 1fr!important}}`}</style>
@@ -45,7 +90,7 @@ export default function ImpactPage(){
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]].map(([label,href])=>(<li key={label}><a href={href} style={{color:href==="/impact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/impact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>))}
           </ul>
-          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
+          <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>{t.bookCTA}</a>
         </div>
       </nav>
 
@@ -58,9 +103,9 @@ export default function ImpactPage(){
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",position:"relative",zIndex:1}}>
           <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>04</span>
-            <span style={{fontFamily:"monospace",fontSize:9,letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Impact</span>
+            <span style={{fontFamily:"monospace",fontSize:9,letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>{t.pageLabel}</span>
           </div>
-          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Our Impact</h1>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>{t.pageTitle}</h1>
           <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>As a Società Benefit, our mission goes beyond profit. We are dedicated to creating lasting positive impact through sustainability-driven innovation in the construction sector.</p>
           <div style={{display:"flex",gap:10,flexWrap:"wrap",alignItems:"center"}}>
             <span style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(255,210,80,0.12)",border:"1px solid #FFD97D",borderRadius:2,padding:"9px 20px",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:"#FFD97D",letterSpacing:"0.04em",fontWeight:500}}><svg width="11" height="11" viewBox="0 0 12 12"><polygon points="6,0 12,3 12,9 6,12 0,9 0,3" fill="none" stroke="#FFD97D" strokeWidth="1.5"/></svg>Società Benefit</span>

@@ -173,80 +173,95 @@ const copy = {
 
 // ─── MEMBER CARD ─────────────────────────────────────────────────────────────
 function MemberCard({ m }) {
-  const [hov, setHov] = useState(false);
+  const [photoHov, setPhotoHov] = useState(false);
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div
-      style={{ background:C.white, borderRadius:2, overflow:"hidden",
-        border:`1px solid ${C.rule}`, display:"flex", flexDirection:"column",
-        position:"relative", cursor:"default" }}
-      onMouseEnter={()=>setHov(true)}
-      onMouseLeave={()=>setHov(false)}
-    >
-      {/* Photo */}
-      <div style={{ position:"relative", height:300, background:m.bg,
-        overflow:"hidden", flexShrink:0 }}>
+    <div style={{ background:C.white, borderRadius:2, overflow:"hidden",
+      border:`1px solid ${C.rule}`, display:"flex", flexDirection:"column" }}>
+
+      {/* Photo — cover with center/center crop, bio overlay on hover */}
+      <div
+        style={{ position:"relative", height:360, background:m.bg,
+          overflow:"hidden", flexShrink:0, cursor:"pointer" }}
+        onMouseEnter={()=>setPhotoHov(true)}
+        onMouseLeave={()=>setPhotoHov(false)}
+      >
         <svg style={{ position:"absolute", inset:0, width:"100%", height:"100%",
           opacity:0.08, pointerEvents:"none" }}
-          viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          {Array.from({length:8},(_,i)=>(
-            <line key={i} x1={i*60-20} y1="0" x2={i*60+100} y2="300"
-              stroke={m.accent} strokeWidth="1"/>
-          ))}
-          {[[60,60],[180,110],[300,50],[80,220],[260,190],[350,130]].map(([x,y],i)=>(
-            <circle key={i} cx={x} cy={y} r="2" fill={m.accent}/>
-          ))}
+          viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice">
+          {Array.from({length:8},(_,i)=>(<line key={i} x1={i*60-20} y1="0" x2={i*60+100} y2="360" stroke={m.accent} strokeWidth="1"/>))}
         </svg>
-        <div style={{ position:"absolute", top:0, right:0, width:40, height:40,
-          borderBottom:`1.5px solid ${m.accent}`, borderLeft:`1.5px solid ${m.accent}`,
-          opacity:0.35 }}/>
+
         {m.photo && !imgError ? (
           <img src={m.photo} alt={m.name} onError={()=>setImgError(true)}
             style={{ position:"absolute", inset:0, width:"100%", height:"100%",
-              objectFit:"cover", objectPosition:"center top" }}/>
+              objectFit:"cover", objectPosition:"center center" }}/>
         ) : (
           <div style={{ position:"absolute", inset:0, display:"flex",
             alignItems:"center", justifyContent:"center" }}>
-            <span style={{ fontSize:72, fontFamily:"'Georgia',serif",
-              color:"rgba(255,255,255,0.12)", letterSpacing:"0.05em" }}>
-              {m.initials}
-            </span>
+            <span style={{ fontSize:80, fontFamily:"'Georgia',serif",
+              color:"rgba(255,255,255,0.12)" }}>{m.initials}</span>
           </div>
         )}
-        <div style={{ position:"absolute", bottom:0, left:0, right:0, height:100,
+
+        {/* Gradient at bottom */}
+        <div style={{ position:"absolute", bottom:0, left:0, right:0, height:80,
           background:`linear-gradient(to top, ${m.bg}, transparent)`, zIndex:1 }}/>
-        <div style={{ position:"absolute", bottom:16, left:20, zIndex:2 }}>
+
+        {/* Role badge */}
+        <div style={{ position:"absolute", bottom:14, left:18, zIndex:2 }}>
           <span style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em",
-            color:m.accent, background:"rgba(0,0,0,0.4)",
-            padding:"3px 9px", borderRadius:2, textTransform:"uppercase" }}>
+            color:m.accent, background:"rgba(0,0,0,0.5)",
+            padding:"4px 10px", borderRadius:2, textTransform:"uppercase" }}>
             {m.role}
           </span>
         </div>
+
+        {/* Bio overlay — appears on photo hover */}
+        <div style={{
+          position:"absolute", inset:0,
+          background:`${m.bg}f0`,
+          padding:"28px 24px",
+          opacity: photoHov ? 1 : 0,
+          transform: photoHov ? "translateY(0)" : "translateY(10px)",
+          transition:"all 0.25s ease",
+          zIndex:10,
+          overflowY:"auto",
+          display:"flex", flexDirection:"column", justifyContent:"center",
+          pointerEvents: photoHov ? "auto" : "none",
+        }}>
+          <p style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em",
+            color:m.accent, textTransform:"uppercase", margin:"0 0 12px" }}>
+            {m.role}
+          </p>
+          <p style={{ fontSize:13, color:"rgba(255,255,255,0.82)", lineHeight:1.8,
+            fontFamily:"'Helvetica Neue',Arial,sans-serif", margin:0 }}>
+            {m.bio}
+          </p>
+        </div>
       </div>
 
-      {/* Default info — always visible */}
-      <div style={{ padding:"24px 28px 28px" }}>
+      {/* Info — always visible, links always clickable */}
+      <div style={{ padding:"22px 24px 26px", flexGrow:1 }}>
         <h3 style={{ fontSize:20, fontWeight:400, color:C.ink, margin:"0 0 4px",
           fontFamily:"'Georgia',serif" }}>{m.name}</h3>
         <p style={{ fontSize:10, fontFamily:"monospace", color:C.inkLight,
-          letterSpacing:"0.08em", margin:"0 0 18px", textTransform:"uppercase" }}>
+          letterSpacing:"0.08em", margin:"0 0 16px", textTransform:"uppercase" }}>
           {m.credentials}
         </p>
-        {/* Expertise tags */}
-        <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:20 }}>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:5, marginBottom:18 }}>
           {m.tags.map((tag,i)=>(
             <span key={i} style={{ fontSize:11,
               fontFamily:"'Helvetica Neue',Arial,sans-serif",
-              padding:"3px 10px", border:`1px solid ${C.rule}`,
+              padding:"3px 8px", border:`1px solid ${C.rule}`,
               borderRadius:2, color:C.inkLight, background:C.sand }}>
               {tag}
             </span>
           ))}
         </div>
-        {/* Links */}
         <div style={{ display:"flex", gap:16, borderTop:`1px solid ${C.rule}`,
-          paddingTop:18, alignItems:"center" }}>
+          paddingTop:16, alignItems:"center" }}>
           <a href={m.linkedin} target="_blank" rel="noopener noreferrer"
             style={{ fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif",
               color:C.green, textDecoration:"none", display:"flex",
@@ -257,49 +272,23 @@ function MemberCard({ m }) {
             </svg>
             LinkedIn
           </a>
-          <a href={m.orcid} target="_blank" rel="noopener noreferrer"
+          {m.orcid && <a href={m.orcid} target="_blank" rel="noopener noreferrer"
             style={{ fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif",
               color:C.inkLight, textDecoration:"none" }}
             onClick={()=>track("team_orcid",{name:m.name})}>
             ORCiD →
-          </a>
-          <span style={{ fontSize:11, color:C.inkLight,
-            fontFamily:"'Helvetica Neue',Arial,sans-serif",
-            marginLeft:"auto", opacity: hov ? 0 : 0.6,
-            transition:"opacity 0.2s" }}>
-            hover for bio
+          </a>}
+          <span style={{ fontSize:10, color:C.inkLight, marginLeft:"auto",
+            fontFamily:"monospace", letterSpacing:"0.06em", opacity:0.6 }}>
+            hover photo
           </span>
         </div>
-      </div>
-
-      {/* Bio overlay — slides up on hover */}
-      <div style={{
-        position:"absolute", left:0, right:0, bottom:0,
-        background:m.bg,
-        padding:"32px 28px",
-        transform: hov ? "translateY(0)" : "translateY(100%)",
-        transition:"transform 0.3s ease",
-        zIndex:10,
-        maxHeight:"62%",
-        overflowY:"auto",
-      }}>
-        <div style={{ position:"absolute", top:0, right:0, width:40, height:40,
-          borderBottom:`1.5px solid ${m.accent}`, borderLeft:`1.5px solid ${m.accent}`,
-          opacity:0.3 }}/>
-        <p style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em",
-          color:m.accent, textTransform:"uppercase", margin:"0 0 14px" }}>
-          {m.role}
-        </p>
-        <p style={{ fontSize:13, color:"rgba(255,255,255,0.72)", lineHeight:1.8,
-          fontFamily:"'Helvetica Neue',Arial,sans-serif", margin:0 }}>
-          {m.bio}
-        </p>
       </div>
     </div>
   );
 }
 
-// ─── PAGE ─────────────────────────────────────────────────────────────────────
+
 export default function LeveryTeam() {
   const [lang, setLang] = useState("en");
   const [scrolled, setScrolled] = useState(false);

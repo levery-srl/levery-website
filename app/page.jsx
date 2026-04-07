@@ -242,6 +242,19 @@ const copy = {
     footerTagline:"R&D specializzato, costruito intorno al tuo team.",
     footerRights:"© 2026 Levery S.r.l. Società Benefit · Tutti i diritti riservati",
     langSwitch:"EN",
+    clientsTitle:"Con chi lavoriamo",
+    clientsSub:"Collaboriamo con aziende lungo tutta la filiera delle costruzioni e dei materiali.",
+    clients:[
+      {sector:"Produttori di involucro edilizio",desc:"Produttori di facciate, rivestimenti e serramenti che sviluppano nuovi prodotti o devono adeguarsi all'ESPR.",icon:"▣"},
+      {sector:"Produttori di materiali bio-based",desc:"Aziende che trasformano residui agricoli in materiali da costruzione — mattoni, isolanti, compositi.",icon:"◉"},
+      {sector:"BIPV e prodotti solari per l'edilizia",desc:"Produttori che integrano il fotovoltaico in sistemi di facciata, coperture e vetrate.",icon:"◈"},
+      {sector:"Innovatori tech per le costruzioni",desc:"Startup e scale-up che sviluppano strumenti digitali, robotica o soluzioni AI per l'ambiente costruito.",icon:"◎"},
+    ],
+    newsletterTitle:"Rimani aggiornato",
+    newsletterSub:"Una email al mese. Analisi di settore, nuovi prodotti, aggiornamenti normativi — filtrati dal nostro team.",
+    newsletterPh:"La tua email aziendale",
+    newsletterBtn:"Iscriviti",
+    newsletterNote:"Niente spam. Cancellazione in qualsiasi momento.",
   },
 };
 
@@ -284,6 +297,8 @@ export default function LeveryHomepage() {
       <style>{`
         *{box-sizing:border-box}body{margin:0}
         @media(max-width:900px){
+          .l-clients-grid{grid-template-columns:1fr 1fr!important}
+          
           .l-nav-links{display:none!important}
           .l-mobile-cta{display:block!important}
           .l-grid3{grid-template-columns:1fr!important}
@@ -291,7 +306,9 @@ export default function LeveryHomepage() {
           .l-footer-grid{grid-template-columns:1fr 1fr!important}
           .l-hero-right{opacity:0.18!important}
         @media(max-width:1400px){.l-hero-h1{font-size:52px!important}}
-          @media(max-width:900px){.l-hero-h1{font-size:38px!important}}
+          @media(max-width:900px){
+          .l-clients-grid{grid-template-columns:1fr 1fr!important}
+          .l-hero-h1{font-size:38px!important}}
         }
         .l-insight-row:hover{background:rgba(45,64,89,0.04)!important}
         .l-proj-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.10)!important}
@@ -424,7 +441,41 @@ export default function LeveryHomepage() {
       <div style={{ background:C.white, padding:"72px 0 88px" }} id="projects">
         <div style={inner}>
           <div style={secHdr}>
-            <div style={secLab()}>
+                  {/* CLIENTS */}
+      <div style={{background:C.white,padding:"80px 0",borderBottom:`1px solid ${C.rule}`}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
+          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 8px"}}>{t.clientsTitle}</p>
+          <p style={{fontSize:18,fontWeight:400,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 40px",maxWidth:560,lineHeight:1.5}}>{t.clientsSub}</p>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}} className="l-clients-grid">
+            {t.clients.map((cl,i)=>(
+              <div key={i} style={{padding:"24px 20px",border:`1px solid ${C.rule}`,borderRadius:2,background:C.sand}}>
+                <span style={{fontSize:22,color:C.green,display:"block",marginBottom:12}}>{cl.icon}</span>
+                <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.3}}>{cl.sector}</p>
+                <p style={{fontSize:12,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.65,margin:0}}>{cl.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* NEWSLETTER */}
+      <div style={{background:"#1A1A1A",padding:"64px 0"}}>
+        <div style={{maxWidth:600,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
+          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase",margin:"0 0 12px"}}>{t.newsletterTitle}</p>
+          <h2 style={{fontSize:24,fontWeight:400,color:C.white,fontFamily:"'Georgia',serif",margin:"0 0 10px",lineHeight:1.3}}>{t.newsletterSub}</h2>
+          <p style={{fontSize:13,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{t.newsletterNote}</p>
+          <div style={{display:"flex",gap:10,maxWidth:440,margin:"0 auto"}}>
+            <input type="email" placeholder={t.newsletterPh}
+              style={{flex:1,padding:"12px 16px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:C.white,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
+            <button style={{background:C.green,color:C.white,padding:"12px 24px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
+              onClick={()=>{const el=document.querySelector('input[type=email]');if(el&&el.value){window.location.href=`mailto:info@levery.it?subject=Newsletter%20subscription&body=Please%20add%20me%20to%20the%20Levery%20newsletter:%20${encodeURIComponent(el.value)}`;el.value='';}}}>
+              {t.newsletterBtn}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div style={secLab()}>
               <span style={secNum()}>02</span>
               <span style={secTitle()}>{t.projectsTitle}</span>
             </div>

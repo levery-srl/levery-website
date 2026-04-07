@@ -1,12 +1,12 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const C={brand:"#2D4059",green:"#1E6B45",greenMid:"#2A8A58",
   white:"#FFFFFF",sand:"#F5F2EC",ink:"#1A1A1A",
   inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
 const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 const NAV_LINKS=[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
-const FORMSPREE_ID="xpwdqgpb"; // replace with your Formspree form ID
+// FormSubmit — no account needed, sends directly to info@levery.it
 
 function Input({label,name,type="text",required=false,value,onChange,placeholder=""}){
   return(
@@ -33,7 +33,38 @@ function Select({label,name,required=false,value,onChange,options}){
   );
 }
 
+const copy={
+  en:{
+    pageLabel:"Contact", pageTitle:"Let's talk.",
+    pageSub:"Tell us about your project. We respond within one working day.",
+    langSwitch:"IT",bookCTA:"Book a call",
+    namePh:"Your name",companyPh:"Company",emailPh:"Work email",msgPh:"Describe your project or challenge — what are you working on?",
+    submit:"Send message",sending:"Sending…",sent:"Message sent — we will be in touch within one working day.",
+    altTitle:"Or book a call directly",altSub:"Choose a time that works for you.",
+    altBtn:"Open booking calendar →",
+    nameLabel:"Name",companyLabel:"Company",emailLabel:"Email",msgLabel:"Message",
+  },
+  it:{
+    pageLabel:"Contatti", pageTitle:"Parliamo.",
+    pageSub:"Raccontaci il tuo progetto. Rispondiamo entro un giorno lavorativo.",
+    langSwitch:"EN",bookCTA:"Prenota una call",
+    namePh:"Il tuo nome",companyPh:"Azienda",emailPh:"Email aziendale",msgPh:"Descrivi il tuo progetto o la tua sfida — su cosa stai lavorando?",
+    submit:"Invia messaggio",sending:"Invio in corso…",sent:"Messaggio inviato — ti risponderemo entro un giorno lavorativo.",
+    altTitle:"Oppure prenota una call direttamente",altSub:"Scegli il momento che preferisci.",
+    altBtn:"Apri il calendario →",
+    nameLabel:"Nome",companyLabel:"Azienda",emailLabel:"Email",msgLabel:"Messaggio",
+  },
+};
+
 export default function ContactPage(){
+  const [lang,setLang]=useState("en");
+  useEffect(()=>{
+    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
+    if(saved){setLang(saved);return;}
+    const browser=typeof navigator!=="undefined"?navigator.language:"en";
+    if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
+  },[]);
+  const t=copy[lang];
   const [form,setForm]=useState({name:"",company:"",email:"",topic:"",message:""});
   const [status,setStatus]=useState("idle"); // idle | sending | success | error
 
@@ -43,8 +74,8 @@ export default function ContactPage(){
     e.preventDefault();
     setStatus("sending");
     try{
-      const res=await fetch(`https://formspree.io/f/${FORMSPREE_ID}`,{
-        method:"POST",headers:{"Content-Type":"application/json"},
+      const res=await fetch("https://formsubmit.co/ajax/info@levery.it",{
+        method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
         body:JSON.stringify(form),
       });
       setStatus(res.ok?"success":"error");
@@ -61,7 +92,7 @@ export default function ContactPage(){
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             <li key="Work"><a href="/work" style={{color:"/work"==="/contact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/work"==="/contact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Work</a></li><li key="Products"><a href="/products" style={{color:"/products"==="/contact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/products"==="/contact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Products</a></li><li key="Insights"><a href="/insights" style={{color:"/insights"==="/contact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/insights"==="/contact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Insights</a></li><li key="Impact"><a href="/impact" style={{color:"/impact"==="/contact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/impact"==="/contact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Impact</a></li><li key="Team"><a href="/team" style={{color:"/team"==="/contact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/team"==="/contact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Team</a></li><li key="Contact"><a href="/contact" style={{color:"/contact"==="/contact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/contact"==="/contact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Contact</a></li>
           </ul>
-          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
+          <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>{t.bookCTA}</a>
         </div>
       </nav>
 
@@ -74,10 +105,10 @@ export default function ContactPage(){
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",position:"relative",zIndex:1}}>
           <div style={{display:"flex",alignItems:"baseline",gap:16,marginBottom:16}}>
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>06</span>
-            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Contact</span>
+            <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>{t.pageLabel}</span>
           </div>
-          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Contact</h1>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.65}}>Tell us about your project. We respond within one working day.</p>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>{t.pageTitle}</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.55)",margin:0,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.65}}>{t.pageSub}</p>
         </div>
       </div>
 
@@ -127,7 +158,7 @@ export default function ContactPage(){
                   <div style={{marginBottom:24}}>
                     <label style={{display:"block",fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",marginBottom:8}}>Message *</label>
                     <textarea name="message" required value={form.message} onChange={set("message")} rows={5}
-                      placeholder="Describe your project or question briefly…"
+                      placeholder={t.msgPh} data-placeholder="Describe your project or question briefly…"
                       style={{width:"100%",padding:"11px 14px",fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:C.ink,background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,outline:"none",resize:"vertical",boxSizing:"border-box"}}
                       onFocus={e=>e.target.style.borderColor=C.green}
                       onBlur={e=>e.target.style.borderColor=C.rule}/>

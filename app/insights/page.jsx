@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const C={brand:"#2D4059",green:"#1E6B45",white:"#FFFFFF",sand:"#F5F2EC",
   ink:"#1A1A1A",inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
@@ -16,47 +16,47 @@ const ARTICLES=[
   {slug:"bio-03-26",series:"Make It Green",sub:"Bio-03",num:"04/26",domain:"green",author:"AP",date:"Apr 2, 2026",
    title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
    excerpt:"Six projects completed between 2023 and 2026 — from Roots Hamburg to Casa di Luce — demonstrating how biocomposites and natural fibers achieve equivalent or superior technical performance.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/jametguedjatelierfusomyrhaps-35-1920w.jpg"},
+   hero:"/images/blog/jametguedjatelierfusomyrhaps-35-1920w.jpg"},
   {slug:"ai-02-26",series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"human",author:"MG",date:"Feb 25, 2026",
    title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
    excerpt:"The landscape of AI-based solutions is expanding rapidly — from automated MEP design to high-precision reality capture. Examining frontier products addressing the industry's most persistent labor shortages.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-34804017-1920w.jpeg"},
+   hero:"/images/blog/pexels-photo-34804017-1920w.jpeg"},
   {slug:"rob-02-26",series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"AP",date:"Feb 3, 2026",
    title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
    excerpt:"Robotic units bridging the gap between digital BIM representation and jobsite execution — HP SitePrint, FBR Hadrian X, and autonomous site management platforms.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-17180807-1920w.jpeg"},
+   hero:"/images/blog/pexels-photo-17180807-1920w.jpeg"},
   {slug:"bio-02-26",series:"Make It Green",sub:"Bio-02",num:"01/26",domain:"green",author:"AP",date:"Jan 7, 2026",
    title:"Bio-based building materials & products for construction: innovative technologies",
    excerpt:"From mycelium insulation to hemp bricks — high-performance bio-based composites redefining the building envelope as active carbon sinks.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/crop2.jpg%28mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69%29-1920w.jpg"},
+   hero:"/images/blog/crop2.jpg%28mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69%29-1920w.jpg"},
   {slug:"ai-01-25",series:"Make It Human",sub:"AI-01",num:"12/25",domain:"human",author:"MG",date:"Nov 26, 2025",
    title:"AI as a Copilot for Construction: Actors & Stakeholders",
    excerpt:"AI is shifting construction from reactive to predictive workflows — mapping the ecosystem of technology developers, data providers and end-users driving this transformation.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-30530416-1920w.jpeg"},
+   hero:"/images/blog/pexels-photo-30530416-1920w.jpeg"},
   {slug:"rob-01-25",series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"AP",date:"Oct 29, 2025",
    title:"Robotic & Automation for Construction: Actors & Stakeholders",
    excerpt:"Understanding the key actors — from equipment manufacturers to research entities — driving the shift toward automated, digitally integrated construction.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/pexels-photo-10119310-1920w.jpeg"},
+   hero:"/images/blog/pexels-photo-10119310-1920w.jpeg"},
   {slug:"bio-01-25",series:"Make It Green",sub:"Bio-01",num:"08/25",domain:"green",author:"AP",date:"Oct 1, 2025",
    title:"Bio-based Building Materials & Products for Construction: Actors & Stakeholders",
    excerpt:"The transition to bio-based construction requires a fundamental shift in the value chain — from farmers growing raw materials to policymakers setting new standards.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/ladrillos_de_canamo_0-1920w.jpg"},
+   hero:"/images/blog/ladrillos_de_canamo_0-1920w.jpg"},
   {slug:"xr-03-25",series:"Make It Human",sub:"XR-03",num:"07/25",domain:"human",author:"AP",date:"Jul 2025",
    title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
    excerpt:"XR solutions as a technological enabler for building O&M — immersive document visualization, remote assistance, advanced diagnostics and automated reporting with ARyze.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/Immagine-2025-06-26-104300-1920w.jpg"},
+   hero:"/images/blog/Immagine-2025-06-26-104300-1920w.jpg"},
   {slug:"dpp-03-25",series:"Make It Digital",sub:"DPP-03",num:"06/25",domain:"digital",author:"AP",date:"Jun 2025",
    title:"DeePPy: Revolutionizing Transparency in Construction with the Digital Product Passport",
    excerpt:"How DeePPy's guided DPP creation, supplier data management and impact configurator are making ESPR compliance accessible to construction product manufacturers.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/immagine-1-1920w.jpg"},
+   hero:"/images/blog/immagine-1-1920w.jpg"},
   {slug:"bipv-03-25",series:"Make It Green",sub:"BIPV-03",num:"05/25",domain:"green",author:"AP",date:"May 2025",
    title:"BIPV in Action: Real-World Applications Driving the Sustainable Transformation of Buildings",
    excerpt:"From Novartis Pavilion Basel to Copenhagen International School — global case studies demonstrating how BIPV thrives and the barriers it must overcome.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/NovartisPavillon-01-ThePlan-1920w.jpg"},
+   hero:"/images/blog/NovartisPavillon-01-ThePlan-1920w.jpg"},
   {slug:"xr-02-25",series:"Make It Human",sub:"XR-02",num:"04/25",domain:"human",author:"AP",date:"Apr 2025",
    title:"Extended Reality (XR) in Construction: Transforming Design, Building, and Operation",
    excerpt:"XR technologies reshaping every stage of the construction lifecycle — case studies from Unity, HoloBuilder, Gamma AR, XYZ Reality and the PROMETHEUS project.",
-   hero:"https://lirp.cdn-website.com/f62b8008/dms3rep/multi/opt/foto-1920w.jpg"},
+   hero:"/images/blog/foto-1920w.jpg"},
 ];
 
 // ─── PUBLICATIONS ─────────────────────────────────────────────────────────────
@@ -119,7 +119,7 @@ function NavBar(){
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             <li key="Work"><a href="/work" style={{color:"/work"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/work"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Work</a></li><li key="Products"><a href="/products" style={{color:"/products"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/products"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Products</a></li><li key="Insights"><a href="/insights" style={{color:"/insights"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/insights"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Insights</a></li><li key="Impact"><a href="/impact" style={{color:"/impact"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/impact"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Impact</a></li><li key="Team"><a href="/team" style={{color:"/team"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/team"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Team</a></li><li key="Contact"><a href="/contact" style={{color:"/contact"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/contact"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Contact</a></li>
           </ul>
-          <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
+          <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
         </div>
       </nav>
 
@@ -209,7 +209,13 @@ function PressCard({p}){
 }
 
 
-export default function InsightsPage(){
+export default function Insi
+  const [lang,setLang]=useState("en");
+  useEffect(()=>{
+    const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
+    if(saved){setLang(saved);}
+    else{const b=typeof navigator!=="undefined"?navigator.language:"en";if(b.startsWith("it")){setLang("it");}}
+  },[]);ghtsPage(){
   const [tab,setTab]=useState("articles");
   const [filter,setFilter]=useState("all");
   const filtered=filter==="all"?ARTICLES:ARTICLES.filter(a=>a.domain===filter||a.series.toLowerCase().includes(filter));
