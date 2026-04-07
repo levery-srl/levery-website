@@ -16,15 +16,15 @@ const ARTICLES=[
   {slug:"bio-03-26",series:"Make It Green",sub:"Bio-03",num:"04/26",domain:"green",author:"AP",date:"Apr 2, 2026",
    title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
    excerpt:"Six projects completed between 2023 and 2026 — from Roots Hamburg to Casa di Luce — demonstrating how biocomposites and natural fibers achieve equivalent or superior technical performance.",
-   hero:"/images/blog/jametguedjatelierfusomyrhaps-35-1920w.jpg"},
+   hero:"/images/blog/jametgued-1920w.jpg"},
   {slug:"ai-02-26",series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"human",author:"MG",date:"Feb 25, 2026",
    title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
    excerpt:"The landscape of AI-based solutions is expanding rapidly — from automated MEP design to high-precision reality capture. Examining frontier products addressing the industry's most persistent labor shortages.",
-   hero:"/images/blog/pexels-photo-34804017-1920w.jpeg"},
+   hero:"/images/blog/pexels-34804017-1920w.jpeg"},
   {slug:"rob-02-26",series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"AP",date:"Feb 3, 2026",
    title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
    excerpt:"Robotic units bridging the gap between digital BIM representation and jobsite execution — HP SitePrint, FBR Hadrian X, and autonomous site management platforms.",
-   hero:"/images/blog/pexels-photo-17180807-1920w.jpeg"},
+   hero:"/images/blog/pexels-17180807-1920w.jpeg"},
   {slug:"bio-02-26",series:"Make It Green",sub:"Bio-02",num:"01/26",domain:"green",author:"AP",date:"Jan 7, 2026",
    title:"Bio-based building materials & products for construction: innovative technologies",
    excerpt:"From mycelium insulation to hemp bricks — high-performance bio-based composites redefining the building envelope as active carbon sinks.",
@@ -32,15 +32,15 @@ const ARTICLES=[
   {slug:"ai-01-25",series:"Make It Human",sub:"AI-01",num:"12/25",domain:"human",author:"MG",date:"Nov 26, 2025",
    title:"AI as a Copilot for Construction: Actors & Stakeholders",
    excerpt:"AI is shifting construction from reactive to predictive workflows — mapping the ecosystem of technology developers, data providers and end-users driving this transformation.",
-   hero:"/images/blog/pexels-photo-30530416-1920w.jpeg"},
+   hero:"/images/blog/pexels-30530416-1920w.jpeg"},
   {slug:"rob-01-25",series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"AP",date:"Oct 29, 2025",
    title:"Robotic & Automation for Construction: Actors & Stakeholders",
    excerpt:"Understanding the key actors — from equipment manufacturers to research entities — driving the shift toward automated, digitally integrated construction.",
-   hero:"/images/blog/pexels-photo-10119310-1920w.jpeg"},
+   hero:"/images/blog/pexels-10119310-1920w.jpeg"},
   {slug:"bio-01-25",series:"Make It Green",sub:"Bio-01",num:"08/25",domain:"green",author:"AP",date:"Oct 1, 2025",
    title:"Bio-based Building Materials & Products for Construction: Actors & Stakeholders",
    excerpt:"The transition to bio-based construction requires a fundamental shift in the value chain — from farmers growing raw materials to policymakers setting new standards.",
-   hero:"/images/blog/ladrillos_de_canamo_0-1920w.jpg"},
+   hero:"/images/blog/ladrillos-canamo-1920w.jpg"},
   {slug:"xr-03-25",series:"Make It Human",sub:"XR-03",num:"07/25",domain:"human",author:"AP",date:"Jul 2025",
    title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
    excerpt:"XR solutions as a technological enabler for building O&M — immersive document visualization, remote assistance, advanced diagnostics and automated reporting with ARyze.",
@@ -52,7 +52,7 @@ const ARTICLES=[
   {slug:"bipv-03-25",series:"Make It Green",sub:"BIPV-03",num:"05/25",domain:"green",author:"AP",date:"May 2025",
    title:"BIPV in Action: Real-World Applications Driving the Sustainable Transformation of Buildings",
    excerpt:"From Novartis Pavilion Basel to Copenhagen International School — global case studies demonstrating how BIPV thrives and the barriers it must overcome.",
-   hero:"/images/blog/NovartisPavillon-01-ThePlan-1920w.jpg"},
+   hero:"/images/blog/NovartisPavillon-01-1920w.jpg"},
   {slug:"xr-02-25",series:"Make It Human",sub:"XR-02",num:"04/25",domain:"human",author:"AP",date:"Apr 2025",
    title:"Extended Reality (XR) in Construction: Transforming Design, Building, and Operation",
    excerpt:"XR technologies reshaping every stage of the construction lifecycle — case studies from Unity, HoloBuilder, Gamma AR, XYZ Reality and the PROMETHEUS project.",
@@ -209,8 +209,7 @@ function PressCard({p}){
 }
 
 
-export default function Insi
-  const [lang,setLang]=useState("en");
+export default function InsightsPage("en");
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);}

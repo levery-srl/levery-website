@@ -138,8 +138,7 @@ function HeroPattern({accent1,accent2,dual}){
   );
 }
 
-export default function ProjectClie
-  const [lang,setLang]=useState("en");
+export default function ProjectClient("en");
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);}

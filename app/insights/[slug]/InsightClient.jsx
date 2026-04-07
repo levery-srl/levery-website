@@ -15,11 +15,11 @@ const ARTICLES={
   "bio-03-26":{
     series:"Make It Green",sub:"Bio-03",num:"04/26",domain:"green",author:"Alessandro Pracucci",date:"April 2, 2026",
     title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
-    hero:"/images/blog/jametguedjatelierfusomyrhaps-35-1920w.jpg",
+    hero:"/images/blog/jametgued-1920w.jpg",
     images:[
-      "/images/blog/Pedone-02_Pedone-1920w.jpg",
-      "/images/blog/Ricehouse-02_Ricehouse-1920w.jpg",
-      "/images/blog/Immagine+2026-04-02+121740-1920w.png",
+      "/images/blog/Pedone-02-1920w.jpg",
+      "/images/blog/Ricehouse-02-1920w.jpg",
+      "/images/blog/Immagine-2026-04-02-121740.png",
     ],
     captions:[
       "Fig. 1 | The Goutte d'Or project by Atelier Fuso (credit: The Plan)",
@@ -46,12 +46,12 @@ const ARTICLES={
       "ai-02-26":{
     series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"digital",author:"Matteo Giovanardi",date:"February 25, 2026",
     title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
-    hero:"/images/blog/pexels-photo-34804017-1920w.jpeg",
+    hero:"/images/blog/pexels-34804017-1920w.jpeg",
     images:[
       "/images/blog/clev-1920w.png",
-      "/images/blog/9f8b381c-444c-4770-bd92-0705078deee4-1920w.jpg",
-      "/images/blog/original_163384f3-13d7-4bde-a80e-092c1f1589b7_-1920w.png",
-      "/images/blog/Immagine+2026-02-25+153201-1920w.png",
+      "/images/blog/9f8b381c-1920w.jpg",
+      "/images/blog/original-163384-1920w.png",
+      "/images/blog/Immagine-2026-02-25-153201.png",
     ],
     captions:[
       "Fig. 1 | Clev AI copilot for BIM (credit: Clev)",
@@ -77,7 +77,7 @@ const ARTICLES={
   "rob-02-26":{
     series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"Alessandro Pracucci",date:"February 3, 2026",
     title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
-    hero:"/images/blog/pexels-photo-17180807-1920w.jpeg",
+    hero:"/images/blog/pexels-17180807-1920w.jpeg",
     images:[
       "/images/blog/HP-01-1920w.jpg",
       "/images/blog/Tybot-01-1920w.jpg",
@@ -110,7 +110,7 @@ const ARTICLES={
 "bio-02-26":{
     series:"Make It Green",sub:"BIO-02",num:"01/26",domain:"green",author:"Alessandro Pracucci",date:"Jan 7, 2026",
     title:"Bio-based building materials & products for construction: innovative technologies",
-    hero:"/images/blog/crop2.jpg(mediaclass-full-width.c3083fedae46a95f1139ff9d5833b1b6b8e20a69)-1920w.jpg",
+    hero:"/images/blog/crop2-1920w.jpg",
     images:[
       "/images/blog/mykor-01-1920w.jpg",
       "/images/blog/INDRESMAT-01-1920w.jpg",
@@ -144,7 +144,7 @@ const ARTICLES={
     "ai-01-25":{
     series:"Make It Digital",sub:"AI-01",num:"12/25",domain:"digital",author:"Matteo Giovanardi",date:"Nov 26, 2025",
     title:"AI as a Copilot for Construction: Actors & Stakeholders",
-    hero:"/images/blog/pexels-photo-30530416-1920w.jpeg",
+    hero:"/images/blog/pexels-30530416-1920w.jpeg",
     images:[
       "/images/blog/IMG1-1920w.png",
       "/images/blog/IMG2-1920w.png",
@@ -174,10 +174,10 @@ const ARTICLES={
   "bio-01-25":{
     series:"Make It Green",sub:"BIO-01",num:"08/25",domain:"green",author:"Alessandro Pracucci",date:"Oct 1, 2025",
     title:"Bio-based Building Materials & Products for Construction: Actors & Stakeholders",
-    hero:"/images/blog/ladrillos_de_canamo_0-1920w.jpg",
+    hero:"/images/blog/ladrillos-canamo-1920w.jpg",
     images:[
-      "/images/blog/04-TATU.1698252652.2865-1920w.jpg",
-      "/images/blog/W2W_partnes-1920w.jpg",
+      "/images/blog/04-TATU-1920w.jpg",
+      "/images/blog/W2W-partners-1920w.jpg",
       "/images/blog/0002-1920w.jpg",
     ],
     captions:[
@@ -211,11 +211,11 @@ const ARTICLES={
   "rob-01-25":{
     series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"Alessandro Pracucci",date:"Oct 29, 2025",
     title:"Robotic & Automation for Construction: Actors & Stakeholders",
-    hero:"/images/blog/pexels-photo-10119310-1920w.jpeg",
+    hero:"/images/blog/pexels-10119310-1920w.jpeg",
     images:[
-      "/images/blog/Amlatea-01_Credit-Iturralde-1920w.jpeg",
-      "/images/blog/Hadriamn-X-03_Credit-FBR-1920w.jpg",
-      "/images/blog/Hilti_01_Credit-Hilti-1920w.jpg",
+      "/images/blog/Amlatea-01-1920w.jpeg",
+      "/images/blog/Hadrian-X-03-1920w.jpg",
+      "/images/blog/Hilti_01-1920w.jpg",
     ],
     captions:[
       "Fig. 1 — AMALTEA project: robotics technologies (credit: Iturralde)",
@@ -236,7 +236,7 @@ const ARTICLES={
     series:"Make It Digital",sub:"XR-03",num:"07/25",domain:"digital",author:"Matteo Giovanardi",date:"Jun 26, 2025",
     title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
     hero:"/images/blog/Immagine-2025-06-26-104300-1920w.jpg",
-    images:["/images/blog/Immagine-2025-06-26-104300-1920w.jpg","/images/blog/Immagine+2025-06-26+105320-1920w.jpg","/images/blog/Immagine+2025-06-26+104402-1920w.jpg","/images/blog/Immagine+2025-06-26+104341-1920w.jpg"],
+    images:["/images/blog/Immagine-2025-06-26-104300-1920w.jpg","/images/blog/Immagine-2025-06-26-105320.jpg","/images/blog/Immagine-2025-06-26-104402.jpg","/images/blog/Immagine-2025-06-26-104341.jpg"],
     captions:["Fig. 1 — ARyze platform (credits: Levery)","Fig. 2 — ARyze: remote collaboration module (credits: Levery)","Fig. 3 — ARyze: IoT data visualization (credits: Levery)","Fig. 4 — ARyze: automated reporting interface (credits: Levery)"],
     sections:[
       {h:"Introduction",body:"Extended Reality (XR) — encompassing VR, AR, and MR — is transforming how we interact with buildings. Modern building envelopes incorporate sophisticated active components: intelligent solar shading, automated openings, environmental sensors, photovoltaic modules. Traditional reactive maintenance is no longer sufficient. Aligned with EPBD (EU/2024/1275) and the Smart Readiness Indicator (SRI) framework, innovative solutions must preserve system functionality while extending useful life."},
@@ -267,8 +267,8 @@ const ARTICLES={
   "bipv-03-25":{
     series:"Make It Green",sub:"BIPV-03",num:"05/25",domain:"green",author:"Alessandro Pracucci",date:"May 2025",
     title:"BIPV in Action: Real-World Applications Driving the Sustainable Transformation of Buildings",
-    hero:"/images/blog/NovartisPavillon-01-ThePlan-1920w.jpg",
-    images:["/images/blog/NovartisPavillon-01-ThePlan-1920w.jpg","/images/blog/CIS-01-SolarLab-1920w.jpg","/images/blog/Red-College-01-MetSolar-1920w.jpg","/images/blog/Unipol-02-MCA-1920w.jpg","/images/blog/SunRock-01-MVRDV-1920w.png"],
+    hero:"/images/blog/NovartisPavillon-01-1920w.jpg",
+    images:["/images/blog/NovartisPavillon-01-1920w.jpg","/images/blog/CIS-01-SolarLab-1920w.jpg","/images/blog/Red-College-01-1920w.jpg","/images/blog/Unipol-02-1920w.jpg","/images/blog/SunRock-01-1920w.png"],
     captions:["Fig. 1 — Pavillon Novartis, Basel (credit: The Plan / AMDL Circle)","Fig. 2 — Copenhagen International School (credit: SolarLab / C.F. Møller Architects)","Fig. 3 — Red Deer College Residence, Canada (credit: MetSolar)","Fig. 4 — Unipol Tower, Milan (credit: MCA Architects / MetSolar)","Fig. 5 — Sun Rock by MVRDV for Taipower, Taiwan (credit: MVRDV)"],
     sections:[
       {h:"Introduction",body:"BIPV represents a paradigm shift in construction — one of the most promising ways to decarbonize the built environment. Solar panels are no longer add-ons but integral components that blend functionality with sustainability. The European project MC2.0 investigates how stakeholders approach BIPV in different building typologies, mapping practices and testing design tools to accelerate scalable, user-centric BIPV solutions."},
@@ -320,7 +320,7 @@ export default function InsightClient({slug}){
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {NAV_LINKS.map(([label,href])=>(<li key={label}><a href={href} style={{color:href==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>))}
           </ul>
-          <a href={BOOKING} target="_blank" rel="noopener noreferrer" <button style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}} onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
+          <button style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}} onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}}>{lang==="en"?"IT":"EN"}</button><a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
         </div>
       </nav>
 
