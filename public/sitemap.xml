@@ -30,5 +30,6 @@
   <url><loc>https://levery.it/impact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://levery.it/team</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://levery.it/contact</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://levery.it/ai-usage-policy</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 
 </urlset>

@@ -299,14 +299,6 @@ const ARTICLES={
 
 };
 
-function HeroPattern({accent}){
-  return(
-    <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.07,pointerEvents:"none"}} viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice">
-      {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="320" stroke={accent||"#7EC8E3"} strokeWidth="1"/>))}
-    </svg>
-  );
-}
-
 export default function InsightClient({slug}){
   const [lang,setLang]=useState("en");
   useEffect(()=>{

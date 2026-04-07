@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from "react";
-import React, { useState, useEffect } from "react";
 
 const C = {
   brand:"#2D4059", green:"#1E6B45", greenMid:"#2A8A58",
