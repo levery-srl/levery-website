@@ -379,7 +379,7 @@ export default function LeveryHomepage() {
           </div>
           <hr style={hr()}/>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:2, background:C.rule }} className="l-grid3">
-            {t.services.map((svc,i)=>{
+            {(t.services||[]).map((svc,i)=>{
               const { bg, accent, label } = svc.domain;
               const stripes = Array.from({length:10},(_,j)=>j*38-30);
               return (
@@ -428,7 +428,7 @@ export default function LeveryHomepage() {
       {/* ── STATS – after services, proof of track record ── */}
       <div style={{ background:C.sandDark, borderTop:`1px solid ${C.rule}`, borderBottom:`1px solid ${C.rule}` }}>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px", display:"grid", gridTemplateColumns:"repeat(4,1fr)" }} className="l-stats-grid">
-          {t.stats.map((s,i)=>(
+          {(t.stats||[]).map((s,i)=>(
             <div key={i} style={{ padding:"32px 24px", borderRight:i<3?`1px solid ${C.rule}`:"none" }}>
               <span style={{ fontSize:36, fontWeight:200, letterSpacing:0, color:C.brand, display:"block", fontFamily:"'Georgia',serif", lineHeight:1 }}>{s.value}</span>
               <span style={{ fontSize:12, color:C.inkLight, fontFamily:"'Helvetica Neue',Arial,sans-serif", marginTop:7, display:"block", letterSpacing:"0.03em" }}>{s.label}</span>
@@ -447,7 +447,7 @@ export default function LeveryHomepage() {
           <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 8px"}}>{t.clientsTitle}</p>
           <p style={{fontSize:18,fontWeight:400,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 40px",maxWidth:560,lineHeight:1.5}}>{t.clientsSub}</p>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}} className="l-clients-grid">
-            {t.clients.map((cl,i)=>(
+            {(t.clients||[]).map((cl,i)=>(
               <div key={i} style={{padding:"24px 20px",border:`1px solid ${C.rule}`,borderRadius:2,background:C.sand}}>
                 <span style={{fontSize:22,color:C.green,display:"block",marginBottom:12}}>{cl.icon}</span>
                 <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.3}}>{cl.sector}</p>
@@ -483,7 +483,7 @@ export default function LeveryHomepage() {
           </div>
           <hr style={hr()}/>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:2, background:C.rule }} className="l-grid3">
-            {t.projects.map((p,i)=>{
+            {(t.projects||[]).map((p,i)=>{
               const active = p.status==="Active"||p.status==="Attivo";
               const dom = domainFor(p.tags, p.name);
               return (
@@ -528,7 +528,7 @@ export default function LeveryHomepage() {
           </div>
           <hr style={hr()}/>
           <div style={{ display:"flex", flexDirection:"column", gap:2 }}>
-            {t.insights.map((ins,i)=>(
+            {(t.insights||[]).map((ins,i)=>(
               <a key={i} href={`/insights/${ins.slug}`} style={{ textDecoration:"none" }}
                 onClick={()=>track("insight_click",{slug:ins.slug,series:ins.series})}
               >

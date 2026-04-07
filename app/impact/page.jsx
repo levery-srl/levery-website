@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from "react";
 const C={brand:"#2D4059",green:"#1E6B45",greenMid:"#2A8A58",greenLight:"#E8F5EE",
   white:"#FFFFFF",sand:"#F5F2EC",sandDark:"#EDE9E1",ink:"#1A1A1A",
   inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
