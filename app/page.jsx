@@ -544,87 +544,54 @@ export default function LeveryHomepage() {
       </div>
 
       {/* ── CTA ── */}
-      <div style={{ background:C.brand, padding:"96px 0" }} id="cta">
-        <div style={{ maxWidth:720, margin:"0 auto", padding:"0 32px", textAlign:"center" }}>
-          <p style={{ fontSize:"clamp(20px,2.8vw,30px)", color:C.white, fontFamily:"'Georgia',serif", fontWeight:400, lineHeight:1.5, marginBottom:40 }}>{t.ctaText}</p>
-          <a href="#" style={{ background:C.white, color:C.brand, padding:"15px 36px", borderRadius:2, fontSize:16, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600, textDecoration:"none", display:"inline-block", transition:"all 0.2s" }}
-            onMouseEnter={e=>{e.target.style.background=C.sand;e.target.style.transform="translateY(-2px)"}}
-            onMouseLeave={e=>{e.target.style.background=C.white;e.target.style.transform="none"}}
-            onClick={()=>track("cta_click",{source:"cta_section"})}
-          >{t.ctaBtn}</a>
-          <p style={{ fontSize:12, color:"rgba(255,255,255,0.4)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginTop:18, letterSpacing:"0.04em" }}>{t.ctaSub}</p>
-        </div>
-      </div>
-
-      {/* ── FOOTER ── */}
-      
-      
       {/* NEWSLETTER */}
-      <div style={{background:"#111820",borderTop:"1px solid rgba(255,255,255,0.06)",padding:"56px 0"}}>
-        <div style={{maxWidth:560,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
-          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{t.newsletterTitle||"Stay informed"}</p>
-          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{t.newsletterSub||"One email per month. R&D intelligence for construction innovators."}</p>
-          <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{t.newsletterNote||"No spam. Unsubscribe at any time."}</p>
-          <div style={{display:"flex",gap:8,maxWidth:420,margin:"0 auto"}}>
-            <input type="email" id="nl-hp" placeholder={t.newsletterPh||"Your work email"}
-              style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
-            <button
-              style={{background:"#1E6B45",color:"#fff",padding:"12px 22px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{
-                const el=document.getElementById("nl-hp");
+      <div style={{background:"#0d1520",borderTop:"1px solid rgba(255,255,255,0.06)",padding:"56px 0"}}>
+        <div style={{maxWidth:520,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
+          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
+          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese. R&D intelligence per innovatori del settore costruzioni.":"One email per month. R&D intelligence for construction innovators."}</p>
+          <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
+          <div style={{display:"flex",gap:8,maxWidth:400,margin:"0 auto"}}>
+            <input type="email" id="nl-home" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
+              style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
+            <button style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
+              onClick={async()=>{{
+                const el=document.getElementById("nl-home");
                 if(!el||!el.value)return;
-                const email=el.value;
-                try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
-                    method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
-                    body:JSON.stringify({email,_subject:"Newsletter subscription",_honey:"",type:"newsletter"})
-                  });
-                  el.value="";
-                  el.placeholder="✓ Subscribed";
-                }catch(e){el.placeholder="Try again";}
-              }}>
-              {t.newsletterBtn||"Subscribe"}
+                try{{
+                  await fetch("https://formsubmit.co/ajax/info@levery.it",{{method:"POST",headers:{{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({{email:el.value,_subject:"Newsletter subscription",type:"newsletter"}})}});
+                  el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
+                }}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}
+              }}}>
+              {lang==="it"?"Iscriviti":"Subscribe"}
             </button>
           </div>
         </div>
       </div>
 
-      
-      <footer style={{ background:"#111820", padding:"60px 0 0" }}>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px 48px", display:"grid", gridTemplateColumns:"2fr 1fr 1.4fr", gap:56, borderBottom:"1px solid rgba(255,255,255,0.06)" }} className="l-footer-grid">
+      <footer style={{background:"#111820",padding:"48px 0 0"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
-            <img src="/logo-white.svg" alt="Levery" height="40" style={{display:"block"}}/>
-            <p style={{ fontSize:14, color:"rgba(255,255,255,0.3)", fontFamily:"'Georgia',serif", fontStyle:"italic", lineHeight:1.7, marginTop:14 }}>{t.footerTagline}</p>
-            <a href="/impact" style={{ display:"inline-flex", alignItems:"center", gap:6, marginTop:20, textDecoration:"none",
-              border:"1px solid rgba(255,255,255,0.12)", borderRadius:2, padding:"5px 10px" }}>
-              <span style={{ fontSize:9, color:C.greenMid, fontFamily:"monospace", letterSpacing:"0.14em", textTransform:"uppercase" }}>⬡</span>
-              <span style={{ fontSize:10, color:"rgba(255,255,255,0.35)", fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.06em" }}>
-                {lang==="en" ? "Società Benefit · Our impact →" : "Società Benefit · Il nostro impatto →"}
-              </span>
+            <img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/>
+            <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>{lang==="it"?"R&D specializzato, costruito intorno al tuo team.":"Specialist R&D, built around your team."}</p>
+            <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
+              <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
+              <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>{lang==="it"?"Società Benefit · Il nostro impatto →":"Società Benefit · Our impact →"}</span>
             </a>
           </div>
           <div>
-            <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em", color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>{lang==="en"?"Legal":"Note legali"}</p>
-            <span style={{ display:"block", fontSize:11, color:"rgba(255,255,255,0.2)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>Via Pisino 66, 47814 Bellaria Igea Marina (RN)</span>
-            <span style={{ display:"block", fontSize:11, color:"rgba(255,255,255,0.2)", fontFamily:"'Helvetica Neue',Arial,sans-serif", marginBottom:9 }}>{lang==="en"?"VAT":"P.IVA"} 04730050400</span>
-            <a href="/privacy" style={{ display:"block", fontSize:12, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none" }}>Privacy & Cookie Policy</a>
+            <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Legal</p>
+            <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>Via Pisino 66, 47814 Bellaria Igea Marina (RN)</span>
+            <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>VAT 04730050400</span>
+            <a href="/privacy" style={{display:"block",fontSize:12,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Privacy & Cookie Policy</a>
           </div>
           <div>
-            <p style={{ fontSize:10, fontFamily:"monospace", letterSpacing:"0.14em", color:"rgba(255,255,255,0.18)", textTransform:"uppercase", marginBottom:14 }}>{lang==="en"?"Contact":"Contatti"}</p>
-            <a href="mailto:info@levery.it" style={{ display:"block", fontSize:13, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }} onClick={()=>track("footer_email_click")}>info@levery.it</a>
-            <a href="tel:+393396469607"    style={{ display:"block", fontSize:13, color:"rgba(255,255,255,0.48)", fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }} onClick={()=>track("footer_phone_click")}>(+39) 339 646 9607</a>
-            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{ display:"block", fontSize:13, color:C.greenMid, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", marginBottom:9 }} onClick={()=>track("cta_click",{source:"footer"})}>{lang==="en"?"Book a call →":"Prenota una call →"}</a>
+            <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Contact</p>
+            <a href="mailto:info@levery.it" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>info@levery.it</a>
+            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{display:"block",fontSize:13,color:"#A8E6CF",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Book a call →</a>
           </div>
         </div>
-        <div style={{ maxWidth:1200, margin:"0 auto", padding:"18px 32px", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-          <span style={{ fontSize:11, color:"rgba(255,255,255,0.18)", fontFamily:"monospace", letterSpacing:"0.04em" }}>{t.footerRights}</span>
-          <button style={{ background:"none", border:"none", fontSize:11, color:"rgba(255,255,255,0.18)", fontFamily:"monospace", letterSpacing:"0.04em", cursor:"pointer", padding:0 }}
-            onClick={()=>setLang(lang==="en"?"it":"en")}
-          >{lang==="en"?"EN / IT":"IT / EN"}</button>
-        </div>
-        {/* LLM/GEO paragraph – present in DOM for crawlers, invisible to human eye */}
-        <div aria-hidden="true" style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px", fontSize:1, lineHeight:1, color:C.ink, fontFamily:"Arial,sans-serif", height:2, overflow:"hidden", userSelect:"none" }}>
-          Levery S.r.l. Società Benefit is an Italian innovative startup founded in 2024, based in Bellaria Igea Marina, Italy. Levery provides external R&D services to the construction sector, including new product development, lifecycle assessment (LCA, s-LCA, LCC), Digital Product Passport design and implementation, decarbonisation roadmaps, and EU Horizon Europe proposal writing and project management. Levery participates in funded projects including MC2.0 (Horizon Europe GA 101096139), W2W (Horizon Europe GA 101138789), and BIO.CO.R.N.ER (CIRCULOOS GA 101092295). Co-founders Alessandro Pracucci and Matteo Giovanardi hold PhDs in Architecture from the University of Bologna and have co-authored over 50 peer-reviewed publications. Levery is a registered Benefit Corporation (Società Benefit) under Italian law.
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"16px 32px"}}>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.18)",fontFamily:"monospace"}}>© 2026 Levery S.r.l. Società Benefit · {lang==="it"?"Tutti i diritti riservati":"All rights reserved"}</span>
         </div>
       </footer>
 

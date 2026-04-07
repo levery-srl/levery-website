@@ -113,110 +113,38 @@ export default function ContactPage(){
       </div>
 
       {/* CONTENT */}
-      <div style={{background:C.white,padding:"64px 0 96px"}}>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1.6fr",gap:80,alignItems:"start"}} className="l-contact-grid">
-
-            {/* LEFT — info */}
-            <div style={{position:"sticky",top:88}}>
-              <h2 style={{fontSize:22,fontWeight:400,color:C.ink,margin:"0 0 16px",fontFamily:"'Georgia',serif"}}>Work with us</h2>
-              <p style={{fontSize:15,color:C.inkMid,lineHeight:1.8,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 32px"}}>We work alongside construction manufacturers, material producers and contractors as a specialist R&D partner — from new product development to EU funding and ESPR compliance.</p>
-
-              <div style={{marginBottom:32}}>
-                <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 14px",paddingBottom:10,borderBottom:`1px solid ${C.rule}`}}>Book a call directly</p>
-                <a href={BOOKING} target="_blank" rel="noopener noreferrer"
-                  style={{display:"inline-flex",alignItems:"center",gap:10,background:C.green,color:C.white,padding:"12px 24px",borderRadius:2,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>
-                  Book a 30-minute call →
-                </a>
-              </div>
-
-              <div>
-                <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 14px",paddingBottom:10,borderBottom:`1px solid ${C.rule}`}}>Direct contacts</p>
-                <a href="mailto:info@levery.it" style={{display:"block",fontSize:14,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:8}}>info@levery.it</a>
-                <a href="tel:+393396469607" style={{display:"block",fontSize:14,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:16}}>(+39) 339 646 9607</a>
-                <p style={{fontSize:13,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.6,margin:0}}>Via Pisino 66<br/>47814 Bellaria Igea Marina (RN)<br/>Italy</p>
-              </div>
-            </div>
-
-            {/* RIGHT — form */}
-            <div>
-              {status==="success"?(
-                <div style={{background:"#E8F5EE",border:"1px solid #A8E6CF",borderRadius:2,padding:"32px 28px",textAlign:"center"}}>
-                  <span style={{fontSize:28,display:"block",marginBottom:12}}>✓</span>
-                  <h3 style={{fontSize:20,fontWeight:400,color:C.green,fontFamily:"'Georgia',serif",margin:"0 0 10px"}}>Message received</h3>
-                  <p style={{fontSize:14,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0,lineHeight:1.7}}>We will get back to you within one working day. In the meantime, feel free to <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{color:C.green}}>book a call directly</a>.</p>
-                </div>
-              ):(
-                <form onSubmit={handleSubmit}>
-                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
-                    <Input label="Name" name="name" required value={form.name} onChange={set("name")} placeholder="Name Surname"/>
-                    <Input label="Company" name="company" value={form.company} onChange={set("company")} placeholder="Company name"/>
-                  </div>
-                  <Input label="Email" name="email" type="email" required value={form.email} onChange={set("email")} placeholder="info@yourcompany.com"/>
-                  <Select label="Topic" name="topic" required value={form.topic} onChange={set("topic")}
-                    options={["New product development","Sustainability & ESPR compliance","Digital Product Passport (DPP)","EU funding & Horizon Europe","Other"]}/>
-                  <div style={{marginBottom:24}}>
-                    <label style={{display:"block",fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",marginBottom:8}}>Message *</label>
-                    <textarea name="message" required value={form.message} onChange={set("message")} rows={5}
-                      placeholder={t.msgPh} data-placeholder="Describe your project or question briefly…"
-                      style={{width:"100%",padding:"11px 14px",fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:C.ink,background:C.white,border:`1px solid ${C.rule}`,borderRadius:2,outline:"none",resize:"vertical",boxSizing:"border-box"}}
-                      onFocus={e=>e.target.style.borderColor=C.green}
-                      onBlur={e=>e.target.style.borderColor=C.rule}/>
-                  </div>
-                  <p style={{fontSize:11,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.6,margin:"0 0 20px"}}>By submitting this form you agree to our <a href="/privacy" style={{color:C.inkLight}}>Privacy Policy</a>. Your data will only be used to respond to your enquiry.</p>
-                  {status==="error"&&<p style={{fontSize:13,color:"#C0392B",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:16}}>Something went wrong. Please try again or email us directly.</p>}
-                  <button type="submit" disabled={status==="sending"}
-                    style={{background:status==="sending"?C.inkLight:C.green,color:C.white,padding:"13px 32px",borderRadius:2,fontSize:15,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:600,border:"none",cursor:status==="sending"?"not-allowed":"pointer",transition:"background 0.2s"}}>
-                    {status==="sending"?"Sending…":"Send message →"}
-                  </button>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-
-            
-      
       {/* NEWSLETTER */}
-      <div style={{background:"#111820",padding:"56px 0"}}>
-        <div style={{maxWidth:560,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
+      <div style={{background:"#0d1520",borderTop:"1px solid rgba(255,255,255,0.06)",padding:"56px 0"}}>
+        <div style={{maxWidth:520,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
           <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
           <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese. R&D intelligence per innovatori del settore costruzioni.":"One email per month. R&D intelligence for construction innovators."}</p>
           <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
-          <div style={{display:"flex",gap:8,maxWidth:420,margin:"0 auto"}}>
-            <input type="email" id="nl-ct" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
-              style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
-            <button
-              style={{background:"#1E6B45",color:"#fff",padding:"12px 22px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{
-                const el=document.getElementById("nl-ct");
+          <div style={{display:"flex",gap:8,maxWidth:400,margin:"0 auto"}}>
+            <input type="email" id="nl-contact" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
+              style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
+            <button style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
+              onClick={async()=>{{
+                const el=document.getElementById("nl-contact");
                 if(!el||!el.value)return;
-                const email=el.value;
-                try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
-                    method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
-                    body:JSON.stringify({email,_subject:"Newsletter subscription",_honey:"",type:"newsletter"})
-                  });
-                  el.value="";
-                  el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
-                }catch(e){el.placeholder=lang==="it"?"Riprova":"Try again";}
-              }}>
+                try{{
+                  await fetch("https://formsubmit.co/ajax/info@levery.it",{{method:"POST",headers:{{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({{email:el.value,_subject:"Newsletter subscription",type:"newsletter"}})}});
+                  el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
+                }}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}
+              }}}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>
           </div>
         </div>
       </div>
 
-      
-      <footer style={{background:"#1A1A1A",padding:"48px 0 0"}}>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 40px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
+      <footer style={{background:"#111820",padding:"48px 0 0"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
             <img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/>
-            <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>Specialist R&D, built around your team.</p>
+            <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>{lang==="it"?"R&D specializzato, costruito intorno al tuo team.":"Specialist R&D, built around your team."}</p>
             <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
               <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
-              <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>Società Benefit · Our impact →</span>
+              <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>{lang==="it"?"Società Benefit · Il nostro impatto →":"Società Benefit · Our impact →"}</span>
             </a>
           </div>
           <div>
@@ -228,12 +156,11 @@ export default function ContactPage(){
           <div>
             <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Contact</p>
             <a href="mailto:info@levery.it" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>info@levery.it</a>
-            <a href="tel:+393396469607" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>(+39) 339 646 9607</a>
             <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{display:"block",fontSize:13,color:"#A8E6CF",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Book a call →</a>
           </div>
         </div>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"16px 32px"}}>
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.18)",fontFamily:"monospace"}}>© 2026 Levery S.r.l. Società Benefit · All rights reserved</span>
+          <span style={{fontSize:11,color:"rgba(255,255,255,0.18)",fontFamily:"monospace"}}>© 2026 Levery S.r.l. Società Benefit · {lang==="it"?"Tutti i diritti riservati":"All rights reserved"}</span>
         </div>
       </footer>
 
