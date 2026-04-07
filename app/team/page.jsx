@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from "react";
 import React, { useState, useEffect } from "react";
 
 const C = {
@@ -361,7 +362,7 @@ export default function LeveryTeam() {
         <div style={{ ...inner }}>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)",
             gap:24 }} className="l-team-grid">
-            {t.members.map((m,i)=>(
+            {(t.members||[]).map((m,i)=>(
               <MemberCard key={i} m={m}/>
             ))}
           </div>
