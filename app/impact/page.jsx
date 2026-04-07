@@ -26,6 +26,9 @@ const COPY={
     report2025:"2025 Annual Report",
     report2025note:"Publishing Q2 2026",
     report2024:"2024 Annual Report",
+    report2024note:"Download PDF",
+    reportSub:"As a Società Benefit, we publish an annual report documenting our social and environmental impact.",
+    reportTitle:"Annual Benefit Report",
     ctaTitle:"Work with us on your sustainability goals",
     ctaSub:"LCA, Digital Product Passport, decarbonisation roadmap — we can help.",
     ctaBtn:"Book a call →",
@@ -50,6 +53,9 @@ const COPY={
     report2025:"Relazione 2025",
     report2025note:"Pubblicazione prevista Q2 2026",
     report2024:"Relazione 2024",
+    report2024note:"Scarica PDF",
+    reportSub:"Come Società Benefit, pubblichiamo una relazione annuale che documenta il nostro impatto sociale e ambientale.",
+    reportTitle:"Relazione Annuale d'Impatto",
     ctaTitle:"Lavora con noi sui tuoi obiettivi di sostenibilità",
     ctaSub:"LCA, Passaporto Digitale di Prodotto, roadmap di decarbonizzazione — possiamo aiutarti.",
     ctaBtn:"Prenota una call →",
@@ -69,9 +75,23 @@ function Nav({lang, setLang, currentPath}){
     if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl);
   }
   return(
-    <Nav lang={lang} setLang={setLang} currentPath="/impact"/>
+    <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
+      <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+        <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
+        <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
+          {links.map(([label,href])=>(
+            <li key={href}><a href={href} style={{color:currentPath===href?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:currentPath===href?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>
+          ))}
+        </ul>
+        <div style={{display:"flex",alignItems:"center",gap:8}}>
+          <button onClick={toggleLang} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer"}}>{lang==="en"?"IT":"EN"}</button>
+          <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>Book a call</a>
+        </div>
+      </div>
+    </nav>
   );
 }
+
 
 export default function ImpactPage(){
   const [lang,setLang]=useState("en");
@@ -97,7 +117,7 @@ export default function ImpactPage(){
       
 
       {/* HERO */}
-      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"120px 0 64px",position:"relative",overflow:"hidden"}}>
+      <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"184px 0 64px",position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.06,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
@@ -136,25 +156,29 @@ export default function ImpactPage(){
         </div>
       </div>
 
-      {/* BENEFIT REPORT */}
+            {/* BENEFIT REPORT */}
       <div style={{background:C.white,padding:"80px 0",borderBottom:`1px solid ${C.rule}`}}>
-        <div style={{...inner}}>
-          <h2 style={{fontSize:13,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 16px"}}>{t.reportTitle}</h2>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
+          <h2 style={{fontSize:13,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 16px"}}>{t.reportTitle||"Annual Benefit Report"}</h2>
           <p style={{fontSize:15,color:C.inkMid,lineHeight:1.8,fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:600,margin:"0 0 32px"}}>{t.reportSub}</p>
           <div style={{display:"flex",gap:16,flexWrap:"wrap"}}>
-            <div style={{padding:"20px 24px",border:`1px solid ${C.rule}`,borderRadius:2,minWidth:220}}>
-              <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 6px"}}>{t.report2025}</p>
-              <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{t.report2025note}</p>
-            </div>
+            <a href="/docs/levery-benefit-report-2024.pdf" target="_blank" rel="noopener noreferrer"
+              style={{padding:"20px 24px",border:`1px solid ${C.green}`,borderRadius:2,minWidth:220,textDecoration:"none",display:"block",cursor:"pointer"}}>
+              <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 6px"}}>{t.report2024||"2024 Annual Report"}</p>
+              <p style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{t.report2024note||"Download PDF"} ↓</p>
+            </a>
             <div style={{padding:"20px 24px",border:`1px solid ${C.rule}`,borderRadius:2,minWidth:220,opacity:0.5}}>
-              <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 6px"}}>{t.report2024}</p>
-              <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>Coming soon</p>
+              <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 6px"}}>{t.report2025||"2025 Annual Report"}</p>
+              <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{t.report2025note||"Publishing Q2 2026"}</p>
             </div>
           </div>
+          <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",marginTop:16}}>
+            {lang==="it"?"Il PDF del 2024 sarà disponibile al link dopo il caricamento su GitHub (public/docs/).":"The 2024 PDF will be available after uploading to GitHub (public/docs/)."}
+          </p>
         </div>
       </div>
 
-      {/* CTA */}
+      {/* CTA */}{/* CTA */}
       <div style={{background:C.green,padding:"64px 0"}}>
         <div style={{...inner,textAlign:"center"}}>
           <h2 style={{fontSize:28,fontWeight:400,color:C.white,fontFamily:"'Georgia',serif",margin:"0 0 12px"}}>{t.ctaTitle}</h2>

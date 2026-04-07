@@ -88,7 +88,7 @@ const copy = {
         photo:"/team/alessandro.jpg",
         role:"Co-founder & Director",
         name:"Alessandro Pracucci",
-        credentials:"PhD · Architect · Adjunct Professor, University of Bologna",
+        credentials:"Arch, PhD",
         bio:"Over a decade leading innovation in the construction sector — from building envelope systems and bio-based materials to digital transformation and EU-funded research. He holds a PhD, the National Scientific Qualification as Associate Professor, and teaches Building Technology at the University of Bologna. Author of 50+ peer-reviewed publications (h-index 10). Track record across 15+ European research projects with €65M+ in secured funding and direct management of €3.5M+ in project budgets. At Levery he leads strategy, client relationships, and product development.",
         tags:["Building Envelope","EU Funding","Digital Products","Sustainability Strategy"],
         linkedin:"https://it.linkedin.com/in/alessandropracucci",
@@ -100,7 +100,7 @@ const copy = {
         photo:"/team/matteo.jpg",
         role:"Co-founder",
         name:"Matteo Giovanardi",
-        credentials:"PhD · Architect · Politecnico di Torino",
+        credentials:"Arch, PhD",
         bio:"Architect and researcher with a PhD from Politecnico di Torino. Specialised in environmental sustainability, circular economy, and lifecycle assessment applied to construction materials and building systems. Co-founder and strategic partner at Levery, bridging academic rigour with market-ready solutions for industrial partners.",
         tags:["LCA","Circular Economy","Bio-based Materials","Applied Research"],
         linkedin:"https://it.linkedin.com/in/matteo-giovanardi-b36ba1117",
@@ -177,7 +177,7 @@ function MemberCard({ m }) {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div style={{ background:C.white, borderRadius:2, overflow:"hidden",
+    <div style={{display:"flex",flexDirection:"column",height:"100%", background:C.white, borderRadius:2, overflow:"hidden",
       border:`1px solid ${C.rule}`, display:"flex", flexDirection:"column" }}>
 
       {/* Photo — cover with center/center crop, bio overlay on hover */}
@@ -243,7 +243,7 @@ function MemberCard({ m }) {
       </div>
 
       {/* Info — always visible, links always clickable */}
-      <div style={{ padding:"22px 24px 26px", flexGrow:1 }}>
+      <div style={{ padding:"22px 24px 26px", flexGrow:1, display:"flex", flexDirection:"column" }}>
         <h3 style={{ fontSize:20, fontWeight:400, color:C.ink, margin:"0 0 4px",
           fontFamily:"'Georgia',serif" }}>{m.name}</h3>
         <p style={{ fontSize:10, fontFamily:"monospace", color:C.inkLight,
@@ -260,7 +260,7 @@ function MemberCard({ m }) {
             </span>
           ))}
         </div>
-        <div style={{ display:"flex", gap:16, borderTop:`1px solid ${C.rule}`,
+        <div style={{ display:"flex", gap:16, marginTop:"auto",borderTop:`1px solid ${C.rule}`,
           paddingTop:16, alignItems:"center" }}>
           <a href={m.linkedin} target="_blank" rel="noopener noreferrer"
             style={{ fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif",
@@ -278,10 +278,6 @@ function MemberCard({ m }) {
             onClick={()=>track("team_orcid",{name:m.name})}>
             ORCiD →
           </a>}
-          <span style={{ fontSize:10, color:C.inkLight, marginLeft:"auto",
-            fontFamily:"monospace", letterSpacing:"0.06em", opacity:0.6 }}>
-            hover photo
-          </span>
         </div>
       </div>
     </div>

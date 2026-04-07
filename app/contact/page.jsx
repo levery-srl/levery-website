@@ -177,23 +177,38 @@ export default function ContactPage(){
       </div>
 
             
+      
       {/* NEWSLETTER */}
       <div style={{background:"#111820",padding:"56px 0"}}>
         <div style={{maxWidth:560,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
           <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
-          <p style={{fontSize:18,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese con analisi di settore, nuovi prodotti e aggiornamenti normativi.":"One email per month. Sector analysis, new products, regulatory updates."}</p>
-          <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 24px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
-          <div style={{display:"flex",gap:8,maxWidth:400,margin:"0 auto"}}>
-            <input type="email" id="nl-contact" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
-              style={{flex:1,padding:"11px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.12)",background:"rgba(255,255,255,0.05)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
-            <button style={{background:"#1E6B45",color:"#fff",padding:"11px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={()=>{const el=document.getElementById("nl-contact");if(el&&el.value){window.location.href=`mailto:info@levery.it?subject=Newsletter&body=${encodeURIComponent(el.value)}`;el.value="";}}}>
+          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese. R&D intelligence per innovatori del settore costruzioni.":"One email per month. R&D intelligence for construction innovators."}</p>
+          <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
+          <div style={{display:"flex",gap:8,maxWidth:420,margin:"0 auto"}}>
+            <input type="email" id="nl-ct" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
+              style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
+            <button
+              style={{background:"#1E6B45",color:"#fff",padding:"12px 22px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
+              onClick={async()=>{
+                const el=document.getElementById("nl-ct");
+                if(!el||!el.value)return;
+                const email=el.value;
+                try{
+                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
+                    method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
+                    body:JSON.stringify({email,_subject:"Newsletter subscription",_honey:"",type:"newsletter"})
+                  });
+                  el.value="";
+                  el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
+                }catch(e){el.placeholder=lang==="it"?"Riprova":"Try again";}
+              }}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>
           </div>
         </div>
       </div>
 
+      
       <footer style={{background:"#1A1A1A",padding:"48px 0 0"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 40px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
