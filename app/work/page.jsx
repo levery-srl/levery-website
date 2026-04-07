@@ -138,7 +138,7 @@ const projects = {
       slug:"mc20",
       name:"MC2.0",
       domain:"eco",bg:"#1A3D2B",accent:"#A8E6CF",label:"ECO",isDual:false,
-      status:"Completed",
+      status:"Active",
       period:"2024–2026",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],

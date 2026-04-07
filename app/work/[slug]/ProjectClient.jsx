@@ -40,7 +40,7 @@ const PROJECTS={
     leveryRole:["Validation of W2W upcycled wood products for integration into prefabricated façade panel systems.","Benchmarking and comparative analysis against conventional virgin materials.","Façade system engineering — design and technical documentation.","Scientific dissemination and communication of project insights across the value chain."],
   },
   "mc20":{
-    name:"MC2.0",domainType:"eco",status:"Completed",
+    name:"MC2.0",domainType:"eco",status:"Active",
     fund:"Horizon Europe (GA 101096139)",fundUrl:"",
     period:"2024–2026",
     partners:["Horizon Europe (Grant Agreement 101096139)","Glass to Power S.p.A.","GUALINI S.p.A."],

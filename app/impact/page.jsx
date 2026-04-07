@@ -59,6 +59,20 @@ const COPY={
 const inner={maxWidth:1200,margin:"0 auto",padding:"0 32px"};
 const NAV_LINKS=[["Our Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
 
+
+function Nav({lang, setLang, currentPath}){
+  const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
+  const links=[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
+  function toggleLang(){
+    const nl=lang==="en"?"it":"en";
+    setLang(nl);
+    if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl);
+  }
+  return(
+    <Nav lang={lang} setLang={setLang} currentPath="/impact"/>
+  );
+}
+
 export default function ImpactPage(){
   const [lang,setLang]=useState("en");
   useEffect(()=>{
@@ -80,18 +94,7 @@ export default function ImpactPage(){
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-grid{grid-template-columns:1fr!important}}`}</style>
 
       {/* NAV */}
-      <nav style={{background:C.brand,borderBottom:"1px solid rgba(255,255,255,0.07)",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:0,zIndex:100}}>
-        <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
-        <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
-          {NAV_LINKS.map(([label,href])=>(
-            <li key={label}><a href={href} style={{color:href==="/impact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/impact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>
-          ))}
-        </ul>
-        <div style={{display:"flex",gap:8,alignItems:"center"}}>
-          <button onClick={toggleLang} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer"}}>{t.langSwitch}</button>
-          <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>{t.bookCTA}</a>
-        </div>
-      </nav>
+      
 
       {/* HERO */}
       <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"120px 0 64px",position:"relative",overflow:"hidden"}}>

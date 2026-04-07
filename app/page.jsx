@@ -178,9 +178,9 @@ const copy = {
     insightsTitle:"What we are watching",
     insightsSub:"All insights →",
     insights:[
-      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"AI-based solutions for the construction sector: innovative products for designing and constructing", excerpt:"From automated MEP design to high-precision reality capture — how AI is reshaping the construction site.", slug:"ai-solutions-construction" },
-      { domain:DOMAIN.digital, num:"02/26", series:"Make It Digital", date:"Feb 2026", title:"Robotic & Automation for Construction: robotic products for digital workflows", excerpt:"HP SitePrint, Hadrian X, and the next generation of robots closing the gap between BIM and jobsite execution.", slug:"robotics-construction" },
-      { domain:DOMAIN.green,   num:"01/26", series:"Make It Green",   date:"Jan 2026", title:"Bio-based building materials & products for construction: innovative technologies", excerpt:"From mycelium insulation to hemp bricks — commercial-ready products redefining the building envelope.", slug:"bio-based-building-materials" },
+      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Bio-based building materials & products: the 2026 innovation map", excerpt:"From mycelium to hemp composites — the commercial-ready products redefining the building envelope in 2026.", slug:"bio-03-26" },
+      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"AI-based solutions for construction: innovative products for designing and constructing", excerpt:"From automated MEP design to high-precision reality capture — how AI is reshaping the construction site.", slug:"ai-02-26" },
+      { domain:DOMAIN.digital, num:"02/26", series:"Make It Digital", date:"Feb 2026", title:"Robotic & Automation for Construction: robotic products for digital workflows", excerpt:"HP SitePrint, Hadrian X, and the next generation of robots closing the gap between BIM and jobsite execution.", slug:"rob-02-26" },
     ],
     ctaText:"If you are developing a construction product, facing a sustainability compliance challenge, or exploring EU funding — we are the right first call.",
     ctaBtn:"Book a 30-minute call →",
@@ -232,9 +232,9 @@ const copy = {
     insightsTitle:"Quello che stiamo osservando",
     insightsSub:"Tutti gli insights →",
     insights:[
-      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"Soluzioni AI per il settore delle costruzioni: prodotti innovativi per progettare e costruire", excerpt:"Dal design MEP automatizzato al reality capture ad alta precisione — come l'AI sta ridisegnando il cantiere.", slug:"ai-solutions-construction" },
-      { domain:DOMAIN.digital, num:"02/26", series:"Make It Digital", date:"Feb 2026", title:"Robotica e automazione per le costruzioni: prodotti robotici per workflow digitali", excerpt:"HP SitePrint, Hadrian X e la prossima generazione di robot che colmano il gap tra BIM ed esecuzione in cantiere.", slug:"robotics-construction" },
-      { domain:DOMAIN.green,   num:"01/26", series:"Make It Green",   date:"Gen 2026", title:"Materiali bio-based per l'edilizia: tecnologie innovative", excerpt:"Dal mycelium alle costruzioni in canapa — prodotti pronti al mercato che ridefiniscono l'involucro edilizio.", slug:"bio-based-building-materials" },
+      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Materiali bio-based per l'edilizia: la mappa dell'innovazione 2026", excerpt:"Dal mycelium ai compositi di canapa — i prodotti pronti al mercato che ridefiniscono l'involucro edilizio.", slug:"bio-03-26" },
+      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"Soluzioni AI per le costruzioni: prodotti innovativi per progettare e costruire", excerpt:"Dal design MEP automatizzato al reality capture ad alta precisione — come l'AI sta ridisegnando il cantiere.", slug:"ai-02-26" },
+      { domain:DOMAIN.digital, num:"02/26", series:"Make It Digital", date:"Feb 2026", title:"Robotica e automazione per le costruzioni: prodotti robotici per workflow digitali", excerpt:"HP SitePrint, Hadrian X e la prossima generazione di robot che colmano il gap tra BIM ed esecuzione in cantiere.", slug:"rob-02-26" },
     ],
     ctaText:"Se stai sviluppando un prodotto da costruzione, affronti una sfida di conformità alla sostenibilità o stai esplorando i finanziamenti europei — siamo la prima chiamata giusta.",
     ctaBtn:"Prenota una call di 30 minuti →",
@@ -458,22 +458,7 @@ export default function LeveryHomepage() {
         </div>
       </div>
 
-      {/* NEWSLETTER */}
-      <div style={{background:"#1A1A1A",padding:"64px 0"}}>
-        <div style={{maxWidth:600,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
-          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase",margin:"0 0 12px"}}>{t.newsletterTitle}</p>
-          <h2 style={{fontSize:24,fontWeight:400,color:C.white,fontFamily:"'Georgia',serif",margin:"0 0 10px",lineHeight:1.3}}>{t.newsletterSub}</h2>
-          <p style={{fontSize:13,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{t.newsletterNote}</p>
-          <div style={{display:"flex",gap:10,maxWidth:440,margin:"0 auto"}}>
-            <input type="email" placeholder={t.newsletterPh}
-              style={{flex:1,padding:"12px 16px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:C.white,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
-            <button style={{background:C.green,color:C.white,padding:"12px 24px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={()=>{const el=document.querySelector('input[type=email]');if(el&&el.value){window.location.href=`mailto:info@levery.it?subject=Newsletter%20subscription&body=Please%20add%20me%20to%20the%20Levery%20newsletter:%20${encodeURIComponent(el.value)}`;el.value='';}}}>
-              {t.newsletterBtn}
-            </button>
-          </div>
-        </div>
-      </div>
+      
 
       <div style={secLab()}>
               <span style={secNum()}>02</span>
@@ -572,6 +557,24 @@ export default function LeveryHomepage() {
       </div>
 
       {/* ── FOOTER ── */}
+      
+      {/* NEWSLETTER */}
+      <div style={{background:"#111820",borderTop:"1px solid rgba(255,255,255,0.06)",padding:"48px 0"}}>
+        <div style={{maxWidth:600,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
+          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{t.newsletterTitle||"Stay informed"}</p>
+          <p style={{fontSize:18,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{t.newsletterSub||"One email per month. Sector analysis, new products, regulatory updates."}</p>
+          <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 24px"}}>{t.newsletterNote||"No spam. Unsubscribe at any time."}</p>
+          <div style={{display:"flex",gap:8,maxWidth:420,margin:"0 auto"}}>
+            <input type="email" id="nl-email" placeholder={t.newsletterPh||"Your work email"}
+              style={{flex:1,padding:"11px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.12)",background:"rgba(255,255,255,0.05)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
+            <button style={{background:"#1E6B45",color:"#fff",padding:"11px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
+              onClick={()=>{const el=document.getElementById("nl-email");if(el&&el.value){window.location.href=`mailto:info@levery.it?subject=Newsletter&body=${encodeURIComponent(el.value)}`;el.value="";}}}>
+              {t.newsletterBtn||"Subscribe"}
+            </button>
+          </div>
+        </div>
+      </div>
+
       <footer style={{ background:"#111820", padding:"60px 0 0" }}>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px 48px", display:"grid", gridTemplateColumns:"2fr 1fr 1.4fr", gap:56, borderBottom:"1px solid rgba(255,255,255,0.06)" }} className="l-footer-grid">
           <div>
