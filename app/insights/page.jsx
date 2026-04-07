@@ -214,7 +214,11 @@ export default function InsightsPage(){
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);}
     else{const b=typeof navigator!=="undefined"?navigator.language:"en";if(b.startsWith("it")){setLang("it");}}
-  },[]);ghtsPage(){
+  },[]); 
+}
+
+export default function InsightsPage(){
+
   const [tab,setTab]=useState("articles");
   const [filter,setFilter]=useState("all");
   const filtered=filter==="all"?ARTICLES:ARTICLES.filter(a=>a.domain===filter||a.series.toLowerCase().includes(filter));

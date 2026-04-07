@@ -143,7 +143,11 @@ export default function ProjectClient({slug}){
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);}
     else{const b=typeof navigator!=="undefined"?navigator.language:"en";if(b.startsWith("it")){setLang("it");}}
-  },[]);nt({slug}){
+  },[]); 
+}
+
+export default function ProjectClient({slug}){
+
   const p=PROJECTS[slug]||PROJECTS["bio-corner"];
   const isDual=p.domainType==="dual";
   const dom1=isDual?DOM.rd:p.domainType==="rd"?DOM.rd:DOM.eco;
