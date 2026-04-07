@@ -209,7 +209,7 @@ function PressCard({p}){
 }
 
 
-export default function InsightsPage("en");
+export default function InsightsPage(){
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);}
