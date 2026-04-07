@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from "react";
 const C={brand:"#2D4059",green:"#1E6B45",greenMid:"#2A8A58",greenLight:"#E8F5EE",
   white:"#FFFFFF",sand:"#F5F2EC",sandDark:"#EDE9E1",ink:"#1A1A1A",
   inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
@@ -152,7 +153,7 @@ export default function ImpactPage(){
             <div key={ci} style={{marginBottom:48}}>
               <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 20px",paddingBottom:12,borderBottom:`1px solid ${C.rule}`}}>{cat.cat}</p>
               <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:2,background:C.rule}} className="l-metrics-grid">
-                {cat.items.map((m,mi)=>(
+                {ca(t.items||[]).map((m,mi)=>(
                   <div key={mi} style={{background:C.white,padding:"28px 24px"}}>
                     <span style={{display:"block",fontSize:36,fontWeight:400,color:C.green,fontFamily:"'Georgia',serif",lineHeight:1,marginBottom:8}}>{m.n}</span>
                     <span style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.5}}>{m.label}</span>

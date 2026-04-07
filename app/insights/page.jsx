@@ -209,12 +209,15 @@ function PressCard({p}){
 }
 
 
-export default function InsightsPage("en");
+export default function InsightsPage(){
+  const [lang,setLang]=useState("en");
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
-    if(saved){setLang(saved);}
-    else{const b=typeof navigator!=="undefined"?navigator.language:"en";if(b.startsWith("it")){setLang("it");}}
-  },[]);ghtsPage(){
+    if(saved){setLang(saved);return;}
+    const b=typeof navigator!=="undefined"?navigator.language:"en";
+    if(b.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
+  },[]);
+
   const [tab,setTab]=useState("articles");
   const [filter,setFilter]=useState("all");
   const filtered=filter==="all"?ARTICLES:ARTICLES.filter(a=>a.domain===filter||a.series.toLowerCase().includes(filter));

@@ -85,7 +85,7 @@ export default function AIUsagePolicy(){
         <h1 style={{fontSize:"clamp(28px,3vw,40px)",fontWeight:400,color:C.ink,margin:"0 0 24px",fontFamily:"'Georgia',serif",lineHeight:1.1}}>{t.title}</h1>
         <p style={{fontSize:16,color:C.inkMid,lineHeight:1.8,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 48px",maxWidth:680}}>{t.intro}</p>
 
-        {t.sections.map((sec,i)=>(
+        {(t.sections||[]).map((sec,i)=>(
           <div key={i} style={{marginBottom:44,paddingBottom:44,borderBottom:i<t.sections.length-1?`1px solid ${C.rule}`:"none"}}>
             <h2 style={{fontSize:13,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 16px"}}>{sec.h}</h2>
             {sec.items&&<ul style={{margin:0,paddingLeft:20}}>
