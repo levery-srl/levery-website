@@ -460,13 +460,15 @@ export default function LeveryHomepage() {
         </div>
       </div>
 
-      
-
-      <div style={secLab()}>
+      {/* ── PROJECTS ── */}
+      <div style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 56px" }}>
+        <div style={inner}>
+          <div style={secHdr}>
+            <div style={secLab()}>
               <span style={secNum()}>02</span>
               <span style={secTitle()}>{t.projectsTitle}</span>
             </div>
-            <a href="/work" style={allLink()}>  {t.projectsSub}</a>
+            <a href="/work" style={allLink()}>{t.projectsSub}</a>
           </div>
           <hr style={hr()}/>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:2, background:C.rule }} className="l-grid3">

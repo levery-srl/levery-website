@@ -242,7 +242,6 @@ export default function LeveryProducts(){
     const h=()=>setScrolled(window.scrollY>40);
     window.addEventListener("scroll",h);
     return()=>window.removeEventListener("scroll",h);
-    setReady(true);
   },[]);
 
   useEffect(()=>{
@@ -251,6 +250,7 @@ export default function LeveryProducts(){
     if(saved){setLang(saved);return;}
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");localStorage.setItem("levery_lang","it");}
+    setReady(true);
   },[]);
 
   const inner={maxWidth:1200,margin:"0 auto",padding:"0 32px"};
@@ -258,7 +258,7 @@ export default function LeveryProducts(){
     ["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
 
   return(
-    <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,
+    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,
       background:C.white,overflowX:"hidden"}}>
       <style>{`
         *{box-sizing:border-box}body{margin:0}
@@ -327,7 +327,7 @@ export default function LeveryProducts(){
       </div>
 
       {/* 50/50 CARDS — same pattern as homepage service cards */}
-      <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease", background:C.white, padding:"72px 0 88px" }}>
+      <div style={{ background:C.white, padding:"72px 0 88px" }}>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px" }}>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:2, background:C.rule }}
             className="l-prod-grid">

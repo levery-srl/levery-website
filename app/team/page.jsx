@@ -295,7 +295,6 @@ export default function LeveryTeam() {
     const h=()=>setScrolled(window.scrollY>40);
     window.addEventListener("scroll",h);
     return()=>window.removeEventListener("scroll",h);
-    setReady(true);
   },[]);
 
   useEffect(()=>{
@@ -304,6 +303,7 @@ export default function LeveryTeam() {
     if(saved){setLang(saved);return;}
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");localStorage.setItem("levery_lang","it");}
+    setReady(true);
   },[]);
 
   const inner = { maxWidth:1200, margin:"0 auto", padding:"0 32px" };
