@@ -171,9 +171,9 @@ const copy = {
     projectsTitle:"Active projects",
     projectsSub:"All projects →",
     projects:[
-      { name:"BIO.CO.R.N.ER", fund:"CIRCULOOS · GA 101092295", tags:["Bio-based Materials","Digital Tools","Circular Economy"], desc:"Digital supply chain architecture for bio-based building materials. NGSI-LD data platform, real-time traceability dashboard.", status:"Active" },
-      { name:"MC2.0",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energy","New Products"], desc:"Mass customisation of building-integrated photovoltaics. Market analysis, testing protocols, cost analysis across building typologies.", status:"Active" },
-      { name:"W2W",           fund:"Horizon Europe · GA 101138789", tags:["Circular Economy","Façade Systems","DPP"], desc:"Wood waste valorisation for prefabricated façade systems. Acoustic testing, façade engineering, Digital Product Passport.", status:"Active" },
+      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295", tags:["Bio-based Materials","Digital Tools","Circular Economy"], desc:"Digital supply chain architecture for bio-based building materials. NGSI-LD data platform, real-time traceability dashboard.", status:"Active" },
+      { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energy","New Products"], desc:"Mass customisation of building-integrated photovoltaics. Market analysis, testing protocols, cost analysis across building typologies.", status:"Active" },
+      { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Circular Economy","Façade Systems","DPP"], desc:"Wood waste valorisation for prefabricated façade systems. Acoustic testing, façade engineering, Digital Product Passport.", status:"Active" },
     ],
     insightsTitle:"What we are watching",
     insightsSub:"All insights →",
@@ -225,9 +225,9 @@ const copy = {
     projectsTitle:"Progetti attivi",
     projectsSub:"Tutti i progetti →",
     projects:[
-      { name:"BIO.CO.R.N.ER", fund:"CIRCULOOS · GA 101092295",     tags:["Materiali Bio-based","Strumenti Digitali","Economia Circolare"], desc:"Architettura digitale della supply chain per materiali bio-based da costruzione. Piattaforma dati NGSI-LD, dashboard di tracciabilità in tempo reale.", status:"Attivo" },
-      { name:"MC2.0",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energia","Nuovi Prodotti"],                               desc:"Mass customisation di fotovoltaico integrato negli edifici. Analisi di mercato, protocolli di test, analisi dei costi per tipologie edilizie.", status:"Attivo" },
-      { name:"W2W",           fund:"Horizon Europe · GA 101138789", tags:["Economia Circolare","Sistemi di Facciata","DPP"],                 desc:"Valorizzazione dei rifiuti di legno per sistemi di facciata prefabbricati. Test acustici, ingegneria della facciata, Passaporto Digitale di Prodotto.", status:"Attivo" },
+      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295",     tags:["Materiali Bio-based","Strumenti Digitali","Economia Circolare"], desc:"Architettura digitale della supply chain per materiali bio-based da costruzione. Piattaforma dati NGSI-LD, dashboard di tracciabilità in tempo reale.", status:"Attivo" },
+      { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energia","Nuovi Prodotti"],                               desc:"Mass customisation di fotovoltaico integrato negli edifici. Analisi di mercato, protocolli di test, analisi dei costi per tipologie edilizie.", status:"Attivo" },
+      { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Economia Circolare","Sistemi di Facciata","DPP"],                 desc:"Valorizzazione dei rifiuti di legno per sistemi di facciata prefabbricati. Test acustici, ingegneria della facciata, Passaporto Digitale di Prodotto.", status:"Attivo" },
     ],
     insightsTitle:"Quello che stiamo osservando",
     insightsSub:"Tutti gli insights →",
@@ -447,9 +447,9 @@ export default function LeveryHomepage() {
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}} className="l-clients-grid">
             {(t.clients||[]).map((cl,i)=>(
               <div key={i} style={{padding:"24px 20px",border:`1px solid ${C.rule}`,borderRadius:2,background:C.sand}}>
-                <span style={{fontSize:22,color:C.green,display:"block",marginBottom:12}}>{cl.icon}</span>
-                <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.3}}>{cl.sector}</p>
-                <p style={{fontSize:12,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.65,margin:0}}>{cl.desc}</p>
+                <span style={{fontSize:28,color:C.green,display:"block",marginBottom:14}}>{cl.icon}</span>
+                <p style={{fontSize:18,fontWeight:400,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 10px",lineHeight:1.25}}>{cl.sector}</p>
+                <p style={{fontSize:14,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.65,margin:0}}>{cl.desc}</p>
               </div>
             ))}
           </div>
@@ -489,7 +489,7 @@ export default function LeveryHomepage() {
                         <span key={j} style={{ fontSize:11, fontFamily:"'Helvetica Neue',Arial,sans-serif", padding:"3px 9px", border:`1px solid ${C.rule}`, borderRadius:2, color:C.inkMid, background:C.sand }}>{tag}</span>
                       ))}
                     </div>
-                    <a href={`/work/${p.name.toLowerCase().split(".").join("-")}`} style={{ fontSize:12, color:C.green, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", letterSpacing:"0.03em" }}
+                    <a href={`/work/${p.slug||p.name.toLowerCase().split(".").join("-")}`} style={{ fontSize:12, color:C.green, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", letterSpacing:"0.03em" }}
                       onClick={()=>track("project_view",{project:p.name})}
                     >
                       {lang==="en"?"View project →":"Vedi progetto →"}
