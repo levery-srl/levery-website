@@ -196,6 +196,31 @@ function PressCard({p}){
 
 
 export default function LeveryInsights(){
+  const copy={
+    en:{
+      heroSub:"Sector analysis, product reviews and R&D perspectives on digital construction, sustainability and EU funding.",
+      tabArticles:"Articles",tabPubs:"Publications",tabPress:"Press",
+      filterAll:"All articles",
+      pubsTitle:"Peer-reviewed publications",
+      pressTitle:"Press coverage",
+      ctaTitle:"Let\'s build something worth publishing.",
+      ctaSub:"We work with manufacturers, research consortia and EU project officers. Tell us what you need.",
+      ctaBook:"Book a call",
+      footerTagline:"Specialist R&D, built around your team.",
+    },
+    it:{
+      heroSub:"Analisi di settore, recensioni di prodotti e prospettive R&D su costruzione digitale, sostenibilità e finanziamenti europei.",
+      tabArticles:"Articoli",tabPubs:"Pubblicazioni",tabPress:"Stampa",
+      filterAll:"Tutti gli articoli",
+      pubsTitle:"Pubblicazioni scientifiche",
+      pressTitle:"Rassegna stampa",
+      ctaTitle:"Costruiamo qualcosa che valga la pena pubblicare.",
+      ctaSub:"Lavoriamo con produttori, consorzi di ricerca e project officer europei. Dicci di cosa hai bisogno.",
+      ctaBook:"Prenota una call",
+      footerTagline:"R&D specializzato, costruito intorno al tuo team.",
+    },
+  };
+  const t=copy[lang]||copy["en"];
   const [lang,setLang]=useState("en");
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
@@ -251,13 +276,13 @@ export default function LeveryInsights(){
             <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Insights</span>
           </div>
           <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Insights</h1>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>Sector analysis, product reviews and R&D perspectives on digital construction, sustainability and EU funding.</p>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>{t.heroSub}</p>
 
           {/* TABS */}
           <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-            <TabBtn id="articles" label="Articles"/>
-            <TabBtn id="publications" label="Publications"/>
-            <TabBtn id="press" label="Press"/>
+            <TabBtn id="articles" label={t.tabArticles}/>
+            <TabBtn id="publications" label={t.tabPubs}/>
+            <TabBtn id="press" label={t.tabPress}/>
           </div>
         </div>
       </div>
@@ -268,7 +293,7 @@ export default function LeveryInsights(){
           <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
             {/* Series filters */}
             <div style={{display:"flex",gap:8,flexWrap:"wrap",marginBottom:40}}>
-              {[["all","All articles"],["digital","Make It Digital"],["green","Make It Green"],["human","Make It Human"]].map(([key,label])=>(
+              {[["all",t.filterAll],["digital","Make It Digital"],["green","Make It Green"],["human","Make It Human"]].map(([key,label])=>(
                 <button key={key} onClick={()=>setFilter(key)} style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",textTransform:"uppercase",padding:"7px 16px",borderRadius:2,cursor:"pointer",border:"1px solid",transition:"all 0.2s",
                   background:filter===key?C.brand:"transparent",color:filter===key?C.white:C.inkLight,borderColor:filter===key?C.brand:C.rule}}>
                   {label}
