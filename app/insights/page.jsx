@@ -237,8 +237,7 @@ export default function LeveryInsights(){
             >{lang==="it"?"Prenota una call":"Book a call"}</a>
           </div>
         </div>
-      </nav>/style>
-      <NavBar lang={lang} setLang={setLang}/>
+      </nav>
 
       {/* HEADER */}
       <div style={{background:`linear-gradient(145deg,${C.brand} 0%,#1A2D40 100%)`,padding:"120px 0 64px",position:"relative",overflow:"hidden"}}>
