@@ -239,7 +239,7 @@ export default function LeveryProducts(){
           .l-prod-grid{grid-template-columns:1fr!important}
         }
         .l-prod-cta:hover{opacity:0.85}
-      `}<
+      `}/>
       {/* NAV */}
       <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
