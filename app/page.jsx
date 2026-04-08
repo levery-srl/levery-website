@@ -492,7 +492,7 @@ export default function LeveryHomepage() {
                         <span key={j} style={{ fontSize:11, fontFamily:"'Helvetica Neue',Arial,sans-serif", padding:"3px 9px", border:`1px solid ${C.rule}`, borderRadius:2, color:C.inkMid, background:C.sand }}>{tag}</span>
                       ))}
                     </div>
-                    <a href={`/work/${p.name.toLowerCase().replace(/\./g,"-")}`} style={{ fontSize:12, color:C.green, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", letterSpacing:"0.03em" }}
+                    <a href={`/work/${p.name.toLowerCase().split(".").join("-")}`} style={{ fontSize:12, color:C.green, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", letterSpacing:"0.03em" }}
                       onClick={()=>track("project_view",{project:p.name})}
                     >
                       {lang==="en"?"View project →":"Vedi progetto →"}
