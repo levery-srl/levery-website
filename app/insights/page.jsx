@@ -220,7 +220,6 @@ export default function LeveryInsights(){
       footerTagline:"R&D specializzato, costruito intorno al tuo team.",
     },
   };
-  const t=copy[lang]||copy["en"];
   const [lang,setLang]=useState("en");
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
@@ -229,6 +228,7 @@ export default function LeveryInsights(){
     if(b.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
   },[]);
 
+  const t=copy[lang]||copy["en"];
   const [tab,setTab]=useState("articles");
   const [filter,setFilter]=useState("all");
   const filtered=filter==="all"?ARTICLES:ARTICLES.filter(a=>a.domain===filter||a.series.toLowerCase().includes(filter));
