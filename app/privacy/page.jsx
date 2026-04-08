@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from "react";
 const C={brand:"#2D4059",green:"#1E6B45",white:"#FFFFFF",ink:"#1A1A1A",inkMid:"#4A4A4A",inkLight:"#8A8A8A",sand:"#F5F2EC",rule:"#E0DBD3"}
 const S=({title,children})=>(<div style={{marginBottom:40}}><h2 style={{fontSize:15,fontWeight:600,color:C.ink,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 10px",paddingBottom:10,borderBottom:`1px solid ${C.rule}`}}>{title}</h2><div style={{fontSize:14,color:C.inkMid,lineHeight:1.85,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>{children}</div></div>)
 export default function PrivacyPage(){
