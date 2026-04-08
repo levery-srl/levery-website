@@ -139,6 +139,14 @@ function HeroPattern({accent1,accent2,dual}){
 }
 
 export default function ProjectClient({slug}){
+  const [lang, setLang] = useState("en");
+  useEffect(()=>{
+    const saved = typeof localStorage !== "undefined" ? localStorage.getItem("levery_lang") : null;
+    if(saved){ setLang(saved); return; }
+    const b = typeof navigator !== "undefined" ? navigator.language : "en";
+    if(b.startsWith("it")){ setLang("it"); }
+  },[]);
+
 
   const p=PROJECTS[slug]||PROJECTS["bio-corner"];
   const isDual=p.domainType==="dual";
