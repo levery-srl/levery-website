@@ -560,9 +560,9 @@ export default function LeveryHomepage() {
                 const el=document.getElementById("nl-home");
                 if(!el||!el.value)return;
                 try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})}});
+                  await fetch("https://formsubmit.co/ajax/info@levery.it",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})});
                   el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
-                }catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}
+                }catch(e){el.placeholder=lang==="it"?"Riprova":"Try again";}}
               }}}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>
