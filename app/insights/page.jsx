@@ -111,10 +111,6 @@ const PRESS=[
   },
 ];
 
-function NavBar({lang,setLang}){
-  return(
-);
-}
 
 function ArticleCard({a}){
   const dom=DOMAIN[a.domain]||DOMAIN.digital;
@@ -480,10 +476,6 @@ const PRESS=[
   },
 ];
 
-function NavBar({lang,setLang}){
-  return(
-);
-}
 
 function ArticleCard({a}){
   const dom=DOMAIN[a.domain]||DOMAIN.digital;

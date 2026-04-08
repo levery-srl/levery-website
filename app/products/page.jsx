@@ -204,18 +204,6 @@ function ProductCard({p, dimmed=false}){
 }
 
 
-function Nav({lang, setLang, currentPath}){
-  const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
-  const links=[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
-  function toggleLang(){
-    const nl=lang==="en"?"it":"en";
-    setLang(nl);
-    if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl);
-  }
-  return(
-);
-}
-
 
 export default function LeveryProducts(){
   const [lang,setLang]=useState("en");
