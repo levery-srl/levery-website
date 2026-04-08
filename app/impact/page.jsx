@@ -95,13 +95,11 @@ function Nav({lang, setLang, currentPath}){
 
 export default function ImpactPage(){
   const [lang,setLang]=useState("en");
-  const [ready,setReady]=useState(false);
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);return;}
     const b=typeof navigator!=="undefined"?navigator.language:"en";
     if(b.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
-    setReady(true);
   },[]);
   const t=COPY[lang]||COPY["en"];
 
@@ -112,7 +110,7 @@ export default function ImpactPage(){
   }
 
   return(
-    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",fontFamily:"'Georgia',serif",color:C.ink,background:C.white,minHeight:"100vh"}}>
+    <div style={{fontFamily:"'Georgia',serif",color:C.ink,background:C.white,minHeight:"100vh"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-grid{grid-template-columns:1fr!important}}`}</style>
 
       {/* NAV */}

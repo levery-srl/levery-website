@@ -233,7 +233,6 @@ function Nav({lang, setLang, currentPath}){
 
 export default function LeveryProducts(){
   const [lang,setLang]=useState("en");
-  const [ready,setReady]=useState(false);
   const [scrolled,setScrolled]=useState(false);
   const [active,setActive]=useState(null); // null | "aryze" | "deeppy"
   const t=copy[lang]||copy["en"];
@@ -250,7 +249,6 @@ export default function LeveryProducts(){
     if(saved){setLang(saved);return;}
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");localStorage.setItem("levery_lang","it");}
-    setReady(true);
   },[]);
 
   const inner={maxWidth:1200,margin:"0 auto",padding:"0 32px"};
@@ -258,7 +256,7 @@ export default function LeveryProducts(){
     ["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
 
   return(
-    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,
+    <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,
       background:C.white,overflowX:"hidden"}}>
       <style>{`
         *{box-sizing:border-box}body{margin:0}

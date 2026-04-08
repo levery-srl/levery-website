@@ -57,18 +57,16 @@ const copy={
 
 export default function AIUsagePolicy(){
   const [lang,setLang]=useState("en");
-  const [ready,setReady]=useState(false);
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);return;}
     const b=typeof navigator!=="undefined"?navigator.language:"en";
     if(b.startsWith("it")){setLang("it");}
-    setReady(true);
   },[]);
   const t=copy[lang];
 
   return(
-    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",fontFamily:"'Georgia',serif",color:C.ink,background:C.white,minHeight:"100vh"}}>
+    <div style={{fontFamily:"'Georgia',serif",color:C.ink,background:C.white,minHeight:"100vh"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}`}</style>
       <nav style={{background:C.brand,borderBottom:"1px solid rgba(255,255,255,0.07)",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>

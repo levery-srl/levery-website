@@ -6,7 +6,6 @@ const BOOKING = "https://outlook.office.com/book/InfoLevert@levery.it/";
 
 export default function NotFound(){
   const [lang, setLang] = useState("en");
-  const [ready, setReady] = useState(false);
   useEffect(()=>{
     const saved = typeof localStorage !== "undefined" ? localStorage.getItem("levery_lang") : null;
     if(saved){ setLang(saved); }
@@ -14,7 +13,6 @@ export default function NotFound(){
       const b = typeof navigator !== "undefined" ? navigator.language : "en";
       if(b.startsWith("it")) setLang("it");
     }
-    setReady(true);
   },[]);
 
   const t = {
@@ -50,7 +48,7 @@ export default function NotFound(){
   const copy = t[lang]||t["en"];
 
   return(
-    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",minHeight:"100vh",background:C.brand,display:"flex",flexDirection:"column",fontFamily:"'Georgia','Times New Roman',serif"}}>
+    <div style={{minHeight:"100vh",background:C.brand,display:"flex",flexDirection:"column",fontFamily:"'Georgia','Times New Roman',serif"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}`}</style>
 
       {/* NAV */}

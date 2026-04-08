@@ -202,15 +202,6 @@ export default function ProjectClient({slug}){
         </div>
       </div>
 
-      {/* GALLERY */}
-      {p.images&&p.images.length>0&&(
-        <div style={{background:C.ink,padding:"2px 0"}}>
-          <div style={{display:"grid",gridTemplateColumns:p.images.length>1?"1fr 1fr":"1fr",gap:2,maxHeight:300,overflow:"hidden"}}>
-            {p.images.slice(0,2).map((img,i)=>(<img key={i} src={img} alt={`${p.name} ${i+1}`} style={{width:"100%",height:300,objectFit:"cover",display:"block"}}/>))}
-          </div>
-        </div>
-      )}
-
       {/* CONTENT */}
       <div style={{background:C.white,padding:"64px 0 96px"}}>
         <div style={inner}>

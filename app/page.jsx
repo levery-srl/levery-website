@@ -261,7 +261,6 @@ const copy = {
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 export default function LeveryHomepage() {
   const [lang, setLang] = useState("en");
-  const [ready, setReady] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [activeService, setActiveService] = useState(null);
@@ -278,7 +277,6 @@ export default function LeveryHomepage() {
     if(saved&&(saved==="it"||saved==="en")){setLang(saved);return;}
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
-    setReady(true);
   },[]);
 
   const parallax = -scrollY * 0.15;
@@ -295,7 +293,7 @@ export default function LeveryHomepage() {
   const secHdr  = { display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginBottom:0 };
 
   return (
-    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease", fontFamily:"'Georgia','Times New Roman',serif", color:C.ink, background:C.white, overflowX:"hidden" }}>
+    <div style={{ fontFamily:"'Georgia','Times New Roman',serif", color:C.ink, background:C.white, overflowX:"hidden" }}>
       <style>{`
         *{box-sizing:border-box}body{margin:0}
         @media(max-width:900px){

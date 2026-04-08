@@ -121,7 +121,7 @@ const ARTICLES={
     title:"Bio-based building materials & products for construction: innovative technologies",
     hero:"/images/blog/crop2-1920w.jpg",
     images:[
-      "/images/blog/mykor-01-1920w.jpg",
+      "/images/blog/crop2-1920w.jpg",
       "/images/blog/INDRESMAT-01-1920w.jpg",
       "/images/blog/mogu-02-1920w.jpg",
       "/images/blog/strongbyform-01-1920w.jpg",
@@ -256,8 +256,8 @@ const ARTICLES={
   "xr-03-25":{
     series:"Make It Digital",sub:"XR-03",num:"07/25",domain:"digital",author:"Matteo Giovanardi",date:"Jun 26, 2025",
     title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
-    hero:"/images/blog/Immagine-2025-06-26-104300-1920w.jpg",
-    images:["/images/blog/Immagine-2025-06-26-104300-1920w.jpg","/images/blog/Immagine-2025-06-26-105320.jpg","/images/blog/Immagine-2025-06-26-104402.jpg","/images/blog/Immagine-2025-06-26-104341.jpg"],
+    hero:"/images/blog/XR-03+2025-06-26+103540-1920w.jpg",
+    images:["/images/blog/XR-03+2025-06-26+103540-1920w.jpg","/images/blog/Immagine-2025-06-26-105320.jpg","/images/blog/Immagine-2025-06-26-104402.jpg","/images/blog/Immagine-2025-06-26-104341.jpg"],
     captions:["Fig. 1 — ARyze platform (credits: Levery)","Fig. 2 — ARyze: remote collaboration module (credits: Levery)","Fig. 3 — ARyze: IoT data visualization (credits: Levery)","Fig. 4 — ARyze: automated reporting interface (credits: Levery)"],
     sections:[
       {h:"Introduction",body:"Extended Reality (XR) — encompassing VR, AR, and MR — is transforming how we interact with buildings. Modern building envelopes incorporate sophisticated active components: intelligent solar shading, automated openings, environmental sensors, photovoltaic modules. Traditional reactive maintenance is no longer sufficient. Aligned with EPBD (EU/2024/1275) and the Smart Readiness Indicator (SRI) framework, innovative solutions must preserve system functionality while extending useful life."},
@@ -342,19 +342,17 @@ function HeroPattern({accent}){
 
 export default function InsightClient({slug}){
   const [lang,setLang]=useState("en");
-  const [ready,setReady]=useState(false);
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);return;}
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
-    setReady(true);
   },[]);
   const a=ARTICLES[slug]||ARTICLES["ai-02-26"];
   const dom=DOMAIN[a.domain]||DOMAIN.digital;
 
   return(
-    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
+    <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-art-layout{grid-template-columns:1fr!important}.l-sidebar{position:static!important}}`}</style>
 
       <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
