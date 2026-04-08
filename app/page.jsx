@@ -439,11 +439,7 @@ export default function LeveryHomepage() {
         </div>
       </div>
 
-      {/* ── PROJECTS ── */}
-      <div style={{ background:C.white, padding:"72px 0 88px" }} id="projects">
-        <div style={inner}>
-          <div style={secHdr}>
-                  {/* CLIENTS */}
+      {/* ── CLIENTS ── */}
       <div style={{background:C.white,padding:"80px 0",borderBottom:`1px solid ${C.rule}`}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
           <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 8px"}}>{t.clientsTitle}</p>
@@ -460,8 +456,9 @@ export default function LeveryHomepage() {
         </div>
       </div>
 
+
       {/* ── PROJECTS ── */}
-      <div style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 56px" }}>
+            <div style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 56px" }}>
         <div style={inner}>
           <div style={secHdr}>
             <div style={secLab()}>
