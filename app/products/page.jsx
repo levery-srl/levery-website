@@ -233,6 +233,7 @@ function Nav({lang, setLang, currentPath}){
 
 export default function LeveryProducts(){
   const [lang,setLang]=useState("en");
+  const [ready,setReady]=useState(false);
   const [scrolled,setScrolled]=useState(false);
   const [active,setActive]=useState(null); // null | "aryze" | "deeppy"
   const t=copy[lang]||copy["en"];
@@ -241,6 +242,7 @@ export default function LeveryProducts(){
     const h=()=>setScrolled(window.scrollY>40);
     window.addEventListener("scroll",h);
     return()=>window.removeEventListener("scroll",h);
+    setReady(true);
   },[]);
 
   useEffect(()=>{
@@ -325,7 +327,7 @@ export default function LeveryProducts(){
       </div>
 
       {/* 50/50 CARDS — same pattern as homepage service cards */}
-      <div style={{ background:C.white, padding:"72px 0 88px" }}>
+      <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease", background:C.white, padding:"72px 0 88px" }}>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px" }}>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:2, background:C.rule }}
             className="l-prod-grid">
@@ -363,13 +365,13 @@ export default function LeveryProducts(){
             <input type="email" id="nl-products" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
               style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
             <button style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{{
+              onClick={async()=>{
                 const el=document.getElementById("nl-products");
                 if(!el||!el.value)return;
-                try{{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{{method:"POST",headers:{{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({{email:el.value,_subject:"Newsletter subscription",type:"newsletter"}})}});
+                try{
+                  await fetch("https://formsubmit.co/ajax/info@levery.it",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})}});
                   el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
-                }}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}
+                }catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}
               }}}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>

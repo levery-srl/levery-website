@@ -1,4 +1,4 @@
-'use client'
+'use client'opacity:ready?1:0,transition:"opacity 0.15s ease",
 import { useState, useEffect } from "react";
 
 // ─── DESIGN TOKENS ───────────────────────────────────────────────────────────
@@ -261,6 +261,7 @@ const copy = {
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 export default function LeveryHomepage() {
   const [lang, setLang] = useState("en");
+  const [ready, setReady] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [activeService, setActiveService] = useState(null);
@@ -277,6 +278,7 @@ export default function LeveryHomepage() {
     if(saved&&(saved==="it"||saved==="en")){setLang(saved);return;}
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
+    setReady(true);
   },[]);
 
   const parallax = -scrollY * 0.15;
@@ -554,13 +556,13 @@ export default function LeveryHomepage() {
             <input type="email" id="nl-home" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
               style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
             <button style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{{
+              onClick={async()=>{
                 const el=document.getElementById("nl-home");
                 if(!el||!el.value)return;
-                try{{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{{method:"POST",headers:{{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({{email:el.value,_subject:"Newsletter subscription",type:"newsletter"}})}});
+                try{
+                  await fetch("https://formsubmit.co/ajax/info@levery.it",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})}});
                   el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
-                }}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}
+                }catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}
               }}}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>

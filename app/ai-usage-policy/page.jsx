@@ -57,16 +57,18 @@ const copy={
 
 export default function AIUsagePolicy(){
   const [lang,setLang]=useState("en");
+  const [ready,setReady]=useState(false);
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);return;}
     const b=typeof navigator!=="undefined"?navigator.language:"en";
     if(b.startsWith("it")){setLang("it");}
+    setReady(true);
   },[]);
   const t=copy[lang];
 
   return(
-    <div style={{fontFamily:"'Georgia',serif",color:C.ink,background:C.white,minHeight:"100vh"}}>
+    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",fontFamily:"'Georgia',serif",color:C.ink,background:C.white,minHeight:"100vh"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}`}</style>
       <nav style={{background:C.brand,borderBottom:"1px solid rgba(255,255,255,0.07)",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
         <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
@@ -110,7 +112,7 @@ export default function AIUsagePolicy(){
             <input type="email" id="nl-ai" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
               style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
             <button style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{{const el=document.getElementById("nl-ai");if(!el||!el.value)return;try{{await fetch("https://formsubmit.co/ajax/info@levery.it",{{method:"POST",headers:{{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({{email:el.value,_subject:"Newsletter subscription",type:"newsletter"}})}});el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";}}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}}}}>
+              onClick={async()=>{const el=document.getElementById("nl-ai");if(!el||!el.value)return;try{await fetch("https://formsubmit.co/ajax/info@levery.it",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})}});el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>
           </div>

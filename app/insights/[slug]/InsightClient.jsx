@@ -342,17 +342,19 @@ function HeroPattern({accent}){
 
 export default function InsightClient({slug}){
   const [lang,setLang]=useState("en");
+  const [ready,setReady]=useState(false);
   useEffect(()=>{
     const saved=typeof localStorage!=="undefined"?localStorage.getItem("levery_lang"):null;
     if(saved){setLang(saved);return;}
     const browser=typeof navigator!=="undefined"?navigator.language:"en";
     if(browser.startsWith("it")){setLang("it");if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang","it");}
+    setReady(true);
   },[]);
   const a=ARTICLES[slug]||ARTICLES["ai-02-26"];
   const dom=DOMAIN[a.domain]||DOMAIN.digital;
 
   return(
-    <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
+    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease",fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-art-layout{grid-template-columns:1fr!important}.l-sidebar{position:static!important}}`}</style>
 
       <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
@@ -457,7 +459,7 @@ export default function InsightClient({slug}){
             <input type="email" id="nl-insight" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
               style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
             <button style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{{const el=document.getElementById("nl-insight");if(!el||!el.value)return;try{{await fetch("https://formsubmit.co/ajax/info@levery.it",{{method:"POST",headers:{{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({{email:el.value,_subject:"Newsletter subscription",type:"newsletter"}})}});el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";}}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}}}}>
+              onClick={async()=>{const el=document.getElementById("nl-insight");if(!el||!el.value)return;try{await fetch("https://formsubmit.co/ajax/info@levery.it",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"}},body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})}});el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";}catch(e){{el.placeholder=lang==="it"?"Riprova":"Try again";}}}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>
           </div>
