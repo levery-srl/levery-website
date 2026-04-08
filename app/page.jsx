@@ -1,4 +1,4 @@
-'use client'opacity:ready?1:0,transition:"opacity 0.15s ease",
+'use client'
 import { useState, useEffect } from "react";
 
 // ─── DESIGN TOKENS ───────────────────────────────────────────────────────────
@@ -295,7 +295,7 @@ export default function LeveryHomepage() {
   const secHdr  = { display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginBottom:0 };
 
   return (
-    <div style={{ fontFamily:"'Georgia','Times New Roman',serif", color:C.ink, background:C.white, overflowX:"hidden" }}>
+    <div style={{opacity:ready?1:0,transition:"opacity 0.15s ease", fontFamily:"'Georgia','Times New Roman',serif", color:C.ink, background:C.white, overflowX:"hidden" }}>
       <style>{`
         *{box-sizing:border-box}body{margin:0}
         @media(max-width:900px){
@@ -556,14 +556,7 @@ export default function LeveryHomepage() {
             <input type="email" id="nl-home" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
               style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
             <button style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{
-                const el=document.getElementById("nl-home");
-                if(!el||!el.value)return;
-                try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})});
-                  el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
-                }catch(e){el.placeholder=lang==="it"?"Riprova":"Try again";}}
-              }}}>
+              onClick={async()=>{const el=document.getElementById("nl-home");if(!el||!el.value)return;try{await fetch("https://formsubmit.co/ajax/info@levery.it",{"method":"POST","headers":{"Content-Type":"application/json","Accept":"application/json"},"body":JSON.stringify({"email":el.value,"_subject":"Newsletter subscription","type":"newsletter"})});el.value="";el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";}catch(e){el.placeholder=lang==="it"?"Riprova":"Try again";}}}}}>
               {lang==="it"?"Iscriviti":"Subscribe"}
             </button>
           </div>
