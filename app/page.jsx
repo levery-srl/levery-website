@@ -339,7 +339,7 @@ export default function LeveryHomepage() {
       </nav>
 
       {/* ── HERO ── */}
-      <section style={{ minHeight:"clamp(50vh,60vh,68vh)", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
+      <section style={{ minHeight:"520px", display:"flex", alignItems:"center", background:C.sand, position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", inset:0, zIndex:1 }} className="l-hero-right">
           <GradientMesh parallax={parallax}/>
         </div>
