@@ -53,7 +53,7 @@ export default function NotFound(){
 
       {/* NAV */}
       <nav style={{padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between",borderBottom:"1px solid rgba(255,255,255,0.08)"}}>
-        <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
+        <a href="/"><img src="/logo-icon.svg" alt="Levery" height="28" style={{display:"block"}}/></a>
         <div style={{display:"flex",gap:8,alignItems:"center"}}>
           <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}}
             style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.5)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer"}}>

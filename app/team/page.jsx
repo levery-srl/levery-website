@@ -322,7 +322,7 @@ export default function LeveryTeam() {
       {/* NAV */}
             <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
+          <a href="/"><img src="/logo-icon.svg" alt="Levery" height="28" style={{display:"block"}}/></a>
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {[["Work","Lavori","/work"],["Products","Prodotti","/products"],["Insights","Insights","/insights"],["Impact","Impatto","/impact"],["Team","Team","/team"],["Contact","Contatti","/contact"]].map(([en,it,path])=>(
               <li key={path}><a href={path} style={{color:path==="/team"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:path==="/team"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}
@@ -427,7 +427,7 @@ export default function LeveryTeam() {
       <footer style={{background:"#111820",padding:"48px 0 0"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
-            <img src="/logo-levery-vertical.svg" alt="Levery" height="72" style={{display:"block"}}/>
+            <img src="/logo-color.svg" alt="Levery" height="72" style={{display:"block"}}/>
             <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>{lang==="it"?"R&D specializzato, costruito intorno al tuo team.":"Specialist R&D, built around your team."}</p>
             <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
               <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
