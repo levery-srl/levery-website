@@ -139,32 +139,32 @@ const copy = {
     nav:["Our Work","Products","Insights","Impact","Team","Contact"],
     bookCTA:"Book a call",
     heroLabel:"Levery S.r.l. Società Benefit",
-    heroH1a:"Your external R&D team",
-    heroH1b:"for the construction industry.",
-    heroSub:"We work alongside manufacturers, material producers, and contractors — bringing specialist R&D capabilities in new product development, sustainability compliance, and EU funding access.",
+    heroH1a:"Your R&D team —",
+    heroH1b:"when you need it, how you need it.",
+    heroSub:"We work alongside manufacturers, material producers and contractors as R&D partners — covering new product and process development, sustainability protocols and access to EU funding.",
     heroBtn:"Book a 30-minute call →",
     heroLink:"See our active projects ↓",
     stats:[
       {value:"€15M+",label:"EU projects contributed to"},
       {value:"€700K+",label:"Direct R&D budget managed"},
       {value:"50+",  label:"Peer-reviewed publications"},
-      {value:"100+", label:"Partners we work with"},
+      {value:"3",   label:"New products co-developed"},
     ],
     servicesTitle:"What we do",
     services:[
-      { domain:DOMAIN.digital, icon:"◈", title:"New Product Development",
+      { domain:DOMAIN.digital, icon:"◈", title:"New Product & Process Development",
         desc:"From concept development and material testing to prototype validation and pre-commercial launch — we run the full R&D cycle so your team can focus on production.",
-        ifText:"Relevant if you are developing a new building material, component, or system.",
-        caps:["Concept development & prototyping","Material selection & testing","Market validation & competitive benchmarking","Certification pathway support","Business model definition"],
+        ifText:"Relevant if you are developing a new building material, component, system or production process — including robotics and automation.",
+        caps:["Concept development & prototyping","Material selection & testing","Market validation & competitive benchmarking","Patent research & IP support","Business model definition"],
         link:"See related projects →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sustainability & Circular Economy",
         desc:"LCA, Digital Product Passports, decarbonisation roadmaps, ESG reporting. We translate regulatory requirements into actionable technical work.",
         ifText:"Relevant if you face ESPR compliance, decarbonisation targets, or ESG reporting obligations.",
         caps:["Digital Product Passport (DPP)","LCA / Lifecycle Assessment","ESPR & CE marking compliance","Decarbonisation roadmap","ESG Scope 1–3 reporting"],
         link:"See related projects →", href:"/work?filter=sustainability" },
-      { domain:DOMAIN.funding, icon:"◎", title:"EU Funding & Networks",
-        desc:"Horizon Europe proposal writing, open call applications, consortium building, financial reporting. We have been on the inside of 10+ funded projects.",
-        ifText:"Relevant if you want to access EU R&D funding or join an active research consortium.",
+      { domain:DOMAIN.funding, icon:"◎", title:"Research Partnerships & EU Funding",
+        desc:"Horizon Europe proposal writing, open call applications, consortium building, financial reporting. We help you access public R&D funding and build the right commercial and research partnerships.",
+        ifText:"Relevant if you want to access EU R&D funding or build commercial and research partnerships.",
         caps:["Horizon Europe proposal writing","Open call scouting","Consortium building","EU project management & reporting","Technical documentation for regulators"],
         link:"See related projects →", href:"/work?filter=funding" },
     ],
@@ -175,6 +175,8 @@ const copy = {
       { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energy","New Products"], desc:"Mass customisation of building-integrated photovoltaics. Market analysis, testing protocols, cost analysis across building typologies.", status:"Active" },
       { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Circular Economy","Façade Systems","DPP"], desc:"Wood waste valorisation for prefabricated façade systems. Acoustic testing, façade engineering, Digital Product Passport.", status:"Active" },
     ],
+    clientsTitle:"Who we work with",
+    clientsSub:"We work with companies across the construction and materials supply chain.",
     insightsTitle:"What we are watching",
     insightsSub:"All insights →",
     insights:[
@@ -193,30 +195,30 @@ const copy = {
     nav:["Progetti","Prodotti","Insights","Impatto","Team","Contatti"],
     bookCTA:"Prenota una call",
     heroLabel:"Levery S.r.l. Società Benefit",
-    heroH1a:"Il tuo team R&D esterno",
-    heroH1b:"per l'industria delle costruzioni.",
-    heroSub:"Affianchiamo produttori, fornitori di materiali e imprese con competenze R&D verticali — sviluppo di nuovi prodotti, sostenibilità normativa e accesso ai finanziamenti europei.",
+    heroH1a:"Il tuo team R&D —",
+    heroH1b:"quando ti serve, come ti serve.",
+    heroSub:"Affianchiamo produttori, fornitori di materiali e imprese come partner per il trasferimento tecnologico — sviluppo di nuovi prodotti e processi, protocolli di sostenibilità e accesso ai finanziamenti europei.",
     heroBtn:"Prenota una call di 30 minuti →",
     heroLink:"Vedi i progetti attivi ↓",
     stats:[
       {value:"€15M+",label:"Progetti EU a cui abbiamo contribuito"},
       {value:"€700K+",label:"Budget R&D gestito direttamente"},
       {value:"50+",  label:"Pubblicazioni peer-reviewed"},
-      {value:"100+", label:"Partner con cui collaboriamo"},
+      {value:"3",   label:"Nuovi prodotti co-sviluppati"},
     ],
     servicesTitle:"Cosa facciamo",
     services:[
-      { domain:DOMAIN.digital, icon:"◈", title:"Sviluppo Nuovi Prodotti",
+      { domain:DOMAIN.digital, icon:"◈", title:"Sviluppo di Prodotti e Processi",
         desc:"Dallo sviluppo del concept e dalla selezione dei materiali fino alla validazione del prototipo e al lancio pre-commerciale — gestiamo l'intero ciclo R&D perché il tuo team possa concentrarsi sulla produzione.",
-        ifText:"Pertinente se stai sviluppando un nuovo materiale, componente o sistema per l'edilizia.",
-        caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Validazione di mercato e benchmarking","Supporto percorso certificazione","Definizione business model"],
+        ifText:"Pertinente se stai sviluppando un nuovo materiale, componente, sistema o processo produttivo — incluse robotica e automazione.",
+        caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Validazione di mercato e benchmarking","Ricerca brevettuale e supporto IP","Definizione business model"],
         link:"Vedi progetti correlati →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sostenibilità ed Economia Circolare",
         desc:"LCA, Passaporti Digitali di Prodotto, roadmap di decarbonizzazione, reportistica ESG. Traduciamo i requisiti normativi in lavoro tecnico concreto.",
         ifText:"Pertinente se affronti la conformità ESPR, obiettivi di decarbonizzazione o obblighi di rendicontazione ESG.",
         caps:["Passaporto Digitale di Prodotto (DPP)","LCA / Analisi del Ciclo di Vita","Conformità ESPR e marcatura CE","Roadmap di decarbonizzazione","Reportistica ESG Scope 1–3"],
         link:"Vedi progetti correlati →", href:"/work?filter=sustainability" },
-      { domain:DOMAIN.funding, icon:"◎", title:"Finanziamenti EU e Reti",
+      { domain:DOMAIN.funding, icon:"◎", title:"Partnership di Ricerca e Finanziamenti EU",
         desc:"Scrittura di proposte Horizon Europe, domande per open call, costruzione di consorzi, rendicontazione finanziaria. Siamo stati all'interno di 10+ progetti finanziati.",
         ifText:"Pertinente se vuoi accedere ai finanziamenti R&D europei o unirti a un consorzio di ricerca attivo.",
         caps:["Scrittura proposte Horizon Europe","Scouting open call","Costruzione consorzi","Gestione e rendicontazione progetti UE","Documentazione tecnica per enti e regolatori"],
@@ -321,13 +323,18 @@ export default function LeveryHomepage() {
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
-            {[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]].map(([label,href])=>(
-              <li key={label}><a href={href} style={{color:"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>{label}</a></li>
+            {[["Work","Lavori","/work"],["Products","Prodotti","/products"],["Insights","Insights","/insights"],["Impact","Impatto","/impact"],["Team","Team","/team"],["Contact","Contatti","/contact"]].map(([en,it,path])=>(
+              <li key={path}><a href={path} style={{color:"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",paddingBottom:2}}
+              >{lang==="it"?it:en}</a></li>
             ))}
           </ul>
-          <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer",marginRight:8}}>{lang==="en"?"IT":"EN"}</button><a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer"
-            onClick={()=>track("cta_click",{source:"nav"})}
-            style={{background:C.green,color:C.white,padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}>{t.bookCTA}</a>
+          <div style={{display:"flex",alignItems:"center",gap:8}}>
+            <button onClick={()=>{const nl=lang==="en"?"it":"en";setLang(nl);if(typeof localStorage!=="undefined")localStorage.setItem("levery_lang",nl)}} style={{background:"none",border:"1px solid rgba(255,255,255,0.2)",color:"rgba(255,255,255,0.55)",fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",padding:"4px 10px",borderRadius:2,cursor:"pointer"}}
+            >{lang==="en"?"IT":"EN"}</button>
+            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{background:"#1E6B45",color:"#FFFFFF",padding:"9px 20px",borderRadius:2,fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,textDecoration:"none"}}
+              onClick={()=>track("cta_click",{source:"nav"})}
+            >{lang==="it"?"Prenota una call":"Book a call"}</a>
+          </div>
         </div>
       </nav>
 
@@ -438,10 +445,15 @@ export default function LeveryHomepage() {
       </div>
 
       {/* ── CLIENTS ── */}
-      <div style={{background:C.white,padding:"80px 0",borderBottom:`1px solid ${C.rule}`}}>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
-          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 8px"}}>{t.clientsTitle}</p>
-          <p style={{fontSize:18,fontWeight:400,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 40px",maxWidth:560,lineHeight:1.5}}>{t.clientsSub}</p>
+      <div style={{background:C.white,padding:"clamp(48px,6vh,72px) 0 56px",borderBottom:`1px solid ${C.rule}`}}>
+        <div style={inner}>
+          <div style={secHdr}>
+            <div style={secLab()}>
+              <span style={secNum()}>01b</span>
+              <span style={secTitle()}>{t.clientsTitle}</span>
+            </div>
+          </div>
+          <p style={{fontSize:16,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",margin:"8px 0 32px",maxWidth:560,lineHeight:1.6}}>{t.clientsSub}</p>
           <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}} className="l-clients-grid">
             {(t.clients||[]).map((cl,i)=>(
               <div key={i} style={{padding:"24px 20px",border:`1px solid ${C.rule}`,borderRadius:2,background:C.sand}}>
@@ -544,10 +556,10 @@ export default function LeveryHomepage() {
 
       {/* ── CTA ── */}
       {/* NEWSLETTER */}
-      <div style={{background:"#0d1520",borderTop:"1px solid rgba(255,255,255,0.06)",padding:"56px 0"}}>
+      <div style={{background:"#111820",borderTop:"1px solid rgba(255,255,255,0.08)",padding:"56px 0"}}>
         <div style={{maxWidth:520,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
           <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
-          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese. R&D intelligence per innovatori del settore costruzioni.":"One email per month. R&D intelligence for construction innovators."}</p>
+          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese. Notizie R&D e innovazione per il settore delle costruzioni.":"One email per month. R&D and innovation news for the construction industry."}</p>
           <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
           <div style={{display:"flex",gap:8,maxWidth:400,margin:"0 auto"}}>
             <input type="email" id="nl-home" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
