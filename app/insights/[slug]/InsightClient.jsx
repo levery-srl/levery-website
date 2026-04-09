@@ -49,7 +49,7 @@ const ARTICLES={
       "ai-02-26":{
     series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"digital",author:"Matteo Giovanardi",date:"February 25, 2026",
     title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
-    hero:"/images/blog/pexels-34804017-1920w.jpeg",
+    hero:"/images/blog/pexels-34804017-1920w.jpg",
     images:[
       "/images/blog/clev-1920w.png",
       "/images/blog/9f8b381c-1920w.jpg",
@@ -83,7 +83,7 @@ const ARTICLES={
   "rob-02-26":{
     series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"Alessandro Pracucci",date:"February 3, 2026",
     title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
-    hero:"/images/blog/pexels-17180807-1920w.jpeg",
+    hero:"/images/blog/pexels-17180807-1920w.jpg",
     images:[
       "/images/blog/HP-01-1920w.jpg",
       "/images/blog/Tybot-01-1920w.jpg",
@@ -156,7 +156,7 @@ const ARTICLES={
     "ai-01-25":{
     series:"Make It Digital",sub:"AI-01",num:"12/25",domain:"digital",author:"Matteo Giovanardi",date:"Nov 26, 2025",
     title:"AI as a Copilot for Construction: Actors & Stakeholders",
-    hero:"/images/blog/pexels-30530416-1920w.jpeg",
+    hero:"/images/blog/pexels-30530416-1920w.jpg",
     images:[
       "/images/blog/IMG1-1920w.png",
       "/images/blog/IMG2-1920w.png",
@@ -229,9 +229,9 @@ const ARTICLES={
   "rob-01-25":{
     series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"Alessandro Pracucci",date:"Oct 29, 2025",
     title:"Robotic & Automation for Construction: Actors & Stakeholders",
-    hero:"/images/blog/pexels-10119310-1920w.jpeg",
+    hero:"/images/blog/pexels-10119310-1920w.jpg",
     images:[
-      "/images/blog/Amlatea-01-1920w.jpeg",
+      "/images/blog/Amlatea-01-1920w.jpg",
       "/images/blog/Hadrian-X-03-1920w.jpg",
       "/images/blog/Hilti_01-1920w.jpg",
     ],
