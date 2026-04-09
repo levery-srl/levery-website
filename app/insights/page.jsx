@@ -70,11 +70,15 @@ const ARTICLES=[
   {slug:"bipv-03-25",series:"Make It Green",sub:"BIPV-03",num:"05/25",domain:"green",author:"AP",date:"May 2025",
    title:"BIPV in Action: Real-World Applications Driving the Sustainable Transformation of Buildings",
    excerpt:"From Novartis Pavilion Basel to Copenhagen International School — global case studies demonstrating how BIPV thrives and the barriers it must overcome.",
-   hero:"/images/blog/NovartisPavillon-01-1920w.jpg"},
+   hero:"/images/blog/NovartisPavillon-01-1920w.jpg",
+   titleIt:"BIPV in Azione: Applicazioni Reali che Guidano la Transizione Energetica Sostenibile",
+   excerptIt:"Casi reali di integrazione fotovoltaica negli edifici — facciate, coperture e vetrate — che dimostrano come il BIPV stia passando da tecnologia di nicchia a componente standard dell'involucro edilizio."},
   {slug:"xr-02-25",series:"Make It Human",sub:"XR-02",num:"04/25",domain:"human",author:"AP",date:"Apr 2025",
    title:"Extended Reality (XR) in Construction: Transforming Design, Building, and Operation",
    excerpt:"XR technologies reshaping every stage of the construction lifecycle — case studies from Unity, HoloBuilder, Gamma AR, XYZ Reality and the PROMETHEUS project.",
-   hero:"/images/blog/foto-1920w.jpg"},
+   hero:"/images/blog/foto-1920w.jpg",
+   titleIt:"Extended Reality (XR) nelle Costruzioni: Trasformare Progettazione, Formazione e Manutenzione",
+   excerptIt:"Come AR, VR e MR stanno ridefinendo il ciclo di vita dell'edilizia — dalla visualizzazione del progetto alla formazione in cantiere, fino alla manutenzione guidata degli edifici esistenti."},
 ];
 
 // ─── PUBLICATIONS ─────────────────────────────────────────────────────────────
