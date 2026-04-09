@@ -261,7 +261,7 @@ export default function LeveryProducts(){
 
       {/* PAGE HEADER */}
       <div style={{background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,
-        padding:"140px 0 80px",minHeight:"380px",position:"relative",overflow:"hidden"}}>
+        height:"450px",overflow:"hidden",position:"relative",paddingTop:"120px"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",
           opacity:0.04,pointerEvents:"none"}}
           viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
