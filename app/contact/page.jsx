@@ -36,7 +36,7 @@ function Select({label,name,required=false,value,onChange,options}){
 const copy={
   en:{
     pageLabel:"Contact", pageTitle:"Let's talk.",
-    pageSub:"Tell us about your project. We respond within one working day.",
+    pageSub:"Tell us about your project.",
     langSwitch:"IT",bookCTA:"Book a call",
     namePh:"Your name",companyPh:"Company",emailPh:"Work email",msgPh:"Describe your project or challenge — what are you working on?",
     submit:"Send message",sending:"Sending…",sent:"Message sent — we will be in touch within one working day.",
@@ -46,7 +46,7 @@ const copy={
   },
   it:{
     pageLabel:"Contatti", pageTitle:"Parliamo.",
-    pageSub:"Raccontaci il tuo progetto. Rispondiamo entro un giorno lavorativo.",
+    pageSub:"Raccontaci il tuo progetto.",
     langSwitch:"EN",bookCTA:"Prenota una call",
     namePh:"Il tuo nome",companyPh:"Azienda",emailPh:"Email aziendale",msgPh:"Descrivi il tuo progetto o la tua sfida — su cosa stai lavorando?",
     submit:"Invia messaggio",sending:"Invio in corso…",sent:"Messaggio inviato — ti risponderemo entro un giorno lavorativo.",
@@ -83,7 +83,7 @@ export default function ContactPage(){
   };
 
   return(
-    <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden"}}>
+    <div style={{fontFamily:"'Georgia','Times New Roman',serif",color:C.ink,background:C.white,overflowX:"hidden",paddingBottom:0}}>
       <style>{`*{box-sizing:border-box}body{margin:0}@media(max-width:900px){.l-nav-links{display:none!important}.l-contact-grid{grid-template-columns:1fr!important}}`}</style>
 
             <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
@@ -121,8 +121,112 @@ export default function ContactPage(){
       </div>
 
       {/* CONTENT */}
+      {/* FORM */}
+      <div style={{background:C.white,padding:"80px 0"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:64}} className="l-contact-grid">
+            {/* Left: info */}
+            <div>
+              <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:C.inkLight,textTransform:"uppercase",marginBottom:8}}>
+                {lang==="it"?"Parliamo":"Let's talk"}
+              </p>
+              <h2 style={{fontSize:28,fontWeight:400,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 24px",lineHeight:1.2}}>
+                {lang==="it"?"Come possiamo aiutarti?":"How can we help?"}
+              </h2>
+              <p style={{fontSize:15,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7,margin:"0 0 40px"}}>
+                {lang==="it"
+                  ?"Siamo attivi su nuovi prodotti, sostenibilità, finanziamenti EU e strumenti digitali. Scrivici e ti risponderemo."
+                  :"We are active on new products, sustainability, EU funding and digital tools. Write to us and we will get back to you."}
+              </p>
+              <div style={{display:"flex",flexDirection:"column",gap:12}}>
+                <a href="mailto:info@levery.it" style={{fontSize:15,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",fontWeight:500}}>info@levery.it</a>
+                <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer"
+                  style={{display:"inline-flex",alignItems:"center",gap:8,fontSize:13,color:C.ink,fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",border:`1px solid ${C.rule}`,borderRadius:2,padding:"10px 18px",width:"fit-content"}}>
+                  {lang==="it"?"Prenota una call →":"Book a call →"}
+                </a>
+              </div>
+            </div>
+            {/* Right: form */}
+            <div>
+              {status==="success" ? (
+                <div style={{padding:"48px 32px",background:C.sand,borderRadius:2,textAlign:"center"}}>
+                  <p style={{fontSize:22,fontWeight:400,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 12px"}}>
+                    {lang==="it"?"Messaggio ricevuto.":"Message received."}
+                  </p>
+                  <p style={{fontSize:14,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>
+                    {lang==="it"?"Ti risponderemo al più presto.":"We will get back to you soon."}
+                  </p>
+                </div>
+              ) : (
+                <div style={{display:"flex",flexDirection:"column",gap:16}} onSubmit={handleSubmit}>
+                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+                    <div>
+                      <label style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,textTransform:"uppercase",display:"block",marginBottom:6}}>
+                        {lang==="it"?"Nome":"Name"} *
+                      </label>
+                      <input value={form.name} onChange={set("name")} required
+                        style={{width:"100%",padding:"10px 12px",border:`1px solid ${C.rule}`,borderRadius:2,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:C.ink,background:C.white,outline:"none",boxSizing:"border-box"}}
+                        placeholder={lang==="it"?"Il tuo nome":"Your name"}/>
+                    </div>
+                    <div>
+                      <label style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,textTransform:"uppercase",display:"block",marginBottom:6}}>
+                        {lang==="it"?"Azienda":"Company"}
+                      </label>
+                      <input value={form.company} onChange={set("company")}
+                        style={{width:"100%",padding:"10px 12px",border:`1px solid ${C.rule}`,borderRadius:2,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:C.ink,background:C.white,outline:"none",boxSizing:"border-box"}}
+                        placeholder={lang==="it"?"La tua azienda":"Your company"}/>
+                    </div>
+                  </div>
+                  <div>
+                    <label style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,textTransform:"uppercase",display:"block",marginBottom:6}}>
+                      Email *
+                    </label>
+                    <input type="email" value={form.email} onChange={set("email")} required
+                      style={{width:"100%",padding:"10px 12px",border:`1px solid ${C.rule}`,borderRadius:2,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:C.ink,background:C.white,outline:"none",boxSizing:"border-box"}}
+                      placeholder={lang==="it"?"La tua email aziendale":"Your work email"}/>
+                  </div>
+                  <div>
+                    <label style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,textTransform:"uppercase",display:"block",marginBottom:6}}>
+                      {lang==="it"?"Di cosa hai bisogno?":"What do you need?"}
+                    </label>
+                    <select value={form.topic} onChange={set("topic")}
+                      style={{width:"100%",padding:"10px 12px",border:`1px solid ${C.rule}`,borderRadius:2,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:form.topic?C.ink:C.inkLight,background:C.white,outline:"none",boxSizing:"border-box",appearance:"none"}}>
+                      <option value="">{lang==="it"?"Seleziona un argomento":"Select a topic"}</option>
+                      <option value="product">{lang==="it"?"Sviluppo nuovi prodotti":"New product development"}</option>
+                      <option value="sustainability">{lang==="it"?"Sostenibilità e circolarità":"Sustainability & circularity"}</option>
+                      <option value="funding">{lang==="it"?"Finanziamenti EU":"EU funding"}</option>
+                      <option value="digital">{lang==="it"?"Strumenti digitali (DPP, AR)":"Digital tools (DPP, AR)"}</option>
+                      <option value="other">{lang==="it"?"Altro":"Other"}</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,textTransform:"uppercase",display:"block",marginBottom:6}}>
+                      {lang==="it"?"Messaggio":"Message"} *
+                    </label>
+                    <textarea value={form.message} onChange={set("message")} required rows={5}
+                      style={{width:"100%",padding:"10px 12px",border:`1px solid ${C.rule}`,borderRadius:2,fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",color:C.ink,background:C.white,outline:"none",resize:"vertical",boxSizing:"border-box"}}
+                      placeholder={lang==="it"?"Raccontaci il tuo progetto o sfida...":"Tell us about your project or challenge..."}/>
+                  </div>
+                  {status==="error"&&(
+                    <p style={{fontSize:13,color:"#c0392b",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>
+                      {lang==="it"?"Errore nell'invio. Scrivi a info@levery.it":"Error sending. Write to info@levery.it"}
+                    </p>
+                  )}
+                  <button onClick={handleSubmit} disabled={status==="sending"}
+                    style={{background:C.green,color:C.white,padding:"13px 28px",borderRadius:2,border:"none",fontSize:14,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:600,cursor:status==="sending"?"not-allowed":"pointer",opacity:status==="sending"?0.7:1,alignSelf:"flex-start"}}>
+                    {status==="sending"
+                      ?(lang==="it"?"Invio...":"Sending...")
+                      :(lang==="it"?"Invia messaggio":"Send message")}
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* NEWSLETTER */}
-      <div style={{background:"#0d1520",borderTop:"1px solid rgba(255,255,255,0.06)",padding:"56px 0"}}>
+      <div style={{background:"#111820",borderTop:"1px solid rgba(255,255,255,0.08)",padding:"56px 0"}}>
         <div style={{maxWidth:520,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
           <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
           <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese. R&D intelligence per innovatori del settore costruzioni.":"One email per month. R&D intelligence for construction innovators."}</p>

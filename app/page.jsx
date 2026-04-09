@@ -361,7 +361,7 @@ export default function LeveryHomepage() {
             <h1 className="l-hero-h1" style={{ fontSize:"clamp(44px, 5.5vw, 82px)", fontWeight:400, color:C.ink, lineHeight:1.0, margin:"0 0 28px", fontFamily:"'Georgia','Times New Roman',serif" }}>
               {t.heroH1a}<br/><span style={{ fontStyle:"italic", color:C.brand }}>{t.heroH1b}</span>
             </h1>
-            <p style={{ fontSize:16, color:C.inkMid, lineHeight:1.8, margin:"0 0 44px", fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:300 }}>{t.heroSub}</p>
+            <p style={{ fontSize:16, color:C.inkMid, lineHeight:1.8, margin:"0 0 44px", fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:300, whiteSpace:"pre-line" }}>{t.heroSub}</p>
             <div style={{ display:"flex", alignItems:"center", gap:24, flexWrap:"wrap" }}>
               <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{ background:C.brand, color:C.white, padding:"13px 28px", borderRadius:2, fontSize:15, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600, textDecoration:"none", display:"inline-block", transition:"all 0.2s" }}
                 onMouseEnter={e=>{e.target.style.background=C.brandMid;e.target.style.transform="translateY(-2px)"}}
@@ -449,7 +449,7 @@ export default function LeveryHomepage() {
         <div style={inner}>
           <div style={secHdr}>
             <div style={secLab()}>
-              <span style={secNum()}>01b</span>
+              <span style={secNum()}>02</span>
               <span style={secTitle()}>{t.clientsTitle}</span>
             </div>
           </div>
@@ -472,7 +472,7 @@ export default function LeveryHomepage() {
         <div style={inner}>
           <div style={secHdr}>
             <div style={secLab()}>
-              <span style={secNum()}>02</span>
+              <span style={secNum()}>03</span>
               <span style={secTitle()}>{t.projectsTitle}</span>
             </div>
             <a href="/work" style={allLink()}>{t.projectsSub}</a>
@@ -517,7 +517,7 @@ export default function LeveryHomepage() {
         <div style={inner}>
           <div style={secHdr}>
             <div style={secLab()}>
-              <span style={secNum()}>03</span>
+              <span style={secNum()}>04</span>
               <span style={secTitle()}>{t.insightsTitle}</span>
             </div>
             <a href="/insights" style={allLink()}>{t.insightsSub}</a>
