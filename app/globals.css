@@ -1,2 +1,10 @@
+@font-face {
+  font-family: 'Gilmer';
+  src: url('/fonts/Gilmer-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; }

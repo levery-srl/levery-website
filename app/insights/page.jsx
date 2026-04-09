@@ -17,38 +17,56 @@ const ARTICLES=[
    title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
    excerpt:"Six projects completed between 2023 and 2026 — from Roots Hamburg to Casa di Luce — demonstrating how biocomposites and natural fibers achieve equivalent or superior technical performance.",
    hero:"/images/blog/jametgued-1920w.jpg"},
+   titleIt:"Architettura bio-based: Progetti e casi studio per il futuro delle costruzioni",
+   excerptIt:"Sei progetti completati tra il 2023 e il 2026 — da Roots Hamburg a Casa di Luce — che dimostrano come biocompositi e fibre naturali raggiungano prestazioni tecniche equivalenti o superiori.",
   {slug:"ai-02-26",series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"human",author:"MG",date:"Feb 25, 2026",
    title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
    excerpt:"The landscape of AI-based solutions is expanding rapidly — from automated MEP design to high-precision reality capture. Examining frontier products addressing the industry's most persistent labor shortages.",
-   hero:"/images/blog/pexels-34804017-1920w.jpg"},
+   hero:"/images/blog/pexels-34804017-1920w.jpeg"},
+   titleIt:"Soluzioni AI per il settore costruzioni: Prodotti innovativi per progettare e costruire",
+   excerptIt:"Il panorama delle soluzioni AI si espande rapidamente — dalla progettazione MEP automatizzata al reality capture ad alta precisione. Un'analisi dei prodotti di frontiera che affrontano le carenze di manodopera più persistenti del settore.",
   {slug:"rob-02-26",series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"AP",date:"Feb 3, 2026",
    title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
    excerpt:"Robotic units bridging the gap between digital BIM representation and jobsite execution — HP SitePrint, FBR Hadrian X, and autonomous site management platforms.",
-   hero:"/images/blog/pexels-17180807-1920w.jpg"},
+   hero:"/images/blog/pexels-17180807-1920w.jpeg"},
+   titleIt:"Robotica e Automazione per le Costruzioni: Prodotti Robotici per Workflow Digitali",
+   excerptIt:"Unità robotiche che colmano il divario tra la rappresentazione BIM digitale e l'esecuzione in cantiere — HP SitePrint, FBR Hadrian X e piattaforme autonome di gestione del cantiere.",
   {slug:"bio-02-26",series:"Make It Green",sub:"Bio-02",num:"01/26",domain:"green",author:"AP",date:"Jan 7, 2026",
    title:"Bio-based building materials & products for construction: innovative technologies",
    excerpt:"From mycelium insulation to hemp bricks — high-performance bio-based composites redefining the building envelope as active carbon sinks.",
    hero:"/images/blog/crop2-1920w.jpg"},
+   titleIt:"Materiali e prodotti bio-based per l'edilizia: tecnologie innovative",
+   excerptIt:"Dal mycelium insulation ai mattoni di canapa — compositi bio-based ad alte prestazioni che ridefiniscono l'involucro edilizio come carbon sink attivo.",
   {slug:"ai-01-25",series:"Make It Human",sub:"AI-01",num:"12/25",domain:"human",author:"MG",date:"Nov 26, 2025",
    title:"AI as a Copilot for Construction: Actors & Stakeholders",
    excerpt:"AI is shifting construction from reactive to predictive workflows — mapping the ecosystem of technology developers, data providers and end-users driving this transformation.",
-   hero:"/images/blog/pexels-30530416-1920w.jpg"},
+   hero:"/images/blog/pexels-30530416-1920w.jpeg"},
+   titleIt:"AI come Copilota per le Costruzioni: Attori e Stakeholder",
+   excerptIt:"L'AI sposta le costruzioni da flussi di lavoro reattivi a predittivi — mappatura dell'ecosistema di sviluppatori tecnologici, fornitori di dati e utenti finali.",
   {slug:"rob-01-25",series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"AP",date:"Oct 29, 2025",
    title:"Robotic & Automation for Construction: Actors & Stakeholders",
    excerpt:"Understanding the key actors — from equipment manufacturers to research entities — driving the shift toward automated, digitally integrated construction.",
-   hero:"/images/blog/pexels-10119310-1920w.jpg"},
+   hero:"/images/blog/pexels-10119310-1920w.jpeg"},
+   titleIt:"Robotica e Automazione per le Costruzioni: Attori e Stakeholder",
+   excerptIt:"Comprensione dei principali attori — dai produttori di attrezzature agli enti di ricerca — che guidano il passaggio verso costruzioni automatizzate e integrate digitalmente.",
   {slug:"bio-01-25",series:"Make It Green",sub:"Bio-01",num:"08/25",domain:"green",author:"AP",date:"Oct 1, 2025",
    title:"Bio-based Building Materials & Products for Construction: Actors & Stakeholders",
    excerpt:"The transition to bio-based construction requires a fundamental shift in the value chain — from farmers growing raw materials to policymakers setting new standards.",
    hero:"/images/blog/ladrillos-canamo-1920w.jpg"},
+   titleIt:"Materiali e Prodotti Bio-based per l'Edilizia: Attori e Stakeholder",
+   excerptIt:"La transizione alle costruzioni bio-based richiede uno spostamento fondamentale nella filiera del valore — dagli agricoltori che coltivano le materie prime ai policy maker che definiscono i nuovi standard.",
   {slug:"xr-03-25",series:"Make It Human",sub:"XR-03",num:"07/25",domain:"human",author:"AP",date:"Jul 2025",
    title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
    excerpt:"XR solutions as a technological enabler for building O&M — immersive document visualization, remote assistance, advanced diagnostics and automated reporting with ARyze.",
    hero:"/images/blog/XR-03+2025-06-26+103540-1920w.jpg"},
+   titleIt:"Entrare nel Futuro: Come ARyze sta Rivoluzionando la Manutenzione Edilizia",
+   excerptIt:"XR come abilitatore tecnologico per l'O&M degli edifici — visualizzazione immersiva dei documenti, assistenza remota, diagnostica avanzata e reportistica automatizzata con ARyze.",
   {slug:"dpp-03-25",series:"Make It Digital",sub:"DPP-03",num:"06/25",domain:"digital",author:"AP",date:"Jun 2025",
    title:"DeePPy: Revolutionizing Transparency in Construction with the Digital Product Passport",
    excerpt:"How DeePPy's guided DPP creation, supplier data management and impact configurator are making ESPR compliance accessible to construction product manufacturers.",
    hero:"/images/blog/immagine-1-1920w.jpg"},
+   titleIt:"DeePPy: Rivoluzionare la Trasparenza nelle Costruzioni con il Passaporto Digitale di Prodotto",
+   excerptIt:"Come la creazione guidata DPP di DeePPy, la visualizzazione dei dati della supply chain e l'integrazione ESPR stanno trasformando la conformità in un vantaggio competitivo.",
   {slug:"bipv-03-25",series:"Make It Green",sub:"BIPV-03",num:"05/25",domain:"green",author:"AP",date:"May 2025",
    title:"BIPV in Action: Real-World Applications Driving the Sustainable Transformation of Buildings",
    excerpt:"From Novartis Pavilion Basel to Copenhagen International School — global case studies demonstrating how BIPV thrives and the barriers it must overcome.",
@@ -115,7 +133,7 @@ function NavBar({lang,setLang}){
   return(
           <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
+          <a href="/" style={{textDecoration:"none",display:"flex",alignItems:"center",gap:10}}><img src="/logo-white.svg" alt="" height="28" style={{display:"block"}}/><span style={{fontFamily:"'Gilmer','Georgia',serif",fontWeight:800,fontSize:20,color:"#fff",letterSpacing:"-0.01em",lineHeight:1,userSelect:"none"}}>Levery</span></a>
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             <li key="Work"><a href="/work" style={{color:"/work"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/work"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Work</a></li><li key="Products"><a href="/products" style={{color:"/products"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/products"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Products</a></li><li key="Insights"><a href="/insights" style={{color:"/insights"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/insights"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Insights</a></li><li key="Impact"><a href="/impact" style={{color:"/impact"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/impact"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Impact</a></li><li key="Team"><a href="/team" style={{color:"/team"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/team"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Team</a></li><li key="Contact"><a href="/contact" style={{color:"/contact"==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:"/contact"==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>Contact</a></li>
           </ul>
@@ -126,7 +144,7 @@ function NavBar({lang,setLang}){
   );
 }
 
-function ArticleCard({a}){
+function ArticleCard({a,lang}){
   const dom=DOMAIN[a.domain]||DOMAIN.digital;
   const [hov,setHov]=useState(false);
   return(
@@ -144,9 +162,9 @@ function ArticleCard({a}){
       </div>
       <div style={{padding:"18px 20px 22px"}}>
         <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.1em",color:C.inkLight,margin:"0 0 8px"}}>{a.series} · {a.date} · By {a.author}</p>
-        <h3 style={{fontSize:16,fontWeight:400,color:C.ink,margin:"0 0 10px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{a.title}</h3>
-        <p style={{fontSize:13,color:C.inkMid,lineHeight:1.65,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px"}}>{a.excerpt}</p>
-        <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>Read →</span>
+        <h3 style={{fontSize:16,fontWeight:400,color:C.ink,margin:"0 0 10px",fontFamily:"'Georgia',serif",lineHeight:1.35}}>{lang==="it"&&a.titleIt?a.titleIt:a.title}</h3>
+        <p style={{fontSize:13,color:C.inkMid,lineHeight:1.65,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 14px"}}>{lang==="it"&&a.excerptIt?a.excerptIt:a.excerpt}</p>
+        <span style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>{lang==="it"?"Leggi →":"Read →"}</span>
       </div>
     </a>
   );
@@ -273,7 +291,7 @@ export default function InsightsPage(){
               ))}
             </div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
-              {filtered.map(a=>(<ArticleCard key={a.slug} a={a}/>))}
+              {filtered.map(a=>(<ArticleCard lang={lang} key={a.slug} a={a}/>))}
             </div>
           </div>
         </div>
@@ -319,7 +337,7 @@ export default function InsightsPage(){
             <footer style={{background:"#1A1A1A",padding:"48px 0 0"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
-            <img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/>
+            <img src="/logo-levery-vertical.svg" alt="Levery" height="72" style={{display:"block"}}/>
             <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>Specialist R&D, built around your team.</p>
             <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
               <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>

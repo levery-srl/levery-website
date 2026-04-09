@@ -49,7 +49,7 @@ const ARTICLES={
       "ai-02-26":{
     series:"Make It Digital",sub:"AI-02",num:"03/26",domain:"digital",author:"Matteo Giovanardi",date:"February 25, 2026",
     title:"AI-based solutions for the construction sector: Innovative products for designing and constructing",
-    hero:"/images/blog/pexels-34804017-1920w.jpg",
+    hero:"/images/blog/pexels-34804017-1920w.jpeg",
     images:[
       "/images/blog/clev-1920w.png",
       "/images/blog/9f8b381c-1920w.jpg",
@@ -83,7 +83,7 @@ const ARTICLES={
   "rob-02-26":{
     series:"Make It Digital",sub:"Rob-02",num:"02/26",domain:"digital",author:"Alessandro Pracucci",date:"February 3, 2026",
     title:"Robotic & Automation for Construction: Robotic Products for Digital Workflows",
-    hero:"/images/blog/pexels-17180807-1920w.jpg",
+    hero:"/images/blog/pexels-17180807-1920w.jpeg",
     images:[
       "/images/blog/HP-01-1920w.jpg",
       "/images/blog/Tybot-01-1920w.jpg",
@@ -156,7 +156,7 @@ const ARTICLES={
     "ai-01-25":{
     series:"Make It Digital",sub:"AI-01",num:"12/25",domain:"digital",author:"Matteo Giovanardi",date:"Nov 26, 2025",
     title:"AI as a Copilot for Construction: Actors & Stakeholders",
-    hero:"/images/blog/pexels-30530416-1920w.jpg",
+    hero:"/images/blog/pexels-30530416-1920w.jpeg",
     images:[
       "/images/blog/IMG1-1920w.png",
       "/images/blog/IMG2-1920w.png",
@@ -229,9 +229,9 @@ const ARTICLES={
   "rob-01-25":{
     series:"Make It Digital",sub:"Rob-01",num:"11/25",domain:"digital",author:"Alessandro Pracucci",date:"Oct 29, 2025",
     title:"Robotic & Automation for Construction: Actors & Stakeholders",
-    hero:"/images/blog/pexels-10119310-1920w.jpg",
+    hero:"/images/blog/pexels-10119310-1920w.jpeg",
     images:[
-      "/images/blog/Amlatea-01-1920w.jpg",
+      "/images/blog/Amlatea-01-1920w.jpeg",
       "/images/blog/Hadrian-X-03-1920w.jpg",
       "/images/blog/Hilti_01-1920w.jpg",
     ],
@@ -357,7 +357,7 @@ export default function InsightClient({slug}){
 
       <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
         <div style={{...inner,height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <a href="/"><img src="/logo-white.svg" alt="Levery" height="30" style={{display:"block"}}/></a>
+          <a href="/" style={{textDecoration:"none",display:"flex",alignItems:"center",gap:10}}><img src="/logo-white.svg" alt="" height="28" style={{display:"block"}}/><span style={{fontFamily:"'Gilmer','Georgia',serif",fontWeight:800,fontSize:20,color:"#fff",letterSpacing:"-0.01em",lineHeight:1,userSelect:"none"}}>Levery</span></a>
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {NAV_LINKS.map(([label,href])=>(<li key={label}><a href={href} style={{color:href==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>))}
           </ul>
@@ -482,7 +482,7 @@ export default function InsightClient({slug}){
       <footer style={{background:"#111820",padding:"48px 0 0"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
-            <img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/>
+            <img src="/logo-levery-vertical.svg" alt="Levery" height="72" style={{display:"block"}}/>
             <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>{lang==="it"?"R&D specializzato, costruito intorno al tuo team.":"Specialist R&D, built around your team."}</p>
           </div>
           <div>
