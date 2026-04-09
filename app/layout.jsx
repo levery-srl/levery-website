@@ -6,7 +6,7 @@ export const metadata = {
     template: '%s | Levery'
   },
   description: 'Levery is a specialist R&D partner for the construction sector. New product development, sustainability compliance, Digital Product Passport and EU funding for manufacturers and innovators.',
-  keywords: ['R&D construction', 'digital product passport', 'ESPR compliance', 'bio-based materials', 'BIPV', 'Horizon Europe', 'circular economy construction', 'building innovation Italy'],
+  keywords: ['R&D construction', 'partner R&D costruzioni', 'digital product passport', 'passaporto digitale prodotto', 'ESPR compliance', 'bio-based materials', 'materiali bio-based edilizia', 'BIPV', 'Horizon Europe', 'circular economy construction', 'economia circolare costruzioni', 'building innovation Italy', 'innovazione edilizia', 'Levery'],
   authors: [{ name: 'Levery S.r.l. Società Benefit', url: 'https://levery.it' }],
   creator: 'Levery S.r.l. Società Benefit',
   metadataBase: new URL('https://levery.it'),
@@ -23,7 +23,7 @@ export const metadata = {
     alternateLocale: 'it_IT',
     url: 'https://levery.it',
     siteName: 'Levery',
-    title: 'Levery — Specialist R&D for Construction',
+    title: { default: 'Levery — Specialist R&D for Construction', template: '%s | Levery' },
     description: 'Specialist R&D, built around your team. New product development, sustainability compliance and EU funding for the construction sector.',
     images: [
       {
@@ -36,7 +36,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Levery — Specialist R&D for Construction',
+    title: { default: 'Levery — Specialist R&D for Construction', template: '%s | Levery' },
     description: 'Specialist R&D, built around your team.',
     images: ['/og-image.png'],
   },

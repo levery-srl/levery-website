@@ -277,14 +277,14 @@ export default function InsightsPage(){
             <span style={{fontFamily:"monospace",fontSize:22,color:"rgba(255,255,255,0.15)",letterSpacing:"-0.02em"}}>03</span>
             <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.18em",color:"rgba(255,255,255,0.3)",textTransform:"uppercase"}}>Insights</span>
           </div>
-          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Insights</h1>
-          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>Sector analysis, product reviews and R&D perspectives on digital construction, sustainability and EU funding.</p>
+          <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>{lang==="it"?"Insights":"Insights"}</h1>
+          <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>{lang==="it"?"Analisi di settore, recensioni di prodotti e prospettive R&D su costruzione digitale, sostenibilità e finanziamenti europei.":"Sector analysis, product reviews and R&D perspectives on digital construction, sustainability and EU funding."}</p>
 
           {/* TABS */}
           <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-            <TabBtn id="articles" label="Articles"/>
-            <TabBtn id="publications" label="Publications"/>
-            <TabBtn id="press" label="Press"/>
+            <TabBtn id="articles" label={lang==="it"?"Articoli":"Articles"}/>
+            <TabBtn id="publications" label={lang==="it"?"Pubblicazioni":"Publications"}/>
+            <TabBtn id="press" label={lang==="it"?"Rassegna stampa":"Press"}/>
           </div>
         </div>
       </div>
