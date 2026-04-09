@@ -119,6 +119,15 @@ function ArticleCard({a}){
     <a href={`/insights/${a.slug}`} style={{textDecoration:"none",display:"block",background:C.white,borderRadius:2,overflow:"hidden",border:`1px solid ${C.rule}`,transform:hov?"translateY(-3px)":"none",boxShadow:hov?"0 8px 24px rgba(0,0,0,0.10)":"none",transition:"all 0.2s"}}
       onMouseEnter={()=>setHov(true)} onMouseLeave={()=>setHov(false)}>
       <div style={{height:160,overflow:"hidden",background:dom.bg,position:"relative"}}>
+          {/* TABS */}
+          <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+            <TabBtn id="articles" label={t.tabArticles}/>
+            <TabBtn id="publications" label={t.tabPubs}/>
+            <TabBtn id="press" label={t.tabPress}/>
+          </div>
+        </div>
+      </div>
+          
         {a.hero&&<img src={a.hero} alt={a.title} style={{width:"100%",height:"100%",objectFit:"cover",opacity:0.6,display:"block"}}/>}
         <div style={{position:"absolute",top:12,left:12,display:"flex",gap:6}}>
           <span style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:dom.accent,background:"rgba(0,0,0,0.4)",padding:"3px 8px",borderRadius:2,textTransform:"uppercase"}}>{dom.label}</span>
@@ -266,7 +275,7 @@ export default function LeveryInsights(){
       </nav>
 
       {/* HEADER */}
-      <div style={{background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,padding:"140px 0 80px",position:"relative",overflow:"hidden"}}>
+      <div style={{background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,padding:"140px 0 80px",minHeight:"380px",position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.06,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
@@ -277,132 +286,5 @@ export default function LeveryInsights(){
           </div>
           <h1 style={{fontSize:"clamp(36px,3.5vw,52px)",fontWeight:400,color:C.white,margin:"0 0 14px",fontFamily:"'Georgia',serif",lineHeight:1.05}}>Insights</h1>
           <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",fontStyle:"italic",maxWidth:520,lineHeight:1.7}}>{t.heroSub}</p>
-
-          {/* TABS */}
-          <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-            <TabBtn id="articles" label={t.tabArticles}/>
-            <TabBtn id="publications" label={t.tabPubs}/>
-            <TabBtn id="press" label={t.tabPress}/>
-          </div>
         </div>
       </div>
-
-      {/* ARTICLES TAB */}
-      {tab==="articles"&&(
-        <div style={{background:C.white,padding:"40px 0 96px"}}>
-          <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
-            {/* Series filters */}
-            <div style={{display:"flex",gap:8,flexWrap:"wrap",marginBottom:40}}>
-              {[["all",t.filterAll],["digital","Make It Digital"],["green","Make It Green"],["human","Make It Human"]].map(([key,label])=>(
-                <button key={key} onClick={()=>setFilter(key)} style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",textTransform:"uppercase",padding:"7px 16px",borderRadius:2,cursor:"pointer",border:"1px solid",transition:"all 0.2s",
-                  background:filter===key?C.brand:"transparent",color:filter===key?C.white:C.inkLight,borderColor:filter===key?C.brand:C.rule}}>
-                  {label}
-                </button>
-              ))}
-            </div>
-            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
-              {filtered.map(a=>(<ArticleCard key={a.slug} a={a}/>))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* PUBLICATIONS TAB */}
-      {tab==="publications"&&(
-        <div style={{background:C.white,padding:"40px 0 96px"}}>
-          <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
-            <p style={{fontSize:14,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7,margin:"0 0 32px",maxWidth:640}}>
-              Peer-reviewed scientific publications by the Levery team. Open access articles are freely available at the linked DOI.
-            </p>
-            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
-              {PUBLICATIONS.map((p,i)=>(<PubCard key={i} p={p}/>))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* PRESS TAB */}
-      {tab==="press"&&(
-        <div style={{background:C.white,padding:"40px 0 96px"}}>
-          <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
-            <p style={{fontSize:14,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.7,margin:"0 0 32px",maxWidth:640}}>
-              External media coverage and press mentions of Levery, its research and products.
-            </p>
-            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}} className="l-grid">
-              {PRESS.map((p,i)=>(<PressCard key={i} p={p}/>))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* CTA */}
-      <div style={{background:C.green,padding:"64px 0"}}>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
-          <h2 style={{fontSize:28,fontWeight:400,color:C.white,fontFamily:"'Georgia',serif",margin:"0 0 12px"}}>Want R&D insights tailored to your sector?</h2>
-          <p style={{fontSize:15,color:"rgba(255,255,255,0.7)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>Book a call and we will walk you through what is relevant for your business.</p>
-          <a href={BOOKING} target="_blank" rel="noopener noreferrer" style={{display:"inline-block",background:C.white,color:C.green,padding:"13px 32px",borderRadius:2,fontSize:15,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:600,textDecoration:"none"}}>Book a call →</a>
-        </div>
-      </div>
-
-                  {/* NEWSLETTER */}
-      <div style={{background:"#111820",borderTop:"1px solid rgba(255,255,255,0.08)",padding:"56px 0"}}>
-        <div style={{maxWidth:520,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
-          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
-          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4,whiteSpace:"pre-line"}}>{lang==="it"?"Una email al mese.\nR&D e innovazione per il settore delle costruzioni.":"One email per month.\nR&D and innovation news for the construction industry."}</p>
-          <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
-          <div style={{display:"flex",gap:8,maxWidth:400,margin:"0 auto"}}>
-            <input type="email" id="nl-insights" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
-              style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
-            <button
-              style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
-              onClick={async()=>{
-                const el=document.getElementById("nl-insights");
-                if(!el||!el.value)return;
-                try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
-                    method:"POST",
-                    headers:{"Content-Type":"application/json","Accept":"application/json"},
-                    body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})
-                  });
-                  el.value="";
-                  el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
-                }catch(e){
-                  el.placeholder=lang==="it"?"Riprova":"Try again";
-                }
-              }}>
-              {lang==="it"?"Iscriviti":"Subscribe"}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <footer style={{background:"#111820",padding:"48px 0 0"}}>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
-          <div>
-            <img src="/logo-white.svg" alt="Levery" height="36" style={{display:"block"}}/>
-            <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>{lang==="it"?"R&D specializzato, costruito intorno al tuo team.":"Specialist R&D, built around your team."}</p>
-            <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
-              <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
-              <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>{lang==="it"?"Società Benefit · Il nostro impatto →":"Società Benefit · Our impact →"}</span>
-            </a>
-          </div>
-          <div>
-            <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Legal</p>
-            <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>Via Pisino 66, 47814 Bellaria Igea Marina (RN)</span>
-            <span style={{display:"block",fontSize:11,color:"rgba(255,255,255,0.2)",fontFamily:"'Helvetica Neue',Arial,sans-serif",marginBottom:9}}>VAT 04730050400</span>
-            <a href="/privacy" style={{display:"block",fontSize:12,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Privacy & Cookie Policy</a>
-          </div>
-          <div>
-            <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Contact</p>
-            <a href="mailto:info@levery.it" style={{display:"block",fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none",marginBottom:9}}>info@levery.it</a>
-            <a href="https://outlook.office.com/book/InfoLevert@levery.it/" target="_blank" rel="noopener noreferrer" style={{display:"block",fontSize:13,color:"#A8E6CF",fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>Book a call →</a>
-          </div>
-        </div>
-        <div style={{maxWidth:1200,margin:"0 auto",padding:"16px 32px"}}>
-          <span style={{fontSize:11,color:"rgba(255,255,255,0.18)",fontFamily:"monospace"}}>© 2026 Levery S.r.l. Società Benefit · {lang==="it"?"Tutti i diritti riservati":"All rights reserved"}</span>
-        </div>
-      </footer>
-
-    </div>
-  );
-}

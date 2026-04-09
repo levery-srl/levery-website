@@ -474,7 +474,7 @@ export default function LeveryWork() {
 
       {/* PAGE HEADER */}
       <div style={{ background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,
-        padding:"140px 0 80px", position:"relative", overflow:"hidden" }}>
+        padding:"140px 0 80px", minHeight:"380px", position:"relative", overflow:"hidden" }}>
         <svg style={{ position:"absolute", inset:0, width:"100%", height:"100%",
           opacity:0.04, pointerEvents:"none" }}
           viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
@@ -493,14 +493,6 @@ export default function LeveryWork() {
           <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:520,lineHeight:1.7,fontStyle:"italic"}}>{t.pageSub}</p>
 
           {/* Filters */}
-          <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-            {filterBtn("all", t.filterAll)}
-            {filterBtn("active", t.filterActive)}
-            {filterBtn("completed", t.filterCompleted)}
-          </div>
-        </div>
-      </div>
-
       {/* PROJECT GRID */}
       <div style={{ background:C.white, padding:"64px 0 88px" }}>
         <div style={{ ...inner }}>

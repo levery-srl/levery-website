@@ -134,7 +134,7 @@ export default function ImpactPage(){
       
 
       {/* HERO */}
-      <div style={{background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,padding:"140px 0 80px",position:"relative",overflow:"hidden"}}>
+      <div style={{background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,padding:"140px 0 80px",minHeight:"380px",position:"relative",overflow:"hidden"}}>
         <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.06,pointerEvents:"none"}} viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="280" stroke="#7EC8E3" strokeWidth="1"/>))}
         </svg>
