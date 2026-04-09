@@ -370,8 +370,7 @@ export default function InsightClient({slug}){
 
       {/* HERO */}
       <div style={{background:`linear-gradient(135deg,${dom.bg} 0%,${C.brand} 100%)`,minHeight:"clamp(88px,11vh,130px)",display:"flex",alignItems:"flex-end",paddingBottom:56,position:"relative",overflow:"hidden"}}>
-        <HeroPattern accent={dom.accent}/>
-        {a.hero&&<div style={{position:"absolute",inset:0,backgroundImage:`url(${a.hero})`,backgroundSize:"cover",backgroundPosition:"center",opacity:0.15}}/>}
+            {a.hero&&<div style={{position:"absolute",inset:0,backgroundImage:`url(${a.hero})`,backgroundSize:"cover",backgroundPosition:"center",opacity:0.15}}/>}
         <div style={{...inner,position:"relative",zIndex:2,width:"100%",paddingTop:"clamp(88px,11vh,130px)"}}>
           <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
             <a href="/insights" style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.12em",color:"rgba(255,255,255,0.4)",textTransform:"uppercase",textDecoration:"none"}}>← Insights</a>
