@@ -77,7 +77,7 @@ function Nav({lang, setLang, currentPath}){
   return(
     <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
       <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-        <a href="/"><img src="/logo-icon.svg" alt="Levery" height="28" style={{display:"block"}}/></a>
+        <a href="/" style={{textDecoration:"none",display:"flex",alignItems:"center",gap:9}}><img src="/logo-icon.svg" alt="" height="28" style={{display:"block"}}/><span style={{fontFamily:"'Gilmer',sans-serif",fontWeight:800,fontSize:19,color:"#fff",letterSpacing:"-0.01em",lineHeight:1,userSelect:"none"}}>Levery</span></a>
         <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
           {links.map(([label,href])=>(
             <li key={href}><a href={href} style={{color:currentPath===href?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:currentPath===href?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>
@@ -116,7 +116,7 @@ export default function ImpactPage(){
       {/* NAV */}
       <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <a href="/"><img src="/logo-icon.svg" alt="Levery" height="28" style={{display:"block"}}/></a>
+          <a href="/" style={{textDecoration:"none",display:"flex",alignItems:"center",gap:9}}><img src="/logo-icon.svg" alt="" height="28" style={{display:"block"}}/><span style={{fontFamily:"'Gilmer',sans-serif",fontWeight:800,fontSize:19,color:"#fff",letterSpacing:"-0.01em",lineHeight:1,userSelect:"none"}}>Levery</span></a>
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {[["Work","Lavori","/work"],["Products","Prodotti","/products"],["Insights","Insights","/insights"],["Impact","Impatto","/impact"],["Team","Team","/team"],["Contact","Contatti","/contact"]].map(([en,it,path])=>(
               <li key={path}><a href={path} style={{color:path==="/impact"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:path==="/impact"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}

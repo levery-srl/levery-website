@@ -357,7 +357,7 @@ export default function InsightClient({slug}){
 
       <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(45,64,89,0.97)",backdropFilter:"blur(10px)",borderBottom:"1px solid rgba(255,255,255,0.07)"}}>
         <div style={{...inner,height:64,display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <a href="/"><img src="/logo-icon.svg" alt="Levery" height="28" style={{display:"block"}}/></a>
+          <a href="/" style={{textDecoration:"none",display:"flex",alignItems:"center",gap:9}}><img src="/logo-icon.svg" alt="" height="28" style={{display:"block"}}/><span style={{fontFamily:"'Gilmer',sans-serif",fontWeight:800,fontSize:19,color:"#fff",letterSpacing:"-0.01em",lineHeight:1,userSelect:"none"}}>Levery</span></a>
           <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}} className="l-nav-links">
             {NAV_LINKS.map(([label,href])=>(<li key={label}><a href={href} style={{color:href==="/insights"?"#fff":"rgba(255,255,255,0.72)",textDecoration:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",borderBottom:href==="/insights"?"1px solid rgba(255,255,255,0.35)":"none",paddingBottom:2}}>{label}</a></li>))}
           </ul>
