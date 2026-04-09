@@ -139,9 +139,9 @@ const copy = {
     nav:["Our Work","Products","Insights","Impact","Team","Contact"],
     bookCTA:"Book a call",
     heroLabel:"Levery S.r.l. Società Benefit",
-    heroH1a:"Your R&D team —",
-    heroH1b:"when you need it, how you need it.",
-    heroSub:"We work alongside manufacturers, material producers and contractors as R&D partners — covering new product and process development, sustainability protocols and access to EU funding.",
+    heroH1a:"Your R&D partner",
+    heroH1b:"integrated, flexible, specialist.",
+    heroSub:"We work alongside manufacturers and construction companies in the development of new products and processes, in sustainability and in access to European funding.",
     heroBtn:"Book a 30-minute call →",
     heroLink:"See our active projects ↓",
     stats:[
@@ -195,9 +195,9 @@ const copy = {
     nav:["Progetti","Prodotti","Insights","Impatto","Team","Contatti"],
     bookCTA:"Prenota una call",
     heroLabel:"Levery S.r.l. Società Benefit",
-    heroH1a:"Il tuo team R&D —",
-    heroH1b:"quando ti serve, come ti serve.",
-    heroSub:"Affianchiamo produttori, fornitori di materiali e imprese come partner per il trasferimento tecnologico — sviluppo di nuovi prodotti e processi, protocolli di sostenibilità e accesso ai finanziamenti europei.",
+    heroH1a:"Il tuo partner R&D",
+    heroH1b:"integrato, flessibile, specializzato.",
+    heroSub:"Affianchiamo produttori e imprese del settore costruzioni nello sviluppo di nuovi prodotti e processi, nella sostenibilità e nell'accesso ai finanziamenti europei.",
     heroBtn:"Prenota una call di 30 minuti →",
     heroLink:"Vedi i progetti attivi ↓",
     stats:[
@@ -358,7 +358,7 @@ export default function LeveryHomepage() {
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"clamp(96px, 13vh, 140px) 32px clamp(64px, 8vh, 100px)", width:"100%", position:"relative", zIndex:3 }}>
           <div style={{ maxWidth:780 }}>
             <span style={{ fontFamily:"monospace", fontSize:10, letterSpacing:"0.18em", color:C.inkLight, textTransform:"uppercase", marginBottom:22, display:"block" }}>{t.heroLabel}</span>
-            <h1 className="l-hero-h1" style={{ fontSize:"clamp(38px, 3.8vw, 64px)", fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 24px", fontFamily:"'Georgia','Times New Roman',serif" }}>
+            <h1 className="l-hero-h1" style={{ fontSize:"clamp(44px, 5.5vw, 82px)", fontWeight:400, color:C.ink, lineHeight:1.0, margin:"0 0 28px", fontFamily:"'Georgia','Times New Roman',serif" }}>
               {t.heroH1a}<br/><span style={{ fontStyle:"italic", color:C.brand }}>{t.heroH1b}</span>
             </h1>
             <p style={{ fontSize:16, color:C.inkMid, lineHeight:1.8, margin:"0 0 44px", fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:300 }}>{t.heroSub}</p>

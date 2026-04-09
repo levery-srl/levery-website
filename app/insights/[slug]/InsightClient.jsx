@@ -256,8 +256,8 @@ const ARTICLES={
   "xr-03-25":{
     series:"Make It Digital",sub:"XR-03",num:"07/25",domain:"digital",author:"Matteo Giovanardi",date:"Jun 26, 2025",
     title:"Stepping into the Future: How ARyze is Revolutionizing Building Maintenance",
-    hero:"/images/blog/XR-03+2025-06-26+103540-1920w.jpg",
-    images:["/images/blog/XR-03+2025-06-26+103540-1920w.jpg","/images/blog/Immagine-2025-06-26-105320.jpg","/images/blog/Immagine-2025-06-26-104402.jpg","/images/blog/Immagine-2025-06-26-104341.jpg"],
+    hero:"/images/blog/XR-03-2025-06-26-103540-1920w.jpg",
+    images:["/images/blog/XR-03-2025-06-26-103540-1920w.jpg","/images/blog/Immagine-2025-06-26-105320.jpg","/images/blog/Immagine-2025-06-26-104402.jpg","/images/blog/Immagine-2025-06-26-104341.jpg"],
     captions:["Fig. 1 — ARyze platform (credits: Levery)","Fig. 2 — ARyze: remote collaboration module (credits: Levery)","Fig. 3 — ARyze: IoT data visualization (credits: Levery)","Fig. 4 — ARyze: automated reporting interface (credits: Levery)"],
     sections:[
       {h:"Introduction",body:"Extended Reality (XR) — encompassing VR, AR, and MR — is transforming how we interact with buildings. Modern building envelopes incorporate sophisticated active components: intelligent solar shading, automated openings, environmental sensors, photovoltaic modules. Traditional reactive maintenance is no longer sufficient. Aligned with EPBD (EU/2024/1275) and the Smart Readiness Indicator (SRI) framework, innovative solutions must preserve system functionality while extending useful life."},
