@@ -141,7 +141,8 @@ const copy = {
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Your R&D partner",
     heroH1b:"integrated, flexible, specialist.",
-    heroSub:"We work alongside manufacturers and construction companies in the development of new products and processes, in sustainability and in access to European funding.",
+    heroSub:"We work alongside manufacturers and construction companies in the development of new products and processes,
+in sustainability pathways and in access to European funding.",
     heroBtn:"Book a 30-minute call →",
     heroLink:"See our active projects ↓",
     stats:[
@@ -197,7 +198,8 @@ const copy = {
     heroLabel:"Levery S.r.l. Società Benefit",
     heroH1a:"Il tuo partner R&D",
     heroH1b:"integrato, flessibile, specializzato.",
-    heroSub:"Affianchiamo produttori e imprese del settore costruzioni nello sviluppo di nuovi prodotti e processi, nella sostenibilità e nell'accesso ai finanziamenti europei.",
+    heroSub:"Affianchiamo produttori e imprese del settore costruzioni nello sviluppo di nuovi prodotti e processi,
+nei percorsi di sostenibilità e nell'accesso ai finanziamenti europei.",
     heroBtn:"Prenota una call di 30 minuti →",
     heroLink:"Vedi i progetti attivi ↓",
     stats:[
@@ -559,7 +561,7 @@ export default function LeveryHomepage() {
       <div style={{background:"#111820",borderTop:"1px solid rgba(255,255,255,0.08)",padding:"56px 0"}}>
         <div style={{maxWidth:520,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
           <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
-          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4}}>{lang==="it"?"Una email al mese. Notizie R&D e innovazione per il settore delle costruzioni.":"One email per month. R&D and innovation news for the construction industry."}</p>
+          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4,whiteSpace:"pre-line"}}>{lang==="it"?"Una email al mese.\nNotizie R&D e innovazione per il settore delle costruzioni.":"One email per month.\nR&D and innovation news for the construction industry."}</p>
           <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
           <div style={{display:"flex",gap:8,maxWidth:400,margin:"0 auto"}}>
             <input type="email" id="nl-home" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
