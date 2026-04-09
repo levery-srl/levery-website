@@ -8,12 +8,14 @@ const DOMAIN={
   human:{bg:"#2A1E3D",accent:"#C3A8E6",label:"HUMAN"},
 };
 const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
-const MONTHS_IT={Jan:"Gennaio",Feb:"Febbraio",Mar:"Marzo",Apr:"Aprile",May:"Maggio",Jun:"Giugno",Jul:"Luglio",Aug:"Agosto",Sep:"Settembre",Oct:"Ottobre",Nov:"Novembre",Dec:"Dicembre"};
+const MONTHS_IT={Jan:"Gennaio",January:"Gennaio",Feb:"Febbraio",February:"Febbraio",Mar:"Marzo",March:"Marzo",Apr:"Aprile",April:"Aprile",May:"Maggio",Jun:"Giugno",June:"Giugno",Jul:"Luglio",July:"Luglio",Aug:"Agosto",August:"Agosto",Sep:"Settembre",September:"Settembre",Oct:"Ottobre",October:"Ottobre",Nov:"Novembre",November:"Novembre",Dec:"Dicembre",December:"Dicembre"};
 function locDate(dateStr,lang){
   if(lang!=="it"||!dateStr) return dateStr;
-  const m1=dateStr.match(/^([A-Za-z]{3})\s+(\d+),?\s+(\d{4})$/);
+  // "April 2, 2026" or "Apr 2, 2026"
+  const m1=dateStr.match(/^([A-Za-z]+)\s+(\d+),?\s+(\d{4})$/);
   if(m1) return `${m1[2]} ${MONTHS_IT[m1[1]]||m1[1]} ${m1[3]}`;
-  const m2=dateStr.match(/^([A-Za-z]{3})\s+(\d{4})$/);
+  // "April 2026" or "Apr 2025"
+  const m2=dateStr.match(/^([A-Za-z]+)\s+(\d{4})$/);
   if(m2) return `${MONTHS_IT[m2[1]]||m2[1]} ${m2[2]}`;
   return dateStr;
 }
@@ -369,7 +371,9 @@ export default function InsightClient({slug}){
 
       {/* HERO */}
       <div style={{background:`linear-gradient(135deg,${dom.bg} 0%,${C.brand} 100%)`,minHeight:"clamp(88px,11vh,130px)",display:"flex",alignItems:"flex-end",paddingBottom:56,position:"relative",overflow:"hidden"}}>
-        <HeroPattern accent={dom.accent}/>
+        <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.07,pointerEvents:"none"}} viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice">
+          {Array.from({length:14},(_,i)=>(<line key={i} x1={i*95-40} y1="0" x2={i*95+160} y2="320" stroke={dom.accent||"#7EC8E3"} strokeWidth="1"/>))}
+        </svg>
         {a.hero&&<div style={{position:"absolute",inset:0,backgroundImage:`url(${a.hero})`,backgroundSize:"cover",backgroundPosition:"center",opacity:0.15}}/>}
         <div style={{...inner,position:"relative",zIndex:2,width:"100%",paddingTop:"clamp(88px,11vh,130px)"}}>
           <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:20}}>
@@ -448,6 +452,41 @@ export default function InsightClient({slug}){
       <div style={{background:C.sand,padding:"28px 0",borderTop:`1px solid ${C.rule}`}}>
         <div style={inner}><a href="/insights" style={{fontSize:13,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",textDecoration:"none"}}>{lang==="en"?"← Back to Insights":"← Torna agli Insight"}</a></div>
       </div>
+
+
+
+      {/* NEWSLETTER */}
+      <div style={{background:"#111820",borderTop:"1px solid rgba(255,255,255,0.08)",padding:"56px 0"}}>
+        <div style={{maxWidth:520,margin:"0 auto",padding:"0 32px",textAlign:"center"}}>
+          <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.16em",color:"rgba(255,255,255,0.25)",textTransform:"uppercase",margin:"0 0 10px"}}>{lang==="it"?"Rimani aggiornato":"Stay informed"}</p>
+          <p style={{fontSize:20,fontWeight:400,color:"rgba(255,255,255,0.85)",fontFamily:"'Georgia',serif",margin:"0 0 8px",lineHeight:1.4,whiteSpace:"pre-line"}}>{lang==="it"?"Una email al mese.\nR&D e innovazione per il settore delle costruzioni.":"One email per month.\nR&D and innovation news for the construction industry."}</p>
+          <p style={{fontSize:12,color:"rgba(255,255,255,0.3)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 28px"}}>{lang==="it"?"Niente spam. Cancellazione in qualsiasi momento.":"No spam. Unsubscribe at any time."}</p>
+          <div style={{display:"flex",gap:8,maxWidth:400,margin:"0 auto"}}>
+            <input type="email" id="nl-work" placeholder={lang==="it"?"La tua email aziendale":"Your work email"}
+              style={{flex:1,padding:"12px 14px",borderRadius:2,border:"1px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",color:"#fff",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",outline:"none"}}/>
+            <button
+              style={{background:"#1E6B45",color:"#fff",padding:"12px 20px",borderRadius:2,border:"none",fontSize:13,fontFamily:"'Helvetica Neue',Arial,sans-serif",fontWeight:500,cursor:"pointer",whiteSpace:"nowrap"}}
+              onClick={async()=>{
+                const el=document.getElementById("nl-work");
+                if(!el||!el.value)return;
+                try{
+                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
+                    method:"POST",
+                    headers:{"Content-Type":"application/json","Accept":"application/json"},
+                    body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})
+                  });
+                  el.value="";
+                  el.placeholder=lang==="it"?"✓ Iscritto":"✓ Subscribed";
+                }catch(e){
+                  el.placeholder=lang==="it"?"Riprova":"Try again";
+                }
+              }}>
+              {lang==="it"?"Iscriviti":"Subscribe"}
+            </button>
+          </div>
+        </div>
+      </div>
+
 
       <footer style={{background:C.ink,padding:"48px 0 0"}}>
         <div style={{...inner,paddingBottom:40,display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
