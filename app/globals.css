@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Gilmer';
+  font-family: 'Gilmer Heavy';
   src: url('/fonts/Gilmer-Heavy.otf') format('opentype');
-  font-weight: 800;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
