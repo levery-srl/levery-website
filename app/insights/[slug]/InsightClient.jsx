@@ -8,6 +8,18 @@ const DOMAIN={
   human:{bg:"#2A1E3D",accent:"#C3A8E6",label:"HUMAN"},
 };
 const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
+
+const MONTHS_IT={Jan:"Gennaio",Feb:"Febbraio",Mar:"Marzo",Apr:"Aprile",May:"Maggio",Jun:"Giugno",Jul:"Luglio",Aug:"Agosto",Sep:"Settembre",Oct:"Ottobre",Nov:"Novembre",Dec:"Dicembre"};
+function locDate(dateStr,lang){
+  if(lang!=="it"||!dateStr) return dateStr;
+  // Handle "Month Day, Year" format e.g. "Apr 2, 2026" → "2 Aprile 2026"
+  const m1=dateStr.match(/^([A-Za-z]{3})\s+(\d+),?\s+(\d{4})$/);
+  if(m1) return `${m1[2]} ${MONTHS_IT[m1[1]]||m1[1]} ${m1[3]}`;
+  // Handle "Month Year" format e.g. "Apr 2025" → "Aprile 2025"
+  const m2=dateStr.match(/^([A-Za-z]{3})\s+(\d{4})$/);
+  if(m2) return `${MONTHS_IT[m2[1]]||m2[1]} ${m2[2]}`;
+  return dateStr;
+}
 const NAV_LINKS=[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
 const inner={maxWidth:1200,margin:"0 auto",padding:"0 32px"};
 
@@ -380,7 +392,7 @@ export default function InsightClient({slug}){
             <span style={{fontSize:9,fontFamily:"monospace",color:"rgba(255,255,255,0.4)",letterSpacing:"0.1em"}}>{a.series} · {a.sub} · {lang==="it"?"Articolo":"Article"} {a.num}</span>
           </div>
           <h1 style={{fontSize:"clamp(28px,3vw,44px)",fontWeight:400,color:C.white,margin:"0 0 20px",fontFamily:"'Georgia',serif",lineHeight:1.1,maxWidth:760}}>{lang==="it"&&a.titleIt?a.titleIt:a.title}</h1>
-          <p style={{fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{a.date} · {lang==="it"?"di":"By"} {a.author}</p>
+          <p style={{fontSize:13,color:"rgba(255,255,255,0.45)",fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{locDate(a.date,lang)} · {lang==="it"?"di":"By"} {a.author}</p>
         </div>
       </div>
 
@@ -431,7 +443,7 @@ export default function InsightClient({slug}){
                 <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Series:":"Serie:"}</strong> {a.series}</p>
                 <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Issue:":"Numero:"}</strong> {a.sub} · {a.num}</p>
                 <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"0 0 8px",lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Author:":"Autore:"}</strong> {a.author}</p>
-                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0,lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Published:":"Pubblicato:"}</strong> {a.date}</p>
+                <p style={{fontSize:13,color:C.inkMid,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0,lineHeight:1.5}}><strong style={{fontWeight:600,color:C.ink}}>{lang==="en"?"Published:":"Pubblicato:"}</strong> {locDate(a.date,lang)}</p>
               </div>
               <div style={{background:dom.bg,borderRadius:2,padding:24}}>
                 <p style={{fontSize:13,color:"rgba(255,255,255,0.6)",fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.6,margin:"0 0 16px"}}>{lang==="it"?"Vuoi approfondire questo tema per il tuo business?":lang==="it"?"Vuoi approfondire questo tema per il tuo business?":"Want to discuss this topic for your business?"}</p>
