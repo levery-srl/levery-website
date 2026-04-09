@@ -492,10 +492,17 @@ export default function LeveryWork() {
             fontFamily:"'Georgia',serif", lineHeight:1.05 }}>{t.pageTitle}</h1>
           <p style={{fontSize:16,color:"rgba(255,255,255,0.48)",margin:"0 0 32px",fontFamily:"'Helvetica Neue',Arial,sans-serif",maxWidth:520,lineHeight:1.7,fontStyle:"italic"}}>{t.pageSub}</p>
 
-          {/* Filters */}
+        </div>
+      </div>
+
       {/* PROJECT GRID */}
       <div style={{ background:C.white, padding:"64px 0 88px" }}>
         <div style={{ ...inner }}>
+          <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:24 }}>
+            {filterBtn("all", t.filterAll)}
+            {filterBtn("active", t.filterActive)}
+            {filterBtn("completed", t.filterCompleted)}
+          </div>
           {/* Count */}
           <p style={{ fontSize:11, fontFamily:"monospace", color:C.inkLight,
             letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:32 }}>
