@@ -358,7 +358,7 @@ export default function LeveryHomepage() {
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"clamp(96px, 13vh, 140px) 32px clamp(64px, 8vh, 100px)", width:"100%", position:"relative", zIndex:3 }}>
           <div style={{ maxWidth:780 }}>
             <span style={{ fontFamily:"monospace", fontSize:10, letterSpacing:"0.18em", color:C.inkLight, textTransform:"uppercase", marginBottom:22, display:"block" }}>{t.heroLabel}</span>
-            <h1 className="l-hero-h1" style={{ fontSize:"clamp(36px, 4vw, 62px)", fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 20px", fontFamily:"'Georgia','Times New Roman',serif" }}>
+            <h1 className="l-hero-h1" style={{ fontSize:"clamp(36px, 3.5vw, 52px)", fontWeight:400, color:C.ink, lineHeight:1.05, margin:"0 0 16px", fontFamily:"'Georgia','Times New Roman',serif" }}>
               {t.heroH1a}<br/><span style={{ fontStyle:"italic", color:C.brand }}>{t.heroH1b}</span>
             </h1>
             <p style={{ fontSize:16, color:C.inkMid, lineHeight:1.8, margin:"0 0 32px", fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:300 }}>{lang==="it" ? <>Affianchiamo produttori e imprese del settore costruzioni nello sviluppo di nuovi prodotti e processi,<br/>nei percorsi di sostenibilità e nell'accesso ai finanziamenti europei.</> : <>We work alongside manufacturers and construction companies in the development of new products and processes,<br/>in sustainability pathways and in access to European funding.</>}</p>
