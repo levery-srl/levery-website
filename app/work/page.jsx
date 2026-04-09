@@ -474,7 +474,7 @@ export default function LeveryWork() {
 
       {/* PAGE HEADER */}
       <div style={{ background:`linear-gradient(145deg,#1C2D40 0%,${C.brand} 100%)`,
-        padding:"120px 0 64px", position:"relative", overflow:"hidden" }}>
+        padding:"clamp(140px,15vh,200px) 0 80px", position:"relative", overflow:"hidden" }}>
         <svg style={{ position:"absolute", inset:0, width:"100%", height:"100%",
           opacity:0.04, pointerEvents:"none" }}
           viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid slice">
