@@ -52,9 +52,9 @@ const copy = {
       id:"aryze", label:"XR Platform", name:"ARyze",
       sector:"Building O&M · Facility Management", status:"Available",
       tagline:"Your maintenance team, always in the right place with the right information.",
-      description:"Maintenance technicians spend too much time searching for documentation, waiting for remote support, and filling in reports manually. ARyze puts manuals, procedures, live building data and remote expert assistance directly in their field of view — via AR on smartphone, tablet or smart glasses.",
+      description:"Maintenance technicians spend too much time searching for documentation, waiting for remote support, and filling in reports manually. ARyze puts manuals, procedures, live building data and remote expert assistance directly in their field of view – via AR on smartphone, tablet or smart glasses.",
       bullets:[
-        {head:"Find it instantly", body:"Documentation, procedures and BIM data overlaid on the actual equipment — no more searching through folders."},
+        {head:"Find it instantly", body:"Documentation, procedures and BIM data overlaid on the actual equipment – no more searching through folders."},
         {head:"Fix it faster", body:"Step-by-step AR guidance reduces errors and downtime, even for less experienced technicians."},
         {head:"Report automatically", body:"Every intervention is logged and timestamped. No manual input, no missing records."},
       ],
@@ -67,9 +67,9 @@ const copy = {
       id:"deeppy", label:"Compliance Platform", name:"DeePPy",
       sector:"Construction Products · ESPR Compliance", status:"Early access",
       tagline:"ESPR is coming. DeePPy gets your products ready.",
-      description:"The EU's ESPR regulation will require Digital Product Passports for construction materials from 2027. DeePPy automates data collection, structuring and DPP generation — so your compliance team is not building spreadsheets from scratch.",
+      description:"The EU's ESPR regulation will require Digital Product Passports for construction materials from 2027. DeePPy automates data collection, structuring and DPP generation – so your compliance team is not building spreadsheets from scratch.",
       bullets:[
-        {head:"Structured from day one", body:"Bill of materials, supplier data and environmental declarations — collected and organised automatically."},
+        {head:"Structured from day one", body:"Bill of materials, supplier data and environmental declarations – collected and organised automatically."},
         {head:"Regulation-ready output", body:"DPPs generated in machine-readable format, aligned with current ESPR and EPD standards."},
         {head:"Supply chain transparency", body:"Track data across your supplier network without chasing emails."},
       ],
@@ -79,7 +79,7 @@ const copy = {
       accent:"#A8E6CF", bg:"#152C1E",
     },
     ctaTitle:"Need both, or neither?",
-    ctaSub:"Tell us what you are working on — we will point you to the right tool or scope a solution from scratch.",
+    ctaSub:"Tell us what you are working on – we will point you to the right tool or scope a solution from scratch.",
     footerTagline:"Specialist R&D, built around your team.",
     footerRights:"© 2026 Levery S.r.l. Società Benefit · All rights reserved",
     benefitBadge:"Società Benefit · Our impact →",
@@ -96,9 +96,9 @@ const copy = {
       id:"aryze", label:"Piattaforma XR", name:"ARyze",
       sector:"Building O&M · Facility Management", status:"Disponibile",
       tagline:"Il tuo team di manutenzione, sempre nel posto giusto con le informazioni giuste.",
-      description:"I tecnici perdono troppo tempo a cercare documentazione, aspettare supporto da remoto e compilare report a mano. ARyze porta manuali, procedure, dati dell'edificio in tempo reale e assistenza esperta direttamente nel campo visivo — via AR su smartphone, tablet o occhiali smart.",
+      description:"I tecnici perdono troppo tempo a cercare documentazione, aspettare supporto da remoto e compilare report a mano. ARyze porta manuali, procedure, dati dell'edificio in tempo reale e assistenza esperta direttamente nel campo visivo – via AR su smartphone, tablet o occhiali smart.",
       bullets:[
-        {head:"Trovalo subito", body:"Documentazione, procedure e dati BIM sovrapposti all'impianto reale — niente più ricerche tra cartelle."},
+        {head:"Trovalo subito", body:"Documentazione, procedure e dati BIM sovrapposti all'impianto reale – niente più ricerche tra cartelle."},
         {head:"Intervieni più veloce", body:"La guida AR passo passo riduce errori e tempi di fermo, anche per tecnici meno esperti."},
         {head:"Report automatici", body:"Ogni intervento viene registrato e marcato temporalmente. Zero inserimento manuale."},
       ],
@@ -111,9 +111,9 @@ const copy = {
       id:"deeppy", label:"Piattaforma Compliance", name:"DeePPy",
       sector:"Prodotti da costruzione · Compliance ESPR", status:"Early access",
       tagline:"L'ESPR arriva. DeePPy prepara i tuoi prodotti.",
-      description:"Il regolamento ESPR richiederà il Passaporto Digitale di Prodotto per i materiali da costruzione dal 2027. DeePPy automatizza raccolta dati, strutturazione e generazione del DPP — così il tuo team di compliance non costruisce fogli Excel da zero.",
+      description:"Il regolamento ESPR richiederà il Passaporto Digitale di Prodotto per i materiali da costruzione dal 2027. DeePPy automatizza raccolta dati, strutturazione e generazione del DPP – così il tuo team di compliance non costruisce fogli Excel da zero.",
       bullets:[
-        {head:"Strutturato dal primo giorno", body:"Distinta base, dati fornitori e dichiarazioni ambientali — raccolti e organizzati automaticamente."},
+        {head:"Strutturato dal primo giorno", body:"Distinta base, dati fornitori e dichiarazioni ambientali – raccolti e organizzati automaticamente."},
         {head:"Output pronto per la normativa", body:"DPP generati in formato machine-readable, allineati agli standard ESPR ed EPD vigenti."},
         {head:"Trasparenza supply chain", body:"Traccia i dati lungo la rete fornitori senza inseguire email."},
       ],
@@ -123,7 +123,7 @@ const copy = {
       accent:"#A8E6CF", bg:"#152C1E",
     },
     ctaTitle:"Ti servono entrambi, o nessuno dei due?",
-    ctaSub:"Raccontaci su cosa stai lavorando — ti indichiamo lo strumento giusto o definiamo una soluzione da zero.",
+    ctaSub:"Raccontaci su cosa stai lavorando – ti indichiamo lo strumento giusto o definiamo una soluzione da zero.",
     footerTagline:"R&D specializzato, costruito intorno al tuo team.",
     footerRights:"© 2026 Levery S.r.l. Società Benefit · Tutti i diritti riservati",
     benefitBadge:"Società Benefit · Il nostro impatto →",
@@ -307,7 +307,7 @@ export default function LeveryProducts(){
         </div>
       </div>
 
-      {/* 50/50 CARDS — same pattern as homepage service cards */}
+      {/* 50/50 CARDS – same pattern as homepage service cards */}
       <div style={{ background:C.white, padding:"72px 0 88px" }}>
         <div style={{ maxWidth:1200, margin:"0 auto", padding:"0 32px" }}>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:2, background:C.rule }}

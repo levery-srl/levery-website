@@ -1,4 +1,5 @@
 import './globals.css'
+import CookieBanner from './CookieBanner'
 
 export const metadata = {
   title: {
@@ -68,8 +69,11 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer=window.dataLayer||[];
           function gtag(){dataLayer.push(arguments);}
+          gtag('consent','default',{'analytics_storage':'denied'});
           gtag('js',new Date());
-          gtag('config','G-LL1GSHR21G');
+          var _consent=typeof localStorage!=='undefined'?localStorage.getItem('levery_cookie_consent'):null;
+          if(_consent==='accepted'){gtag('consent','update',{'analytics_storage':'granted'});}
+          gtag('config','G-LL1GSHR21G',{'anonymize_ip':true});
         `}}/>
         {/* Structured data — Organization */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -114,6 +118,7 @@ export default function RootLayout({ children }) {
         })}}/>
       </head>
       <body>{children}</body>
+        <CookieBanner/>
     </html>
   )
 }

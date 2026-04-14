@@ -75,7 +75,7 @@ const copy = {
     langSwitch:"IT", bookCTA:"Book a call",
     pageLabel:"Team",
     pageTitle:"The people behind Levery.",
-    pageSub:"A focused team of senior specialists — PhD-level expertise across R&D, sustainability and EU funding.",
+    pageSub:"A focused team of senior specialists – PhD-level expertise across R&D, sustainability and EU funding.",
     ctaTitle:"Work with us.",
     ctaSub:"If you have a project in mind or want to explore a collaboration, we are easy to reach.",
     footerTagline:"Specialist R&D, built around your team.",
@@ -89,7 +89,7 @@ const copy = {
         role:"Co-founder & Director",
         name:"Alessandro Pracucci",
         credentials:"Arch, PhD",
-        bio:"Over a decade leading innovation in the construction sector — from building envelope systems and bio-based materials to digital transformation and EU-funded research. He holds a PhD, the National Scientific Qualification as Associate Professor, and teaches Building Technology at the University of Bologna. Author of 50+ peer-reviewed publications (h-index 10). Track record across 15+ European research projects with €65M+ in secured funding and direct management of €3.5M+ in project budgets. At Levery he leads strategy, client relationships, and product development.",
+        bio:"Over a decade leading innovation in the construction sector – from building envelope systems and bio-based materials to digital transformation and EU-funded research. He holds a PhD, the National Scientific Qualification as Associate Professor, and teaches Building Technology at the University of Bologna. Author of 50+ peer-reviewed publications (h-index 10). Track record across 15+ European research projects with €65M+ in secured funding and direct management of €3.5M+ in project budgets. At Levery he leads strategy, client relationships, and product development.",
         tags:["Building Envelope","EU Funding","Digital Products","Sustainability Strategy"],
         linkedin:"https://it.linkedin.com/in/alessandropracucci",
         orcid:"https://orcid.org/0000-0003-0877-1283",
@@ -124,7 +124,7 @@ const copy = {
     langSwitch:"EN", bookCTA:"Prenota una call",
     pageLabel:"Team",
     pageTitle:"Le persone dietro Levery.",
-    pageSub:"Un team di specialisti senior — competenze a livello di dottorato in R&D, sostenibilità e finanziamenti europei.",
+    pageSub:"Un team di specialisti senior – competenze a livello di dottorato in R&D, sostenibilità e finanziamenti europei.",
     ctaTitle:"Lavora con noi.",
     ctaSub:"Se hai un progetto in mente o vuoi esplorare una collaborazione, siamo facili da raggiungere.",
     footerTagline:"R&D specializzato, costruito intorno al tuo team.",
@@ -138,7 +138,7 @@ const copy = {
         role:"Co-fondatore & Direttore",
         name:"Alessandro Pracucci",
         credentials:"Arch, PhD",
-        bio:"Oltre un decennio alla guida dell'innovazione nel settore delle costruzioni — dai sistemi di involucro edilizio e materiali bio-based alla trasformazione digitale e alla ricerca finanziata dall'UE. È PhD, abilitato come Professore Associato e insegna Tecnologia dell'Architettura all'Università di Bologna. Autore di 50+ pubblicazioni peer-reviewed (h-index 10). Track record su 15+ progetti europei con €65M+ di finanziamenti ottenuti e gestione diretta di €3.5M+. In Levery guida strategia, relazioni con i clienti e sviluppo dei prodotti.",
+        bio:"Oltre un decennio alla guida dell'innovazione nel settore delle costruzioni – dai sistemi di involucro edilizio e materiali bio-based alla trasformazione digitale e alla ricerca finanziata dall'UE. È PhD, abilitato come Professore Associato e insegna Tecnologia dell'Architettura all'Università di Bologna. Autore di 50+ pubblicazioni peer-reviewed (h-index 10). Track record su 15+ progetti europei con €65M+ di finanziamenti ottenuti e gestione diretta di €3.5M+. In Levery guida strategia, relazioni con i clienti e sviluppo dei prodotti.",
         tags:["Involucro Edilizio","Finanziamenti EU","Prodotti Digitali","Strategia Sostenibilità"],
         linkedin:"https://it.linkedin.com/in/alessandropracucci",
         orcid:"https://orcid.org/0000-0003-0877-1283",
@@ -180,7 +180,7 @@ function MemberCard({ m }) {
     <div style={{display:"flex",flexDirection:"column",height:"100%", background:C.white, borderRadius:2, overflow:"hidden",
       border:`1px solid ${C.rule}`, display:"flex", flexDirection:"column" }}>
 
-      {/* Photo — cover with center/center crop, bio overlay on hover */}
+      {/* Photo – cover with center/center crop, bio overlay on hover */}
       <div
         style={{ position:"relative", height:360, background:m.bg,
           overflow:"hidden", flexShrink:0, cursor:"pointer" }}
@@ -218,7 +218,7 @@ function MemberCard({ m }) {
           </span>
         </div>
 
-        {/* Bio overlay — appears on photo hover */}
+        {/* Bio overlay – appears on photo hover */}
         <div style={{
           position:"absolute", inset:0,
           background:`${m.bg}f0`,
@@ -242,7 +242,7 @@ function MemberCard({ m }) {
         </div>
       </div>
 
-      {/* Info — always visible, links always clickable */}
+      {/* Info – always visible, links always clickable */}
       <div style={{ padding:"22px 24px 26px", flexGrow:1, display:"flex", flexDirection:"column" }}>
         <h3 style={{ fontSize:20, fontWeight:400, color:C.ink, margin:"0 0 4px",
           fontFamily:"'Georgia',serif" }}>{m.name}</h3>

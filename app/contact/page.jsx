@@ -5,8 +5,7 @@ const C={brand:"#2D4059",green:"#1E6B45",greenMid:"#2A8A58",
   white:"#FFFFFF",sand:"#F5F2EC",ink:"#1A1A1A",
   inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
 const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
-const NAV_LINKS=[["Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
-// FormSubmit — no account needed, sends directly to info@levery.it
+// FormSubmit – no account needed, sends directly to info@levery.it
 
 function Input({label,name,type="text",required=false,value,onChange,placeholder=""}){
   return(
@@ -38,8 +37,8 @@ const copy={
     pageLabel:"Contact", pageTitle:"Let's talk.",
     pageSub:"Tell us about your project.",
     langSwitch:"IT",bookCTA:"Book a call",
-    namePh:"Your name",companyPh:"Company",emailPh:"Work email",msgPh:"Describe your project or challenge — what are you working on?",
-    submit:"Send message",sending:"Sending…",sent:"Message sent — we will be in touch within one working day.",
+    namePh:"Your name",companyPh:"Company",emailPh:"Work email",msgPh:"Describe your project or challenge – what are you working on?",
+    submit:"Send message",sending:"Sending…",sent:"Message sent – we will be in touch within one working day.",
     altTitle:"Or book a call directly",altSub:"Choose a time that works for you.",
     altBtn:"Open booking calendar →",
     nameLabel:"Name",companyLabel:"Company",emailLabel:"Email",msgLabel:"Message",
@@ -48,8 +47,8 @@ const copy={
     pageLabel:"Contatti", pageTitle:"Parliamo.",
     pageSub:"Raccontaci il tuo progetto.",
     langSwitch:"EN",bookCTA:"Prenota una call",
-    namePh:"Il tuo nome",companyPh:"Azienda",emailPh:"Email aziendale",msgPh:"Descrivi il tuo progetto o la tua sfida — su cosa stai lavorando?",
-    submit:"Invia messaggio",sending:"Invio in corso…",sent:"Messaggio inviato — ti risponderemo entro un giorno lavorativo.",
+    namePh:"Il tuo nome",companyPh:"Azienda",emailPh:"Email aziendale",msgPh:"Descrivi il tuo progetto o la tua sfida – su cosa stai lavorando?",
+    submit:"Invia messaggio",sending:"Invio in corso…",sent:"Messaggio inviato – ti risponderemo entro un giorno lavorativo.",
     altTitle:"Oppure prenota una call direttamente",altSub:"Scegli il momento che preferisci.",
     altBtn:"Apri il calendario →",
     nameLabel:"Nome",companyLabel:"Azienda",emailLabel:"Email",msgLabel:"Messaggio",

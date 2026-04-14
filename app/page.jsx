@@ -8,14 +8,14 @@ const C = {
   green:      "#1E6B45",
   greenMid:   "#2A8A58",
   greenLight: "#E8F5EE",
-  sand:       "#F5F2EC",   // cream — hero, insights section bg
-  sandDark:   "#EDE9E1",   // darker cream — stats section bg
+  sand:       "#F5F2EC",   // cream – hero, insights section bg
+  sandDark:   "#EDE9E1",   // darker cream – stats section bg
   white:      "#FFFFFF",   // services, projects section bg
   ink:        "#1A1A1A",
   inkMid:     "#4A4A4A",
   inkLight:   "#8A8A8A",
   rule:       "#E0DBD3",
-  footerBg:   "#111820",   // near-black footer — darker than brand
+  footerBg:   "#111820",   // near-black footer – darker than brand
 };
 
 // ─── COLOUR PALETTE per domain ───────────────────────────────────────────────
@@ -81,13 +81,13 @@ function GradientMesh({ parallax }) {
         .gmesh-blob4{animation:blob4 28s ease-in-out infinite}
       `}</style>
 
-      {/* Right-side fade mask — protects left text */}
+      {/* Right-side fade mask – protects left text */}
       <div style={{
         position:"absolute", inset:0, zIndex:2,
         background:"linear-gradient(to right, #F5F2EC 28%, transparent 60%)"
       }}/>
 
-      {/* Blobs — muted, work on cream background */}
+      {/* Blobs – muted, work on cream background */}
       <div className="gmesh-blob gmesh-blob1" style={{
         width:500, height:500, top:-60, right:60,
         background:"radial-gradient(circle, rgba(45,64,89,0.12) 0%, transparent 70%)",
@@ -153,8 +153,8 @@ const copy = {
     servicesTitle:"What we do",
     services:[
       { domain:DOMAIN.digital, icon:"◈", title:"New Product & Process Development",
-        desc:"From concept development and material testing to prototype validation and pre-commercial launch — we run the full R&D cycle so your team can focus on production.",
-        ifText:"Relevant if you are developing a new building material, component, system or production process — including robotics and automation.",
+        desc:"From concept development and material testing to prototype validation and pre-commercial launch – we run the full R&D cycle so your team can focus on production.",
+        ifText:"Relevant if you are developing a new building material, component, system or production process – including robotics and automation.",
         caps:["Concept development & prototyping","Material selection & testing","Market validation & competitive benchmarking","Patent research & IP support","Business model definition"],
         link:"See related projects →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sustainability & Circular Economy",
@@ -179,18 +179,18 @@ const copy = {
     clientsSub:"We work with companies across the construction and materials supply chain.",
     clients:[
       {sector:"Building envelope manufacturers",desc:"Facade, cladding and window manufacturers developing new products or adapting to ESPR requirements.",icon:"▣"},
-      {sector:"Bio-based material producers",desc:"Companies transforming agricultural residues into construction materials — bricks, insulation, composites.",icon:"◉"},
+      {sector:"Bio-based material producers",desc:"Companies transforming agricultural residues into construction materials – bricks, insulation, composites.",icon:"◉"},
       {sector:"BIPV and solar building products",desc:"Manufacturers integrating photovoltaics into facade systems, roofing and glazing.",icon:"◈"},
       {sector:"Construction tech innovators",desc:"Startups and scale-ups developing digital tools, robotics or AI solutions for the built environment.",icon:"◎"},
     ],
     insightsTitle:"What we are watching",
     insightsSub:"All insights →",
     insights:[
-      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Bio-based building materials & products: the 2026 innovation map", excerpt:"From mycelium to hemp composites — the commercial-ready products redefining the building envelope in 2026.", slug:"bio-03-26" },
-      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"AI-based solutions for construction: innovative products for designing and constructing", excerpt:"From automated MEP design to high-precision reality capture — how AI is reshaping the construction site.", slug:"ai-02-26" },
+      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Bio-based building materials & products: the 2026 innovation map", excerpt:"From mycelium to hemp composites – the commercial-ready products redefining the building envelope in 2026.", slug:"bio-03-26" },
+      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"AI-based solutions for construction: innovative products for designing and constructing", excerpt:"From automated MEP design to high-precision reality capture – how AI is reshaping the construction site.", slug:"ai-02-26" },
       { domain:DOMAIN.digital, num:"02/26", series:"Make It Digital", date:"Feb 2026", title:"Robotic & Automation for Construction: robotic products for digital workflows", excerpt:"HP SitePrint, Hadrian X, and the next generation of robots closing the gap between BIM and jobsite execution.", slug:"rob-02-26" },
     ],
-    ctaText:"If you are developing a construction product, facing a sustainability compliance challenge, or exploring EU funding — we are the right first call.",
+    ctaText:"If you are developing a construction product, facing a sustainability compliance challenge, or exploring EU funding – we are the right first call.",
     ctaBtn:"Book a 30-minute call →",
     ctaSub:"No pitch. No commitment. 30 minutes.",
     footerTagline:"Specialist R&D, built around your team.",
@@ -215,8 +215,8 @@ const copy = {
     servicesTitle:"Cosa facciamo",
     services:[
       { domain:DOMAIN.digital, icon:"◈", title:"Sviluppo di Prodotti e Processi",
-        desc:"Dallo sviluppo del concept e dalla selezione dei materiali fino alla validazione del prototipo e al lancio pre-commerciale — gestiamo l'intero ciclo R&D perché il tuo team possa concentrarsi sulla produzione.",
-        ifText:"Pertinente se stai sviluppando un nuovo materiale, componente, sistema o processo produttivo — incluse robotica e automazione.",
+        desc:"Dallo sviluppo del concept e dalla selezione dei materiali fino alla validazione del prototipo e al lancio pre-commerciale – gestiamo l'intero ciclo R&D perché il tuo team possa concentrarsi sulla produzione.",
+        ifText:"Pertinente se stai sviluppando un nuovo materiale, componente, sistema o processo produttivo – incluse robotica e automazione.",
         caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Validazione di mercato e benchmarking","Ricerca brevettuale e supporto IP","Definizione business model"],
         link:"Vedi progetti correlati →", href:"/work?filter=product" },
       { domain:DOMAIN.green, icon:"◉", title:"Sostenibilità ed Economia Circolare",
@@ -240,11 +240,11 @@ const copy = {
     insightsTitle:"Quello che stiamo osservando",
     insightsSub:"Tutti gli insights →",
     insights:[
-      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Materiali bio-based per l'edilizia: la mappa dell'innovazione 2026", excerpt:"Dal mycelium ai compositi di canapa — i prodotti pronti al mercato che ridefiniscono l'involucro edilizio.", slug:"bio-03-26" },
-      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"Soluzioni AI per le costruzioni: prodotti innovativi per progettare e costruire", excerpt:"Dal design MEP automatizzato al reality capture ad alta precisione — come l'AI sta ridisegnando il cantiere.", slug:"ai-02-26" },
+      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Materiali bio-based per l'edilizia: la mappa dell'innovazione 2026", excerpt:"Dal mycelium ai compositi di canapa – i prodotti pronti al mercato che ridefiniscono l'involucro edilizio.", slug:"bio-03-26" },
+      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"Soluzioni AI per le costruzioni: prodotti innovativi per progettare e costruire", excerpt:"Dal design MEP automatizzato al reality capture ad alta precisione – come l'AI sta ridisegnando il cantiere.", slug:"ai-02-26" },
       { domain:DOMAIN.digital, num:"02/26", series:"Make It Digital", date:"Feb 2026", title:"Robotica e automazione per le costruzioni: prodotti robotici per workflow digitali", excerpt:"HP SitePrint, Hadrian X e la prossima generazione di robot che colmano il gap tra BIM ed esecuzione in cantiere.", slug:"rob-02-26" },
     ],
-    ctaText:"Se stai sviluppando un prodotto da costruzione, affronti una sfida di conformità alla sostenibilità o stai esplorando i finanziamenti europei — siamo la prima chiamata giusta.",
+    ctaText:"Se stai sviluppando un prodotto da costruzione, affronti una sfida di conformità alla sostenibilità o stai esplorando i finanziamenti europei – siamo la prima chiamata giusta.",
     ctaBtn:"Prenota una call di 30 minuti →",
     ctaSub:"Nessun pitch. Nessun impegno. 30 minuti.",
     footerTagline:"R&D specializzato, costruito intorno al tuo team.",
@@ -254,12 +254,12 @@ const copy = {
     clientsSub:"Collaboriamo con aziende lungo tutta la filiera delle costruzioni e dei materiali.",
     clients:[
       {sector:"Produttori di involucro edilizio",desc:"Produttori di facciate, rivestimenti e serramenti che sviluppano nuovi prodotti o devono adeguarsi all'ESPR.",icon:"▣"},
-      {sector:"Produttori di materiali bio-based",desc:"Aziende che trasformano residui agricoli in materiali da costruzione — mattoni, isolanti, compositi.",icon:"◉"},
+      {sector:"Produttori di materiali bio-based",desc:"Aziende che trasformano residui agricoli in materiali da costruzione – mattoni, isolanti, compositi.",icon:"◉"},
       {sector:"BIPV e prodotti solari per l'edilizia",desc:"Produttori che integrano il fotovoltaico in sistemi di facciata, coperture e vetrate.",icon:"◈"},
       {sector:"Innovatori tech per le costruzioni",desc:"Startup e scale-up che sviluppano strumenti digitali, robotica o soluzioni AI per l'ambiente costruito.",icon:"◎"},
     ],
     newsletterTitle:"Rimani aggiornato",
-    newsletterSub:"Una email al mese. Analisi di settore, nuovi prodotti, aggiornamenti normativi — filtrati dal nostro team.",
+    newsletterSub:"Una email al mese. Analisi di settore, nuovi prodotti, aggiornamenti normativi – filtrati dal nostro team.",
     newsletterPh:"La tua email aziendale",
     newsletterBtn:"Iscriviti",
     newsletterNote:"Niente spam. Cancellazione in qualsiasi momento.",
@@ -349,7 +349,7 @@ export default function LeveryHomepage() {
         <div style={{ position:"absolute", inset:0, zIndex:1 }} className="l-hero-right">
           <GradientMesh parallax={parallax}/>
         </div>
-        {/* Stripe pattern — right 55%, fades left */}
+        {/* Stripe pattern – right 55%, fades left */}
         <svg style={{ position:"absolute", top:0, right:0, width:"55%", height:"100%", opacity:0.045, pointerEvents:"none", zIndex:1 }}
           viewBox="0 0 660 480" preserveAspectRatio="xMidYMid slice">
           {Array.from({length:14},(_,i)=>(
@@ -410,14 +410,14 @@ export default function LeveryHomepage() {
 
                   {/* Content */}
                   <div style={{ padding:"24px 28px 24px", display:"flex", flexDirection:"column", flexGrow:1, justifyContent:"space-between", position:"relative", zIndex:1 }}>
-                    {/* TOP: label + title + desc + ifText — grows to fill space */}
+                    {/* TOP: label + title + desc + ifText – grows to fill space */}
                     <div>
                       <span style={{ display:"inline-block", fontSize:10, fontFamily:"monospace", letterSpacing:"0.12em", color:accent, background:"rgba(255,255,255,0.07)", padding:"3px 9px", borderRadius:2, marginBottom:20, alignSelf:"flex-start", textTransform:"uppercase" }}>{label}</span>
                       <h3 style={{ fontSize:21, fontWeight:400, color:C.white, margin:"0 0 14px", fontFamily:"'Georgia',serif", lineHeight:1.3 }}>{svc.title}</h3>
                       <p style={{ fontSize:14, lineHeight:1.7, color:"rgba(255,255,255,0.62)", margin:"0 0 10px", fontFamily:"'Helvetica Neue',Arial,sans-serif" }}>{svc.desc}</p>
                       <p style={{ fontSize:11, fontStyle:"italic", color:"rgba(255,255,255,0.32)", margin:0, fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.6 }}>{svc.ifText}</p>
                     </div>
-                    {/* BOTTOM: capabilities list + link — always anchored to bottom */}
+                    {/* BOTTOM: capabilities list + link – always anchored to bottom */}
                     <div>
                     <ul style={{ listStyle:"none", padding:0, margin:"24px 0 20px" }}>
                       {svc.caps.map((cap,j)=>(

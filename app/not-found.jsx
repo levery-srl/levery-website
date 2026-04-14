@@ -19,7 +19,7 @@ export default function NotFound(){
     en:{
       code:"404",
       title:"Page not found.",
-      sub:"The page you're looking for doesn't exist — but we might be able to help.",
+      sub:"The page you're looking for doesn't exist – but we might be able to help.",
       cta1:"Go back home",
       cta2:"Book a call",
       links:[
@@ -33,7 +33,7 @@ export default function NotFound(){
     it:{
       code:"404",
       title:"Pagina non trovata.",
-      sub:"La pagina che cerchi non esiste — ma forse possiamo aiutarti.",
+      sub:"La pagina che cerchi non esiste – ma forse possiamo aiutarti.",
       cta1:"Torna alla home",
       cta2:"Prenota una call",
       links:[

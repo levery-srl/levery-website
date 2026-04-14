@@ -87,7 +87,7 @@ const projects = {
       period:"2026–ongoing",
       fund:"Horizon Europe",
       tags:["Circular Economy", "Window Lifecycle", "Digital Product Passport", "End-of-Life", "Ecodesign"],
-      desc:"Developing technologies, digitisation tools and business models for closing the life cycle of windows — from design to end-of-life recovery.",
+      desc:"Developing technologies, digitisation tools and business models for closing the life cycle of windows – from design to end-of-life recovery.",
       levery:"Digital Product Passport, lifecycle assessment, circular business model definition.",
     },
     {
@@ -109,7 +109,7 @@ const projects = {
       period:"2024–ongoing",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
-      desc:"Transforming wood waste into a valuable resource for a greener future — developing upcycling technologies and circular business models for the construction sector.",
+      desc:"Transforming wood waste into a valuable resource for a greener future – developing upcycling technologies and circular business models for the construction sector.",
       levery:"Prefabricated façade system development, DPP design, scientific dissemination.",
     },
     {
@@ -131,7 +131,7 @@ const projects = {
       period:"2024–2025",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
-      desc:"Advancing augmented and virtual reality applications for the construction sector — from design review to on-site maintenance and worker training.",
+      desc:"Advancing augmented and virtual reality applications for the construction sector – from design review to on-site maintenance and worker training.",
       levery:"XR use case definition, building O&M workflows, technology transfer to ARyze.",
     },
     {
@@ -142,7 +142,7 @@ const projects = {
       period:"2024–2026",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
-      desc:"Mass Customisation 2.0 for integrated photovoltaic building envelopes — enabling flexible, high-performance BIPV systems for mainstream construction.",
+      desc:"Mass Customisation 2.0 for integrated photovoltaic building envelopes – enabling flexible, high-performance BIPV systems for mainstream construction.",
       levery:"Ecodesign MCDA methodology, LCA/LCC analysis, DPP design for BIPV products.",
     },
     {
@@ -153,7 +153,7 @@ const projects = {
       period:"2024–ongoing",
       fund:"Direct service · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
-      desc:"Supporting Glass to Power in the technological integration of BIPV systems into building envelopes — from product validation to market positioning.",
+      desc:"Supporting Glass to Power in the technological integration of BIPV systems into building envelopes – from product validation to market positioning.",
       levery:"Technical documentation, building envelope integration analysis, market strategy.",
     },
     {
@@ -164,7 +164,7 @@ const projects = {
       period:"2023–2027",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
-      desc:"Built Environment Lifecycle Management Assistance — developing digital tools for whole-life assessment and management of building systems and components.",
+      desc:"Built Environment Lifecycle Management Assistance – developing digital tools for whole-life assessment and management of building systems and components.",
       levery:"Platform architecture, sustainability assessment modules, data interoperability.",
     },
   ],
@@ -221,7 +221,7 @@ const projects = {
       period:"2024–ongoing",
       fund:"Horizon Europe · GA 101138789",
       tags:["Wood Waste", "Circular Economy", "C&D Waste", "Façade Systems", "Digital Twin"],
-      desc:"Trasformazione dei rifiuti di legno in una risorsa di valore — tecnologie di upcycling e modelli di business circolari per il settore costruzioni.",
+      desc:"Trasformazione dei rifiuti di legno in una risorsa di valore – tecnologie di upcycling e modelli di business circolari per il settore costruzioni.",
       levery:"Sistema facciata prefabbricata, design DPP, disseminazione scientifica.",
     },
     {
@@ -242,7 +242,7 @@ const projects = {
       period:"2024–2025",
       fund:"Horizon Europe",
       tags:["Extended Reality", "XR", "Building Maintenance", "Digital Twin", "O&M"],
-      desc:"Avanzamento delle applicazioni di realtà aumentata e virtuale per il settore costruzioni — dal design review alla manutenzione in loco e alla formazione.",
+      desc:"Avanzamento delle applicazioni di realtà aumentata e virtuale per il settore costruzioni – dal design review alla manutenzione in loco e alla formazione.",
       levery:"Definizione use case XR, workflow O&M edilizio, trasferimento tecnologico ad ARyze.",
     },
     {
@@ -252,7 +252,7 @@ const projects = {
       status:"Attivo",
       fund:"Horizon Europe · GA 101096139",
       tags:["BIPV", "Building Integrated PV", "Façade Engineering", "Mass Customisation", "Ecodesign"],
-      desc:"Mass Customisation 2.0 per involucri edilizi fotovoltaici integrati — sistemi BIPV flessibili e ad alte prestazioni per il mercato mainstream.",
+      desc:"Mass Customisation 2.0 per involucri edilizi fotovoltaici integrati – sistemi BIPV flessibili e ad alte prestazioni per il mercato mainstream.",
       levery:"Metodologia MCDA ecodesign, analisi LCA/LCC, design DPP per prodotti BIPV.",
     },
     {
@@ -263,7 +263,7 @@ const projects = {
       period:"2024–ongoing",
       fund:"Servizio diretto · Glass to Power",
       tags:["BIPV", "Building Envelope", "Solar Integration", "Façade Systems", "Technology Transfer"],
-      desc:"Supporto a Glass to Power nell'integrazione tecnologica di sistemi BIPV nell'involucro edilizio — dalla validazione di prodotto al posizionamento di mercato.",
+      desc:"Supporto a Glass to Power nell'integrazione tecnologica di sistemi BIPV nell'involucro edilizio – dalla validazione di prodotto al posizionamento di mercato.",
       levery:"Documentazione tecnica, analisi integrazione involucro, strategia di mercato.",
     },
     {
@@ -274,7 +274,7 @@ const projects = {
       period:"2023–2027",
       fund:"Horizon Europe",
       tags:["Lifecycle Management", "Digital Twin", "ESG Reporting", "Sustainability", "CSRD"],
-      desc:"Built Environment Lifecycle Management Assistance — strumenti digitali per la valutazione e gestione dell'intero ciclo di vita di sistemi e componenti edilizi.",
+      desc:"Built Environment Lifecycle Management Assistance – strumenti digitali per la valutazione e gestione dell'intero ciclo di vita di sistemi e componenti edilizi.",
       levery:"Architettura piattaforma, moduli di valutazione sostenibilità, interoperabilità dati.",
     },
   ],

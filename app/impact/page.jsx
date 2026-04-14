@@ -20,7 +20,7 @@ const COPY={
       {value:"75+",label:"Peer-reviewed publications"},
       {value:"10+",label:"Horizon Europe projects"},
     ],
-    sdgs:["SDG 9 — Industry, Innovation and Infrastructure","SDG 11 — Sustainable Cities and Communities","SDG 12 — Responsible Consumption and Production","SDG 13 — Climate Action"],
+    sdgs:["SDG 9 – Industry, Innovation and Infrastructure","SDG 11 – Sustainable Cities and Communities","SDG 12 – Responsible Consumption and Production","SDG 13 – Climate Action"],
     reportTitle:"Annual Benefit Report",
     reportSub:"As a Società Benefit, we publish an annual report documenting our social and environmental impact.",
     report2025:"2025 Annual Report",
@@ -30,7 +30,7 @@ const COPY={
     reportSub:"As a Società Benefit, we publish an annual report documenting our social and environmental impact.",
     reportTitle:"Annual Benefit Report",
     ctaTitle:"Work with us on your sustainability goals",
-    ctaSub:"LCA, Digital Product Passport, decarbonisation roadmap — we can help.",
+    ctaSub:"LCA, Digital Product Passport, decarbonisation roadmap – we can help.",
     ctaBtn:"Book a call →",
   },
   it:{
@@ -47,7 +47,7 @@ const COPY={
       {value:"75+",label:"Pubblicazioni peer-reviewed"},
       {value:"10+",label:"Progetti Horizon Europe"},
     ],
-    sdgs:["SDG 9 — Industria, Innovazione e Infrastrutture","SDG 11 — Città e Comunità Sostenibili","SDG 12 — Consumo e Produzione Responsabili","SDG 13 — Lotta contro il Cambiamento Climatico"],
+    sdgs:["SDG 9 – Industria, Innovazione e Infrastrutture","SDG 11 – Città e Comunità Sostenibili","SDG 12 – Consumo e Produzione Responsabili","SDG 13 – Lotta contro il Cambiamento Climatico"],
     reportTitle:"Relazione Annuale d'Impatto",
     reportSub:"Come Società Benefit, pubblichiamo una relazione annuale che documenta il nostro impatto sociale e ambientale.",
     report2025:"Relazione 2025",
@@ -57,13 +57,12 @@ const COPY={
     reportSub:"Come Società Benefit, pubblichiamo una relazione annuale che documenta il nostro impatto sociale e ambientale.",
     reportTitle:"Relazione Annuale d'Impatto",
     ctaTitle:"Lavora con noi sui tuoi obiettivi di sostenibilità",
-    ctaSub:"LCA, Passaporto Digitale di Prodotto, roadmap di decarbonizzazione — possiamo aiutarti.",
+    ctaSub:"LCA, Passaporto Digitale di Prodotto, roadmap di decarbonizzazione – possiamo aiutarti.",
     ctaBtn:"Prenota una call →",
   },
 };
 
 const inner={maxWidth:1200,margin:"0 auto",padding:"0 32px"};
-const NAV_LINKS=[["Our Work","/work"],["Products","/products"],["Insights","/insights"],["Impact","/impact"],["Team","/team"],["Contact","/contact"]];
 
 
 function Nav({lang, setLang, currentPath}){
@@ -193,7 +192,6 @@ export default function ImpactPage(){
             </div>
           </div>
           <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",marginTop:16}}>
-            {lang==="it"?"Il PDF del 2024 sarà disponibile al link dopo il caricamento su GitHub (public/docs/).":"The 2024 PDF will be available after uploading to GitHub (public/docs/)."}
           </p>
         </div>
       </div>
