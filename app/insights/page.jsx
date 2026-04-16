@@ -345,7 +345,7 @@ export default function InsightsPage(){
         </div>
       </div>
 
-            <footer style={{background:"#1A1A1A",padding:"48px 0 0"}}>
+            <footer style={{background:"#111820",padding:"48px 0 0"}}>
         <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px",display:"grid",gridTemplateColumns:"2fr 1fr 1.4fr",gap:56,borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
           <div>
             <img src="/logo-color.svg" alt="Levery" height="72" style={{display:"block"}}/>
