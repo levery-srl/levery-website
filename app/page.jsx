@@ -474,7 +474,7 @@ export default function LeveryHomepage() {
 
 
       {/* ── PROJECTS ── */}
-            <div style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 56px" }}>
+            <div id="projects" style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 56px" }}>
         <div style={inner}>
           <div style={secHdr}>
             <div style={secLab()}>
