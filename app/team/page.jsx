@@ -89,9 +89,9 @@ const copy = {
         role:"Co-founder & Director",
         name:"Alessandro Pracucci",
         credentials:"Arch, PhD",
-        bio:"Over a decade leading innovation in the construction sector – from building envelope systems and bio-based materials to digital transformation and EU-funded research. He holds a PhD, the National Scientific Qualification as Associate Professor, and teaches Building Technology at the University of Bologna. Author of 50+ peer-reviewed publications (h-index 10). Track record across 15+ European research projects with €65M+ in secured funding and direct management of €3.5M+ in project budgets. At Levery he leads strategy, client relationships, and product development.",
+        bio:"Architectural Technologist with over ten years spanning technical experimentation and industrial reality. He bridges international academic board membership with the hands-on management of complex R&D processes, bringing methodological rigour and systemic thinking to the construction value chain. An executive with deep expertise in technology transfer and risk management, he steers asset development and navigates European innovation ecosystems. At Levery he acts as the guarantor of feasibility: he turns regulatory constraints and emerging materials into concrete strategic opportunities. He does not fall in love with ideas — he falls in love with the method that turns them into real industrial solutions.",
         tags:["Building Envelope","EU Funding","Digital Products","Sustainability Strategy"],
-        linkedin:"https://it.linkedin.com/in/alessandropracucci",
+        linkedin:"https://www.linkedin.com/in/alessandro-pracucci/",
         orcid:"https://orcid.org/0000-0003-0877-1283",
       },
       {
@@ -138,9 +138,9 @@ const copy = {
         role:"Co-fondatore & Direttore",
         name:"Alessandro Pracucci",
         credentials:"Arch, PhD",
-        bio:"Oltre un decennio alla guida dell'innovazione nel settore delle costruzioni – dai sistemi di involucro edilizio e materiali bio-based alla trasformazione digitale e alla ricerca finanziata dall'UE. È PhD, abilitato come Professore Associato e insegna Tecnologia dell'Architettura all'Università di Bologna. Autore di 50+ pubblicazioni peer-reviewed (h-index 10). Track record su 15+ progetti europei con €65M+ di finanziamenti ottenuti e gestione diretta di €3.5M+. In Levery guida strategia, relazioni con i clienti e sviluppo dei prodotti.",
+        bio:"Tecnologo dell\'Architettura con oltre dieci anni di esperienza tra sperimentazione tecnica e realtà industriale. Unisce la presenza nei board accademici internazionali alla gestione di processi complessi di R&D, portando rigore metodologico e visione sistemica nella filiera delle costruzioni. Executive esperto in trasferimento tecnologico e gestione del rischio, guida lo sviluppo di asset e la navigazione in ecosistemi europei. In Levery agisce come garante della fattibilità: trasforma vincoli normativi e nuovi materiali in opportunità strategiche. Non si innamora delle idee, ma del metodo per renderle soluzioni industriali concrete.",
         tags:["Involucro Edilizio","Finanziamenti EU","Prodotti Digitali","Strategia Sostenibilità"],
-        linkedin:"https://it.linkedin.com/in/alessandropracucci",
+        linkedin:"https://www.linkedin.com/in/alessandro-pracucci/",
         orcid:"https://orcid.org/0000-0003-0877-1283",
       },
       {
