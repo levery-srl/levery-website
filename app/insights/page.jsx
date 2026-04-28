@@ -12,6 +12,12 @@ const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
+  {slug:"rob-03-26",series:"Make It Digital",sub:"Rob-03",num:"05/26",domain:"digital",author:"MG",date:"Apr 28, 2026",
+   title:"Robotics in Construction: International Case Studies and Technological Frameworks",
+   titleIt:"Robotica nelle Costruzioni: Casi Studio Internazionali e Framework Tecnologici",
+   excerpt:"From 3D-printed airport buildings to autonomous site monitoring – how robotics is transitioning from experimental prototyping to empirical validation in complex operational environments.",
+   excerptIt:"Dagli edifici aeroportuali stampati in 3D al monitoraggio autonomo del cantiere – come la robotica sta transitando dalla prototipazione sperimentale alla validazione empirica in ambienti operativi complessi.",
+   hero:"/images/blog/3D_printed_utility_building_Ol_Casel_Airport-uai-1600x1280.jpg"},
   {slug:"bio-03-26",series:"Make It Green",sub:"Bio-03",num:"04/26",domain:"green",author:"AP",date:"Apr 2, 2026",
    title:"Bio-based Architecture: Project and Case Studies for the Future of Construction",
    titleIt:"Architettura bio-based: Progetti e casi studio per il futuro delle costruzioni",
