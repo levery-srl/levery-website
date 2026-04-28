@@ -29,20 +29,21 @@ const ARTICLES={
     titleIt:"Robotica nelle Costruzioni: Casi Studio Internazionali e Framework Tecnologici",
     hero:"/images/blog/3D_printed_utility_building_Ol_Casel_Airport-uai-1600x1280.jpg",
     images:[
+      "/images/blog/3D_printed_utility_building_Ol_Casel_Airport-uai-1600x1280.jpg",
       "/images/blog/609_Finished_DBT_ETH_NEST_Smart_Slab_Andrei_Jipa_596A6572-Pano-1280x720.jpg",
       "/images/blog/Spot-interno-2.jpg",
-      "/images/blog/Immagine 2026-04-22 144421.jpg",
+      "/images/blog/Immagine%202026-04-22%20144421.jpg",
     ],
     captions:[
       "Fig. 1 \u2013 3D printed service building in Bergamo Airport (credit WASP)",
       "Fig. 2 \u2013 SmartSlab project (credit DFAB House)",
-      "Fig. 3 \u2013 Spot robot in Chorus Life Bergamo project (credit DDAYDDAY)",
+      "Fig. 3 \u2013 Spot robot in Chorus Life Bergamo project (credit DDAY)",
       "Fig. 4 \u2013 Dusty Robot",
     ],
     captionsIt:[
       "Fig. 1 \u2013 Edificio di servizio stampato in 3D all'aeroporto di Bergamo (credit WASP)",
       "Fig. 2 \u2013 Progetto SmartSlab (credit DFAB House)",
-      "Fig. 3 \u2013 Robot Spot nel progetto Chorus Life Bergamo (credit DDAYDDAY)",
+      "Fig. 3 \u2013 Robot Spot nel progetto Chorus Life Bergamo (credit DDAY)",
       "Fig. 4 \u2013 Robot Dusty",
     ],
     sections:[
@@ -466,7 +467,7 @@ export default function InsightClient({slug}){
                   <p style={{fontSize:15,color:C.inkMid,lineHeight:1.85,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{lang==="it"&&sec.bodyIt?sec.bodyIt:sec.body}</p>
                   {sec.imgIndex!==undefined&&a.images&&a.images[sec.imgIndex]&&(
                     <div style={{marginTop:24,marginBottom:4,borderRadius:2,overflow:"hidden"}}>
-                      <img src={a.images[sec.imgIndex]} alt={sec.h} style={{width:"100%",maxHeight:400,objectFit:"cover",display:"block"}}/>
+                      <img src={a.images[sec.imgIndex]} alt={sec.h} style={{width:"100%",maxHeight:400,objectFit:"contain",display:"block",background:C.sand}}/>
                       {a.captions&&a.captions[sec.imgIndex]&&(
                         <p style={{fontSize:11,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:"8px 0 0",fontStyle:"italic"}}>{lang==="it"&&a.captionsIt?a.captionsIt[sec.imgIndex]||a.captions[sec.imgIndex]:a.captions[sec.imgIndex]}</p>
                       )}
