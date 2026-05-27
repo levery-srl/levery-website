@@ -24,6 +24,7 @@ const DOMAIN = {
   green:    { bg:"#1A3D2B", accent:"#A8E6CF",  label:"ECO",   pill:"#A8E6CF"  },
   funding:  { bg:"#2A2010", accent:"#FFD97D",  label:"EU",    pill:"#FFD97D"  },
   xr:       { bg:"#2A1E3D", accent:"#C3A8E6",  label:"XR",    pill:"#C3A8E6"  },
+  human:    { bg:"#2A1E3D", accent:"#C3A8E6",  label:"HUMAN", pill:"#C3A8E6"  },
 };
 
 // Map keywords → domain
