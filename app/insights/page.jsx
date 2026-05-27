@@ -12,6 +12,12 @@ const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
+  {slug:"ai-03-26",series:"Make It Human",sub:"AI-03",num:"06/26",domain:"human",author:"AP",date:"May 27, 2026",
+   title:"AI in Construction Projects: Real-World Cases Supporting Human Work",
+   titleIt:"AI nei Progetti di Costruzione: Casi Reali a Supporto dell'Operato Umano",
+   excerpt:"Six verified case studies showing how AI is now operational across all project phases – from generative design to structural monitoring – always as an amplifier of human capabilities.",
+   excerptIt:"Sei casi studio verificati che mostrano come l'AI sia oggi operativa in tutte le fasi del progetto – dalla progettazione generativa al monitoraggio strutturale – sempre come amplificatore delle competenze umane.",
+   hero:"/images/blog/ai-03-26-hero-autodesk-forma.jpg"},
   {slug:"rob-03-26",series:"Make It Digital",sub:"Rob-03",num:"05/26",domain:"digital",author:"MG",date:"Apr 28, 2026",
    title:"Robotics in Construction: International Case Studies and Technological Frameworks",
    titleIt:"Robotica nelle Costruzioni: Casi Studio Internazionali e Framework Tecnologici",

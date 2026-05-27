@@ -186,9 +186,9 @@ const copy = {
     insightsTitle:"What we are watching",
     insightsSub:"All insights →",
     insights:[
+      { domain:DOMAIN.human, num:"06/26", series:"Make It Human", date:"May 2026", title:"AI in Construction Projects: Real-World Cases Supporting Human Work", excerpt:"Six verified case studies showing how AI is operational across all project phases – from generative design to structural monitoring.", slug:"ai-03-26" },
       { domain:DOMAIN.digital, num:"05/26", series:"Make It Digital", date:"Apr 2026", title:"Robotics in Construction: International Case Studies and Technological Frameworks", excerpt:"From 3D-printed airport buildings to autonomous site monitoring – how robotics is transitioning from experimental prototyping to empirical validation.", slug:"rob-03-26" },
       { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Bio-based building materials & products: the 2026 innovation map", excerpt:"From mycelium to hemp composites – the commercial-ready products redefining the building envelope in 2026.", slug:"bio-03-26" },
-      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"AI-based solutions for construction: innovative products for designing and constructing", excerpt:"From automated MEP design to high-precision reality capture – how AI is reshaping the construction site.", slug:"ai-02-26" },
         ],
     ctaText:"If you are developing a construction product, facing a sustainability compliance challenge, or exploring EU funding – we are the right first call.",
     ctaBtn:"Book a 30-minute call →",
@@ -240,9 +240,9 @@ const copy = {
     insightsTitle:"Quello che stiamo osservando",
     insightsSub:"Tutti gli insights →",
     insights:[
+      { domain:DOMAIN.human, num:"06/26", series:"Make It Human", date:"May 2026", title:"AI nei Progetti di Costruzione: Casi Reali a Supporto dell'Operato Umano", excerpt:"Sei casi studio verificati che mostrano come l'AI sia oggi operativa in tutte le fasi del progetto – dalla progettazione generativa al monitoraggio strutturale.", slug:"ai-03-26" },
       { domain:DOMAIN.digital, num:"05/26", series:"Make It Digital", date:"Apr 2026", title:"Robotica nelle Costruzioni: Casi Studio Internazionali e Framework Tecnologici", excerpt:"Dagli edifici aeroportuali stampati in 3D al monitoraggio autonomo del cantiere – come la robotica sta transitando dalla prototipazione sperimentale alla validazione empirica.", slug:"rob-03-26" },
       { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Materiali bio-based per l'edilizia: la mappa dell'innovazione 2026", excerpt:"Dal mycelium ai compositi di canapa – i prodotti pronti al mercato che ridefiniscono l'involucro edilizio.", slug:"bio-03-26" },
-      { domain:DOMAIN.digital, num:"03/26", series:"Make It Digital", date:"Feb 2026", title:"Soluzioni AI per le costruzioni: prodotti innovativi per progettare e costruire", excerpt:"Dal design MEP automatizzato al reality capture ad alta precisione – come l'AI sta ridisegnando il cantiere.", slug:"ai-02-26" },
         ],
     ctaText:"Se stai sviluppando un prodotto da costruzione, affronti una sfida di conformità alla sostenibilità o stai esplorando i finanziamenti europei – siamo la prima chiamata giusta.",
     ctaBtn:"Prenota una call di 30 minuti →",
