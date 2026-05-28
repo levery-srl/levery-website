@@ -29,6 +29,7 @@ const ARTICLES={
     titleIt:"AI nei Progetti di Costruzione: Casi Reali a Supporto dell'Operato Umano",
     hero:"/images/blog/ai-03-26-hero-autodesk-forma.jpg",
     images:[
+      "/images/blog/ai-03-26-hero-autodesk-forma.jpg",
       "/images/blog/ai-03-26-holcim-vialiasprint2.jpg",
       "/images/blog/ai-03-26-cartesius-baubot.jpg",
       "/images/blog/ai-03-26-brennero-webuild.jpg",
