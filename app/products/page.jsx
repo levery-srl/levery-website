@@ -60,7 +60,7 @@ const copy = {
       ],
       badge:"Joint venture · Levery + Exvirience",
       eu:"Co-funded by the EU Single Market Programme",
-      cta:"Go to ARyze →", ctaUrl:"https://www.aryze.it/en/",
+      cta:"Go to ARyze →", ctaUrl:"https://www.aryze.it/",
       accent:"#C3A8E6", bg:"#1C2230",
     },
     deeppy:{
