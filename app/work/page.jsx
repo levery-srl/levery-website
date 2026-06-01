@@ -74,7 +74,7 @@ const projects = {
       domain:"dual",bg:"#1C2D40",accent:"#7EC8E3",label:"R&D",isDual:true,
       status:"Active",
       period:"2023–2025",
-      fund:"Regional · Emilia-Romagna",
+      fund:"Horizon Europe · RURBANIVE",
       tags:["Agro-waste Valorisation", "Circular Economy", "Bio-based", "Regional Supply Chain"],
       desc:"Developing a circular agro-waste value chain for the sustainable building sector, creating rural-urban synergies across Emilia-Romagna.",
       levery:"Circular business model, material valorisation strategy, stakeholder engagement.",

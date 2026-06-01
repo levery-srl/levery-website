@@ -86,12 +86,13 @@ const PROJECTS={
   },
   "agro-builder":{
     name:"Agro.build.ER",domainType:"dual",status:"Active",
-    fund:"Regione Emilia-Romagna",fundUrl:"",
+    fund:"Horizon Europe · RURBANIVE",fundUrl:"https://rurbanive-project.eu/",
     period:"2023–2025",
-    partners:["Regione Emilia-Romagna"],
+    partners:["Agrifood Clust-ER","CETMA (coordinator)"],
+    partnerUrls:{"Agrifood Clust-ER":"https://agrifood.clust-er.it/","CETMA (coordinator)":"https://www.cetma.it/"},
     subtitle:"Developing a circular agro-waste value chain for the sustainable building sector and rural-urban synergies in Emilia-Romagna.",
     about:"Agro.build.ER develops a circular agro-waste value chain for the sustainable building sector, creating rural-urban synergies. The project identifies agricultural residues with construction material potential and builds supply chain infrastructure within the regional innovation ecosystem of Emilia-Romagna.",
-    context:"Funded by the Regione Emilia-Romagna as part of regional circular economy and green innovation programmes. Connects the region's strong agri-food sector with construction innovation.",
+    context:"This project has indirectly received funding from the European Union\'s Horizon Europe research and innovation programme under project RURBANIVE (Grant Agreement number: 101136597). Connects the region\'s strong agri-food sector with construction innovation.",
     tags:["Agro-waste Valorisation","Circular Economy","Bio-based Materials","Regional Innovation","Supply Chain","Emilia-Romagna"],
     leveryRole:["Circular business model design – identifying viable pathways for agro-waste valorisation into construction materials.","Material valorisation strategy – technical assessment of agro-waste streams and performance testing.","Stakeholder engagement and regional supply chain mapping between agri-food and construction sectors."],
   },
@@ -241,7 +242,13 @@ export default function ProjectClient({slug}){
               {p.partners&&p.partners.length>0&&(
                 <div style={{background:C.sand,borderRadius:2,padding:24,marginBottom:16,border:`1px solid ${C.rule}`}}>
                   <p style={{fontSize:9,fontFamily:"monospace",letterSpacing:"0.14em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 14px"}}>Partners & funding</p>
-                  {p.partners.map((pt,i)=>(<p key={i} style={{fontSize:13,color:C.inkMid,margin:"0 0 8px",fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.5}}>{pt}</p>))}
+                  {p.partners.map((pt,i)=>(
+                      <p key={i} style={{fontSize:13,color:C.inkMid,margin:"0 0 8px",fontFamily:"'Helvetica Neue',Arial,sans-serif",lineHeight:1.5}}>
+                        {p.partnerUrls&&p.partnerUrls[pt]
+                          ?<a href={p.partnerUrls[pt]} target="_blank" rel="noopener noreferrer" style={{color:C.green,textDecoration:"none",borderBottom:`1px solid ${C.greenMid}`}}>{pt}</a>
+                          :pt}
+                      </p>
+                    ))}
                 </div>
               )}
               <div style={{background:heroBg,borderRadius:2,padding:24}}>
