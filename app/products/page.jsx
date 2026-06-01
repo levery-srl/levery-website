@@ -60,7 +60,7 @@ const copy = {
       ],
       badge:"Joint venture · Levery + Exvirience",
       eu:"Co-funded by the EU Single Market Programme",
-      cta:"Go to ARyze →", ctaUrl:"https://www.aryze.it/",
+      cta:"Go to ARyze →", ctaUrl:"https://www.aryze.it/en/",
       accent:"#C3A8E6", bg:"#1C2230",
     },
     deeppy:{
@@ -351,7 +351,7 @@ export default function LeveryProducts(){
                 const el=document.getElementById("nl-products");
                 if(!el||!el.value)return;
                 try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
+                  await fetch("https://formspree.io/f/xdajryvo",{
                     method:"POST",
                     headers:{"Content-Type":"application/json","Accept":"application/json"},
                     body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})

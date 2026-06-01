@@ -5,7 +5,7 @@ const C={brand:"#2D4059",green:"#1E6B45",greenMid:"#2A8A58",
   white:"#FFFFFF",sand:"#F5F2EC",ink:"#1A1A1A",
   inkMid:"#4A4A4A",inkLight:"#8A8A8A",rule:"#E0DBD3"};
 const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
-// FormSubmit – no account needed, sends directly to info@levery.it
+// Formspree – xdajryvo
 
 function Input({label,name,type="text",required=false,value,onChange,placeholder=""}){
   return(
@@ -73,11 +73,12 @@ export default function ContactPage(){
     e.preventDefault();
     setStatus("sending");
     try{
-      const res=await fetch("https://formsubmit.co/ajax/info@levery.it",{
+      const res=await fetch("https://formspree.io/f/xdajryvo",{
         method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
         body:JSON.stringify(form),
       });
-      setStatus(res.ok?"success":"error");
+      const data=await res.json();
+      setStatus(data.ok?"success":"error");
     }catch{setStatus("error");}
   };
 
@@ -239,7 +240,7 @@ export default function ContactPage(){
                 const el=document.getElementById("nl-contact");
                 if(!el||!el.value)return;
                 try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
+                  await fetch("https://formspree.io/f/xdajryvo",{
                     method:"POST",
                     headers:{"Content-Type":"application/json","Accept":"application/json"},
                     body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})

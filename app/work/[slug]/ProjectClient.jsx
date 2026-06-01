@@ -272,7 +272,7 @@ export default function ProjectClient({slug}){
                 const el=document.getElementById("nl-project");
                 if(!el||!el.value)return;
                 try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
+                  await fetch("https://formspree.io/f/xdajryvo",{
                     method:"POST",
                     headers:{"Content-Type":"application/json","Accept":"application/json"},
                     body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})

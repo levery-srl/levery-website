@@ -121,7 +121,7 @@ export default function AIUsagePolicy(){
                 const el=document.getElementById("nl-ai");
                 if(!el||!el.value)return;
                 try{
-                  await fetch("https://formsubmit.co/ajax/info@levery.it",{
+                  await fetch("https://formspree.io/f/xdajryvo",{
                     method:"POST",
                     headers:{"Content-Type":"application/json","Accept":"application/json"},
                     body:JSON.stringify({email:el.value,_subject:"Newsletter subscription",type:"newsletter"})
