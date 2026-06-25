@@ -51,7 +51,7 @@ const COPY={
     reportTitle:"Relazione Annuale d'Impatto",
     reportSub:"Come Società Benefit, pubblichiamo una relazione annuale che documenta il nostro impatto sociale e ambientale.",
     report2025:"Relazione 2025",
-    report2025note:"Pubblicazione prevista Q2 2026",
+    report2025note:"Scarica PDF",
     report2024:"Relazione 2024",
     report2024note:"Scarica PDF",
     reportSub:"Come Società Benefit, pubblichiamo una relazione annuale che documenta il nostro impatto sociale e ambientale.",
