@@ -24,7 +24,7 @@ const COPY={
     reportTitle:"Annual Benefit Report",
     reportSub:"As a Società Benefit, we publish an annual report documenting our social and environmental impact.",
     report2025:"2025 Annual Report",
-    report2025note:"Publishing Q2 2026",
+    report2025note:"Download PDF",
     report2024:"2024 Annual Report",
     report2024note:"Download PDF",
     reportSub:"As a Società Benefit, we publish an annual report documenting our social and environmental impact.",
