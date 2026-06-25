@@ -98,14 +98,15 @@ const PROJECTS={
   },
   "digi4bio":{
     name:"Digi4BioMat",domainType:"dual",status:"Completed",
-    fund:"INTRANSIT · 2nd Open Call",fundUrl:"https://intransitproject.eu/",
+    fund:"Horizon Europe – Grant Agreement no. 101091494",fundUrl:"https://doi.org/10.3030/101091494",
     period:"2025",
     partners:["Pedone Working S.r.l.","CETMA – Centro di Ricerca e Trasferimento Tecnologico","INTRANSIT (2nd Open Call)"],
     subtitle:"Digital Product Passport for upscaling a circular business model for bio-based construction materials.",
     about:"Digi4BioMat proposes a groundbreaking circular approach for the construction industry: developing innovative bio-based building blocks from agro-wastes (olive stone and almond shells), designing a new Circular Business Model, and implementing a Digital Product Passport for tracking lifecycle data. Key challenges include bio-based material development, mechanical performance testing, lifecycle data digitisation, and innovative CBM validation.",
-    context:"Funded by the INTRANSIT project – 2nd Open Call. Partners include Pedone Working S.r.l. and CETMA research centre.",
+    context:"Funded by the European Union under the Grant Agreement no. 101091494. Partners include Pedone Working S.r.l. and CETMA research centre.",
     tags:["Digital Product Passport","DPP","Bio-based Materials","Circular Business Model","ESPR","Agro-waste","IoT Sensors","Supply Chain Traceability"],
     leveryRole:["Design of the Digi4BioMat Circular Business Model – mapping material flows, supply chains and circularity opportunities.","Development of the Digital Product Passport platform – data schemas, APIs and stakeholder interface.","Dissemination of results through scientific papers, technical reports and industry communications."],
+    refs:["https://works.eurac.edu/SSPCR-2025-Book-of-Abstracts.pdf"],
   },
   "pv-igu":{
     name:"PV-IGU",domainType:"rd",status:"Active",

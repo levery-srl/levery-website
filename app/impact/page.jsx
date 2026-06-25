@@ -186,10 +186,11 @@ export default function ImpactPage(){
               <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 6px"}}>{t.report2024||"2024 Annual Report"}</p>
               <p style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{t.report2024note||"Download PDF"} ↓</p>
             </a>
-            <div style={{padding:"20px 24px",border:`1px solid ${C.rule}`,borderRadius:2,minWidth:220,opacity:0.5}}>
+            <a href="/docs/levery-benefit-report-2025.pdf" target="_blank" rel="noopener noreferrer"
+              style={{padding:"20px 24px",border:`1px solid ${C.green}`,borderRadius:2,minWidth:220,textDecoration:"none",display:"block",cursor:"pointer"}}>
               <p style={{fontSize:14,fontWeight:500,color:C.ink,fontFamily:"'Georgia',serif",margin:"0 0 6px"}}>{t.report2025||"2025 Annual Report"}</p>
-              <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{t.report2025note||"Publishing Q2 2026"}</p>
-            </div>
+              <p style={{fontSize:12,color:C.green,fontFamily:"'Helvetica Neue',Arial,sans-serif",margin:0}}>{t.report2025note||"Download PDF"} ↓</p>
+            </a>
           </div>
           <p style={{fontSize:12,color:C.inkLight,fontFamily:"'Helvetica Neue',Arial,sans-serif",marginTop:16}}>
           </p>

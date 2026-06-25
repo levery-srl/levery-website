@@ -95,6 +95,15 @@ const ARTICLES=[
 // ─── PUBLICATIONS ─────────────────────────────────────────────────────────────
 const PUBLICATIONS=[
   {
+    authors:"Giovanardi, Matteo; Pracucci, Alessandro",year:2025,
+    title:"From Data to Value: The Interlinkages of Digital Product Passports and Circular Business Models in Construction",
+    journal:"SSPCR 2025 – Smart and Sustainable Planning for Cities and Regions Conference",
+    volume:"Bozen, 9–12 December 2025",
+    doi:"10.57749/8f1b-7z02",
+    url:"https://works.eurac.edu/SSPCR-2025-Book-of-Abstracts.pdf",
+    project:"Digi4BioMat",open:true,
+  },
+    {
     authors:"Pracucci A., Giovanardi M.",year:2026,
     title:"Ecodesign Prioritization for BIPV Manufacturers Under ESPR Compliance: An LLM-Assisted Multi-Criteria Framework with Use Cases Application",
     journal:"Preprints.org",note:"Preprint – under peer review",
