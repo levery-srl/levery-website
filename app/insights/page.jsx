@@ -103,6 +103,14 @@ const PUBLICATIONS=[
     project:"PROMETHEUS",open:true,
   },
   {
+    authors:"Pracucci A., Giovanardi M.",year:2026,
+    title:"Ecodesign Prioritization for BIPV Manufacturers Under ESPR Compliance: An LLM-Assisted Multi-Criteria Framework with Use Cases Application",
+    journal:"Preprints.org",note:"Preprint – under peer review",
+    doi:"10.20944/preprints202602.1710.v1",
+    url:"https://www.preprints.org/manuscript/202602.1710",
+    project:"MC2.0",open:true,
+  },
+  {
     authors:"Giovanardi, Matteo; Pracucci, Alessandro",year:2025,
     title:"Advancing circular construction through innovative bio-based materials and digital product passport",
     journal:"SUN – Symbiosis Users Network Proceedings",volume:"9th SUN Conference, 5 November 2025, ISBN 978-88-8286-541-2",
@@ -118,14 +126,6 @@ const PUBLICATIONS=[
     doi:"10.57749/8f1b-7z02",
     url:"https://works.eurac.edu/SSPCR-2025-Book-of-Abstracts.pdf",
     project:"Digi4BioMat",open:true,
-  },
-    {
-    authors:"Pracucci A., Giovanardi M.",year:2026,
-    title:"Ecodesign Prioritization for BIPV Manufacturers Under ESPR Compliance: An LLM-Assisted Multi-Criteria Framework with Use Cases Application",
-    journal:"Preprints.org",note:"Preprint – under peer review",
-    doi:"10.20944/preprints202602.1710.v1",
-    url:"https://www.preprints.org/manuscript/202602.1710",
-    project:"MC2.0",open:true,
   },
   {
     authors:"Pracucci A., Giovanardi M.",year:2025,
