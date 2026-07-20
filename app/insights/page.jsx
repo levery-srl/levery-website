@@ -95,6 +95,22 @@ const ARTICLES=[
 // ─── PUBLICATIONS ─────────────────────────────────────────────────────────────
 const PUBLICATIONS=[
   {
+    authors:"Pracucci, Alessandro; Giovanardi, Matteo; Zara, Alessandro",year:2026,
+    title:"Designing an extended reality platform to optimise operation and maintenance for dynamic building envelopes",
+    journal:"Journal of Facade Design and Engineering",volume:"14(1), pp. 17–38",
+    doi:"10.47982/jfde.2026.337",
+    url:"https://jfde.eu/index.php/jfde/article/view/337",
+    project:"PROMETHEUS",open:true,
+  },
+  {
+    authors:"Giovanardi, Matteo; Pracucci, Alessandro",year:2025,
+    title:"Advancing circular construction through innovative bio-based materials and digital product passport",
+    journal:"SUN – Symbiosis Users Network Proceedings",volume:"9th SUN Conference, 5 November 2025, ISBN 978-88-8286-541-2",
+    doi:"",
+    url:"https://www.pubblicazioni.enea.it/download/send/3-edizioni-enea/788-la-simbiosi-industriale-nellera-della-transizione-digitale-verde-industrial-symbiosis-in-the-twin-transition-era.html",
+    project:"Digi4BioMat",open:true,
+  },
+  {
     authors:"Giovanardi, Matteo; Pracucci, Alessandro",year:2025,
     title:"From Data to Value: The Interlinkages of Digital Product Passports and Circular Business Models in Construction",
     journal:"SSPCR 2025 – Smart and Sustainable Planning for Cities and Regions Conference",
