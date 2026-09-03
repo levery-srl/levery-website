@@ -12,6 +12,12 @@ const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
+  {slug:"eco-01-26",series:"Make It Green",sub:"ECO-01",num:"09/26",domain:"green",author:"AP",date:"Sep 2026",
+   title:"Circular economy in construction materials: who is really closing the loop",
+   titleIt:"Economia circolare nei materiali da costruzione: chi chiude davvero il ciclo",
+   excerpt:"From selective demolition to digital product passports – mapping the actors who are operationally closing the material cycle in construction.",
+   excerptIt:"Dalla demolizione selettiva ai passaporti digitali del prodotto – mappa degli attori che chiudono operativamente il ciclo dei materiali nelle costruzioni.",
+   hero:"/images/blog/RotorDC_UnusualCafe_JérômeHubert.jpg"},
   {slug:"ai-03-26",series:"Make It Human",sub:"AI-03",num:"06/26",domain:"human",author:"AP",date:"May 27, 2026",
    title:"AI in Construction Projects: Real-World Cases Supporting Human Work",
    titleIt:"AI nei Progetti di Costruzione: Casi Reali a Supporto dell'Operato Umano",

@@ -189,7 +189,7 @@ const copy = {
     insights:[
       { domain:DOMAIN.human, num:"06/26", series:"Make It Human", date:"May 2026", title:"AI in Construction Projects: Real-World Cases Supporting Human Work", excerpt:"Six verified case studies showing how AI is operational across all project phases – from generative design to structural monitoring.", slug:"ai-03-26" },
       { domain:DOMAIN.digital, num:"05/26", series:"Make It Digital", date:"Apr 2026", title:"Robotics in Construction: International Case Studies and Technological Frameworks", excerpt:"From 3D-printed airport buildings to autonomous site monitoring – how robotics is transitioning from experimental prototyping to empirical validation.", slug:"rob-03-26" },
-      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Bio-based building materials & products: the 2026 innovation map", excerpt:"From mycelium to hemp composites – the commercial-ready products redefining the building envelope in 2026.", slug:"bio-03-26" },
+      { domain:DOMAIN.green,   num:"09/26", series:"Make It Green",   date:"Sep 2026", title:"Circular economy in construction materials: who is really closing the loop", excerpt:"From selective demolition to digital product passports – mapping the actors who are operationally closing the material cycle in construction.", slug:"eco-01-26" },
         ],
     ctaText:"If you are developing a construction product, facing a sustainability compliance challenge, or exploring EU funding – we are the right first call.",
     ctaBtn:"Book a 30-minute call →",
@@ -238,12 +238,11 @@ const copy = {
       { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energia","Nuovi Prodotti"],                               desc:"Mass customisation di fotovoltaico integrato negli edifici. Analisi di mercato, protocolli di test, analisi dei costi per tipologie edilizie.", status:"Attivo" },
       { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Economia Circolare","Sistemi di Facciata","DPP"],                 desc:"Valorizzazione dei rifiuti di legno per sistemi di facciata prefabbricati. Test acustici, ingegneria della facciata, Passaporto Digitale di Prodotto.", status:"Attivo" },
     ],
-    insightsTitle:"Quello che stiamo osservando",
-    insightsSub:"Tutti gli insights →",
-    insights:[
+    insightsTitle:"Quello che stiamo osservando",insights:[
       { domain:DOMAIN.human, num:"06/26", series:"Make It Human", date:"May 2026", title:"AI nei Progetti di Costruzione: Casi Reali a Supporto dell'Operato Umano", excerpt:"Sei casi studio verificati che mostrano come l'AI sia oggi operativa in tutte le fasi del progetto – dalla progettazione generativa al monitoraggio strutturale.", slug:"ai-03-26" },
       { domain:DOMAIN.digital, num:"05/26", series:"Make It Digital", date:"Apr 2026", title:"Robotica nelle Costruzioni: Casi Studio Internazionali e Framework Tecnologici", excerpt:"Dagli edifici aeroportuali stampati in 3D al monitoraggio autonomo del cantiere – come la robotica sta transitando dalla prototipazione sperimentale alla validazione empirica.", slug:"rob-03-26" },
-      { domain:DOMAIN.green,   num:"04/26", series:"Make It Green",   date:"Apr 2026", title:"Materiali bio-based per l'edilizia: la mappa dell'innovazione 2026", excerpt:"Dal mycelium ai compositi di canapa – i prodotti pronti al mercato che ridefiniscono l'involucro edilizio.", slug:"bio-03-26" },
+      { domain:DOMAIN.green,   num:"09/26", series:"Make It Green",   date:"Set 2026", title:"Economia circolare nei materiali da costruzione: chi chiude davvero il ciclo", excerpt:"Dalla demolizione selettiva ai passaporti digitali – mappa degli attori che chiudono operativamente il ciclo dei materiali.", slug:"eco-01-26" },
+        ]cro edilizio.", slug:"bio-03-26" },
         ],
     ctaText:"Se stai sviluppando un prodotto da costruzione, affronti una sfida di conformità alla sostenibilità o stai esplorando i finanziamenti europei – siamo la prima chiamata giusta.",
     ctaBtn:"Prenota una call di 30 minuti →",
