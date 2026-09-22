@@ -95,6 +95,7 @@ const PROJECTS={
     context:"This project has indirectly received funding from the European Union\'s Horizon Europe research and innovation programme under project RURBANIVE (Grant Agreement number: 101136597). Connects the region\'s strong agri-food sector with construction innovation.",
     tags:["Agro-waste Valorisation","Circular Economy","Bio-based Materials","Regional Innovation","Supply Chain","Emilia-Romagna"],
     leveryRole:["Circular business model design – identifying viable pathways for agro-waste valorisation into construction materials.","Material valorisation strategy – technical assessment of agro-waste streams and performance testing.","Stakeholder engagement and regional supply chain mapping between agri-food and construction sectors."],
+    embed:"https://deeppy.eu/embed/DPP-M-0010",
   },
   "digi4bio":{
     name:"Digi4BioMat",domainType:"dual",status:"Completed",
@@ -250,6 +251,17 @@ export default function ProjectClient({slug}){
                           :pt}
                       </p>
                     ))}
+                </div>
+              )}
+              {p.embed&&(
+                <div style={{marginTop:32}}>
+                  <iframe
+                    src={p.embed}
+                    width="100%"
+                    height="720"
+                    frameBorder="0"
+                    style={{border:"1px solid #E2E8F0",borderRadius:12,maxWidth:800,display:"block"}}
+                  />
                 </div>
               )}
               <div style={{background:heroBg,borderRadius:2,padding:24}}>
