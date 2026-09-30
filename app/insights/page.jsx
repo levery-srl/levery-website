@@ -12,6 +12,12 @@ const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
+  {slug:"trk-01-26",series:"Make It Digital",sub:"TRK-01",num:"10/26",domain:"digital",author:"AP",date:"Oct 1, 2026",
+   title:"Who is turning product knowledge into a competitive advantage",
+   titleIt:"Chi sta trasformando la conoscenza del prodotto in vantaggio competitivo",
+   excerpt:"From Cobuilder to DeePPy – mapping the European actors building structured product data infrastructure before DPP regulations become mandatory.",
+   excerptIt:"Da Cobuilder a DeePPy – mappa degli attori europei che costruiscono infrastrutture di dati di prodotto strutturati prima che le normative DPP diventino obbligatorie.",
+   hero:"/images/blog/EMIDAT_04_EMIDAT.png"},
   {slug:"eco-01-26",series:"Make It Green",sub:"ECO-01",num:"09/26",domain:"green",author:"AP",date:"Sep 2026",
    title:"Circular economy in construction materials: who is really closing the loop",
    titleIt:"Economia circolare nei materiali da costruzione: chi chiude davvero il ciclo",
