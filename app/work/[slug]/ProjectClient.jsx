@@ -233,6 +233,18 @@ export default function ProjectClient({slug}){
                   </div>
                 ))}
               </div>
+              {p.embed&&(
+                <div style={{marginBottom:44}}>
+                  <h2 style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.16em",color:C.inkLight,textTransform:"uppercase",margin:"0 0 18px",paddingBottom:12,borderBottom:`1px solid ${C.rule}`}}>Results</h2>
+                  <iframe
+                    src={p.embed}
+                    width="100%"
+                    height="720"
+                    frameBorder="0"
+                    style={{border:"1px solid #E2E8F0",borderRadius:4,display:"block"}}
+                  />
+                </div>
+              )}
             </div>
             <aside style={{position:"sticky",top:88}} className="l-sidebar">
               <div style={{background:C.sand,borderRadius:2,padding:24,marginBottom:16,border:`1px solid ${C.rule}`}}>
@@ -251,17 +263,6 @@ export default function ProjectClient({slug}){
                           :pt}
                       </p>
                     ))}
-                </div>
-              )}
-              {p.embed&&(
-                <div style={{marginTop:32}}>
-                  <iframe
-                    src={p.embed}
-                    width="100%"
-                    height="720"
-                    frameBorder="0"
-                    style={{border:"1px solid #E2E8F0",borderRadius:12,maxWidth:800,display:"block"}}
-                  />
                 </div>
               )}
               <div style={{background:heroBg,borderRadius:2,padding:24}}>
