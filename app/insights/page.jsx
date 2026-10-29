@@ -17,7 +17,7 @@ const ARTICLES=[
    titleIt:"Progettisti, ingegneri, produttori e gestori: chi lungo la filiera delle costruzioni tiene l’ingegno umano al centro di AI e robotica",
    excerpt:"From computational design studios to facility management platforms – mapping the actors along the construction value chain who are making Human-in-the-Loop a structural approach, not a transitional one.",
    excerptIt:"Dagli studi di progettazione computazionale alle piattaforme di facility management – mappa degli attori lungo la filiera costruzioni che stanno facendo dello Human-in-the-Loop un approccio strutturale, non transitorio.",
-   hero:"/images/blog/HITL_00_HERO.jpg"},
+   hero:"/images/blog/HITL_00_HERO.png"},
   {slug:"trk-01-26",series:"Make It Digital",sub:"TRK-01",num:"10/26",domain:"digital",author:"AP",date:"Oct 1, 2026",
    title:"Who is turning product knowledge into a competitive advantage",
    titleIt:"Chi sta trasformando la conoscenza del prodotto in vantaggio competitivo",
