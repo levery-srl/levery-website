@@ -12,7 +12,7 @@ const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
-  {slug:"hitl-01-26",series:"Make It Human",sub:"HITL-01",num:"11/26",domain:"human",author:"MG, AP",date:"Oct 20, 2026",
+  {slug:"hitl-01-26",series:"Make It Human",sub:"HITL-01",num:"11/26",domain:"human",author:"MG, AP",date:"Oct 29, 2026",
    title:"Designers, engineers, manufacturers and operators: who along the construction value chain keeps human ingenuity at the core of AI and robotics",
    titleIt:"Progettisti, ingegneri, produttori e gestori: chi lungo la filiera delle costruzioni tiene l’ingegno umano al centro di AI e robotica",
    excerpt:"From computational design studios to facility management platforms – mapping the actors along the construction value chain who are making Human-in-the-Loop a structural approach, not a transitional one.",

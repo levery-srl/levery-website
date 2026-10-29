@@ -83,14 +83,14 @@ const ARTICLES={
   },
 
 "hitl-01-26":{
-    series:"Make It Human",sub:"HITL-01",num:"11/26",domain:"human",author:"Matteo Giovanardi, Alessandro Pracucci",date:"October 20, 2026",
+    series:"Make It Human",sub:"HITL-01",num:"11/26",domain:"human",author:"Matteo Giovanardi, Alessandro Pracucci",date:"October 29, 2026",
     title:"Designers, engineers, manufacturers and operators: who along the construction value chain keeps human ingenuity at the core of AI and robotics",
     titleIt:"Progettisti, ingegneri, produttori e gestori: chi lungo la filiera delle costruzioni tiene l’ingegno umano al centro di AI e robotica",
-    hero:"/images/blog/HITL_00_HERO.jpg",
+    hero:"/images/blog/HITL_00_HERO.png",
     images:[
       "/images/blog/ZHA_01.jpg",
       "/images/blog/ARU_01.jpg",
-      "/images/blog/FBR_03.jpg",
+      "/images/blog/FBR_01.jpg",
       "/images/blog/ARY_01.png",
     ],
     captions:[
