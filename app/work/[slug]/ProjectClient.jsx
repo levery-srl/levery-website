@@ -17,9 +17,9 @@ const inner={maxWidth:1200,margin:"0 auto",padding:"0 32px"};
 
 const PROJECTS={
   "bio-corner":{
-    name:"BIO.CO.R.N.ER",domainType:"rd",status:"Active",
+    name:"BIO.CO.R.N.ER",domainType:"rd",status:"Completed",
     fund:"CIRCULOOS · Horizon Europe (GA 101092295)",fundUrl:"https://circuloos.eu/open-calls/",
-    period:"2023–2026",
+    period:"2023–Sep 2026",
     partners:["CIRCULOOS – Horizon Europe (GA 101092295)"],
     subtitle:"BIO-waste for a COordinated and Regenerative New supply chain of eco-sustainable building materials in Emilia-Romagna.",
     about:"The BIO.CO.R.N.ER project proposes a new circular, regional value chain that transforms bio-waste from agri-food, aquaculture, and marine residues into eco-sustainable building materials. Based in the Emilia-Romagna region, the project builds on synergies between the agri-food industry and construction to pioneer low-carbon, bio-based mortars and building components.",
@@ -85,9 +85,9 @@ const PROJECTS={
     leveryRole:["Product development support across material selection, formulation and prototype testing.","Lifecycle assessment (LCA) to quantify environmental performance of bio-based alternatives.","Market analysis – identifying target segments, regulatory pathways and competitive positioning."],
   },
   "agro-builder":{
-    name:"Agro.build.ER",domainType:"dual",status:"Active",
+    name:"Agro.build.ER",domainType:"dual",status:"Completed",
     fund:"Horizon Europe · RURBANIVE",fundUrl:"https://rurbanive-project.eu/",
-    period:"2023–2025",
+    period:"2023–Oct 2026",
     partners:["Agrifood Clust-ER","CETMA (coordinator)"],
     partnerUrls:{"Agrifood Clust-ER":"https://agrifood.clust-er.it/","CETMA (coordinator)":"https://www.cetma.it/"},
     subtitle:"Developing a circular agro-waste value chain for the sustainable building sector and rural-urban synergies in Emilia-Romagna.",
@@ -110,9 +110,9 @@ const PROJECTS={
     refs:["https://works.eurac.edu/SSPCR-2025-Book-of-Abstracts.pdf"],
   },
   "pv-igu":{
-    name:"PV-IGU",domainType:"rd",status:"Active",
+    name:"PV-IGU",domainType:"rd",status:"Completed",
     fund:"Direct R&D service · Glass to Power S.p.A.",fundUrl:"",
-    period:"2024–ongoing",
+    period:"2024–Jun 2026",
     partners:["Glass to Power S.p.A."],
     subtitle:"Supporting Glass to Power in the technological integration of BIPV systems into building envelopes.",
     about:"PV-IGU was a direct R&D service engagement with Glass to Power, an Italian manufacturer of transparent organic photovoltaic modules for building integration. The project focused on supporting the company's technical documentation, building envelope integration strategy and go-to-market approach for BIPV products.",
@@ -122,8 +122,8 @@ const PROJECTS={
   },
   "belm":{
     name:"BELM",domainType:"rd",status:"Active",
-    fund:"Horizon Europe",fundUrl:"",
-    period:"2023–2027",
+    fund:"Internal project",fundUrl:"",
+    period:"2025–ongoing",
     partners:["Horizon Europe"],
     subtitle:"Built Environment Lifecycle Management Assistance – digital platform for whole-life sustainability decision-making.",
     about:"BELM is a digital assistance platform to support end users in decision-making for the identification, analysis, implementation and monitoring of sustainability strategies in the lifecycle management of the built environment. BELM aspires to be a tool in the transition to a smarter, sustainable and resilient construction sector, creating awareness and co-responsibility in economic, social and environmental sustainability.",

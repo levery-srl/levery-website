@@ -12,12 +12,12 @@ const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
-  {slug:"hitl-01-26",series:"Make It Human",sub:"HITL-01",num:"11/26",domain:"human",author:"MG, AP",date:"Oct 20, 2026",
+  {slug:"hitl-01-26",series:"Make It Human",sub:"HITL-01",num:"11/26",domain:"human",author:"MG, AP",date:"Oct 29, 2026",
    title:"Designers, engineers, manufacturers and operators: who along the construction value chain keeps human ingenuity at the core of AI and robotics",
    titleIt:"Progettisti, ingegneri, produttori e gestori: chi lungo la filiera delle costruzioni tiene l’ingegno umano al centro di AI e robotica",
    excerpt:"From computational design studios to facility management platforms – mapping the actors along the construction value chain who are making Human-in-the-Loop a structural approach, not a transitional one.",
    excerptIt:"Dagli studi di progettazione computazionale alle piattaforme di facility management – mappa degli attori lungo la filiera costruzioni che stanno facendo dello Human-in-the-Loop un approccio strutturale, non transitorio.",
-   hero:"/images/blog/HITL_00_HERO.jpg"},
+   hero:"/images/blog/HITL_00_HERO.png"},
   {slug:"trk-01-26",series:"Make It Digital",sub:"TRK-01",num:"10/26",domain:"digital",author:"AP",date:"Oct 1, 2026",
    title:"Who is turning product knowledge into a competitive advantage",
    titleIt:"Chi sta trasformando la conoscenza del prodotto in vantaggio competitivo",
@@ -336,7 +336,7 @@ export default function InsightsPage(){
 
           {/* TABS */}
           <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-            <TabBtn id="articles" label={lang==="it"?"Articoli":"Articles"}/>
+            <TabBtn id="articles" label={lang==="it"?"Articoli blog":"Blog articles"}/>
             <TabBtn id="publications" label={lang==="it"?"Pubblicazioni":"Publications"}/>
             <TabBtn id="press" label={lang==="it"?"Rassegna stampa":"Press"}/>
           </div>
@@ -349,7 +349,7 @@ export default function InsightsPage(){
           <div style={{maxWidth:1200,margin:"0 auto",padding:"0 32px"}}>
             {/* Series filters */}
             <div style={{display:"flex",gap:8,flexWrap:"wrap",marginBottom:40}}>
-              {[["all","All articles"],["digital","Make It Digital"],["green","Make It Green"],["human","Make It Human"]].map(([key,label])=>(
+              {[["all","All blog articles"],["digital","Make It Digital"],["green","Make It Green"],["human","Make It Human"]].map(([key,label])=>(
                 <button key={key} onClick={()=>setFilter(key)} style={{fontSize:11,fontFamily:"monospace",letterSpacing:"0.1em",textTransform:"uppercase",padding:"7px 16px",borderRadius:2,cursor:"pointer",border:"1px solid",transition:"all 0.2s",
                   background:filter===key?C.brand:"transparent",color:filter===key?C.white:C.inkLight,borderColor:filter===key?C.brand:C.rule}}>
                   {label}

@@ -172,7 +172,7 @@ const copy = {
     projectsTitle:"Active projects",
     projectsSub:"All projects →",
     projects:[
-      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295", tags:["Bio-based Materials","Digital Tools","Circular Economy"], desc:"Digital supply chain architecture for bio-based building materials. NGSI-LD data platform, real-time traceability dashboard.", status:"Active" },
+      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295", tags:["Bio-based Materials","Digital Tools","Circular Economy"], desc:"Digital supply chain architecture for bio-based building materials. NGSI-LD data platform, real-time traceability dashboard.", status:"Completed" },
       { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energy","New Products"], desc:"Mass customisation of building-integrated photovoltaics. Market analysis, testing protocols, cost analysis across building typologies.", status:"Active" },
       { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Circular Economy","Façade Systems","DPP"], desc:"Wood waste valorisation for prefabricated façade systems. Acoustic testing, façade engineering, Digital Product Passport.", status:"Active" },
     ],
@@ -234,7 +234,7 @@ const copy = {
     projectsTitle:"Progetti attivi",
     projectsSub:"Tutti i progetti →",
     projects:[
-      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295",     tags:["Materiali Bio-based","Strumenti Digitali","Economia Circolare"], desc:"Architettura digitale della supply chain per materiali bio-based da costruzione. Piattaforma dati NGSI-LD, dashboard di tracciabilità in tempo reale.", status:"Attivo" },
+      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295",     tags:["Materiali Bio-based","Strumenti Digitali","Economia Circolare"], desc:"Architettura digitale della supply chain per materiali bio-based da costruzione. Piattaforma dati NGSI-LD, dashboard di tracciabilità in tempo reale.", status:"Concluso" },
       { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energia","Nuovi Prodotti"],                               desc:"Mass customisation di fotovoltaico integrato negli edifici. Analisi di mercato, protocolli di test, analisi dei costi per tipologie edilizie.", status:"Attivo" },
       { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Economia Circolare","Sistemi di Facciata","DPP"],                 desc:"Valorizzazione dei rifiuti di legno per sistemi di facciata prefabbricati. Test acustici, ingegneria della facciata, Passaporto Digitale di Prodotto.", status:"Attivo" },
     ],
