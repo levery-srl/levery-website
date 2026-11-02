@@ -3,7 +3,7 @@ import ProjectClient from "./ProjectClient";
 
 const SLUGS = [
   "bio-corner","w2w","mc20","prometheus","winloop",
-  "bios-mater","agro-builder","digi4bio","pv-igu","belm"
+  "bios-mater","agro-builder","digi4bio","pv-igu","belm","deeppy"
 ];
 
 export async function generateStaticParams(){

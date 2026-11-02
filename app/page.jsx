@@ -172,9 +172,9 @@ const copy = {
     projectsTitle:"Active projects",
     projectsSub:"All projects →",
     projects:[
-      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295", tags:["Bio-based Materials","Digital Tools","Circular Economy"], desc:"Digital supply chain architecture for bio-based building materials. NGSI-LD data platform, real-time traceability dashboard.", status:"Completed" },
-      { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energy","New Products"], desc:"Mass customisation of building-integrated photovoltaics. Market analysis, testing protocols, cost analysis across building typologies.", status:"Active" },
-      { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Circular Economy","Façade Systems","DPP"], desc:"Wood waste valorisation for prefabricated façade systems. Acoustic testing, façade engineering, Digital Product Passport.", status:"Active" },
+      { name:"WINLOOP", slug:"winloop", fund:"Horizon Europe",                     tags:["Circular Economy","Window Lifecycle","DPP"],   desc:"Technologies, digitisation tools and business models for closing the life cycle of windows – from design to end-of-life recovery.", status:"Active" },
+      { name:"DeePPy",  slug:"deeppy",  fund:"Internal project · InTransit · RURBANIVE", tags:["DPP","ESPR","SaaS"],                    desc:"SaaS platform for Digital Product Passports in construction – all product technical data in one place, organised and ready to share.", status:"Active" },
+      { name:"W2W",     slug:"w2w",     fund:"Horizon Europe · GA 101138789",      tags:["Circular Economy","Façade Systems","DPP"],   desc:"Wood waste valorisation for prefabricated façade systems. Acoustic testing, façade engineering, Digital Product Passport.", status:"Active" },
     ],
     clientsTitle:"Who we work with",
     clientsSub:"We work with companies across the construction and materials supply chain.",
@@ -234,9 +234,9 @@ const copy = {
     projectsTitle:"Progetti attivi",
     projectsSub:"Tutti i progetti →",
     projects:[
-      { name:"BIO.CO.R.N.ER", slug:"bio-corner", slug:"bio-corner", fund:"CIRCULOOS · GA 101092295",     tags:["Materiali Bio-based","Strumenti Digitali","Economia Circolare"], desc:"Architettura digitale della supply chain per materiali bio-based da costruzione. Piattaforma dati NGSI-LD, dashboard di tracciabilità in tempo reale.", status:"Concluso" },
-      { name:"MC2.0", slug:"mc20", slug:"mc20",         fund:"Horizon Europe · GA 101096139", tags:["BIPV & Energia","Nuovi Prodotti"],                               desc:"Mass customisation di fotovoltaico integrato negli edifici. Analisi di mercato, protocolli di test, analisi dei costi per tipologie edilizie.", status:"Attivo" },
-      { name:"W2W", slug:"w2w", slug:"w2w",           fund:"Horizon Europe · GA 101138789", tags:["Economia Circolare","Sistemi di Facciata","DPP"],                 desc:"Valorizzazione dei rifiuti di legno per sistemi di facciata prefabbricati. Test acustici, ingegneria della facciata, Passaporto Digitale di Prodotto.", status:"Attivo" },
+      { name:"WINLOOP", slug:"winloop", fund:"Horizon Europe",                          tags:["Economia Circolare","Ciclo di vita serramenti","DPP"], desc:"Tecnologie, strumenti di digitalizzazione e modelli di business per chiudere il ciclo di vita dei serramenti – dalla progettazione al recupero.", status:"Attivo" },
+      { name:"DeePPy",  slug:"deeppy",  fund:"Progetto interno · InTransit · RURBANIVE", tags:["DPP","ESPR","SaaS"],                                  desc:"Piattaforma SaaS per Digital Product Passport nel settore costruzioni – tutte le informazioni tecniche dei prodotti in un unico posto, organizzate e pronte da condividere.", status:"Attivo" },
+      { name:"W2W",     slug:"w2w",     fund:"Horizon Europe · GA 101138789",           tags:["Economia Circolare","Sistemi di Facciata","DPP"],      desc:"Valorizzazione dei rifiuti di legno per sistemi di facciata prefabbricati. Test acustici, ingegneria della facciata, Passaporto Digitale di Prodotto.", status:"Attivo" },
     ],
     insightsTitle:"Quello che stiamo osservando",insights:[
       { domain:DOMAIN.human,   num:"11/26", series:"Make It Human",   date:"Ott 2026", title:"Progettisti, ingegneri, produttori e gestori: chi tiene l’ingegno umano al centro di AI e robotica", excerpt:"Dagli studi di progettazione computazionale alle piattaforme di facility management – mappa degli attori che fanno dello Human-in-the-Loop un approccio strutturale, non transitorio.", slug:"hitl-01-26" },
