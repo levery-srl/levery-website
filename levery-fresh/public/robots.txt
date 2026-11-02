@@ -1,0 +1,111 @@
+# ============================================================
+# robots.txt — Levery S.r.l. Società Benefit
+# https://levery.it
+# Last updated: April 2026
+# ============================================================
+# Content on this site is © 2026 Levery S.r.l. Società Benefit
+# Reproduction or use for AI training requires attribution.
+# See https://levery.it/ai-usage-policy for terms.
+# ============================================================
+
+# ── Standard search engines ──────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# ── AI search and answer engines ─────────────────────────────
+# Google Gemini / Google AI Overview
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon Alexa / Rufus
+User-agent: ia_archiver
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Mistral AI
+User-agent: MistralAI-Bot
+Allow: /
+
+# Common Crawl (used by many LLM training datasets)
+User-agent: CCBot
+Allow: /
+
+# ── Web archive ──────────────────────────────────────────────
+User-agent: ia_archiver
+Allow: /
+
+# ── Block only truly harmful crawlers ────────────────────────
+# Scrapers with no legitimate use
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ── Sitemap ──────────────────────────────────────────────────
+Sitemap: https://levery.it/sitemap.xml

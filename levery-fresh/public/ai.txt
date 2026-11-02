@@ -1,0 +1,25 @@
+# ai.txt — Levery S.r.l. Società Benefit
+# Standard: https://site.spawning.ai/spawning-ai-txt
+# ============================================================
+
+# PERMITTED USES
+# You may: index, summarize, cite, and answer questions using content from levery.it
+# You must: always attribute content to "Levery S.r.l. Società Benefit (levery.it)"
+
+# NOT PERMITTED
+# Training AI models on scraped bulk content without prior written consent
+# Reproducing full articles or substantial portions without attribution
+# Using content in ways that misrepresent Levery's positions or services
+
+# CONTACT FOR LICENSING
+# info@levery.it
+
+Allow: Indexing
+Allow: Summarization
+Allow: Citation
+Disallow: Training
+Disallow: Reproduction
+
+Contact: info@levery.it
+Attribution: Levery S.r.l. Società Benefit — levery.it
+License: https://levery.it/ai-usage-policy

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D4059"/>
+      <stop offset="100%" stop-color="#1C2D40"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Diagonal lines -->
+  <line x1="-80" y1="0" x2="120" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="0" y1="0" x2="200" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="80" y1="0" x2="280" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="160" y1="0" x2="360" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="240" y1="0" x2="440" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="320" y1="0" x2="520" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="400" y1="0" x2="600" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="480" y1="0" x2="680" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="560" y1="0" x2="760" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="640" y1="0" x2="840" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="720" y1="0" x2="920" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="800" y1="0" x2="1000" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="880" y1="0" x2="1080" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="960" y1="0" x2="1160" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="1040" y1="0" x2="1240" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="1120" y1="0" x2="1320" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="1200" y1="0" x2="1400" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="1280" y1="0" x2="1480" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="1360" y1="0" x2="1560" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+<line x1="1440" y1="0" x2="1640" y2="630" stroke="rgba(126,200,227,0.07)" stroke-width="1"/>
+
+
+  <!-- Logo: exact SVG from nav, scaled to 480x72px -->
+  <svg x="360" y="279" width="480" height="72" viewBox="0 0 200 30">
+    <svg x="0" y="2" width="20" height="26" viewBox="22 0 129 187">
+      <g transform="matrix(3.828,0,0,3.828,14,-51.45)" fill="#ffffff">
+        <path d="M35.76 62.16 l-25.5 0 l-8.16 -8.16 l0 -40.56 l17.16 17.16 l0 21.9 l6.9 0 l7.8 7.8 z M3.48 53.28 l14.4 0 l0 -22.14 l-14.4 -14.4 l0 36.54 z M32.46 60.78 l-6.9 -6.9 l-21.66 0 l6.9 6.9 l21.66 0 z"/>
+      </g>
+    </svg>
+    <text x="28" y="22" font-family="'Helvetica Neue',Arial,sans-serif" font-size="21" font-weight="500" letter-spacing="1.2" fill="#ffffff">Levery</text>
+  </svg>
+
+</svg>
