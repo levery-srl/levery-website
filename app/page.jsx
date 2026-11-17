@@ -474,8 +474,8 @@ export default function LeveryHomepage() {
               <div style={{ width:1, height:36, background:"#C8DFE8", flexShrink:0 }} />
               {/* Levery wordmark + FOUNDING MEMBER */}
               <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0 }}>
-                <LeveryLogo color={C.brand} height={18} />
-                <span style={{ display:"inline-block", width:1, height:"1em", background:C.brand, opacity:0.4, verticalAlign:"middle" }} />
+                <LeveryLogo color={C.brand} height={28} />
+                <span style={{ display:"inline-block", width:1, height:"1.2em", background:C.brand, opacity:0.4, verticalAlign:"middle" }} />
                 <span style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em", color:C.brand, textTransform:"uppercase", whiteSpace:"nowrap" }}>Founding member</span>
               </div>
               <div style={{ width:1, height:36, background:"#C8DFE8", flexShrink:0 }} />
@@ -504,6 +504,9 @@ export default function LeveryHomepage() {
           </div>
         </div>
       </div>
+
+      {/* White separator before stats */}
+      <div style={{ height:32, background:"#fff" }} />
 
       {/* ── STATS – after services, proof of track record ── */}
       <div style={{ background:C.sandDark, borderTop:`1px solid ${C.rule}`, borderBottom:`1px solid ${C.rule}` }}>
