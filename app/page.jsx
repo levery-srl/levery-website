@@ -41,17 +41,18 @@ const MONO = "M35.76 62.16 l-25.5 0 l-8.16 -8.16 l0 -40.56 l17.16 17.16 l0 21.9 
 const WORD = "M9.04 33.92 l13.16 0 l0 6.08 l-19.8 0 l0 -28 l6.64 0 l0 21.92 z M33.394 40.56 c-6.64 0 -11.2 -4.36 -11.2 -10.72 c0 -6.12 4.28 -10.8 10.8 -10.8 c6.76 0 10.68 4.68 10.68 10.56 c0 0.72 -0.04 1.44 -0.16 2.12 l-15.08 0 c0.4 1.92 1.8 3.52 5.08 3.52 c2.16 0 3.4 -0.84 4.08 -2.08 l5.76 1.68 c-1.08 2.52 -4.52 5.72 -9.96 5.72 z M28.434 27.88 l9 0 c-0.2 -1.84 -1.84 -3.48 -4.48 -3.48 s-4.24 1.76 -4.52 3.48 z M59.828 19.6 l7 0 l-8.24 20.4 l-7.2 0 l-8.24 -20.4 l7.04 0 l4.8 13.12 z M77.502 40.56 c-6.64 0 -11.2 -4.36 -11.2 -10.72 c0 -6.12 4.28 -10.8 10.8 -10.8 c6.76 0 10.68 4.68 10.68 10.56 c0 0.72 -0.04 1.44 -0.16 2.12 l-15.08 0 c0.4 1.92 1.8 3.52 5.08 3.52 c2.16 0 3.4 -0.84 4.08 -2.08 l5.76 1.68 c-1.08 2.52 -4.52 5.72 -9.96 5.72 z M72.542 27.88 l9 0 c-0.2 -1.84 -1.84 -3.48 -4.48 -3.48 s-4.24 1.76 -4.52 3.48 z M96.056 22.36 c1.2 -2.2 3.4 -3.44 6.4 -3.04 l0 6 c-4.32 -0.72 -6.4 1.12 -6.4 6.16 l0 8.52 l-6.4 0 l0 -20.4 l6.4 0 l0 2.76 z M118.85 19.6 l6.84 0 l-12.12 28.8 l-6.52 0 l3.64 -8.88 l0.28 -0.04 l-0.28 0.04 l-9.16 -19.92 l7 0 l5.32 12.44 z";
 
 function LeveryLogo({ color="#fff", height=28 }) {
-  const wordH = Math.round(height * 18 / 28);
+  // wordmark is 30% bigger relative to mono than before (ratio 23/28 instead of 18/28)
+  const wordH = Math.round(height * 23 / 28);
   return (
     <div style={{ display:"flex", alignItems:"center", gap:7, flexShrink:0 }}>
       {/* Monogramma L */}
-      <svg height={height} viewBox="0 0 38 48" fill="none" style={{ display:"block" }}>
+      <svg height={height} viewBox="0 0 38 48" fill="none" style={{ display:"block", verticalAlign:"middle" }}>
         <g transform="translate(0,1) scale(0.245)">
           <g transform="matrix(3.828,0,0,3.828,14,-51.45)" fill={color}><path d={MONO}/></g>
         </g>
       </svg>
-      {/* Wordmark Levery */}
-      <svg height={wordH} viewBox="0 0 43 17" fill="none" style={{ display:"block" }}>
+      {/* Wordmark Levery – +30% rispetto alla versione precedente */}
+      <svg height={wordH} viewBox="0 0 43 17" fill="none" style={{ display:"block", verticalAlign:"middle" }}>
         <g transform="scale(0.245)">
           <g transform="matrix(1.393,0,0,1.393,-3.34,-9.11)" fill={color}><path d={WORD}/></g>
         </g>
@@ -480,7 +481,7 @@ export default function LeveryHomepage() {
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAApCAYAAABUWel5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAdSSURBVHgB7ZxNchNHFMf/MlQgK8w6C9onwDkBzQmwT4B8ApxddhabJLABTuDxCQxUWGtugHICN6kkVGWD2TmV4Mn81d2Z1ngk9Rt9RJL7V/VK0mje9Nfr79fTAXBayjZWg4eQoUs5Dn6fl5KX8tR9n4QqpV/KfimD4PpeKS9K2YGMl6XcKeUAMhiHN05fGt6j4Lcp5aSUDDLapvfUfe7XrjM9r0p5PUWfNveklEP3feD0spsuUuuMQmXM/M4M/lxKL1K3XiG33XUp1LsHOQrtGgXqsOJ9535r2LQzDk/jHzNTejWsUYUVSiEuPX13H+NvYO2QDcz5TWwGefBdl/IA1wPfM8B9UljYbDENFo+BrQg5RnubaXRL2YVtnY27lvv/trBZMKE0yDe4nuSwhrqs3i+H7XKlQ8Bdp2tq19nq7m1KS1kE31ljp41nNhmD5c4RerBj2yNUQ4lp3MeoQWonQzalpew4YXfwC6pB+HVEYfokb54wLE7u2MrpSJ0PpdxtuM7x8NGmdd8GdvbJ7kFF3IuG+/wEYh3RsPFfdk+Rw06ujhHXSrM34zBLBfo92DIxm9J9K/fplxkM4gb6OWy34+9XTv8Ey+UORivHOeIqhp85+5kw08IxnsHy6cF24yri3gw2nzkpYytrYMfBbG0Z/+F4bFVEim54BhO6G6nPwswC3U+Qrxd6Mhe2lDNcTUMvQi+r6ZxF6tXpol3eM63HtWsKNg+7mA7vzTCa9zTK4ThMYzVgyyBZVpgn26i67XXtutcVn/cGiUQikUgkEolEIpFIbCptvYQWynvYNa5FyyEm8Pzdn7FriyEazeudOkJXuXsPxzwzhj6a1ya5fneGOJrWKY8jdfuCe+sopx+ucx4J9DVG4/zJxUVF6me4mu5hnnFHp40xSDGYsPX17OePjy+//J3Brpu2oe6gKllrZEEwbgZyuPPDgqhvTWq4nYlIeG+4aL+MtdK+C4e+qAZ2R4V58RmyDQSvr1AZZayzNr25rjRWy9hmNKgifoUf3v66V1xeZpg9jLZwwZ4OHN9CDo2Z/oRdVAWpYQtGsv9M4zBYHl3YOIb+jIw/KxcNM0N8xTCBcP/7BeL5hIZ0L9ohw2CCQT5/99vuDdxo2/2EqJpIYCvFwpBkpocFx9oeHkt4jGZfwUn4vW8vi3Y902iOY4bZxpjSePuwvAz1F9lSGkwxyOJLp1/MpwDq4zfJMMC7XrE7a+McnKFy7eezNGTHEcghRruxA8jP2khgJTAN1/01SZmwQrLLvwebBokzyx5GHZKzUg4W1VIaLM8gSacmUnLYFtOPD6W6NMYuqq47hwwacRj/DIuFRqQarreZX3RhewfqMg8PBboZRtPNyriQlpIFxBNupunPH08/qst/ilN0ikV3UVJ6qDyopZw4XXpUs7U1WG043uU4WmE0ro/c7xzxjC3rtszbKP1sbtD0Jw2ys1X0S4NUmC+69ttAnlG+Mr2HHBbyE/ddesSWsOvTGI3LIFJ3u4Uu45vDDjvYShtYp9se4o80zIN63Ek+T6OcaJBkAQbpZ631yZI/tjmN+j0Dp/sEMnIn3j9TgkHtjIqLx36E7gdYYwrT37jM0gCf/xJ2greNKu2xy0GzrhhQvx53stNB5c82K1N9EXunZ9u3bt9uDOuvi4vz3v7ORP1EIpFIJBKJRCKRSCTWkhtIrArKfV5g/VCY40scuCT0HvFLQvV3Of4HF8a3ti5PC3RaLi8V598/+qaNpw7RsAvBOWTvuNROL/SWkZLBLn5Lwm2i7+IgXXxnftPbhgZxN1JHo3o35+vgehd2R2tH8JzQh9LArnW+jtDNYLcnQwzDlvhTcuV/4k5N0WHkCvwPMHHeGWJuNXZN2EP1UisN2RYhDWqAdhVSoXpBqnd7Y1y4ffkwMh6NC/2xDhk0yF7TH1wQ75Qt5AK2DiVo2BrqHSOuE95VboCrLc80DNp7rh+5cA/dcxh+D7aV3It8hvenDCXKKF9hgkHe3vqq3Dpcivf6OJgBCjaDvGPEdUHBVsgTJ8wLyfCJ3TfLLmZbsg7DejPmmbHPa/SnnGaUJ+MCWBGDJDRC75nDWqqxggehFoRG5dXjx3GxrRRQeYuz1VOQMY9hEuN6FsjQ0XqSUdIgu+P+/PrmreMVMEhmTBd2osFuyHdfXVwP6DjCPGDaWaA0EmkXzvFgDnk3bjC7z0SGBn/KcUY50SB/evv7cVEUkhq5KHwc2FJ+cMIWQ1ow68iuE6bXp535oCE3FhqDgsw7imE15TNbvJmOuDS5rnHAOnZMQIPE6rREzJQMo2NeDTsr5GeOOFi4KvjNPJB0TX7m65H4Q7bFv4fzoBYP5kkXshOJ4ZEQE6nD53PoxNn2qyBsfsYeB6nnGxn6U56jqlnMyIcYUyDP3v5xWKDoYjXwg+T6UdbcicZ0o/Q+gfVDY2PzYMwzfBfqifWHDGFL91lwv8LV8zCMC/Pj/hRdn+6QHNaYHiAOA5tPTLc/ruvtx0Toj/Wn/BctVUnP3WDrqQAAAABJRU5ErkJggg==" alt="Building Envelope Alliance" style={{ height:28, width:"auto", objectFit:"contain", objectPosition:"left", flexShrink:0 }} />
               <div style={{ width:1, height:36, background:"#C8DFE8", flexShrink:0 }} />
               {/* Levery wordmark + FOUNDING MEMBER */}
-              <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0 }}>
+              <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0, alignSelf:"center" }}>
                 <LeveryLogo color={C.brand} height={28} />
                 <div style={{ width:1, height:20, background:C.brand, opacity:0.35, flexShrink:0 }} />
                 <span style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em", color:C.brand, textTransform:"uppercase", whiteSpace:"nowrap" }}>Founding member</span>
@@ -489,8 +490,8 @@ export default function LeveryHomepage() {
               {/* Description */}
               <p style={{ fontSize:13, color:"#2A3A44", fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.55, margin:0, flex:1, minWidth:220 }}>
                 {lang==="it"
-                  ? "Fondata nel 2026, BEA riunisce i principali esperti europei di involucro edilizio per offrire servizi specialistici di consulenza, test e formazione. Levery ne è socia fondatrice e Alessandro Pracucci guida il comitato dei servizi per PMI e industrie."
-                  : "Founded in 2026, BEA brings together Europe's leading building envelope experts to provide specialist consulting, testing and training services. Levery is a founding member and Alessandro Pracucci chairs the services committee for SMEs and industry."
+                  ? <>Fondata nel 2026, BEA è il network europeo di riferimento per l'involucro edilizio. <strong>Essere soci fondatori significa portare al tuo progetto una rete selezionata di esperti europei, con servizi di consulenza, test e formazione progettati ad hoc.</strong> Alessandro Pracucci guida il comitato servizi per PMI e industria.</>
+                  : <>Founded in 2026, BEA is Europe's leading network for building envelope expertise. <strong>As a founding member, Levery brings to your project a curated network of European specialists, with consulting, testing and training services designed around your needs.</strong> Alessandro Pracucci chairs the SME and industry services committee.</>
                 }
               </p>
               {/* CTA column */}
