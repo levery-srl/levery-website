@@ -140,35 +140,37 @@ const copy = {
     nav:["Our Work","Products","Insights","Impact","Team","Contact"],
     bookCTA:"Book a call",
     heroLabel:"Levery S.r.l. Società Benefit",
-    heroH1a:"Your R&D partner",
-    heroH1b:"integrated, flexible, specialist.",
-    heroSub:"We work alongside manufacturers and construction companies in the development of new products and processes, in sustainability pathways and in access to European funding.",
+    heroH1a:"Your next building envelope product,",
+    heroH1b:"from idea to market.",
+    heroSub:"From interior finishes to structural, insulating and external layers: we develop your product, make it work with the rest of the envelope and qualify it for Europe, even where no standard exists yet. Get there first, without carrying the R&D alone.",
     heroBtn:"Book a 30-minute call →",
-    heroLink:"See our active projects ↓",
+    heroLink:"Where to start ↓",
     stats:[
-      {value:"€15M+",label:"EU projects contributed to"},
-      {value:"€700K+",label:"Direct R&D budget managed"},
-      {value:"50+",  label:"Peer-reviewed publications"},
       {value:"3",   label:"New products co-developed"},
+      {value:"€700K+",label:"Direct R&D budget managed"},
+      {value:"€15M+",label:"EU projects contributed to"},
+      {value:"50+",  label:"Peer-reviewed publications"},
     ],
     servicesTitle:"What we do",
     services:[
       { domain:DOMAIN.digital, icon:"◈", title:"New Product & Process Development",
-        desc:"From concept development and material testing to prototype validation and pre-commercial launch – we run the full R&D cycle so your team can focus on production.",
-        ifText:"Relevant if you are developing a new building material, component, system or production process – including robotics and automation.",
-        caps:["Concept development & prototyping","Material selection & testing","Market validation & competitive benchmarking","Patent research & IP support","Business model definition"],
+        desc:"From concept development and material testing to prototype validation and pre-commercial launch, we run the full R&D cycle so your team can focus on production.",
+        ifText:"Relevant if: you are developing a new building material, component, system or production process, including robotics and automation.",
+        caps:["Concept development & prototyping","Integration with the other envelope layers","Material selection & testing","Market validation & competitive benchmarking","Patent research & IP support","Business model definition"],
+        ctaLink:"Start with an envelope integration assessment →", ctaHref:"/contact?topic=envelope-integration",
         link:"See related projects →", href:"/work?filter=product" },
-      { domain:DOMAIN.green, icon:"◉", title:"Sustainability & Circular Economy",
-        desc:"LCA, Digital Product Passports, decarbonisation roadmaps, ESG reporting. We translate regulatory requirements into actionable technical work.",
-        ifText:"Relevant if you face ESPR compliance, decarbonisation targets, or ESG reporting obligations.",
-        caps:["Digital Product Passport (DPP)","LCA / Lifecycle Assessment","ESPR & CE marking compliance","Decarbonisation roadmap","ESG Scope 1–3 reporting"],
-        link:"See related projects →", href:"/work?filter=sustainability" },
-      { domain:DOMAIN.funding, icon:"◎", title:"Research Partnerships & EU Funding",
-        desc:"Horizon Europe proposal writing, open call applications, consortium building, financial reporting. We help you access public R&D funding and build the right commercial and research partnerships.",
-        ifText:"Relevant if you want to access EU R&D funding or build commercial and research partnerships.",
-        caps:["Horizon Europe proposal writing","Open call scouting","Consortium building","EU project management & reporting","Technical documentation for regulators"],
-        link:"See related projects →", href:"/work?filter=funding" },
+      { domain:DOMAIN.green, icon:"◉", title:"Qualification & Compliance",
+        desc:"ETA and CE marking, testing in European laboratories, Digital Product Passport. We turn regulatory requirements into a clear path to market, step by step.",
+        ifText:"Relevant if: your product is not covered by a harmonised standard, or your clients are starting to ask for structured product data.",
+        caps:["ETA & CE marking pathways","Products not covered by harmonised standards",<a key="bea" href="https://www.buildingenvelopealliance.eu/" target="_blank" rel="noopener noreferrer" style={{color:"inherit",textDecoration:"underline",textUnderlineOffset:3}}>Testing with the BEA laboratory network</a>,"Digital Product Passport (DeePPy)","ESPR & CPR readiness"],
+        ctaLink:"Start with an ETA feasibility study →", ctaHref:"/contact?topic=eta-feasibility",
+        ctaLink2:"Start with a one-product DPP pilot →", ctaHref2:"/contact?topic=dpp-pilot",
+        link:"See related projects →", href:"/work?filter=qualification" },
     ],
+    fundingBand:{
+      text:"When it makes sense, we fund innovation together. EU and national funding, research partnerships and consortia, to share the cost and the risk of your next product.",
+      link:"How we work with EU funding →", href:"/work?filter=funding",
+    },
     projectsTitle:"Active projects",
     projectsSub:"All projects →",
     projects:[
@@ -179,8 +181,8 @@ const copy = {
     clientsTitle:"Who we work with",
     clientsSub:"We work with companies across the construction and materials supply chain.",
     clients:[
-      {sector:"Building envelope manufacturers",desc:"Facade, cladding and window manufacturers developing new products or adapting to ESPR requirements.",icon:"▣"},
-      {sector:"Bio-based material producers",desc:"Companies transforming agricultural residues into construction materials – bricks, insulation, composites.",icon:"◉"},
+      {sector:"Building envelope manufacturers",desc:"Manufacturers of any envelope layer, from interior finishes and boards to insulation, structural systems, membranes, cladding, windows and facades, developing new products or preparing for ESPR and CPR.",icon:"▣"},
+      {sector:"Bio-based material producers",desc:"Companies transforming agricultural residues into construction materials: bricks, insulation, composites.",icon:"◉"},
       {sector:"BIPV and solar building products",desc:"Manufacturers integrating photovoltaics into facade systems, roofing and glazing.",icon:"◈"},
       {sector:"Construction tech innovators",desc:"Startups and scale-ups developing digital tools, robotics or AI solutions for the built environment.",icon:"◎"},
     ],
@@ -202,35 +204,37 @@ const copy = {
     nav:["Progetti","Prodotti","Insights","Impatto","Team","Contatti"],
     bookCTA:"Prenota una call",
     heroLabel:"Levery S.r.l. Società Benefit",
-    heroH1a:"Il tuo partner R&D",
-    heroH1b:"integrato, flessibile, specializzato.",
-    heroSub:"Affianchiamo produttori e imprese del settore costruzioni nello sviluppo di nuovi prodotti e processi, nei percorsi di sostenibilità e nell'accesso ai finanziamenti europei.",
+    heroH1a:"Il vostro prossimo prodotto per l'involucro,",
+    heroH1b:"dall'idea al mercato.",
+    heroSub:"Dalla finitura interna agli strati strutturali, isolanti ed esterni: sviluppiamo il vostro prodotto, lo facciamo dialogare con il resto dell'involucro e lo qualifichiamo per l'Europa, anche dove una norma ancora non c'è. Per arrivare primi, senza portare da soli il peso della R&D.",
     heroBtn:"Prenota una call di 30 minuti →",
-    heroLink:"Vedi i progetti attivi ↓",
+    heroLink:"Da dove partire ↓",
     stats:[
-      {value:"€15M+",label:"Progetti EU a cui abbiamo contribuito"},
+      {value:"3",   label:"Nuovi prodotti sviluppati insieme ai clienti"},
       {value:"€700K+",label:"Budget R&D gestito direttamente"},
-      {value:"50+",  label:"Pubblicazioni peer-reviewed"},
-      {value:"3",   label:"Nuovi prodotti co-sviluppati"},
+      {value:"€15M+",label:"Progetti europei a cui abbiamo contribuito"},
+      {value:"50+",  label:"Pubblicazioni scientifiche"},
     ],
     servicesTitle:"Cosa facciamo",
     services:[
-      { domain:DOMAIN.digital, icon:"◈", title:"Sviluppo di Prodotti e Processi",
-        desc:"Dallo sviluppo del concept e dalla selezione dei materiali fino alla validazione del prototipo e al lancio pre-commerciale – gestiamo l'intero ciclo R&D perché il tuo team possa concentrarsi sulla produzione.",
-        ifText:"Pertinente se stai sviluppando un nuovo materiale, componente, sistema o processo produttivo – incluse robotica e automazione.",
-        caps:["Sviluppo concept e prototipazione","Selezione e test dei materiali","Validazione di mercato e benchmarking","Ricerca brevettuale e supporto IP","Definizione business model"],
-        link:"Vedi progetti correlati →", href:"/work?filter=product" },
-      { domain:DOMAIN.green, icon:"◉", title:"Sostenibilità ed Economia Circolare",
-        desc:"LCA, Passaporti Digitali di Prodotto, roadmap di decarbonizzazione, reportistica ESG. Traduciamo i requisiti normativi in lavoro tecnico concreto.",
-        ifText:"Pertinente se affronti la conformità ESPR, obiettivi di decarbonizzazione o obblighi di rendicontazione ESG.",
-        caps:["Passaporto Digitale di Prodotto (DPP)","LCA / Analisi del Ciclo di Vita","Conformità ESPR e marcatura CE","Roadmap di decarbonizzazione","Reportistica ESG Scope 1–3"],
-        link:"Vedi progetti correlati →", href:"/work?filter=sustainability" },
-      { domain:DOMAIN.funding, icon:"◎", title:"Partnership di Ricerca e Finanziamenti EU",
-        desc:"Scrittura di proposte Horizon Europe, domande per open call, costruzione di consorzi, rendicontazione finanziaria. Siamo stati all'interno di 10+ progetti finanziati.",
-        ifText:"Pertinente se vuoi accedere ai finanziamenti R&D europei o unirti a un consorzio di ricerca attivo.",
-        caps:["Scrittura proposte Horizon Europe","Scouting open call","Costruzione consorzi","Gestione e rendicontazione progetti UE","Documentazione tecnica per enti e regolatori"],
-        link:"Vedi progetti correlati →", href:"/work?filter=funding" },
+      { domain:DOMAIN.digital, icon:"◈", title:"Sviluppo di nuovi prodotti e processi",
+        desc:"Dallo sviluppo del concept e dai test sui materiali fino alla validazione del prototipo e al lancio pre-commerciale, gestiamo l'intero ciclo di R&D, così il vostro team può concentrarsi sulla produzione.",
+        ifText:"Utile se: state sviluppando un nuovo materiale, componente, sistema o processo produttivo, anche con robotica e automazione.",
+        caps:["Sviluppo del concept e prototipazione","Integrazione con gli altri strati dell'involucro","Scelta e test dei materiali","Validazione di mercato e benchmark con i concorrenti","Ricerca brevettuale e supporto sulla proprietà intellettuale","Definizione del modello di business"],
+        ctaLink:"Partite da un'analisi di integrazione nell'involucro →", ctaHref:"/contact?topic=envelope-integration",
+        link:"Vedi i progetti collegati →", href:"/work?filter=product" },
+      { domain:DOMAIN.green, icon:"◉", title:"Qualifica e conformità",
+        desc:"ETA e marcatura CE, test nei laboratori europei, Digital Product Passport. Trasformiamo i requisiti normativi in un percorso chiaro verso il mercato, un passo alla volta.",
+        ifText:"Utile se: il vostro prodotto non è coperto da una norma armonizzata, oppure i vostri clienti iniziano a chiedere dati di prodotto strutturati.",
+        caps:["Percorsi ETA e marcatura CE","Prodotti non coperti da norme armonizzate",<a key="bea" href="https://www.buildingenvelopealliance.eu/" target="_blank" rel="noopener noreferrer" style={{color:"inherit",textDecoration:"underline",textUnderlineOffset:3}}>Test con la rete di laboratori BEA</a>,"Digital Product Passport (DeePPy)","Preparazione a ESPR e CPR"],
+        ctaLink:"Partite da uno studio di fattibilità ETA →", ctaHref:"/contact?topic=eta-feasibility",
+        ctaLink2:"Partite da un pilota DPP su un prodotto →", ctaHref2:"/contact?topic=dpp-pilot",
+        link:"Vedi i progetti collegati →", href:"/work?filter=qualification" },
     ],
+    fundingBand:{
+      text:"Quando ha senso, finanziamo insieme l'innovazione. Fondi europei e nazionali, partenariati di ricerca e consorzi, per condividere costi e rischi del vostro prossimo prodotto.",
+      link:"Come lavoriamo con i fondi europei →", href:"/work?filter=funding",
+    },
     projectsTitle:"Progetti attivi",
     projectsSub:"Tutti i progetti →",
     projects:[
@@ -252,8 +256,8 @@ const copy = {
     clientsTitle:"Con chi lavoriamo",
     clientsSub:"Collaboriamo con aziende lungo tutta la filiera delle costruzioni e dei materiali.",
     clients:[
-      {sector:"Produttori di involucro edilizio",desc:"Produttori di facciate, rivestimenti e serramenti che sviluppano nuovi prodotti o devono adeguarsi all'ESPR.",icon:"▣"},
-      {sector:"Produttori di materiali bio-based",desc:"Aziende che trasformano residui agricoli in materiali da costruzione – mattoni, isolanti, compositi.",icon:"◉"},
+      {sector:"Produttori dell'involucro edilizio",desc:"Produttori di ogni strato dell'involucro, dalle finiture interne e i pannelli a isolanti, sistemi strutturali, membrane, rivestimenti, serramenti e facciate, che sviluppano nuovi prodotti o si preparano a ESPR e CPR.",icon:"▣"},
+      {sector:"Produttori di materiali bio-based",desc:"Aziende che trasformano residui agricoli in materiali da costruzione: mattoni, isolanti, compositi.",icon:"◉"},
       {sector:"BIPV e prodotti solari per l'edilizia",desc:"Produttori che integrano il fotovoltaico in sistemi di facciata, coperture e vetrate.",icon:"◈"},
       {sector:"Innovatori tech per le costruzioni",desc:"Startup e scale-up che sviluppano strumenti digitali, robotica o soluzioni AI per l'ambiente costruito.",icon:"◎"},
     ],
@@ -309,6 +313,7 @@ export default function LeveryHomepage() {
           .l-nav-links{display:none!important}
           .l-mobile-cta{display:block!important}
           .l-grid3{grid-template-columns:1fr!important}
+          .l-grid2{grid-template-columns:1fr!important}
           .l-stats-grid{grid-template-columns:1fr 1fr!important}
           .l-footer-grid{grid-template-columns:1fr 1fr!important}
           .l-hero-right{opacity:0.18!important}
@@ -373,9 +378,9 @@ export default function LeveryHomepage() {
                 onMouseLeave={e=>{e.target.style.background=C.brand;e.target.style.transform="none"}}
                 onClick={()=>track("cta_click",{source:"hero"})}
               >{t.heroBtn}</a>
-              <a href="#projects" style={{ color:C.inkLight, fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", borderBottom:`1px solid ${C.rule}`, paddingBottom:2 }}
+              <a href="#services" style={{ color:C.inkLight, fontSize:13, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", borderBottom:`1px solid ${C.rule}`, paddingBottom:2 }}
                 onMouseEnter={e=>e.target.style.color=C.inkMid} onMouseLeave={e=>e.target.style.color=C.inkLight}
-                onClick={()=>track("hero_projects_scroll")}
+                onClick={()=>track("hero_services_scroll")}
               >{t.heroLink}</a>
             </div>
           </div>
@@ -383,14 +388,14 @@ export default function LeveryHomepage() {
       </section>
 
       {/* ── SERVICES ── */}
-      <div style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 56px" }}>
+      <div id="services" style={{ background:C.white, padding:"clamp(48px, 6vh, 72px) 0 0", scrollMarginTop:"80px" }}>
         <div style={inner}>
           <div style={secLab()}>
             <span style={secNum()}>01</span>
             <span style={secTitle()}>{t.servicesTitle}</span>
           </div>
           <hr style={hr()}/>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:2, background:C.rule }} className="l-grid3">
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:2, background:C.rule }} className="l-grid2">
             {(t.services||[]).map((svc,i)=>{
               const { bg, accent, label } = svc.domain;
               const stripes = Array.from({length:10},(_,j)=>j*38-30);
@@ -409,30 +414,93 @@ export default function LeveryHomepage() {
 
                   {/* Content */}
                   <div style={{ padding:"24px 28px 24px", display:"flex", flexDirection:"column", flexGrow:1, justifyContent:"space-between", position:"relative", zIndex:1 }}>
-                    {/* TOP: label + title + desc + ifText – grows to fill space */}
+                    {/* TOP: label + title + desc + ifText */}
                     <div>
                       <span style={{ display:"inline-block", fontSize:10, fontFamily:"monospace", letterSpacing:"0.12em", color:accent, background:"rgba(255,255,255,0.07)", padding:"3px 9px", borderRadius:2, marginBottom:20, alignSelf:"flex-start", textTransform:"uppercase" }}>{label}</span>
                       <h3 style={{ fontSize:21, fontWeight:400, color:C.white, margin:"0 0 14px", fontFamily:"'Georgia',serif", lineHeight:1.3 }}>{svc.title}</h3>
                       <p style={{ fontSize:14, lineHeight:1.7, color:"rgba(255,255,255,0.62)", margin:"0 0 10px", fontFamily:"'Helvetica Neue',Arial,sans-serif" }}>{svc.desc}</p>
                       <p style={{ fontSize:11, fontStyle:"italic", color:"rgba(255,255,255,0.32)", margin:0, fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.6 }}>{svc.ifText}</p>
                     </div>
-                    {/* BOTTOM: capabilities list + link – always anchored to bottom */}
+                    {/* BOTTOM: capabilities list + CTAs + secondary link */}
                     <div>
-                    <ul style={{ listStyle:"none", padding:0, margin:"24px 0 20px" }}>
-                      {svc.caps.map((cap,j)=>(
-                        <li key={j} style={{ fontSize:13, padding:"8px 0", borderTop:"1px solid rgba(255,255,255,0.08)", color:"rgba(255,255,255,0.72)", fontFamily:"'Helvetica Neue',Arial,sans-serif" }}>{cap}</li>
-                      ))}
-                    </ul>
-                    <a href={svc.href} style={{ display:"inline-block", fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.03em", padding:"9px 18px", borderRadius:2, textDecoration:"none", background:"rgba(255,255,255,0.08)", color:accent, border:`1px solid rgba(255,255,255,0.12)`, transition:"all 0.2s", alignSelf:"flex-start" }}
-                      onMouseEnter={e=>e.target.style.background="rgba(255,255,255,0.14)"}
-                      onMouseLeave={e=>e.target.style.background="rgba(255,255,255,0.08)"}
-                      onClick={()=>track("service_projects_link",{service:svc.title})}
-                    >{svc.link}</a>
+                      <ul style={{ listStyle:"none", padding:0, margin:"24px 0 20px" }}>
+                        {svc.caps.map((cap,j)=>(
+                          <li key={j} style={{ fontSize:13, padding:"8px 0", borderTop:"1px solid rgba(255,255,255,0.08)", color:"rgba(255,255,255,0.72)", fontFamily:"'Helvetica Neue',Arial,sans-serif" }}>{cap}</li>
+                        ))}
+                      </ul>
+                      <div style={{ display:"flex", flexDirection:"column", gap:8, marginBottom:16 }}>
+                        <a href={svc.ctaHref} style={{ display:"inline-block", fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.03em", padding:"10px 18px", borderRadius:2, textDecoration:"none", background:accent, color:bg, border:"none", transition:"all 0.2s", alignSelf:"flex-start", fontWeight:500 }}
+                          onMouseEnter={e=>e.target.style.opacity="0.88"} onMouseLeave={e=>e.target.style.opacity="1"}
+                          onClick={()=>track("service_cta_click",{service:svc.title,cta:svc.ctaHref})}
+                        >{svc.ctaLink}</a>
+                        {svc.ctaLink2 && (
+                          <a href={svc.ctaHref2} style={{ display:"inline-block", fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.03em", padding:"10px 18px", borderRadius:2, textDecoration:"none", background:"rgba(255,255,255,0.08)", color:accent, border:`1px solid rgba(255,255,255,0.12)`, transition:"all 0.2s", alignSelf:"flex-start" }}
+                            onMouseEnter={e=>e.target.style.background="rgba(255,255,255,0.14)"} onMouseLeave={e=>e.target.style.background="rgba(255,255,255,0.08)"}
+                            onClick={()=>track("service_cta_click",{service:svc.title,cta:svc.ctaHref2})}
+                          >{svc.ctaLink2}</a>
+                        )}
+                      </div>
+                      <a href={svc.href} style={{ display:"inline-block", fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif", letterSpacing:"0.03em", color:"rgba(255,255,255,0.4)", textDecoration:"none", borderBottom:"1px solid rgba(255,255,255,0.15)", paddingBottom:1 }}
+                        onMouseEnter={e=>e.target.style.color="rgba(255,255,255,0.7)"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.4)"}
+                        onClick={()=>track("service_projects_link",{service:svc.title})}
+                      >{svc.link}</a>
                     </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+          {/* Funding band */}
+          {t.fundingBand && (
+            <div style={{ background:C.sandDark, borderTop:`1px solid ${C.rule}`, borderBottom:`1px solid ${C.rule}`, padding:"28px 32px" }}>
+              <div style={{ maxWidth:1200, margin:"0 auto", width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:16 }}>
+                <p style={{ fontSize:14, color:C.inkMid, fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.6, margin:0, maxWidth:680 }}>{t.fundingBand.text}</p>
+                <a href={t.fundingBand.href} style={{ fontSize:13, color:C.brand, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", borderBottom:`1px solid ${C.brand}`, paddingBottom:1, whiteSpace:"nowrap" }}
+                  onMouseEnter={e=>e.target.style.opacity="0.7"} onMouseLeave={e=>e.target.style.opacity="1"}
+                  onClick={()=>track("funding_band_click")}
+                >{t.fundingBand.link}</a>
+              </div>
+            </div>
+          )}
+
+          {/* White separator */}
+          <div style={{ height:32, background:"#fff" }} />
+
+          {/* BEA block – compact horizontal band */}
+          <div style={{ margin:0, borderTop:`1px solid ${C.brand}`, borderBottom:`1px solid ${C.brand}`, background:"#F0F7FC" }}>
+            <div style={{ maxWidth:1200, margin:"0 auto", padding:"20px 32px", display:"flex", alignItems:"center", gap:20, flexWrap:"wrap" }}>
+              {/* BEA logo */}
+              <img src="data:image/png;base64,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" alt="Building Envelope Alliance" style={{ height:28, width:"auto", objectFit:"contain", objectPosition:"left", flexShrink:0 }} />
+              <div style={{ width:1, height:36, background:"#C8DFE8", flexShrink:0 }} />
+              {/* Levery wordmark + FOUNDING MEMBER */}
+              <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0 }}>
+                <LeveryLogo color={C.brand} height={18} />
+                <span style={{ display:"inline-block", width:1, height:"1em", background:C.brand, opacity:0.4, verticalAlign:"middle" }} />
+                <span style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em", color:C.brand, textTransform:"uppercase", whiteSpace:"nowrap" }}>Founding member</span>
+              </div>
+              <div style={{ width:1, height:36, background:"#C8DFE8", flexShrink:0 }} />
+              {/* Description */}
+              <p style={{ fontSize:13, color:"#2A3A44", fontFamily:"'Helvetica Neue',Arial,sans-serif", lineHeight:1.55, margin:0, flex:1, minWidth:220 }}>
+                {lang==="it"
+                  ? "Fondata nel 2026, BEA riunisce i principali esperti europei di involucro edilizio per offrire servizi specialistici di consulenza, test e formazione. Levery ne è socia fondatrice e Alessandro Pracucci guida il comitato dei servizi per PMI e industrie."
+                  : "Founded in 2026, BEA brings together Europe's leading building envelope experts to provide specialist consulting, testing and training services. Levery is a founding member and Alessandro Pracucci chairs the services committee for SMEs and industry."
+                }
+              </p>
+              {/* CTA column */}
+              <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-start", gap:10, flexShrink:0 }}>
+                <a href="/contact?topic=bea-screening"
+                  style={{ display:"inline-block", background:C.brand, color:"#fff", padding:"10px 20px", borderRadius:2, fontSize:12, fontFamily:"'Helvetica Neue',Arial,sans-serif", fontWeight:600, textDecoration:"none", whiteSpace:"nowrap" }}
+                  onClick={()=>track("bea_network_click")}
+                >
+                  {lang==="it" ? "Accedi alla rete →" : "Access the network →"}
+                </a>
+                <a href="https://www.buildingenvelopealliance.eu/" target="_blank" rel="noopener noreferrer"
+                  style={{ fontSize:11, color:C.brand, fontFamily:"'Helvetica Neue',Arial,sans-serif", textDecoration:"none", borderBottom:`1px solid ${C.brand}`, paddingBottom:1, whiteSpace:"nowrap" }}
+                >
+                  {lang==="it" ? "Chi è BEA ↗" : "About BEA ↗"}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -597,10 +665,16 @@ export default function LeveryHomepage() {
           <div>
             <img src="/logo-color.svg" alt="Levery" height="72" style={{display:"block"}}/>
             <p style={{fontSize:14,color:"rgba(255,255,255,0.3)",fontFamily:"'Georgia',serif",fontStyle:"italic",lineHeight:1.7,marginTop:14}}>{lang==="it"?"R&D specializzato, costruito intorno al tuo team.":"Specialist R&D, built around your team."}</p>
-            <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,marginTop:16,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
-              <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
-              <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>{lang==="it"?"Società Benefit · Il nostro impatto →":"Società Benefit · Our impact →"}</span>
-            </a>
+            <div style={{display:"flex",gap:8,marginTop:16,flexWrap:"wrap"}}>
+              <a href="/impact" style={{display:"inline-flex",alignItems:"center",gap:6,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
+                <span style={{fontSize:9,color:"#A8E6CF",fontFamily:"monospace"}}>⬡</span>
+                <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>{lang==="it"?"Società Benefit · Il nostro impatto →":"Società Benefit · Our impact →"}</span>
+              </a>
+              <a href="https://www.buildingenvelopealliance.eu/" target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,textDecoration:"none",border:"1px solid rgba(255,255,255,0.12)",borderRadius:2,padding:"4px 10px"}}>
+                <span style={{fontSize:9,color:"#7EC8E3",fontFamily:"monospace"}}>◈</span>
+                <span style={{fontSize:10,color:"rgba(255,255,255,0.35)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"0.06em"}}>{lang==="it"?"Socio fondatore BEA →":"Founding member of BEA →"}</span>
+              </a>
+            </div>
           </div>
           <div>
             <p style={{fontSize:10,fontFamily:"monospace",letterSpacing:"0.14em",color:"rgba(255,255,255,0.18)",textTransform:"uppercase",marginBottom:14}}>Legal</p>

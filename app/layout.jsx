@@ -6,7 +6,7 @@ export const metadata = {
     default: 'Levery — Specialist R&D for Construction',
     template: '%s | Levery'
   },
-  description: 'Levery is a specialist R&D partner for the construction sector. New product development, sustainability compliance, Digital Product Passport and EU funding for manufacturers and innovators.',
+  description: 'Specialist R&D for building envelope products: new product development, envelope integration, ETA and CE marking, Digital Product Passport.',
   keywords: ['R&D construction', 'partner R&D costruzioni', 'digital product passport', 'passaporto digitale prodotto', 'ESPR compliance', 'bio-based materials', 'materiali bio-based edilizia', 'BIPV', 'Horizon Europe', 'circular economy construction', 'economia circolare costruzioni', 'building innovation Italy', 'innovazione edilizia', 'Levery'],
   authors: [{ name: 'Levery S.r.l. Società Benefit', url: 'https://levery.it' }],
   creator: 'Levery S.r.l. Società Benefit',
@@ -25,7 +25,7 @@ export const metadata = {
     url: 'https://levery.it',
     siteName: 'Levery',
     title: { default: 'Levery — Specialist R&D for Construction', template: '%s | Levery' },
-    description: 'Specialist R&D, built around your team. New product development, sustainability compliance and EU funding for the construction sector.',
+    description: 'Specialist R&D for building envelope products: new product development, envelope integration, ETA and CE marking, Digital Product Passport.',
     images: [
       {
         url: '/og-image.png',
