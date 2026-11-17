@@ -475,7 +475,7 @@ export default function LeveryHomepage() {
               {/* Levery wordmark + FOUNDING MEMBER */}
               <div style={{ display:"flex", alignItems:"center", gap:10, flexShrink:0 }}>
                 <LeveryLogo color={C.brand} height={28} />
-                <span style={{ display:"inline-block", width:1, height:"1.2em", background:C.brand, opacity:0.4, verticalAlign:"middle" }} />
+                <div style={{ width:1, height:20, background:C.brand, opacity:0.35, flexShrink:0 }} />
                 <span style={{ fontSize:9, fontFamily:"monospace", letterSpacing:"0.14em", color:C.brand, textTransform:"uppercase", whiteSpace:"nowrap" }}>Founding member</span>
               </div>
               <div style={{ width:1, height:36, background:"#C8DFE8", flexShrink:0 }} />
