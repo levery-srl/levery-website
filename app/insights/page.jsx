@@ -12,6 +12,12 @@ const BOOKING="https://outlook.office.com/book/InfoLevert@levery.it/";
 
 // ─── ARTICLES ────────────────────────────────────────────────────────────────
 const ARTICLES=[
+  {slug:"eco-02-26",series:"Make It Green",sub:"ECO-02",num:"12/26",domain:"green",author:"AP",date:"Nov 25, 2026",
+   title:"Materials and building systems designed for circularity",
+   titleIt:"Materiali e sistemi costruttivi progettati per la circolarità",
+   excerpt:"From dry-stacked bricks to compostable acoustic panels: eight European products designed to be taken apart, made from waste or taken back at end of life.",
+   excerptIt:"Dai mattoni posati a secco ai pannelli acustici compostabili: otto prodotti europei progettati per essere smontati, nati da scarti o ritirati a fine vita.",
+   hero:"/images/blog/EcoCocon-01_EcoCocon.jpg"},
   {slug:"hitl-01-26",series:"Make It Human",sub:"HITL-01",num:"11/26",domain:"human",author:"MG, AP",date:"Oct 29, 2026",
    title:"Designers, engineers, manufacturers and operators: who along the construction value chain keeps human ingenuity at the core of AI and robotics",
    titleIt:"Progettisti, ingegneri, produttori e gestori: chi lungo la filiera delle costruzioni tiene l’ingegno umano al centro di AI e robotica",

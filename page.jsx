@@ -194,9 +194,9 @@ const copy = {
     insightsTitle:"What we are watching",
     insightsSub:"All insights →",
     insights:[
+      { domain:DOMAIN.green,   num:"12/26", series:"Make It Green",   date:"Nov 2026", title:"Materials and building systems designed for circularity", excerpt:"From dry-stacked bricks to compostable acoustic panels: eight European products designed to be taken apart, made from waste or taken back at end of life.", slug:"eco-02-26" },
       { domain:DOMAIN.human,   num:"11/26", series:"Make It Human",   date:"Oct 2026", title:"Designers, engineers, manufacturers and operators: who keeps human ingenuity at the core of AI and robotics", excerpt:"From computational design studios to facility management platforms – mapping the actors making Human-in-the-Loop a structural approach, not a transitional one.", slug:"hitl-01-26" },
       { domain:DOMAIN.digital, num:"10/26", series:"Make It Digital", date:"Oct 2026", title:"Who is turning product knowledge into a competitive advantage", excerpt:"From Cobuilder to DeePPy – the European actors building structured product data infrastructure before DPP regulations become mandatory.", slug:"trk-01-26" },
-      { domain:DOMAIN.green,   num:"09/26", series:"Make It Green",   date:"Sep 2026", title:"Circular economy in construction materials: who is really closing the loop", excerpt:"From selective demolition to digital product passports – mapping the actors who are operationally closing the material cycle in construction.", slug:"eco-01-26" },
       ],
     ctaText:"If you are developing a construction product, facing a sustainability compliance challenge, or exploring EU funding – we are the right first call.",
     ctaBtn:"Book a 30-minute call →",
@@ -248,9 +248,9 @@ const copy = {
       { name:"W2W",     slug:"w2w",     fund:"Horizon Europe · GA 101138789",           tags:["Economia Circolare","Sistemi di Facciata","DPP"],      desc:"Valorizzazione dei rifiuti di legno per sistemi di facciata prefabbricati. Test acustici, ingegneria della facciata, Passaporto Digitale di Prodotto.", status:"Attivo" },
     ],
     insightsTitle:"Quello che stiamo osservando",insights:[
+      { domain:DOMAIN.green,   num:"12/26", series:"Make It Green",   date:"Nov 2026", title:"Materiali e sistemi costruttivi progettati per la circolarità", excerpt:"Dai mattoni posati a secco ai pannelli acustici compostabili: otto prodotti europei progettati per essere smontati, nati da scarti o ritirati a fine vita.", slug:"eco-02-26" },
       { domain:DOMAIN.human,   num:"11/26", series:"Make It Human",   date:"Ott 2026", title:"Progettisti, ingegneri, produttori e gestori: chi tiene l’ingegno umano al centro di AI e robotica", excerpt:"Dagli studi di progettazione computazionale alle piattaforme di facility management – mappa degli attori che fanno dello Human-in-the-Loop un approccio strutturale, non transitorio.", slug:"hitl-01-26" },
       { domain:DOMAIN.digital, num:"10/26", series:"Make It Digital", date:"Ott 2026", title:"Chi sta trasformando la conoscenza del prodotto in vantaggio competitivo", excerpt:"Da Cobuilder a DeePPy – gli attori europei che costruiscono infrastrutture di dati di prodotto strutturati prima che le normative DPP diventino obbligatorie.", slug:"trk-01-26" },
-      { domain:DOMAIN.green,   num:"09/26", series:"Make It Green",   date:"Set 2026", title:"Economia circolare nei materiali da costruzione: chi chiude davvero il ciclo", excerpt:"Dalla demolizione selettiva ai passaporti digitali – mappa degli attori che chiudono operativamente il ciclo dei materiali.", slug:"eco-01-26" },
       ],
     ctaText:"Se stai sviluppando un prodotto da costruzione, affronti una sfida di conformità alla sostenibilità o stai esplorando i finanziamenti europei – siamo la prima chiamata giusta.",
     ctaBtn:"Prenota una call di 30 minuti →",
